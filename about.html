@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us | Open Softwares &amp; Group Companies</title>
-  <meta name="description" content="Learn about Open Softwares, a technology group architecting software for education (SchoolMate ERP), manufacturing, and real estate across Maharashtra, India.">
+  <title>About Us | OpenSoftwares &amp; Group Companies</title>
+  <meta name="description" content="Learn about OpenSoftwares, a technology group architecting software for education (Schoolmate ERP), manufacturing, and real estate across Maharashtra, India.">
   <link rel="canonical" href="https://opensoftwares.in/about.html">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://opensoftwares.in/about.html">
-  <meta property="og:title" content="About Us | Open Softwares">
-  <meta property="og:description" content="Open Softwares is a group of companies managing software in the education, manufacturing and real estate industries.">
+  <meta property="og:title" content="About Us | OpenSoftwares">
+  <meta property="og:description" content="OpenSoftwares is a group of companies managing software in the education, manufacturing and real estate industries.">
   <meta property="og:image" content="https://opensoftwares.in/assets/slider-admin.svg">
 
   <!-- Google Fonts Inter -->
@@ -31,29 +31,79 @@
     "@type": "AboutPage",
     "mainEntity": {
       "@type": "Organization",
-      "name": "Open Softwares",
+      "name": "OpenSoftwares",
       "url": "https://opensoftwares.in",
       "logo": "https://opensoftwares.in/assets/favicon.svg",
-      "description": "Open Softwares is a group of companies managing software in the education, manufacturing and real estate industries."
+      "description": "OpenSoftwares is a group of companies managing software in the education, manufacturing and real estate industries."
     }
   }
   </script>
 </head>
 <body>
 
+  <!-- Reusable SVG Sprite -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+    <defs>
+      <symbol id="icon-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="currentColor" />
+      </symbol>
+      <symbol id="icon-graduation-cap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+        <path d="M6 12v5c0 2 2.5 3.5 6 3.5s6-1.5 6-3.5v-5" />
+      </symbol>
+      <symbol id="icon-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+      </symbol>
+      <symbol id="icon-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+      </symbol>
+      <symbol id="icon-handshake" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m11 17 2 2a1 1 0 0 0 1.4 0l4.3-4.3a1 1 0 0 0 0-1.4L16 11.5" />
+        <path d="m18 10 1.5-1.5a1 1 0 0 0 0-1.4l-2.6-2.6a1 1 0 0 0-1.4 0L12 8" />
+        <path d="m15 13-3-3a1 1 0 0 0-1.4 0L7 13.6a1 1 0 0 0 0 1.4L9.6 17.6a1 1 0 0 0 1.4 0L14 14.6" />
+        <path d="m3 7 3-3a1 1 0 0 1 1.4 0L10 6.6" />
+      </symbol>
+      <symbol id="icon-map-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+        <circle cx="12" cy="10" r="3" />
+      </symbol>
+      <symbol id="icon-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+      </symbol>
+      <symbol id="icon-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+      </symbol>
+      <symbol id="icon-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10" />
+        <polyline points="12 6 12 12 16 14" />
+      </symbol>
+      <symbol id="icon-whatsapp" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.15 8.15 0 01-1.25-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 012.41 5.82c0 4.54-3.7 8.24-8.23 8.24zm4.51-6.17c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.89.87-.89 2.12s.91 2.46 1.04 2.63c.12.17 1.79 2.73 4.33 3.83.61.26 1.08.42 1.45.54.61.19 1.16.17 1.6.1 1.48-.07 1.47-.6 1.68-1.18.21-.59.21-1.09.15-1.19-.06-.11-.22-.17-.47-.3z"/>
+      </symbol>
+      <symbol id="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18" />
+        <line x1="6" y1="6" x2="18" y2="18" />
+      </symbol>
+      <symbol id="icon-building" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="4" y="2" width="16" height="20" rx="2" ry="2" />
+        <path d="M9 22v-4h6v4M8 6h.01M16 6h.01M12 6h.01M12 10h.01M12 14h.01M16 10h.01M16 14h.01M8 10h.01M8 14h.01" />
+      </symbol>
+    </defs>
+  </svg>
+
   <!-- =========================================================================
        Header & Sticky Navigation
        ========================================================================= -->
   <header class="site-header" id="siteHeader">
     <div class="container header-container">
-      <a href="index.html" class="brand-wordmark" aria-label="Open Softwares Homepage">
+      <a href="index.html" class="brand-wordmark" aria-label="OpenSoftwares Homepage">
         <span class="brand-cap">O</span>pen<span class="brand-cap">S</span>oftwares<span class="brand-dot"></span>
       </a>
 
       <nav class="nav-desktop" aria-label="Main Navigation">
         <ul class="nav-links">
           <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="schoolmate.html" class="nav-link">SchoolMate</a></li>
+          <li><a href="schoolmate.html" class="nav-link">Schoolmate</a></li>
           <li><a href="about.html" class="nav-link active">About Us</a></li>
           <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
@@ -78,11 +128,13 @@
       <a href="index.html" class="brand-wordmark">
         <span class="brand-cap">O</span>pen<span class="brand-cap">S</span>oftwares<span class="brand-dot"></span>
       </a>
-      <button class="drawer-close-btn" id="drawerCloseBtn" type="button" aria-label="Close navigation menu">✕</button>
+      <button class="drawer-close-btn" id="drawerCloseBtn" type="button" aria-label="Close navigation menu">
+        <svg class="svg-icon"><use href="#icon-close"></use></svg>
+      </button>
     </div>
     <ul class="mobile-nav-links">
       <li><a href="index.html" class="mobile-nav-link">Home</a></li>
-      <li><a href="schoolmate.html" class="mobile-nav-link">SchoolMate Software</a></li>
+      <li><a href="schoolmate.html" class="mobile-nav-link">Schoolmate Software</a></li>
       <li><a href="about.html" class="mobile-nav-link active">About Us</a></li>
       <li><a href="contact.html" class="mobile-nav-link">Contact &amp; Demo</a></li>
     </ul>
@@ -100,10 +152,13 @@
     <!-- Hero Banner -->
     <section class="page-hero">
       <div class="container page-hero-content">
-        <span class="section-badge">Our Origin &amp; Vision</span>
+        <span class="section-badge">
+          <svg class="svg-icon"><use href="#icon-shield"></use></svg>
+          Our Origin &amp; Vision
+        </span>
         <h1>Pioneering Software Solutions for Growing Enterprises</h1>
         <p>
-          At Open Softwares, we build reliable, human-centered technology that solves ground-level operational challenges in India's foundational industries.
+          At OpenSoftwares, we build reliable, human-centered technology that solves ground-level operational challenges in India's foundational industries.
         </p>
       </div>
     </section>
@@ -113,7 +168,7 @@
       <div class="container">
         <div class="statement-callout reveal">
           <p>
-            "Open Softwares is a group of companies managing software in the education, manufacturing and real estate industries."
+            "OpenSoftwares is a group of companies managing software in the education, manufacturing and real estate industries."
           </p>
         </div>
       </div>
@@ -123,24 +178,27 @@
     <section class="section section-alt">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-badge">Our Story</span>
+          <span class="section-badge">
+            <svg class="svg-icon"><use href="#icon-book"></use></svg>
+            Our Story
+          </span>
           <h2 class="section-title">Rooted in Engineering, Driven by Impact</h2>
           <p class="section-desc">
-            Open Softwares was founded with an uncompromising belief: Indian institutions and enterprises deserve world-class software tailored to their regional realities, compliance mandates, and operational rhythms.
+            OpenSoftwares was founded with an uncompromising belief: Indian institutions and enterprises deserve world-class software tailored to their regional realities, compliance mandates, and operational rhythms.
           </p>
         </div>
 
         <div class="grid grid-2" style="align-items: center; gap: 3.5rem;">
           <div class="reveal delay-100">
-            <h3 style="font-size: 1.6rem; margin-bottom: 1rem; color: #0A2A5E;">Transforming Education First with SchoolMate</h3>
+            <h3 style="font-size: 1.6rem; margin-bottom: 1rem; color: #0A2A5E;">Transforming Education First with Schoolmate</h3>
             <p style="margin-bottom: 1.25rem;">
               We began by observing the chaotic reality of school administration across Maharashtra. Teachers spent hours filling attendance registers by hand, parents queued outside administrative offices to pay term fees, and guardians worried anxiously about school bus delays on congested roads.
             </p>
             <p style="margin-bottom: 1.25rem;">
-              We engineered <strong>SchoolMate</strong> from scratch to eliminate this friction. By pairing an intuitive mobile application for parents with a rock-solid, multi-branch ERP for school trustees, SchoolMate has brought transparency, safety, and operational calm to hundreds of campuses.
+              We engineered <strong>Schoolmate</strong> from scratch to eliminate this friction. By pairing an intuitive mobile application for parents with a rock-solid, multi-branch ERP for school trustees, Schoolmate has brought transparency, safety, and operational calm to hundreds of campuses.
             </p>
             <p>
-              As Open Softwares expands into manufacturing systems and real estate PropTech, our foundational ethos remains unchanged: building robust systems that perform reliably day in and day out.
+              As OpenSoftwares expands into manufacturing systems and real estate PropTech, our foundational ethos remains unchanged: building robust systems that perform reliably day in and day out.
             </p>
           </div>
 
@@ -149,7 +207,7 @@
             <div style="display: flex; flex-direction: column; gap: 1.4rem;">
               <div>
                 <div style="display: flex; align-items: center; gap: 0.6rem; font-weight: 700; color: #0A2A5E; margin-bottom: 0.3rem;">
-                  <span>🎓 Education (SchoolMate)</span>
+                  <span>Education (Schoolmate)</span>
                   <span style="font-size: 0.72rem; background: #DCFCE7; color: #15803D; padding: 2px 8px; border-radius: 10px;">LIVE NOW</span>
                 </div>
                 <p style="font-size: 0.92rem;">Empowering 250+ schools, 185,000+ students, and 320,000+ parents with unified ERP, homework tracking, bus GPS, and fee collection.</p>
@@ -157,7 +215,7 @@
 
               <div>
                 <div style="display: flex; align-items: center; gap: 0.6rem; font-weight: 700; color: #475569; margin-bottom: 0.3rem;">
-                  <span>🏭 Manufacturing Systems</span>
+                  <span>Manufacturing Systems</span>
                   <span style="font-size: 0.72rem; background: #F1F5F9; color: #475569; padding: 2px 8px; border-radius: 10px;">COMING SOON</span>
                 </div>
                 <p style="font-size: 0.92rem;">Smart shop-floor ERP, inventory tracking, Bill of Materials (BOM), and machine maintenance analytics for MSME fabricators.</p>
@@ -165,10 +223,10 @@
 
               <div>
                 <div style="display: flex; align-items: center; gap: 0.6rem; font-weight: 700; color: #475569; margin-bottom: 0.3rem;">
-                  <span>🏢 Real Estate &amp; PropTech</span>
+                  <span>Real Estate &amp; PropTech</span>
                   <span style="font-size: 0.72rem; background: #F1F5F9; color: #475569; padding: 2px 8px; border-radius: 10px;">COMING SOON</span>
                 </div>
-                <p style="font-size: 0.92rem;">Developer CRM, broker commission pipelines, RERA stage-wise billing, and customer milestone portals.</p>
+                <p style="font-size: 0.92rem;">Developer suites, broker commission pipelines, RERA stage-wise billing, and customer milestone portals.</p>
               </div>
             </div>
           </div>
@@ -181,7 +239,9 @@
       <div class="container">
         <div class="mission-vision-grid">
           <div class="mv-card reveal delay-100">
-            <div class="mv-card-icon" aria-hidden="true">🎯</div>
+            <div class="mv-card-icon" aria-hidden="true">
+              <svg class="svg-icon"><use href="#icon-graduation-cap"></use></svg>
+            </div>
             <h3>Our Mission</h3>
             <p>
               To eliminate administrative overhead for educational and commercial institutions by architecting software that is blazingly fast, accessible to every staff member regardless of technical skill, and backed by unwavering regional customer support.
@@ -189,7 +249,9 @@
           </div>
 
           <div class="mv-card reveal delay-200">
-            <div class="mv-card-icon" aria-hidden="true">🔭</div>
+            <div class="mv-card-icon" aria-hidden="true">
+              <svg class="svg-icon"><use href="#icon-building"></use></svg>
+            </div>
             <h3>Our Vision</h3>
             <p>
               To become Maharashtra's and Western India's most trusted software group, known for delivering uncompromising reliability, ethical data governance, and products that genuinely improve the everyday lives of students, parents, and workers.
@@ -200,26 +262,35 @@
         <!-- Core Values Grid -->
         <div style="margin-top: 4rem;">
           <div class="section-header reveal">
-            <span class="section-badge">Core Principles</span>
+            <span class="section-badge">
+              <svg class="svg-icon"><use href="#icon-shield"></use></svg>
+              Core Principles
+            </span>
             <h2 class="section-title">The Values That Guide Us</h2>
-            <p class="section-desc">How Open Softwares approaches product development and customer partnerships.</p>
+            <p class="section-desc">How OpenSoftwares approaches product development and customer partnerships.</p>
           </div>
 
           <div class="grid grid-3">
             <div class="card reveal delay-100">
-              <div style="font-size: 1.8rem; margin-bottom: 0.75rem;">🛡️</div>
+              <div class="mv-card-icon" style="margin-bottom: 1rem;">
+                <svg class="svg-icon"><use href="#icon-shield"></use></svg>
+              </div>
               <h4 style="margin-bottom: 0.5rem;">Absolute Data Integrity</h4>
               <p style="font-size: 0.92rem;">Student records, fee finances, and employee payrolls are strictly encrypted and protected with redundant cloud infrastructure. We never monetize client data.</p>
             </div>
 
             <div class="card reveal delay-200">
-              <div style="font-size: 1.8rem; margin-bottom: 0.75rem;">⚡</div>
+              <div class="mv-card-icon" style="margin-bottom: 1rem;">
+                <svg class="svg-icon"><use href="#icon-bolt"></use></svg>
+              </div>
               <h4 style="margin-bottom: 0.5rem;">Zero-Bloat Speed</h4>
               <p style="font-size: 0.92rem;">We prioritize clean engineering and lightning response times over frivolous gimmicks. Our software performs seamlessly even on modest 4G connections.</p>
             </div>
 
             <div class="card reveal delay-300">
-              <div style="font-size: 1.8rem; margin-bottom: 0.75rem;">🤝</div>
+              <div class="mv-card-icon" style="margin-bottom: 1rem;">
+                <svg class="svg-icon"><use href="#icon-handshake"></use></svg>
+              </div>
               <h4 style="margin-bottom: 0.5rem;">Empathy &amp; Local Presence</h4>
               <p style="font-size: 0.92rem;">We don't hide behind automated chatbots. Our implementation engineers visit school campuses in person and provide phone support in Marathi, Hindi, and English.</p>
             </div>
@@ -232,9 +303,12 @@
     <section class="section section-alt" id="timeline">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-badge">Milestones</span>
+          <span class="section-badge">
+            <svg class="svg-icon"><use href="#icon-clock"></use></svg>
+            Milestones
+          </span>
           <h2 class="section-title">Our Growth Journey</h2>
-          <p class="section-desc">Key milestones in the evolution of Open Softwares and SchoolMate.</p>
+          <p class="section-desc">Key milestones in the evolution of OpenSoftwares and Schoolmate.</p>
         </div>
 
         <div class="timeline-container">
@@ -243,7 +317,7 @@
             <div class="timeline-marker"></div>
             <span class="timeline-year">2021</span>
             <div class="timeline-card">
-              <h4>Founding of Open Softwares</h4>
+              <h4>Founding of OpenSoftwares</h4>
               <p>Founded by passionate software engineers in Maharashtra with a unified goal: modernizing school fee workflows and replacing paper attendance registers.</p>
             </div>
           </div>
@@ -253,8 +327,8 @@
             <div class="timeline-marker"></div>
             <span class="timeline-year">2022</span>
             <div class="timeline-card">
-              <h4>Launch of SchoolMate ERP &amp; Parent App</h4>
-              <p>Rolled out the first version of the SchoolMate Android App with digital homework, UPI fees, and centralized fee accounting across 25 pioneer institutions in Western Maharashtra.</p>
+              <h4>Launch of Schoolmate ERP &amp; Parent App</h4>
+              <p>Rolled out the first version of the Schoolmate Android App with digital homework, UPI fees, and centralized fee accounting across 25 pioneer institutions in Western Maharashtra.</p>
             </div>
           </div>
 
@@ -264,7 +338,7 @@
             <span class="timeline-year">2024</span>
             <div class="timeline-card">
               <h4>Smart GPS Telemetry &amp; Biometric Integration</h4>
-              <p>Engineered hardware-agnostic school bus GPS tracking with speed monitoring and geofencing. Integrated face/thumb biometric machines for automated teacher payroll.</p>
+              <p>Engineered hardware-agnostic school bus GPS tracking with speed monitoring and geofencing. Integrated biometric devices for automated teacher payroll.</p>
             </div>
           </div>
 
@@ -290,7 +364,7 @@
           <div class="cta-banner-buttons">
             <a href="contact.html" class="btn btn-white btn-lg">Contact Our Leadership</a>
             <a href="schoolmate.html" class="btn btn-outline btn-lg" style="color: #FFFFFF; border-color: rgba(255,255,255,0.4);">
-              Explore SchoolMate Suite
+              Explore Schoolmate Suite
             </a>
           </div>
         </div>
@@ -310,15 +384,15 @@
             <span class="brand-cap">O</span>pen<span class="brand-cap">S</span>oftwares<span class="brand-dot"></span>
           </a>
           <p>
-            Open Softwares is a group of companies managing software in the education, manufacturing and real estate industries. Our core focus is delivering dependable, future-ready enterprise systems.
+            OpenSoftwares is a group of companies managing software in the education, manufacturing and real estate industries. Our core focus is delivering dependable, future-ready enterprise systems.
           </p>
           <div style="font-size: 0.85rem; color: #60A5FA; font-weight: 600;">
-            Flagship Product: SchoolMate by Open Softwares
+            Flagship Product: Schoolmate by OpenSoftwares
           </div>
         </div>
 
         <div class="footer-col">
-          <h3>SchoolMate</h3>
+          <h3>Schoolmate</h3>
           <ul class="footer-nav-list">
             <li><a href="schoolmate.html#mobileApp">Android Parent App</a></li>
             <li><a href="schoolmate.html#webErp">Administrative Web ERP</a></li>
@@ -332,7 +406,7 @@
         <div class="footer-col">
           <h3>Group &amp; Company</h3>
           <ul class="footer-nav-list">
-            <li><a href="about.html">About Open Softwares</a></li>
+            <li><a href="about.html">About OpenSoftwares</a></li>
             <li><a href="about.html#mission">Mission &amp; Vision</a></li>
             <li><a href="about.html#timeline">Company Journey</a></li>
             <li><a href="contact.html">Request a Free Demo</a></li>
@@ -344,19 +418,19 @@
           <h3>Contact Us</h3>
           <div class="footer-contact-list">
             <div class="footer-contact-item">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              <svg class="svg-icon"><use href="#icon-map-pin"></use></svg>
               <span>Maharashtra, India</span>
             </div>
             <div class="footer-contact-item">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              <svg class="svg-icon"><use href="#icon-phone"></use></svg>
               <a href="tel:+917204726501">+91 72047 26501</a>
             </div>
             <div class="footer-contact-item">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              <svg class="svg-icon"><use href="#icon-chat"></use></svg>
               <a href="mailto:contact@opensoftwares.in">contact@opensoftwares.in</a>
             </div>
             <div class="footer-contact-item">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+              <svg class="svg-icon"><use href="#icon-clock"></use></svg>
               <span>Mon – Sat: 9:00 AM – 7:00 PM</span>
             </div>
           </div>
@@ -365,7 +439,7 @@
 
       <div class="footer-bottom">
         <div>
-          © Open Softwares. All rights reserved. Registered domain: <strong>opensoftwares.in</strong>
+          &copy; OpenSoftwares. All rights reserved. Registered domain: <strong>opensoftwares.in</strong>
         </div>
         <div>
           Empowering educational institutions across Maharashtra with high-performance software.
@@ -376,13 +450,13 @@
 
   <!-- Floating Buttons -->
   <div class="floating-actions" aria-label="Quick Contact Actions">
-    <a href="tel:+917204726501" class="floating-btn floating-btn-call" aria-label="Call Open Softwares support at +91 72047 26501">
+    <a href="tel:+917204726501" class="floating-btn floating-btn-call" aria-label="Call OpenSoftwares support at +91 72047 26501">
       <span class="floating-tooltip">Call +91 72047 26501</span>
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+      <svg class="svg-icon" style="stroke: #FFFFFF;"><use href="#icon-phone"></use></svg>
     </a>
-    <a href="https://wa.me/917204726501?text=Hi%2C%20I%20want%20to%20know%20more%20about%20school%20software" target="_blank" rel="noopener noreferrer" class="floating-btn floating-btn-whatsapp" aria-label="Chat with SchoolMate specialist on WhatsApp">
+    <a href="https://wa.me/917204726501?text=Hi%2C%20I%20want%20to%20know%20more%20about%20Schoolmate%20by%20OpenSoftwares" target="_blank" rel="noopener noreferrer" class="floating-btn floating-btn-whatsapp" aria-label="Chat with Schoolmate specialist on WhatsApp">
       <span class="floating-tooltip">Chat on WhatsApp</span>
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.15 8.15 0 01-1.25-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 012.41 5.82c0 4.54-3.7 8.24-8.23 8.24zm4.51-6.17c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.89.87-.89 2.12s.91 2.46 1.04 2.63c.12.17 1.79 2.73 4.33 3.83.61.26 1.08.42 1.45.54.61.19 1.16.17 1.6.1 1.48-.07 1.47-.6 1.68-1.18.21-.59.21-1.09.15-1.19-.06-.11-.22-.17-.47-.3z"/></svg>
+      <svg class="svg-icon svg-icon-filled" style="fill: #FFFFFF;"><use href="#icon-whatsapp"></use></svg>
     </a>
   </div>
 

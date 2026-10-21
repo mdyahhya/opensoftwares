@@ -1,5 +1,5 @@
 /**
- * Open Softwares — Main JavaScript (Shared)
+ * OpenSoftwares — Main JavaScript (Shared)
  * Handles: Mobile Navigation, Sticky Header, Focus Trap, Scroll Reveal Animations
  */
 

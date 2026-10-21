@@ -1,5 +1,5 @@
 /**
- * Open Softwares — Contact & Demo Request JavaScript (js/contact.js)
+ * OpenSoftwares — Contact & Demo Request JavaScript (js/contact.js)
  * Implements client-side form validation with accessible error handling and success state.
  */
 

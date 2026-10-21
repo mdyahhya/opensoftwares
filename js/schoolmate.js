@@ -1,5 +1,5 @@
 /**
- * Open Softwares — SchoolMate Product Page JavaScript (js/schoolmate.js)
+ * OpenSoftwares — Schoolmate Product Page JavaScript (js/schoolmate.js)
  * Implements accessible FAQ accordion and interactive product module highlights.
  */
 

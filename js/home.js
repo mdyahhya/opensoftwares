@@ -1,17 +1,18 @@
 /**
- * Open Softwares — Home Page JavaScript (js/home.js)
+ * OpenSoftwares — Home Page JavaScript (js/home.js)
  * Implements:
- * 1. Touch-enabled Auto-playing Slider with Arrows, Dots, and Hover-Pause
- * 2. Animated Android App Mockup cycling with synced label highlights & click-to-view
- * 3. Desktop ERP Interactive Dashboard Tab Switcher & Animated Charts
- * 4. Scroll-Triggered Animated Number Counters for Maharashtra Statistics
+ * 1. Top Image Slider (5 slides, touch swipe, dots below, hover pause)
+ * 2. Interactive Android App Phone Mockup: 5 tabs with animated sliding indicator,
+ *    smooth screen transitions, auto-demo with 10s pause on user click, synced feature labels.
+ * 3. Schoolmate ERP Mockup: sidebar / mobile horizontal chip switcher, animated panels.
+ * 4. Scroll-Triggered Animated Number Counters for Statistics.
  */
 
 (function () {
   'use strict';
 
   // =========================================================================
-  // 1. Image Slider (Directly below Hero)
+  // 1. Image Slider (5 Slides, Dots Below)
   // =========================================================================
   const sliderTrack = document.getElementById('sliderTrack');
   const slides = document.querySelectorAll('.slide-item');
@@ -25,7 +26,6 @@
   let slideInterval = null;
   const AUTOPLAY_DELAY = 5000;
 
-  // Touch variables
   let touchStartX = 0;
   let touchEndX = 0;
 
@@ -33,7 +33,6 @@
     if (!sliderTrack) return;
     sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
 
-    // Update dots
     const dots = dotsContainer ? dotsContainer.querySelectorAll('.slider-dot') : [];
     dots.forEach((dot, index) => {
       if (index === currentSlide) {
@@ -74,7 +73,6 @@
   }
 
   if (sliderTrack && totalSlides > 0) {
-    // Generate dots
     if (dotsContainer) {
       dotsContainer.innerHTML = '';
       for (let i = 0; i < totalSlides; i++) {
@@ -104,12 +102,10 @@
       });
     }
 
-    // Pause on hover
     if (sliderWrapper) {
       sliderWrapper.addEventListener('mouseenter', stopAutoplay);
       sliderWrapper.addEventListener('mouseleave', startAutoplay);
 
-      // Touch events for mobile swiping
       sliderWrapper.addEventListener(
         'touchstart',
         (e) => {
@@ -123,41 +119,55 @@
         'touchend',
         (e) => {
           touchEndX = e.changedTouches[0].screenX;
-          handleSwipe();
+          const diff = touchEndX - touchStartX;
+          if (diff < -45) nextSlide();
+          else if (diff > 45) prevSlide();
           startAutoplay();
         },
         { passive: true }
       );
     }
 
-    function handleSwipe() {
-      const swipeDistance = touchEndX - touchStartX;
-      const threshold = 50;
-      if (swipeDistance < -threshold) {
-        nextSlide();
-      } else if (swipeDistance > threshold) {
-        prevSlide();
-      }
-    }
-
     startAutoplay();
   }
 
   // =========================================================================
-  // 2. Android App Showcase: Cyclic Screen Switcher & Label Highlights
+  // 2. Interactive Android App Mockup (5 Tabs + Sliding Pill + Auto-Demo)
   // =========================================================================
-  const appScreens = document.querySelectorAll('.phone-screen');
-  const appLabels = document.querySelectorAll('.app-label-item');
-  let currentAppIndex = 0;
-  const totalAppScreens = appScreens.length;
-  let appCycleTimer = null;
-  const APP_CYCLE_DELAY = 4200;
+  const phoneTabs = document.querySelectorAll('.phone-tab-btn');
+  const phoneScreens = document.querySelectorAll('.phone-screen');
+  const tabIndicator = document.getElementById('phoneTabIndicator');
+  const appFeatureLabels = document.querySelectorAll('.app-label-item');
 
-  function setAppScreen(index) {
-    if (index < 0 || index >= totalAppScreens) return;
-    currentAppIndex = index;
+  let currentPhoneTabIndex = 0;
+  const totalPhoneTabs = phoneTabs.length;
+  let autoDemoTimer = null;
+  let userInteractionTimeout = null;
+  const AUTO_DEMO_INTERVAL = 4000;
+  const USER_PAUSE_DELAY = 10000;
 
-    appScreens.forEach((screen, idx) => {
+  function setPhoneTab(index, triggeredByUser = false) {
+    if (index < 0 || index >= totalPhoneTabs) return;
+    currentPhoneTabIndex = index;
+
+    // 1. Move sliding pill indicator
+    if (tabIndicator) {
+      tabIndicator.style.transform = `translateX(${index * 100}%)`;
+    }
+
+    // 2. Update Tab buttons
+    phoneTabs.forEach((tab, idx) => {
+      if (idx === index) {
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+      } else {
+        tab.classList.remove('active');
+        tab.setAttribute('aria-selected', 'false');
+      }
+    });
+
+    // 3. Swap Screen inside phone
+    phoneScreens.forEach((screen, idx) => {
       if (idx === index) {
         screen.classList.add('active');
       } else {
@@ -165,8 +175,10 @@
       }
     });
 
-    appLabels.forEach((label, idx) => {
-      if (idx === index) {
+    // 4. Sync feature labels beside the phone
+    appFeatureLabels.forEach((label) => {
+      const targetIndex = parseInt(label.getAttribute('data-tab-index'), 10);
+      if (targetIndex === index) {
         label.classList.add('active');
         label.setAttribute('aria-selected', 'true');
       } else {
@@ -174,65 +186,84 @@
         label.setAttribute('aria-selected', 'false');
       }
     });
-  }
 
-  function nextAppScreen() {
-    const nextIdx = (currentAppIndex + 1) % totalAppScreens;
-    setAppScreen(nextIdx);
-  }
-
-  function startAppLoop() {
-    stopAppLoop();
-    appCycleTimer = setInterval(nextAppScreen, APP_CYCLE_DELAY);
-  }
-
-  function stopAppLoop() {
-    if (appCycleTimer) {
-      clearInterval(appCycleTimer);
-      appCycleTimer = null;
+    // 5. If triggered by user, pause auto-demo for 10 seconds
+    if (triggeredByUser) {
+      pauseAutoDemoFor10s();
     }
   }
 
-  if (appScreens.length > 0 && appLabels.length > 0) {
-    appLabels.forEach((label, idx) => {
-      label.addEventListener('click', () => {
-        setAppScreen(idx);
-        startAppLoop(); // reset timer
-      });
+  function nextPhoneTab() {
+    const nextIdx = (currentPhoneTabIndex + 1) % totalPhoneTabs;
+    setPhoneTab(nextIdx, false);
+  }
+
+  function startAutoDemo() {
+    stopAutoDemo();
+    autoDemoTimer = setInterval(nextPhoneTab, AUTO_DEMO_INTERVAL);
+  }
+
+  function stopAutoDemo() {
+    if (autoDemoTimer) {
+      clearInterval(autoDemoTimer);
+      autoDemoTimer = null;
+    }
+  }
+
+  function pauseAutoDemoFor10s() {
+    stopAutoDemo();
+    if (userInteractionTimeout) {
+      clearTimeout(userInteractionTimeout);
+    }
+    userInteractionTimeout = setTimeout(() => {
+      startAutoDemo();
+    }, USER_PAUSE_DELAY);
+  }
+
+  // Click on phone bottom tabs
+  phoneTabs.forEach((tab, idx) => {
+    tab.addEventListener('click', () => {
+      setPhoneTab(idx, true);
     });
+  });
 
-    const phoneMockup = document.querySelector('.phone-mockup-wrapper');
-    if (phoneMockup) {
-      phoneMockup.addEventListener('mouseenter', stopAppLoop);
-      phoneMockup.addEventListener('mouseleave', startAppLoop);
-    }
+  // Click on side feature labels
+  appFeatureLabels.forEach((label) => {
+    label.addEventListener('click', () => {
+      const targetIndex = parseInt(label.getAttribute('data-tab-index'), 10);
+      if (!isNaN(targetIndex)) {
+        setPhoneTab(targetIndex, true);
+      }
+    });
+  });
 
-    startAppLoop();
+  if (phoneTabs.length > 0) {
+    startAutoDemo();
   }
 
   // =========================================================================
-  // 3. Desktop ERP Showcase: Tab Switcher
+  // 3. Schoolmate ERP Mockup: Modules Switcher
   // =========================================================================
-  const erpTabs = document.querySelectorAll('.erp-tab-btn');
-  const erpScreens = document.querySelectorAll('.erp-screen-view');
+  const erpModules = document.querySelectorAll('.erp-module-btn');
+  const erpPanels = document.querySelectorAll('.erp-panel-view');
 
-  if (erpTabs.length > 0 && erpScreens.length > 0) {
-    erpTabs.forEach((tab) => {
-      tab.addEventListener('click', function () {
-        const targetScreenId = this.getAttribute('data-target');
+  if (erpModules.length > 0 && erpPanels.length > 0) {
+    erpModules.forEach((btn) => {
+      btn.addEventListener('click', function () {
+        const targetPanelId = this.getAttribute('data-erp-panel');
 
-        erpTabs.forEach((t) => {
-          t.classList.remove('active');
-          t.setAttribute('aria-selected', 'false');
+        erpModules.forEach((b) => {
+          b.classList.remove('active');
+          b.setAttribute('aria-selected', 'false');
         });
-        erpScreens.forEach((s) => s.classList.remove('active'));
+        erpPanels.forEach((p) => p.classList.remove('active'));
 
         this.classList.add('active');
         this.setAttribute('aria-selected', 'true');
 
-        const activeScreen = document.getElementById(targetScreenId);
-        if (activeScreen) {
-          activeScreen.classList.add('active');
+        const activePanel = document.getElementById(targetPanelId);
+        if (activePanel) {
+          activePanel.classList.add('active');
         }
       });
     });
@@ -250,7 +281,7 @@
 
     statElements.forEach((counter) => {
       const target = parseInt(counter.getAttribute('data-target'), 10);
-      const duration = 2200; // ms
+      const duration = 2000;
       const frameDuration = 1000 / 60;
       const totalFrames = Math.round(duration / frameDuration);
       let frame = 0;
@@ -283,7 +314,7 @@
           }
         });
       },
-      { threshold: 0.3 }
+      { threshold: 0.25 }
     );
     statsObserver.observe(statsSection);
   } else if (statsSection) {

@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" fill="none">
+  <defs>
+    <linearGradient id="feeBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A2A5E" />
+      <stop offset="100%" stop-color="#07193A" />
+    </linearGradient>
+    <linearGradient id="cardGradFee" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F8FAFC" />
+    </linearGradient>
+    <filter id="shadowFee" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="600" rx="24" fill="url(#feeBg)" />
+  <circle cx="1080" cy="100" r="260" fill="#2563EB" opacity="0.14" />
+  <circle cx="120" cy="500" r="220" fill="#38BDF8" opacity="0.08" />
+
+  <!-- Left Content: Typography & Highlights -->
+  <g transform="translate(80, 100)">
+    <!-- Pill Badge -->
+    <rect width="210" height="34" rx="17" fill="#1E40AF" opacity="0.85" />
+    <circle cx="20" cy="17" r="5" fill="#34D399" />
+    <text x="36" y="22" font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-weight="600" font-size="12" fill="#E0E7FF" letter-spacing="0.5">INSTANT FEE RECOVERY</text>
+
+    <!-- Main Title -->
+    <text x="0" y="85" font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-weight="800" font-size="44" fill="#FFFFFF">Automated Fees &amp;</text>
+    <text x="0" y="140" font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-weight="800" font-size="44" fill="#60A5FA">Accounts Ledger</text>
+
+    <!-- Subtitle -->
+    <text x="0" y="188" font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-weight="400" font-size="17" fill="#CBD5E1">Zero counter queues. Instant UPI payments with 1-click digital</text>
+    <text x="0" y="214" font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-weight="400" font-size="17" fill="#CBD5E1">tax receipts, automated fee reminders, and bank reconciliation.</text>
+
+    <!-- Feature tags with pure SVG icons -->
+    <g transform="translate(0, 260)">
+      <!-- Tag 1 -->
+      <rect width="150" height="38" rx="8" fill="#112952" stroke="#1E40AF" />
+      <path d="M18 20 L23 25 L32 14" stroke="#60A5FA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+      <text x="40" y="24" font-family="'Inter', sans-serif" font-weight="500" font-size="13" fill="#FFFFFF">Direct UPI &amp; Cards</text>
+
+      <!-- Tag 2 -->
+      <rect x="165" width="165" height="38" rx="8" fill="#112952" stroke="#1E40AF" />
+      <path d="M180 25 L180 15 L190 15 L190 25 Z M183 15 L183 13 C183 11.5 187 11.5 187 13 L187 15" stroke="#60A5FA" stroke-width="1.8" fill="none" />
+      <text x="198" y="24" font-family="'Inter', sans-serif" font-weight="500" font-size="13" fill="#FFFFFF">Automated Receipts</text>
+
+      <!-- Tag 3 -->
+      <rect x="345" width="150" height="38" rx="8" fill="#112952" stroke="#1E40AF" />
+      <circle cx="360" cy="19" r="6" stroke="#60A5FA" stroke-width="1.8" fill="none" />
+      <path d="M360 16 L360 19 L363 21" stroke="#60A5FA" stroke-width="1.6" stroke-linecap="round" fill="none" />
+      <text x="375" y="24" font-family="'Inter', sans-serif" font-weight="500" font-size="13" fill="#FFFFFF">Zero Defaulters</text>
+    </g>
+  </g>
+
+  <!-- Right Visual: Clean Modern Fee Dashboard Panel -->
+  <g transform="translate(640, 60)" filter="url(#shadowFee)">
+    <rect width="490" height="470" rx="18" fill="url(#cardGradFee)" stroke="#E2E8F0" stroke-width="1.5" />
+    
+    <!-- Top Bar -->
+    <rect width="490" height="42" rx="18" fill="#0A2A5E" />
+    <rect y="26" width="490" height="16" fill="#0A2A5E" />
+    <circle cx="24" cy="21" r="5" fill="#EF4444" />
+    <circle cx="40" cy="21" r="5" fill="#F59E0B" />
+    <circle cx="56" cy="21" r="5" fill="#10B981" />
+    <rect x="120" y="11" width="260" height="20" rx="10" fill="#061B3D" />
+    <text x="160" y="25" font-family="'Inter', sans-serif" font-weight="500" font-size="11" fill="#93C5FD">schoolmate.opensoftwares.in/fees</text>
+
+    <!-- Metrics -->
+    <g transform="translate(25, 60)">
+      <rect width="135" height="80" rx="10" fill="#F0FDF4" stroke="#BBF7D0" />
+      <text x="16" y="26" font-family="'Inter', sans-serif" font-size="11" fill="#15803D" font-weight="600">Total Collected</text>
+      <text x="16" y="58" font-family="'Inter', sans-serif" font-size="22" fill="#065F46" font-weight="800">₹1.84 Cr</text>
+      <text x="16" y="73" font-family="'Inter', sans-serif" font-size="9" fill="#16A34A" font-weight="600">+18% vs last term</text>
+
+      <rect x="150" width="135" height="80" rx="10" fill="#EFF6FF" stroke="#BFDBFE" />
+      <text x="166" y="26" font-family="'Inter', sans-serif" font-size="11" fill="#1E40AF" font-weight="600">Online UPI Share</text>
+      <text x="166" y="58" font-family="'Inter', sans-serif" font-size="22" fill="#1E3A8A" font-weight="800">88.4%</text>
+      <text x="166" y="73" font-family="'Inter', sans-serif" font-size="9" fill="#2563EB" font-weight="600">Instant direct settlement</text>
+
+      <rect x="300" width="140" height="80" rx="10" fill="#FFFBEB" stroke="#FDE68A" />
+      <text x="316" y="26" font-family="'Inter', sans-serif" font-size="11" fill="#92400E" font-weight="600">Pending Dues</text>
+      <text x="316" y="58" font-family="'Inter', sans-serif" font-size="22" fill="#78350F" font-weight="800">₹8.2 Lakh</text>
+      <text x="316" y="73" font-family="'Inter', sans-serif" font-size="9" fill="#B45309" font-weight="600">Auto SMS active</text>
+    </g>
+
+    <!-- Recent Transactions Table -->
+    <g transform="translate(25, 160)">
+      <rect width="440" height="235" rx="12" fill="#FFFFFF" stroke="#E2E8F0" />
+      <text x="18" y="26" font-family="'Inter', sans-serif" font-size="12" fill="#0F172A" font-weight="700">REAL-TIME ONLINE FEE RECONCILIATION</text>
+      <line x1="18" y1="38" x2="422" y2="38" stroke="#F1F5F9" stroke-width="1.5" />
+
+      <!-- Row 1 -->
+      <g transform="translate(18, 55)">
+        <rect width="32" height="32" rx="8" fill="#EEF4FD" />
+        <path d="M9 16 L14 21 L23 11" stroke="#0A2A5E" stroke-width="2" stroke-linecap="round" fill="none" />
+        <text x="44" y="14" font-family="'Inter', sans-serif" font-size="12" fill="#0F172A" font-weight="700">Aarav Kulkarni — Grade 9B</text>
+        <text x="44" y="28" font-family="'Inter', sans-serif" font-size="10" fill="#64748B">Term-2 Tuition &amp; Bus Fee • PhonePe UPI</text>
+        <text x="330" y="14" font-family="'Inter', sans-serif" font-size="12" fill="#15803D" font-weight="700">₹14,500</text>
+        <text x="330" y="28" font-family="'Inter', sans-serif" font-size="9" fill="#64748B">#REC-8902</text>
+      </g>
+
+      <!-- Row 2 -->
+      <g transform="translate(18, 105)">
+        <rect width="32" height="32" rx="8" fill="#EEF4FD" />
+        <path d="M9 16 L14 21 L23 11" stroke="#0A2A5E" stroke-width="2" stroke-linecap="round" fill="none" />
+        <text x="44" y="14" font-family="'Inter', sans-serif" font-size="12" fill="#0F172A" font-weight="700">Sneha Patil — Grade 7A</text>
+        <text x="44" y="28" font-family="'Inter', sans-serif" font-size="10" fill="#64748B">Term-2 Tuition Fee • Google Pay UPI</text>
+        <text x="330" y="14" font-family="'Inter', sans-serif" font-size="12" fill="#15803D" font-weight="700">₹12,000</text>
+        <text x="330" y="28" font-family="'Inter', sans-serif" font-size="9" fill="#64748B">#REC-8903</text>
+      </g>
+
+      <!-- Row 3 -->
+      <g transform="translate(18, 155)">
+        <rect width="32" height="32" rx="8" fill="#EEF4FD" />
+        <path d="M9 16 L14 21 L23 11" stroke="#0A2A5E" stroke-width="2" stroke-linecap="round" fill="none" />
+        <text x="44" y="14" font-family="'Inter', sans-serif" font-size="12" fill="#0F172A" font-weight="700">Omkar Jadhav — Grade 11 Sci</text>
+        <text x="44" y="28" font-family="'Inter', sans-serif" font-size="10" fill="#64748B">Lab &amp; Annual Term Fee • Net Banking</text>
+        <text x="330" y="14" font-family="'Inter', sans-serif" font-size="12" fill="#15803D" font-weight="700">₹22,400</text>
+        <text x="330" y="28" font-family="'Inter', sans-serif" font-size="9" fill="#64748B">#REC-8904</text>
+      </g>
+
+      <!-- Bottom Status -->
+      <rect x="0" y="195" width="440" height="40" rx="0 0 12 12" fill="#F8FAFC" />
+      <text x="18" y="220" font-family="'Inter', sans-serif" font-size="10" fill="#0A2A5E" font-weight="600">● 100% Automatic Bank Reconciliation with Zero Discrepancy</text>
+    </g>
+  </g>
+</svg>
