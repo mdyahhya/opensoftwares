@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" fill="none">
+  <defs>
+    <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#071936" />
+      <stop offset="100%" stop-color="#0A2A5E" />
+    </linearGradient>
+    <filter id="mapShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="600" rx="24" fill="url(#bgGrad3)" />
+  <circle cx="1100" cy="500" r="260" fill="#38BDF8" opacity="0.08" />
+  <circle cx="200" cy="80" r="180" fill="#2563EB" opacity="0.08" />
+
+  <!-- Left Content -->
+  <g transform="translate(80, 110)">
+    <rect width="210" height="36" rx="18" fill="#1E3A8A" opacity="0.8" />
+    <circle cx="20" cy="18" r="6" fill="#F59E0B" />
+    <text x="36" y="23" font-family="'Inter', sans-serif" font-weight="600" font-size="13" fill="#FEF3C7" letter-spacing="0.5">GPS SMART TELEMETRY</text>
+
+    <text x="0" y="85" font-family="'Inter', sans-serif" font-weight="800" font-size="44" fill="#FFFFFF">Real-Time School</text>
+    <text x="0" y="140" font-family="'Inter', sans-serif" font-weight="800" font-size="44" fill="#F59E0B">Bus GPS Tracking</text>
+
+    <text x="0" y="188" font-family="'Inter', sans-serif" font-weight="400" font-size="17" fill="#CBD5E1">Live vehicle tracking, speed telemetry, geofence alerts, and</text>
+    <text x="0" y="214" font-family="'Inter', sans-serif" font-weight="400" font-size="17" fill="#CBD5E1">automatic pickup notifications give parents complete peace of mind.</text>
+
+    <g transform="translate(0, 260)">
+      <rect width="150" height="38" rx="8" fill="#0A2A5E" stroke="#1E40AF" />
+      <text x="18" y="24" font-family="'Inter', sans-serif" font-weight="500" font-size="14" fill="#FFFFFF">📍 Geofence Alerts</text>
+
+      <rect x="165" width="160" height="38" rx="8" fill="#0A2A5E" stroke="#1E40AF" />
+      <text x="183" y="24" font-family="'Inter', sans-serif" font-weight="500" font-size="14" fill="#FFFFFF">⚡ Over-speed Alert</text>
+
+      <rect x="340" width="150" height="38" rx="8" fill="#0A2A5E" stroke="#1E40AF" />
+      <text x="358" y="24" font-family="'Inter', sans-serif" font-weight="500" font-size="14" fill="#FFFFFF">🛡️ Driver SOS Key</text>
+    </g>
+  </g>
+
+  <!-- Right Visual: Stylized Map Card with Active Bus Route -->
+  <g transform="translate(630, 70)" filter="url(#mapShadow)">
+    <rect width="500" height="460" rx="20" fill="#0F172A" stroke="#334155" stroke-width="2" />
+    
+    <!-- Stylized Map Grid Lines -->
+    <path d="M 40 120 L 460 120 M 40 220 L 460 220 M 40 320 L 460 320 M 40 420 L 460 420" stroke="#1E293B" stroke-width="2" />
+    <path d="M 120 40 L 120 440 M 240 40 L 240 440 M 360 40 L 360 440" stroke="#1E293B" stroke-width="2" />
+
+    <!-- Roads -->
+    <path d="M 60 400 C 140 380, 180 280, 260 260 C 340 240, 380 140, 440 100" stroke="#334155" stroke-width="24" stroke-linecap="round" fill="none" />
+    <path d="M 60 400 C 140 380, 180 280, 260 260 C 340 240, 380 140, 440 100" stroke="#F59E0B" stroke-width="4" stroke-dasharray="8 8" fill="none" />
+
+    <!-- Traveled Route Line Highlight -->
+    <path d="M 60 400 C 140 380, 180 280, 260 260" stroke="#10B981" stroke-width="8" stroke-linecap="round" fill="none" />
+
+    <!-- Stops along the way -->
+    <!-- Stop 1: Finished -->
+    <circle cx="60" cy="400" r="14" fill="#10B981" />
+    <circle cx="60" cy="400" r="6" fill="#FFFFFF" />
+    <text x="30" y="435" font-family="'Inter', sans-serif" font-size="11" fill="#94A3B8" font-weight="600">Bus Depot</text>
+
+    <!-- Stop 2: Active Bus Position -->
+    <g transform="translate(260, 260)">
+      <circle cx="0" cy="0" r="32" fill="#F59E0B" opacity="0.25">
+        <animate attributeName="r" values="24;36;24" dur="2s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.35;0.1;0.35" dur="2s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="0" cy="0" r="18" fill="#F59E0B" />
+      <!-- Bus Mini Icon -->
+      <text x="-9" y="6" font-family="'Inter', sans-serif" font-size="16">🚌</text>
+    </g>
+
+    <!-- Stop 3: Target Stop -->
+    <circle cx="440" cy="100" r="14" fill="#3B82F6" />
+    <circle cx="440" cy="100" r="6" fill="#FFFFFF" />
+    <text x="390" y="80" font-family="'Inter', sans-serif" font-size="12" fill="#93C5FD" font-weight="700">School Main Gate</text>
+
+    <!-- Overlay Telemetry Floating Card -->
+    <rect x="30" y="30" width="300" height="90" rx="14" fill="#0A2A5E" opacity="0.95" stroke="#1E40AF" />
+    <circle cx="55" cy="65" r="18" fill="#F59E0B" />
+    <text x="47" y="70" font-family="'Inter', sans-serif" font-size="14">🚍</text>
+    <text x="85" y="58" font-family="'Inter', sans-serif" font-size="13" fill="#FFFFFF" font-weight="700">Bus MH-12-AQ-8842</text>
+    <text x="85" y="76" font-family="'Inter', sans-serif" font-size="11" fill="#93C5FD">Speed: 38 km/h • On Safe Schedule</text>
+    <text x="85" y="96" font-family="'Inter', sans-serif" font-size="11" fill="#34D399" font-weight="600">● 4.2 km to School (8 mins)</text>
+
+    <!-- Bottom Stat Pill -->
+    <rect x="30" y="380" width="220" height="50" rx="12" fill="#1E293B" stroke="#475569" />
+    <text x="45" y="402" font-family="'Inter', sans-serif" font-size="11" fill="#94A3B8">Driver</text>
+    <text x="45" y="420" font-family="'Inter', sans-serif" font-size="13" fill="#F8FAFC" font-weight="700">Ramesh Shinde</text>
+    <rect x="180" y="392" width="55" height="26" rx="6" fill="#10B981" />
+    <text x="190" y="409" font-family="'Inter', sans-serif" font-size="11" fill="#FFFFFF" font-weight="700">Call</text>
+  </g>
+</svg>

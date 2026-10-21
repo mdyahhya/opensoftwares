@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" fill="none">
+  <defs>
+    <linearGradient id="bgGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E3A5E" />
+      <stop offset="100%" stop-color="#0A2A5E" />
+    </linearGradient>
+    <filter id="classShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="600" rx="24" fill="url(#bgGrad4)" />
+  <circle cx="1000" cy="120" r="240" fill="#06B6D4" opacity="0.1" />
+  <circle cx="200" cy="450" r="220" fill="#3B82F6" opacity="0.08" />
+
+  <!-- Left Content -->
+  <g transform="translate(80, 110)">
+    <rect width="210" height="36" rx="18" fill="#155E75" opacity="0.8" />
+    <circle cx="20" cy="18" r="6" fill="#22D3EE" />
+    <text x="36" y="23" font-family="'Inter', sans-serif" font-weight="600" font-size="13" fill="#CFFAFE" letter-spacing="0.5">SMART CLASSROOMS</text>
+
+    <text x="0" y="85" font-family="'Inter', sans-serif" font-weight="800" font-size="44" fill="#FFFFFF">Future-Ready</text>
+    <text x="0" y="140" font-family="'Inter', sans-serif" font-weight="800" font-size="44" fill="#38BDF8">Digital Learning</text>
+
+    <text x="0" y="188" font-family="'Inter', sans-serif" font-weight="400" font-size="17" fill="#CBD5E1">Empower teachers with digital gradebooks, automated timetable</text>
+    <text x="0" y="214" font-family="'Inter', sans-serif" font-weight="400" font-size="17" fill="#CBD5E1">generators, student remarks, and interactive digital assignments.</text>
+
+    <g transform="translate(0, 260)">
+      <rect width="165" height="38" rx="8" fill="#0C4A6E" />
+      <text x="18" y="24" font-family="'Inter', sans-serif" font-weight="500" font-size="14" fill="#FFFFFF">📅 AI Timetable Gen</text>
+
+      <rect x="180" width="165" height="38" rx="8" fill="#0C4A6E" />
+      <text x="198" y="24" font-family="'Inter', sans-serif" font-weight="500" font-size="14" fill="#FFFFFF">🎓 CBSE Gradebooks</text>
+
+      <rect x="360" width="145" height="38" rx="8" fill="#0C4A6E" />
+      <text x="378" y="24" font-family="'Inter', sans-serif" font-weight="500" font-size="14" fill="#FFFFFF">📝 Online Exams</text>
+    </g>
+  </g>
+
+  <!-- Right Visual: Interactive Tablet / Board Preview -->
+  <g transform="translate(640, 70)" filter="url(#classShadow)">
+    <rect width="490" height="460" rx="20" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2" />
+
+    <!-- Top Tablet Bar -->
+    <rect width="490" height="50" rx="20" fill="#0A2A5E" />
+    <rect y="30" width="490" height="20" fill="#0A2A5E" />
+    <text x="24" y="32" font-family="'Inter', sans-serif" font-size="14" fill="#FFFFFF" font-weight="700">Class 9th (Sec A) • Mathematics</text>
+    <rect x="360" y="13" width="110" height="24" rx="12" fill="#0284C7" />
+    <text x="375" y="29" font-family="'Inter', sans-serif" font-size="11" fill="#FFFFFF" font-weight="600">Period 3 (Ongoing)</text>
+
+    <!-- Content: Teacher Gradebook & Assignment Matrix -->
+    <g transform="translate(25, 75)">
+      <text x="0" y="20" font-family="'Inter', sans-serif" font-size="15" fill="#0F172A" font-weight="800">Weekly Subject Progress</text>
+
+      <!-- Grade Cards -->
+      <g transform="translate(0, 35)">
+        <rect width="135" height="85" rx="10" fill="#F0FDF4" stroke="#BBF7D0" />
+        <text x="14" y="25" font-family="'Inter', sans-serif" font-size="11" fill="#15803D" font-weight="600">Avg. Attendance</text>
+        <text x="14" y="58" font-family="'Inter', sans-serif" font-size="24" fill="#166534" font-weight="800">97.2%</text>
+        <text x="14" y="75" font-family="'Inter', sans-serif" font-size="10" fill="#16A34A">▲ 2.1% from last mo</text>
+
+        <rect x="150" width="135" height="85" rx="10" fill="#EFF6FF" stroke="#BFDBFE" />
+        <text x="164" y="25" font-family="'Inter', sans-serif" font-size="11" fill="#1D4ED8" font-weight="600">Assignments Done</text>
+        <text x="164" y="58" font-family="'Inter', sans-serif" font-size="24" fill="#1E40AF" font-weight="800">94%</text>
+        <text x="164" y="75" font-family="'Inter', sans-serif" font-size="10" fill="#2563EB">38/40 Submitted</text>
+
+        <rect x="300" width="140" height="85" rx="10" fill="#FAF5FF" stroke="#E9D5FF" />
+        <text x="314" y="25" font-family="'Inter', sans-serif" font-size="11" fill="#7E22CE" font-weight="600">Term Average</text>
+        <text x="314" y="58" font-family="'Inter', sans-serif" font-size="24" fill="#581C87" font-weight="800">A+ (91%)</text>
+        <text x="314" y="75" font-family="'Inter', sans-serif" font-size="10" fill="#9333EA">Top in Division</text>
+      </g>
+
+      <!-- Assignment Tasks Checklist Table -->
+      <g transform="translate(0, 145)">
+        <rect width="440" height="190" rx="12" fill="#F8FAFC" stroke="#E2E8F0" />
+        <text x="16" y="25" font-family="'Inter', sans-serif" font-size="12" fill="#64748B" font-weight="700">TODAY'S SYLLABUS &amp; HOMEWORK</text>
+
+        <!-- Item 1 -->
+        <circle cx="28" cy="55" r="9" fill="#10B981" />
+        <text x="25" y="58" font-family="'Inter', sans-serif" font-size="9" fill="#FFFFFF">✓</text>
+        <text x="48" y="59" font-family="'Inter', sans-serif" font-size="12" fill="#0F172A" font-weight="600">Quadratic Equations (Exercise 4.2 completed)</text>
+
+        <!-- Item 2 -->
+        <circle cx="28" cy="95" r="9" fill="#10B981" />
+        <text x="25" y="98" font-family="'Inter', sans-serif" font-size="9" fill="#FFFFFF">✓</text>
+        <text x="48" y="99" font-family="'Inter', sans-serif" font-size="12" fill="#0F172A" font-weight="600">Digital Quiz uploaded to Student App</text>
+
+        <!-- Item 3 -->
+        <circle cx="28" cy="135" r="9" fill="#F59E0B" />
+        <text x="25" y="138" font-family="'Inter', sans-serif" font-size="10" fill="#FFFFFF">•</text>
+        <text x="48" y="139" font-family="'Inter', sans-serif" font-size="12" fill="#0F172A" font-weight="600">Circulate Term-1 Hall Tickets via SMS &amp; App</text>
+
+        <!-- Item 4 -->
+        <circle cx="28" cy="170" r="9" fill="#60A5FA" />
+        <text x="25" y="173" font-family="'Inter', sans-serif" font-size="10" fill="#FFFFFF">→</text>
+        <text x="48" y="174" font-family="'Inter', sans-serif" font-size="12" fill="#475569" font-weight="500">Parent feedback collection opens at 4 PM</text>
+      </g>
+    </g>
+  </g>
+</svg>

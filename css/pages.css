@@ -1,0 +1,495 @@
+/* ==========================================================================
+   Page Specific Styles (css/pages.css)
+   About Us, SchoolMate Deep-Dive, Contact & Demo Request
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Page Hero Banner (Shared across internal pages)
+   -------------------------------------------------------------------------- */
+.page-hero {
+  padding-top: 4.5rem;
+  padding-bottom: 3.5rem;
+  background: radial-gradient(circle at 50% 0%, #F0F6FF 0%, #FFFFFF 85%);
+  text-align: center;
+  position: relative;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.page-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.page-hero h1 {
+  margin-bottom: 1rem;
+}
+
+.page-hero p {
+  font-size: 1.15rem;
+  color: #475569;
+}
+
+/* --------------------------------------------------------------------------
+   2. About Page Specifics
+   -------------------------------------------------------------------------- */
+.statement-callout {
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+  color: #FFFFFF;
+  border-radius: var(--radius-xl);
+  padding: 3.5rem 3rem;
+  text-align: center;
+  margin: 3.5rem 0;
+  box-shadow: var(--shadow-xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.statement-callout::before {
+  content: '“';
+  position: absolute;
+  top: -20px;
+  left: 30px;
+  font-size: 10rem;
+  font-family: Georgia, serif;
+  color: rgba(255, 255, 255, 0.08);
+  pointer-events: none;
+}
+
+.statement-callout p {
+  font-size: clamp(1.25rem, 2.4vw, 1.7rem);
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.45;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+/* Mission & Vision */
+.mission-vision-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  margin: 3rem 0;
+}
+
+.mv-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+}
+
+.mv-card-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-lg);
+  background-color: var(--color-primary-tint);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.mv-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Timeline */
+.timeline-container {
+  position: relative;
+  max-width: 800px;
+  margin: 3rem auto 0 auto;
+  padding-left: 2.5rem;
+}
+
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 10px;
+  width: 3px;
+  background-color: var(--color-primary-tint);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -2.5rem;
+  top: 4px;
+  width: 22px;
+  height: 22px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-primary);
+  border: 4px solid #FFFFFF;
+  box-shadow: 0 0 0 3px rgba(10, 42, 94, 0.2);
+}
+
+.timeline-year {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  background-color: var(--color-primary-tint);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 1.8rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.timeline-card h4 {
+  font-size: 1.15rem;
+  margin-bottom: 0.4rem;
+}
+
+@media (max-width: 768px) {
+  .mission-vision-grid { grid-template-columns: 1fr; }
+}
+
+/* --------------------------------------------------------------------------
+   3. SchoolMate Product Page Specifics
+   -------------------------------------------------------------------------- */
+.feature-split-section {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: 4rem;
+  padding: 3.5rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.feature-split-section.reverse {
+  grid-template-columns: 1fr 1.1fr;
+}
+
+.feature-split-section.reverse .split-content {
+  order: 2;
+}
+
+.feature-split-section.reverse .split-visual {
+  order: 1;
+}
+
+.split-content h2 {
+  font-size: clamp(1.8rem, 3vw, 2.3rem);
+  margin-bottom: 1rem;
+}
+
+.split-feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.75rem;
+}
+
+.split-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.split-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-primary-tint);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 1.1rem;
+}
+
+.split-visual {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--color-border);
+  background-color: #FFFFFF;
+}
+
+@media (max-width: 960px) {
+  .feature-split-section,
+  .feature-split-section.reverse {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .feature-split-section.reverse .split-content { order: 1; }
+  .feature-split-section.reverse .split-visual { order: 2; }
+}
+
+/* FAQ Accordion */
+.faq-container {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faq-item {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background-color: #FFFFFF;
+  overflow: hidden;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.faq-item.active {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-md);
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.4rem 1.6rem;
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  background-color: #FFFFFF;
+  cursor: pointer;
+}
+
+.faq-question:hover {
+  color: var(--color-primary);
+}
+
+.faq-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-bg-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: transform var(--transition-normal), background-color var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+  background-color: var(--color-primary-tint);
+  color: var(--color-primary);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease-out, padding 0.35s ease-out;
+  padding: 0 1.6rem;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 400px;
+  padding: 0 1.6rem 1.4rem 1.6rem;
+}
+
+/* --------------------------------------------------------------------------
+   4. Contact Page Specifics & Interactive Form
+   -------------------------------------------------------------------------- */
+.contact-layout-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 3.5rem;
+  align-items: flex-start;
+}
+
+.contact-card-box {
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-lg);
+}
+
+.form-group {
+  margin-bottom: 1.4rem;
+  position: relative;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+@media (max-width: 600px) {
+  .form-row { grid-template-columns: 1fr; }
+}
+
+.form-label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1E293B;
+  margin-bottom: 0.45rem;
+}
+
+.form-label .required {
+  color: #EF4444;
+  margin-left: 2px;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-size: 0.95rem;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(10, 42, 94, 0.12);
+}
+
+.form-input.is-invalid,
+.form-select.is-invalid,
+.form-textarea.is-invalid {
+  border-color: #EF4444;
+  background-color: #FEF2F2;
+}
+
+.form-error {
+  display: none;
+  font-size: 0.8rem;
+  color: #EF4444;
+  margin-top: 0.35rem;
+  font-weight: 500;
+}
+
+.form-input.is-invalid + .form-error,
+.form-select.is-invalid + .form-error,
+.form-textarea.is-invalid + .form-error {
+  display: block;
+}
+
+.form-success-banner {
+  display: none;
+  background-color: #ECFDF5;
+  border: 1px solid #A7F3D0;
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  text-align: center;
+  color: #065F46;
+  margin-bottom: 1.5rem;
+  animation: fadeIn 0.4s ease-out;
+}
+
+.form-success-banner.active {
+  display: block;
+}
+
+/* Contact Details Info Sidebar */
+.contact-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-info-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-method {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-method:last-child {
+  margin-bottom: 0;
+}
+
+.contact-icon-wrapper {
+  width: 46px;
+  height: 46px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-primary-tint);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.contact-method-detail h4 {
+  font-size: 1rem;
+  color: #0F172A;
+  margin-bottom: 0.2rem;
+}
+
+.contact-method-detail p,
+.contact-method-detail a {
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+}
+
+.contact-method-detail a:hover {
+  color: var(--color-primary);
+}
+
+/* Map Placeholder / Card */
+.contact-map-card {
+  background-color: #0A2A5E;
+  color: #FFFFFF;
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.map-svg-placeholder {
+  width: 100%;
+  height: 180px;
+  margin-top: 1rem;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 960px) {
+  .contact-layout-grid { grid-template-columns: 1fr; }
+}
