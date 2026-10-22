@@ -388,6 +388,8 @@ body.home-page { padding-top: 0; }
 .app-section {
   background-color: var(--paper);
   overflow: hidden;
+  padding-top: clamp(36px, 4.5vw, 56px);
+  padding-bottom: clamp(48px, 6vw, 72px);
 }
 
 /* "Coming Soon on Google Play" notice */
@@ -592,7 +594,7 @@ body.home-page { padding-top: 0; }
   background: #1a1e28;
   border-radius: 10px;
   overflow: hidden;
-  height: 450px;
+  height: 390px;
   position: relative;
 }
 
@@ -852,9 +854,12 @@ body.home-page { padding-top: 0; }
 
 /* ---- Screen: Bus Tracking (Clean High-Contrast GPS Navigation) ---- */
 .screen-bus {
-  background: #EEF2F6;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: #DCE5ED;
   padding: 0;
-  position: relative;
   overflow: hidden;
 }
 .bus-top-bar {
@@ -1037,6 +1042,7 @@ body.home-page { padding-top: 0; }
   border-top: 1px solid var(--line);
   padding: 6px 0 4px;
   position: relative;
+  z-index: 10;
   flex-shrink: 0;
 }
 

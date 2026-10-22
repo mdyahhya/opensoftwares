@@ -411,10 +411,9 @@ em.serif {
   }
 }
 
-/* Dark midnight backgrounds: invert(1) + mix-blend-mode: screen turns black mark white and vanishes black bg */
+/* Dark midnight backgrounds: brightness(0) invert(1) turns dark mark pure crisp white while keeping transparency */
 .brand-logo-darkmode {
-  filter: invert(1);
-  mix-blend-mode: screen;
+  filter: brightness(0) invert(1);
 }
 
 /* Fallback rounded tile if ever needed */
