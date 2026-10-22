@@ -127,10 +127,11 @@ ul, ol { list-style: none; }
 /* --------------------------------------------------------------------------
    4. SVG Icon System (1.5px stroke, round caps, ink colour)
    -------------------------------------------------------------------------- */
-.icon {
+.icon, .svg-icon {
   display: inline-block;
   width: 24px;
   height: 24px;
+  max-width: 100%;
   flex-shrink: 0;
   vertical-align: middle;
   stroke: currentColor;
@@ -139,9 +140,22 @@ ul, ol { list-style: none; }
   stroke-linejoin: round;
   fill: none;
 }
-.icon-sm { width: 18px; height: 18px; }
-.icon-lg { width: 28px; height: 28px; }
-.icon-filled { fill: currentColor; stroke: none; }
+.icon-sm, .svg-icon-sm { width: 18px; height: 18px; max-width: 18px; }
+.icon-md, .svg-icon-md { width: 24px; height: 24px; max-width: 24px; }
+.icon-lg, .svg-icon-lg { width: 28px; height: 28px; max-width: 28px; }
+.icon-filled, .svg-icon-filled { fill: currentColor; stroke: none; }
+
+/* Ensure floating action buttons never overflow their icons */
+.floating-btn svg,
+.floating-btn .icon,
+.floating-btn .svg-icon {
+  width: 24px !important;
+  height: 24px !important;
+  max-width: 24px !important;
+  max-height: 24px !important;
+  display: block;
+  flex-shrink: 0;
+}
 
 /* --------------------------------------------------------------------------
    5. Accessibility
@@ -1226,4 +1240,54 @@ body.splash-locked {
   .site-splash {
     transition: opacity 0.4s ease !important;
   }
+}
+
+/* Additional Footer Helpers (schoolmate & contact) */
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: var(--s6);
+  padding-bottom: var(--s7);
+  border-bottom: 1px solid var(--line-light);
+  margin-bottom: var(--s4);
+}
+@media (max-width: 900px) {
+  .footer-top { grid-template-columns: 1fr 1fr; gap: var(--s4); }
+}
+@media (max-width: 600px) {
+  .footer-top { grid-template-columns: 1fr; }
+}
+.footer-brand-col p {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.6;
+  max-width: 320px;
+  margin: var(--s3) 0;
+}
+.footer-col h3 {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  margin-bottom: var(--s2);
+}
+.footer-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 8px;
+}
+.footer-contact-item a { color: inherit; text-decoration: none; transition: color var(--dur-fast); }
+.footer-contact-item a:hover { color: #fff; }
+.footer-contact-item svg,
+.footer-contact-item .svg-icon,
+.footer-contact-item .icon {
+  width: 16px !important;
+  height: 16px !important;
+  min-width: 16px;
+  color: var(--saffron);
 }
