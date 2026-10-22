@@ -1,118 +1,103 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600" fill="none">
   <defs>
-    <linearGradient id="bgGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0A2A5E" />
-      <stop offset="100%" stop-color="#07193A" />
-    </linearGradient>
-    <linearGradient id="cardGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#FFFFFF" />
-      <stop offset="100%" stop-color="#F8FAFC" />
-    </linearGradient>
-    <filter id="shadow1" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.3" />
+    <filter id="cardShadowAdm" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#0A2A5E" flood-opacity="0.08" />
     </filter>
+    <linearGradient id="ringGradAdm" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
   </defs>
 
-  <!-- Background -->
-  <rect width="1200" height="600" rx="24" fill="url(#bgGrad1)" />
-  <circle cx="1100" cy="80" r="280" fill="#2563EB" opacity="0.14" />
-  <circle cx="100" cy="500" r="200" fill="#38BDF8" opacity="0.08" />
+  <!-- Card Background: Clean White / Paper -->
+  <rect width="600" height="600" rx="24" fill="#FFFFFF" />
+  <rect x="1" y="1" width="598" height="598" rx="23" stroke="#E2E8F0" stroke-width="2" />
 
-  <!-- Left Content: Typography & Highlights -->
-  <g transform="translate(80, 100)">
-    <!-- Pill Badge -->
-    <rect width="190" height="34" rx="17" fill="#1E40AF" opacity="0.85" />
-    <circle cx="20" cy="17" r="5" fill="#34D399" />
-    <text x="36" y="22" font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-weight="600" font-size="12" fill="#E0E7FF" letter-spacing="0.5">INSTITUTION ERP</text>
+  <!-- Subtle Top Decorative Accent -->
+  <path d="M0 24 C0 10.7 10.7 0 24 0 L576 0 C589.3 0 600 10.7 600 24 L600 6 L0 6 Z" fill="#E8A317" />
+
+  <!-- Content Header -->
+  <g transform="translate(40, 36)">
+    <!-- Badge -->
+    <rect width="175" height="28" rx="14" fill="#EFF6FF" stroke="#BFDBFE" />
+    <circle cx="16" cy="14" r="4" fill="#2563EB" />
+    <text x="28" y="18" font-family="'Inter', -apple-system, sans-serif" font-weight="700" font-size="11" fill="#1E40AF" letter-spacing="0.6">SMART ATTENDANCE</text>
 
     <!-- Main Title -->
-    <text x="0" y="85" font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-weight="800" font-size="44" fill="#FFFFFF">Unified School</text>
-    <text x="0" y="140" font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-weight="800" font-size="44" fill="#60A5FA">Administration</text>
+    <text x="0" y="66" font-family="'Inter', -apple-system, sans-serif" font-weight="800" font-size="28" fill="#0B1630">Student &amp; Staff Attendance</text>
 
     <!-- Subtitle -->
-    <text x="0" y="188" font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-weight="400" font-size="17" fill="#CBD5E1">Automate admissions, fee collection, staff payroll, and daily</text>
-    <text x="0" y="214" font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-weight="400" font-size="17" fill="#CBD5E1">operations with zero paperwork across all branches.</text>
-
-    <!-- Feature tags (Pure SVG icons) -->
-    <g transform="translate(0, 260)">
-      <!-- Tag 1 -->
-      <rect width="145" height="38" rx="8" fill="#112952" stroke="#1E40AF" />
-      <path d="M18 16 L25 16 L21 21 L28 21 L19 28 L22 22 L17 22 Z" stroke="#60A5FA" stroke-width="1.6" fill="none" />
-      <text x="36" y="24" font-family="'Inter', sans-serif" font-weight="500" font-size="13" fill="#FFFFFF">Real-time Sync</text>
-
-      <!-- Tag 2 -->
-      <rect x="160" width="160" height="38" rx="8" fill="#112952" stroke="#1E40AF" />
-      <path d="M176 26 L176 20 M182 26 L182 16 M188 26 L188 22" stroke="#60A5FA" stroke-width="2" stroke-linecap="round" fill="none" />
-      <text x="198" y="24" font-family="'Inter', sans-serif" font-weight="500" font-size="13" fill="#FFFFFF">Biometric Staff</text>
-
-      <!-- Tag 3 -->
-      <rect x="335" width="155" height="38" rx="8" fill="#112952" stroke="#1E40AF" />
-      <path d="M352 16 L359 13 L366 16 C366 22 359 26 359 26 C359 26 352 22 352 16 Z" stroke="#60A5FA" stroke-width="1.8" fill="none" />
-      <text x="374" y="24" font-family="'Inter', sans-serif" font-weight="500" font-size="13" fill="#FFFFFF">Bank-grade Data</text>
-    </g>
+    <text x="0" y="96" font-family="'Inter', -apple-system, sans-serif" font-weight="400" font-size="14" fill="#64748B">Biometric sync, automated WhatsApp alerts &amp; CBSE register</text>
   </g>
 
-  <!-- Right Visual: Modern Dashboard Screen Mockup -->
-  <g transform="translate(630, 60)" filter="url(#shadow1)">
-    <!-- Main Window Frame -->
-    <rect width="500" height="470" rx="18" fill="url(#cardGrad1)" stroke="#E2E8F0" stroke-width="1.5" />
-    
-    <!-- Top Bar -->
-    <rect width="500" height="42" rx="18" fill="#0A2A5E" />
-    <rect y="26" width="500" height="16" fill="#0A2A5E" />
-    <circle cx="24" cy="21" r="5" fill="#EF4444" />
-    <circle cx="40" cy="21" r="5" fill="#F59E0B" />
-    <circle cx="56" cy="21" r="5" fill="#10B981" />
-    <rect x="120" y="11" width="270" height="20" rx="10" fill="#061B3D" />
-    <text x="165" y="25" font-family="'Inter', sans-serif" font-weight="500" font-size="11" fill="#93C5FD">schoolmate.opensoftwares.in/erp</text>
+  <!-- Interactive Dashboard Mockup Card -->
+  <g transform="translate(40, 160)" filter="url(#cardShadowAdm)">
+    <!-- Container -->
+    <rect width="520" height="390" rx="18" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5" />
 
-    <!-- Dashboard Content -->
-    <!-- Metric 1 -->
-    <rect x="25" y="65" width="135" height="80" rx="10" fill="#F1F5F9" />
-    <text x="38" y="90" font-family="'Inter', sans-serif" font-size="11" fill="#64748B" font-weight="500">Total Students</text>
-    <text x="38" y="125" font-family="'Inter', sans-serif" font-size="24" fill="#0F172A" font-weight="800">2,480</text>
-    <text x="105" y="125" font-family="'Inter', sans-serif" font-size="11" fill="#10B981" font-weight="600">+98%</text>
+    <!-- Card Top Header -->
+    <rect width="520" height="54" rx="18" fill="#FFFFFF" />
+    <line x1="0" y1="54" x2="520" y2="54" stroke="#E2E8F0" stroke-width="1" />
+    <circle cx="28" cy="27" r="14" fill="#EFF6FF" />
+    <text x="28" y="32" font-family="'Inter', sans-serif" font-size="13" font-weight="700" fill="#2563EB" text-anchor="middle">📅</text>
+    <text x="54" y="25" font-family="'Inter', sans-serif" font-size="14" font-weight="700" fill="#0B1630">Daily Attendance Overview</text>
+    <text x="54" y="42" font-family="'Inter', sans-serif" font-size="11" font-weight="500" fill="#64748B">Today • Class I to XII &bull; 42 Sections</text>
 
-    <!-- Metric 2 -->
-    <rect x="175" y="65" width="135" height="80" rx="10" fill="#EFF6FF" />
-    <text x="188" y="90" font-family="'Inter', sans-serif" font-size="11" fill="#3B82F6" font-weight="500">Fees Collected</text>
-    <text x="188" y="125" font-family="'Inter', sans-serif" font-size="22" fill="#1E3A8A" font-weight="800">₹48.6 L</text>
+    <rect x="400" y="16" width="104" height="26" rx="13" fill="#DCFCE7" />
+    <circle cx="414" cy="29" r="3.5" fill="#16A34A" />
+    <text x="424" y="33" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#15803D">LIVE SYNCED</text>
 
-    <!-- Metric 3 -->
-    <rect x="325" y="65" width="150" height="80" rx="10" fill="#ECFDF5" />
-    <text x="338" y="90" font-family="'Inter', sans-serif" font-size="11" fill="#059669" font-weight="500">Staff Attendance</text>
-    <text x="338" y="125" font-family="'Inter', sans-serif" font-size="24" fill="#065F46" font-weight="800">96.4%</text>
+    <!-- Metrics Row -->
+    <g transform="translate(24, 76)">
+      <!-- Present Metric -->
+      <rect width="144" height="84" rx="12" fill="#FFFFFF" stroke="#E2E8F0" />
+      <text x="16" y="26" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#64748B">PRESENT</text>
+      <text x="16" y="58" font-family="'Inter', sans-serif" font-size="28" font-weight="800" fill="#059669">1,248</text>
+      <text x="16" y="74" font-family="'Inter', sans-serif" font-size="10" font-weight="600" fill="#10B981">96.4% of total</text>
 
-    <!-- Chart Representation -->
-    <rect x="25" y="165" width="285" height="150" rx="10" fill="#FFFFFF" stroke="#E2E8F0" />
-    <text x="40" y="190" font-family="'Inter', sans-serif" font-size="12" fill="#0F172A" font-weight="600">Monthly Revenue &amp; Collections</text>
-    <path d="M 45 285 L 85 250 L 130 265 L 180 220 L 230 235 L 280 195 L 300 210" fill="none" stroke="#2563EB" stroke-width="3" stroke-linecap="round" />
-    <circle cx="280" cy="195" r="5" fill="#2563EB" />
+      <!-- Absent Metric -->
+      <rect x="162" width="144" height="84" rx="12" fill="#FFFFFF" stroke="#E2E8F0" />
+      <text x="178" y="26" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#64748B">ABSENT</text>
+      <text x="178" y="58" font-family="'Inter', sans-serif" font-size="28" font-weight="800" fill="#DC2626">38</text>
+      <text x="178" y="74" font-family="'Inter', sans-serif" font-size="10" font-weight="600" fill="#EF4444">SMS Dispatched</text>
 
-    <!-- Staff List Panel -->
-    <rect x="325" y="165" width="150" height="150" rx="10" fill="#FFFFFF" stroke="#E2E8F0" />
-    <text x="338" y="188" font-family="'Inter', sans-serif" font-size="12" fill="#0F172A" font-weight="600">Pending Actions</text>
-    <rect x="338" y="202" width="124" height="24" rx="6" fill="#FEF3C7" />
-    <text x="346" y="218" font-family="'Inter', sans-serif" font-size="10" fill="#92400E" font-weight="600">12 Fee Approvals</text>
-    <rect x="338" y="234" width="124" height="24" rx="6" fill="#F1F5F9" />
-    <text x="346" y="250" font-family="'Inter', sans-serif" font-size="10" fill="#475569" font-weight="600">4 Leave Requests</text>
-    <rect x="338" y="266" width="124" height="24" rx="6" fill="#EFF6FF" />
-    <text x="346" y="282" font-family="'Inter', sans-serif" font-size="10" fill="#1E40AF" font-weight="600">CBSE Report Sync</text>
+      <!-- On Leave Metric -->
+      <rect x="324" width="148" height="84" rx="12" fill="#FFFFFF" stroke="#E2E8F0" />
+      <text x="340" y="26" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#64748B">ON LEAVE</text>
+      <text x="340" y="58" font-family="'Inter', sans-serif" font-size="28" font-weight="800" fill="#D97706">12</text>
+      <text x="340" y="74" font-family="'Inter', sans-serif" font-size="10" font-weight="600" fill="#F59E0B">Pre-approved</text>
+    </g>
 
-    <!-- Bottom Table Preview -->
-    <rect x="25" y="330" width="450" height="110" rx="10" fill="#F8FAFC" stroke="#E2E8F0" />
-    <text x="40" y="355" font-family="'Inter', sans-serif" font-size="11" fill="#475569" font-weight="700">RECENT STUDENT ADMISSIONS</text>
-    <!-- Row 1 -->
-    <circle cx="48" cy="378" r="10" fill="#DBEAFE" />
-    <text x="44" y="382" font-family="'Inter', sans-serif" font-size="10" fill="#1E40AF" font-weight="700">A</text>
-    <text x="68" y="382" font-family="'Inter', sans-serif" font-size="11" fill="#0F172A" font-weight="600">Aarav Kulkarni — Grade 8-B</text>
-    <rect x="370" y="370" width="85" height="18" rx="9" fill="#DCFCE7" />
-    <text x="382" y="383" font-family="'Inter', sans-serif" font-size="9" fill="#166534" font-weight="700">Verified</text>
-    <!-- Row 2 -->
-    <circle cx="48" cy="410" r="10" fill="#FCE7F3" />
-    <text x="44" y="414" font-family="'Inter', sans-serif" font-size="10" fill="#9D174D" font-weight="700">S</text>
-    <text x="68" y="414" font-family="'Inter', sans-serif" font-size="11" fill="#0F172A" font-weight="600">Sneha Patil — Grade 10-A</text>
-    <rect x="370" y="402" width="85" height="18" rx="9" fill="#DCFCE7" />
-    <text x="382" y="415" font-family="'Inter', sans-serif" font-size="9" fill="#166534" font-weight="700">Verified</text>
+    <!-- Student Attendance List Snippet -->
+    <g transform="translate(24, 180)">
+      <text x="0" y="14" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#0B1630">Recent Class X-A Updates</text>
+
+      <!-- Row 1 -->
+      <rect y="24" width="472" height="42" rx="8" fill="#FFFFFF" stroke="#E2E8F0" />
+      <circle cx="24" cy="45" r="12" fill="#EFF6FF" />
+      <text x="24" y="49" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#1E40AF" text-anchor="middle">AA</text>
+      <text x="46" y="44" font-family="'Inter', sans-serif" font-size="12" font-weight="600" fill="#0B1630">Aanya Agarwal &bull; Roll 14</text>
+      <text x="46" y="57" font-family="'Inter', sans-serif" font-size="9" fill="#64748B">Biometric In: 8:02 AM</text>
+      <rect x="390" y="34" width="70" height="22" rx="11" fill="#DCFCE7" />
+      <text x="425" y="49" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#15803D" text-anchor="middle">Present</text>
+
+      <!-- Row 2 -->
+      <rect y="74" width="472" height="42" rx="8" fill="#FFFFFF" stroke="#E2E8F0" />
+      <circle cx="24" cy="95" r="12" fill="#FEF3C7" />
+      <text x="24" y="99" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#92400E" text-anchor="middle">RK</text>
+      <text x="46" y="94" font-family="'Inter', sans-serif" font-size="12" font-weight="600" fill="#0B1630">Rohan Kulkarni &bull; Roll 22</text>
+      <text x="46" y="107" font-family="'Inter', sans-serif" font-size="9" fill="#64748B">Absent &bull; Automated parent SMS sent</text>
+      <rect x="390" y="84" width="70" height="22" rx="11" fill="#FEE2E2" />
+      <text x="425" y="99" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#B91C1C" text-anchor="middle">Absent</text>
+
+      <!-- Row 3 -->
+      <rect y="124" width="472" height="42" rx="8" fill="#FFFFFF" stroke="#E2E8F0" />
+      <circle cx="24" cy="145" r="12" fill="#F3E8FF" />
+      <text x="24" y="149" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#6B21A8" text-anchor="middle">SP</text>
+      <text x="46" y="144" font-family="'Inter', sans-serif" font-size="12" font-weight="600" fill="#0B1630">Sneha Patil &bull; Roll 28</text>
+      <text x="46" y="157" font-family="'Inter', sans-serif" font-size="9" fill="#64748B">Biometric In: 8:07 AM</text>
+      <rect x="390" y="134" width="70" height="22" rx="11" fill="#DCFCE7" />
+      <text x="425" y="149" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#15803D" text-anchor="middle">Present</text>
+    </g>
   </g>
 </svg>

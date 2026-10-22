@@ -60,21 +60,21 @@ body.home-page { padding-top: 0; }
 .hero-slider-card {
   position: relative;
   width: 100%;
-  max-width: 600px;
-  aspect-ratio: 1200 / 600;
+  max-width: 480px;
+  aspect-ratio: 1 / 1;
   border-radius: clamp(14px, 2.2vw, 22px);
   overflow: hidden;
-  box-shadow: 0 16px 48px -12px rgba(10, 42, 94, 0.28);
-  background: #07193A;
+  box-shadow: 0 16px 40px -12px rgba(10, 42, 94, 0.16);
+  background: #FFFFFF;
   margin: 0 auto;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid #E2E8F0;
 }
 
 @media (min-width: 1024px) {
   .hero-slider-card {
     margin: 0;
     max-width: 100%;
-    transform: rotate(1deg);
+    transform: rotate(0.5deg);
     animation: sliderSettle 1s 0.2s var(--ease-out) forwards;
   }
 }
@@ -88,7 +88,7 @@ body.home-page { padding-top: 0; }
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background: #07193A;
+  background: #FFFFFF;
 }
 
 /* Shared slider items */
@@ -98,8 +98,9 @@ body.home-page { padding-top: 0; }
   width: 100%;
   height: 100%;
   opacity: 0;
-  transition: opacity 0.7s var(--ease-out);
+  transition: opacity 0.6s var(--ease-out);
   overflow: hidden;
+  background: #FFFFFF;
 }
 
 .slide-item.active {
@@ -113,15 +114,15 @@ body.home-page { padding-top: 0; }
   object-fit: contain;
   object-position: center;
   display: block;
-  background: #07193A;
-  /* Ken Burns zoom */
-  animation: kenBurns 6s var(--ease-out) forwards;
+  background: #FFFFFF;
+  /* Subtle Ken Burns zoom */
+  animation: kenBurns 5s var(--ease-out) forwards;
 }
 
 
 @keyframes kenBurns {
   from { transform: scale(1); }
-  to   { transform: scale(1.06); }
+  to   { transform: scale(1.05); }
 }
 
 /* Slide caption scrim at bottom-left */
@@ -214,7 +215,7 @@ body.home-page { padding-top: 0; }
   to   { transform: scaleX(1); }
 }
 
-/* Slider Arrow Buttons (desktop only) */
+/* Slider Arrow Buttons (clean, visible on all viewports) */
 .slider-arrow {
   position: absolute;
   top: 50%;
@@ -223,23 +224,27 @@ body.home-page { padding-top: 0; }
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid rgba(255,255,255,0.3);
-  background: rgba(255,255,255,0.12);
-  backdrop-filter: blur(6px);
-  color: #fff;
-  display: none;
+  border: 1px solid #CBD5E1;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  color: var(--navy);
+  display: flex;
   align-items: center;
   justify-content: center;
-  transition: background var(--dur-fast), border-color var(--dur-fast);
+  box-shadow: 0 4px 12px rgba(10, 42, 94, 0.12);
+  cursor: pointer;
+  transition: all var(--dur-fast);
 }
 
-.slider-arrow:hover { background: rgba(255,255,255,0.22); border-color: rgba(255,255,255,0.5); }
+.slider-arrow:hover {
+  background: #FFFFFF;
+  border-color: var(--navy);
+  box-shadow: 0 6px 16px rgba(10, 42, 94, 0.2);
+  transform: translateY(-50%) scale(1.05);
+}
+
 .slider-arrow-prev { left: var(--s2); }
 .slider-arrow-next { right: var(--s2); }
-
-@media (min-width: 1024px) {
-  .slider-arrow { display: flex; }
-}
 
 /* --------- HERO CONTENT (headline, sub, buttons) ---------- */
 .hero-content {
@@ -818,12 +823,54 @@ body.home-page { padding-top: 0; }
 .video-progress-bar { width: 100%; height: 2px; background: var(--line); border-radius: 1px; overflow: hidden; }
 .video-progress-fill { height: 100%; background: var(--saffron); border-radius: 1px; }
 
-/* ---- Screen: Bus Tracking ---- */
+/* ---- Screen: Bus Tracking (Clean High-Contrast GPS Navigation) ---- */
 .screen-bus {
-  background: #1a2035;
+  background: #EEF2F6;
   padding: 0;
   position: relative;
   overflow: hidden;
+}
+.bus-top-bar {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  z-index: 4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bus-live-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #0B1630;
+  color: #fff;
+  padding: 3px 8px;
+  border-radius: 20px;
+  font-family: var(--font-mono);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+.bus-live-pulse-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #10B981;
+  animation: blink 1.2s infinite;
+}
+.bus-top-speed {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  color: #0A2A5E;
+  font-family: var(--font-mono);
+  font-size: 8.5px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
 }
 .bus-map-bg {
   position: absolute;
@@ -834,25 +881,86 @@ body.home-page { padding-top: 0; }
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 10px;
-  background: linear-gradient(to top, rgba(11,22,48,0.95) 0%, rgba(11,22,48,0) 100%);
+  padding: 8px;
+  background: linear-gradient(to top, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.7) 70%, transparent 100%);
+  z-index: 3;
 }
 .bus-eta-card {
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.1);
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
   border-radius: 10px;
-  padding: 10px;
-  backdrop-filter: blur(8px);
+  padding: 8px;
+  box-shadow: 0 4px 14px rgba(10,42,94,0.12);
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
-.bus-live-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--saffron); animation: blink 1.2s infinite; flex-shrink: 0; }
-.bus-eta-label { font-family: var(--font-mono); font-size: 8px; color: rgba(255,255,255,0.5); letter-spacing: 0.08em; text-transform: uppercase; }
-.bus-eta-time { font-family: var(--font-mono); font-size: 14px; font-weight: 500; color: #fff; line-height: 1; }
-.bus-driver { font-size: 9px; color: rgba(255,255,255,0.6); margin-top: 2px; }
-.bus-route-info { margin-left: auto; text-align: right; }
-.bus-from-to { font-size: 8px; color: rgba(255,255,255,0.5); font-family: var(--font-mono); }
+.bus-eta-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: #FEF3C7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.bus-eta-details {
+  flex: 1;
+  min-width: 0;
+}
+.bus-eta-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 2px;
+}
+.bus-eta-pill {
+  font-family: var(--font-mono);
+  font-size: 7px;
+  font-weight: 700;
+  background: #DCFCE7;
+  color: #15803D;
+  padding: 1px 5px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+.bus-eta-eta {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 800;
+  color: #0B1630;
+}
+.bus-eta-title {
+  font-size: 9px;
+  font-weight: 600;
+  color: #0B1630;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.bus-driver {
+  font-size: 8px;
+  color: #64748B;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.bus-call-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+.bus-call-btn:hover {
+  background: #0d3575;
+}
 
 /* ---- Screen: Notices ---- */
 .screen-notices {

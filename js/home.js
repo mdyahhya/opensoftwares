@@ -37,7 +37,7 @@
     const prevBtn      = wrapper.querySelector('.slider-arrow-prev');
     const nextBtn      = wrapper.querySelector('.slider-arrow-next');
     const progressWrap = wrapper.querySelector('.slider-progress-bar');
-    const DELAY        = 5500;
+    const DELAY        = 3000;
 
     if (!slides.length) return;
 
@@ -158,17 +158,19 @@
   }
 
   // =========================================================================
-  // 4. Interactive Android App Phone Mockup
+  // 4. Interactive Android App Phone Mockup (Attendance -> Videos -> Bus -> Notices)
   // =========================================================================
   const phoneTabs    = document.querySelectorAll('.phone-tab-btn');
   const phoneScreens = document.querySelectorAll('.phone-screen');
   const tabIndicator = document.querySelector('.tab-indicator');
 
-  let currentTab    = 0;
+  const tabSequence = [1, 2, 3, 4]; // Attendance (1) -> Videos (2) -> Bus (3) -> Notices (4)
+  let seqIndex = 0; // index inside tabSequence, starts at tab 1 (Attendance)
+  let currentTab = 1;
   let autoDemoTimer = null;
   let pauseTimer    = null;
-  const AUTO_INTERVAL = 4000;
-  const PAUSE_AFTER   = 10000;
+  const AUTO_INTERVAL = 2800;
+  const PAUSE_AFTER   = 8000;
 
   function setTab(idx, byUser = false) {
     if (idx < 0 || idx >= phoneTabs.length) return;
@@ -187,6 +189,11 @@
       tabIndicator.style.transform = `translateX(${idx * 100}%)`;
     }
 
+    const foundIdx = tabSequence.indexOf(idx);
+    if (foundIdx !== -1) {
+      seqIndex = foundIdx;
+    }
+
     if (byUser) {
       stopAutoDemo();
       clearTimeout(pauseTimer);
@@ -198,7 +205,8 @@
     if (prefersReducedMotion) return;
     stopAutoDemo();
     autoDemoTimer = setInterval(() => {
-      setTab((currentTab + 1) % phoneTabs.length);
+      seqIndex = (seqIndex + 1) % tabSequence.length;
+      setTab(tabSequence[seqIndex]);
     }, AUTO_INTERVAL);
   }
 
@@ -212,8 +220,23 @@
   });
 
   if (phoneTabs.length > 0) {
-    setTab(0);
+    setTab(1); // Default to Attendance
     startAutoDemo();
+  }
+
+  // Scroll trigger: When user scrolls into Section B (#appShowcase), reset to Attendance (tab 1)
+  const appSection = document.getElementById('appShowcase');
+  if (appSection && 'IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          seqIndex = 0;
+          setTab(1);
+          startAutoDemo();
+        }
+      });
+    }, { threshold: 0.25 });
+    observer.observe(appSection);
   }
 
   // =========================================================================

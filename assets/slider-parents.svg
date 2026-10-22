@@ -1,118 +1,71 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600" fill="none">
   <defs>
-    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#07193A" />
-      <stop offset="100%" stop-color="#0A2A5E" />
-    </linearGradient>
-    <filter id="phoneShadow2" x="-20%" y="-10%" width="140%" height="130%">
-      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.35" />
+    <filter id="shadowParent" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#0A2A5E" flood-opacity="0.08" />
     </filter>
   </defs>
 
-  <!-- Background -->
-  <rect width="1200" height="600" rx="24" fill="url(#bgGrad2)" />
-  <circle cx="100" cy="80" r="240" fill="#3B82F6" opacity="0.12" />
-  <circle cx="1050" cy="480" r="280" fill="#60A5FA" opacity="0.1" />
+  <!-- Clean White Card Background -->
+  <rect width="600" height="600" rx="24" fill="#FFFFFF" />
+  <rect x="1" y="1" width="598" height="598" rx="23" stroke="#E2E8F0" stroke-width="2" />
+  <path d="M0 24 C0 10.7 10.7 0 24 0 L576 0 C589.3 0 600 10.7 600 24 L600 6 L0 6 Z" fill="#2563EB" />
 
-  <!-- Left Content -->
-  <g transform="translate(80, 100)">
-    <rect width="210" height="34" rx="17" fill="#1E40AF" opacity="0.85" />
-    <circle cx="20" cy="17" r="5" fill="#38BDF8" />
-    <text x="36" y="22" font-family="'Inter', sans-serif" font-weight="600" font-size="12" fill="#E0E7FF" letter-spacing="0.5">ANDROID PARENT APP</text>
+  <!-- Header -->
+  <g transform="translate(40, 36)">
+    <rect width="180" height="28" rx="14" fill="#EFF6FF" stroke="#BFDBFE" />
+    <circle cx="16" cy="14" r="4" fill="#2563EB" />
+    <text x="28" y="18" font-family="'Inter', sans-serif" font-weight="700" font-size="11" fill="#1E40AF" letter-spacing="0.6">PARENT APP SUITE</text>
 
-    <text x="0" y="85" font-family="'Inter', sans-serif" font-weight="800" font-size="44" fill="#FFFFFF">Empowering Parents</text>
-    <text x="0" y="140" font-family="'Inter', sans-serif" font-weight="800" font-size="44" fill="#38BDF8">Every Single Day</text>
-
-    <text x="0" y="188" font-family="'Inter', sans-serif" font-weight="400" font-size="17" fill="#CBD5E1">Instant homework notifications, exam grade sheets, direct chat</text>
-    <text x="0" y="214" font-family="'Inter', sans-serif" font-weight="400" font-size="17" fill="#CBD5E1">with teachers, and one-tap UPI fee receipts on their smartphones.</text>
-
-    <g transform="translate(0, 260)">
-      <!-- Native Android -->
-      <rect width="150" height="38" rx="8" fill="#0C2042" stroke="#1E40AF" />
-      <rect x="18" y="14" width="10" height="18" rx="2" stroke="#38BDF8" stroke-width="1.8" fill="none" />
-      <circle cx="23" cy="28" r="1" fill="#38BDF8" />
-      <text x="36" y="24" font-family="'Inter', sans-serif" font-weight="500" font-size="13" fill="#FFFFFF">Native Android</text>
-
-      <!-- Parent-Teacher Chat -->
-      <rect x="165" width="165" height="38" rx="8" fill="#0C2042" stroke="#1E40AF" />
-      <path d="M180 16 C180 13.8 183.6 12 188 12 C192.4 12 196 13.8 196 16 C196 18.2 192.4 20 188 20 L184 23 L185 20 C182 19.5 180 18 180 16 Z" stroke="#38BDF8" stroke-width="1.6" fill="none" />
-      <text x="204" y="24" font-family="'Inter', sans-serif" font-weight="500" font-size="13" fill="#FFFFFF">Teacher Chat</text>
-
-      <!-- Instant UPI Fees -->
-      <rect x="345" width="145" height="38" rx="8" fill="#0C2042" stroke="#1E40AF" />
-      <rect x="358" y="15" width="14" height="10" rx="1.5" stroke="#38BDF8" stroke-width="1.6" fill="none" />
-      <path d="M358 18 L372 18" stroke="#38BDF8" stroke-width="1.2" />
-      <text x="380" y="24" font-family="'Inter', sans-serif" font-weight="500" font-size="13" fill="#FFFFFF">Instant UPI Fees</text>
-    </g>
+    <text x="0" y="66" font-family="'Inter', sans-serif" font-weight="800" font-size="28" fill="#0B1630">Empowering Parents Every Day</text>
+    <text x="0" y="96" font-family="'Inter', sans-serif" font-weight="400" font-size="14" fill="#64748B">Instant homework, teacher chat, digital remarks &amp; report cards</text>
   </g>
 
-  <!-- Right Visual: Two overlapping sleek mobile screens -->
-  <g transform="translate(680, 50)" filter="url(#phoneShadow2)">
-    <!-- Back Phone (Teacher view / Notices) -->
-    <g transform="translate(180, 40) rotate(5)">
-      <rect width="250" height="470" rx="36" fill="#0B1B36" stroke="#1E3A8A" stroke-width="3" />
-      <!-- Screen -->
-      <rect x="10" y="10" width="230" height="450" rx="28" fill="#FFFFFF" />
-      <!-- App Header -->
-      <rect x="10" y="10" width="230" height="60" rx="28" fill="#0A2A5E" />
-      <rect x="10" y="45" width="230" height="25" fill="#0A2A5E" />
-      <text x="30" y="48" font-family="'Inter', sans-serif" font-size="12" fill="#FFFFFF" font-weight="700">Digital Notice Board</text>
-      <!-- Notice cards -->
-      <rect x="25" y="85" width="200" height="65" rx="8" fill="#EFF6FF" stroke="#BFDBFE" />
-      <text x="35" y="105" font-family="'Inter', sans-serif" font-size="11" fill="#1E40AF" font-weight="700">Annual Sports Meet 2026</text>
-      <text x="35" y="122" font-family="'Inter', sans-serif" font-size="9" fill="#64748B">Schedule and jersey distribution...</text>
+  <!-- Interactive Parent View Mockup -->
+  <g transform="translate(40, 160)" filter="url(#shadowParent)">
+    <rect width="520" height="390" rx="18" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5" />
 
-      <rect x="25" y="160" width="200" height="65" rx="8" fill="#F8FAFC" stroke="#E2E8F0" />
-      <text x="35" y="180" font-family="'Inter', sans-serif" font-size="11" fill="#0F172A" font-weight="700">Parent-Teacher Meeting</text>
-      <text x="35" y="197" font-family="'Inter', sans-serif" font-size="9" fill="#64748B">Saturday, 10:00 AM in Room 12</text>
+    <!-- Top Profile Row -->
+    <rect width="520" height="74" rx="18" fill="#FFFFFF" />
+    <line x1="0" y1="74" x2="520" y2="74" stroke="#E2E8F0" stroke-width="1" />
+
+    <circle cx="45" cy="37" r="22" fill="#E0F2FE" />
+    <text x="45" y="43" font-family="'Inter', sans-serif" font-size="15" font-weight="800" fill="#0284C7" text-anchor="middle">AA</text>
+    <text x="78" y="32" font-family="'Inter', sans-serif" font-size="15" font-weight="700" fill="#0B1630">Aanya Agarwal</text>
+    <text x="78" y="50" font-family="'Inter', sans-serif" font-size="12" font-weight="500" fill="#64748B">Class X-B &bull; Delhi Public School, Pune</text>
+
+    <rect x="390" y="24" width="105" height="28" rx="14" fill="#DCFCE7" />
+    <text x="442" y="42" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#15803D" text-anchor="middle">Active Parent</text>
+
+    <!-- Parent Cards Grid -->
+    <g transform="translate(24, 94)">
+      <!-- Card 1: Attendance Progress -->
+      <rect width="226" height="120" rx="12" fill="#FFFFFF" stroke="#E2E8F0" />
+      <text x="16" y="26" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#64748B">MONTHLY ATTENDANCE</text>
+      <text x="16" y="60" font-family="'Inter', sans-serif" font-size="32" font-weight="800" fill="#0B1630">94.2%</text>
+      <rect x="16" y="74" width="194" height="6" rx="3" fill="#E2E8F0" />
+      <rect x="16" y="74" width="182" height="6" rx="3" fill="#10B981" />
+      <text x="16" y="102" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#059669">✓ 21 of 22 Days Present</text>
+
+      <!-- Card 2: Homework Status -->
+      <rect x="246" width="226" height="120" rx="12" fill="#FFFFFF" stroke="#E2E8F0" />
+      <text x="262" y="26" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#64748B">HOMEWORK TODAY</text>
+      <rect x="262" y="38" width="8" height="8" rx="4" fill="#E8A317" />
+      <text x="278" y="46" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#0B1630">Maths: Chapter 7</text>
+      <text x="278" y="62" font-family="'Inter', sans-serif" font-size="10" fill="#64748B">Ex 7.2 • Complete by 5 PM</text>
+
+      <rect x="262" y="76" width="8" height="8" rx="4" fill="#10B981" />
+      <text x="278" y="84" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#0B1630">Science: Lab File</text>
+      <text x="278" y="100" font-family="'Inter', sans-serif" font-size="10" fill="#059669">Submitted &bull; Graded A+</text>
     </g>
 
-    <!-- Front Main Phone -->
-    <g transform="translate(20, 20)">
-      <rect width="260" height="490" rx="36" fill="#0A2A5E" stroke="#1E40AF" stroke-width="3" />
-      <!-- Screen Inner -->
-      <rect x="10" y="10" width="240" height="470" rx="28" fill="#F8FAFC" />
-      <!-- Camera punch hole -->
-      <circle cx="130" cy="24" r="4.5" fill="#0A2A5E" />
-
-      <!-- App Header -->
-      <rect x="10" y="10" width="240" height="66" rx="28" fill="#0A2A5E" />
-      <rect x="10" y="52" width="240" height="24" fill="#0A2A5E" />
-      <text x="28" y="52" font-family="'Inter', sans-serif" font-size="13" fill="#FFFFFF" font-weight="700">Schoolmate Parent App</text>
-      <circle cx="225" cy="48" r="10" fill="#2563EB" />
-      <text x="222" y="52" font-family="'Inter', sans-serif" font-size="10" fill="#FFFFFF" font-weight="700">3</text>
-
-      <!-- Student Card -->
-      <rect x="25" y="86" width="210" height="58" rx="12" fill="#FFFFFF" stroke="#E2E8F0" />
-      <circle cx="52" cy="115" r="16" fill="#3B82F6" />
-      <text x="46" y="120" font-family="'Inter', sans-serif" font-size="13" fill="#FFFFFF" font-weight="700">A</text>
-      <text x="78" y="111" font-family="'Inter', sans-serif" font-size="12" fill="#0F172A" font-weight="700">Aditya Deshmukh</text>
-      <text x="78" y="126" font-family="'Inter', sans-serif" font-size="10" fill="#10B981" font-weight="600">Present Today (9:05 AM)</text>
-
-      <!-- Feature Badges -->
-      <rect x="25" y="152" width="98" height="68" rx="10" fill="#EFF6FF" stroke="#BFDBFE" />
-      <path d="M40 172 C40 170 44 168 48 168 C52 168 56 170 56 172 L56 182 C52 180 48 180 40 182 Z M48 168 L48 180" stroke="#1E40AF" stroke-width="1.6" fill="none" />
-      <text x="35" y="196" font-family="'Inter', sans-serif" font-size="11" fill="#1E40AF" font-weight="700">Homework</text>
-      <text x="35" y="210" font-family="'Inter', sans-serif" font-size="9" fill="#3B82F6">2 due tomorrow</text>
-
-      <rect x="135" y="152" width="100" height="68" rx="10" fill="#ECFDF5" stroke="#A7F3D0" />
-      <rect x="150" y="170" width="14" height="10" rx="1.5" stroke="#065F46" stroke-width="1.6" fill="none" />
-      <text x="145" y="196" font-family="'Inter', sans-serif" font-size="11" fill="#065F46" font-weight="700">Term Fee</text>
-      <text x="145" y="210" font-family="'Inter', sans-serif" font-size="9" fill="#10B981">Receipt Paid</text>
-
-      <!-- Live Notification Banner -->
-      <rect x="25" y="230" width="210" height="88" rx="12" fill="#FFFFFF" stroke="#E2E8F0" />
-      <text x="40" y="252" font-family="'Inter', sans-serif" font-size="11" fill="#0F172A" font-weight="700">Bus Status • Route 14</text>
-      <rect x="40" y="265" width="180" height="6" rx="3" fill="#E2E8F0" />
-      <rect x="40" y="265" width="120" height="6" rx="3" fill="#2563EB" />
-      <circle cx="160" cy="268" r="5" fill="#F59E0B" />
-      <text x="40" y="295" font-family="'Inter', sans-serif" font-size="10" fill="#64748B">Arriving in 6 mins at Sector 4</text>
-
-      <!-- Teacher Feedback snippet -->
-      <rect x="25" y="328" width="210" height="74" rx="12" fill="#FFFBEB" stroke="#FDE68A" />
-      <text x="38" y="348" font-family="'Inter', sans-serif" font-size="11" fill="#92400E" font-weight="700">Teacher Note (Maths)</text>
-      <text x="38" y="366" font-family="'Inter', sans-serif" font-size="9" fill="#78350F">"Excellent score in Geometry unit test. Keep it up!"</text>
-      <text x="38" y="386" font-family="'Inter', sans-serif" font-size="8" fill="#B45309">— Mrs. Joshi (Class Teacher)</text>
+    <!-- Teacher Message / Notice Notification -->
+    <g transform="translate(24, 234)">
+      <rect width="472" height="68" rx="12" fill="#FFFFFF" stroke="#E2E8F0" />
+      <circle cx="28" cy="34" r="14" fill="#FEF3C7" />
+      <text x="28" y="39" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#D97706" text-anchor="middle">💬</text>
+      <text x="52" y="28" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#0B1630">Message from Class Teacher (Mrs. Sharma)</text>
+      <text x="52" y="46" font-family="'Inter', sans-serif" font-size="11" fill="#475569">"Aanya scored 48/50 in Science Quiz. Keep up the great work!"</text>
+      <text x="52" y="59" font-family="'Inter', sans-serif" font-size="9" fill="#94A3B8">Today at 10:15 AM &bull; 1-Tap Reply</text>
     </g>
   </g>
 </svg>
