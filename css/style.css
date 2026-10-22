@@ -471,6 +471,15 @@ em.serif {
   letter-spacing: -0.04em;
 }
 
+.brand-legal {
+  font-size: 0.82em;
+  font-weight: 600;
+  color: var(--midnight);
+  margin-left: 5px;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
 .brand-dot {
   display: inline-block;
   width: 5px;
@@ -490,8 +499,34 @@ em.serif {
   color: rgba(255, 255, 255, 0.95);
 }
 
+.brand-link-light .brand-legal {
+  color: rgba(255, 255, 255, 0.92);
+}
+
 .brand-link-light .brand-dot {
   background-color: var(--saffron);
+}
+
+@media (max-width: 600px) {
+  .brand-wordmark {
+    font-size: 1.1rem;
+  }
+  .brand-cap {
+    font-size: 1.35rem;
+  }
+  .brand-legal {
+    font-size: 0.78em;
+    margin-left: 3px;
+  }
+}
+
+@media (max-width: 380px) {
+  .brand-wordmark {
+    font-size: 0.95rem;
+  }
+  .brand-cap {
+    font-size: 1.2rem;
+  }
 }
 
 /* Desktop Nav Links */
