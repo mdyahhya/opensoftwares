@@ -63,8 +63,8 @@
   </style>
 
   <!-- CSS (Cache-busted) -->
-  <link rel="stylesheet" href="/css/style.css?v=2.1">
-  <link rel="stylesheet" href="/css/home.css?v=2.1">
+  <link rel="stylesheet" href="/css/style.css?v=2.2">
+  <link rel="stylesheet" href="/css/home.css?v=2.2">
 
   <!-- Structured Data JSON-LD -->
   <script type="application/ld+json">
@@ -333,175 +333,74 @@
     <!-- ==================================================================
          A. HERO SECTION
          ================================================================== -->
+    <!-- ==================================================================
+         A. HERO SECTION (Unified Single Hero for Mobile & Desktop)
+         ================================================================== -->
     <section class="hero" aria-labelledby="heroTitle">
+      <div class="container hero-container">
 
-      <!-- ---- MOBILE HERO (default up to 1023px) ---- -->
-      <div class="container" style="display:contents;">
-        <!-- Trust Line -->
-        <div class="container">
-          <p class="hero-trust-line" aria-label="Social proof">
-            Trusted by thousands of schools across Maharashtra
+        <!-- Left / Text Column -->
+        <div class="hero-text-col">
+          <p class="hero-trust-line">Trusted by thousands of schools across Maharashtra</p>
+          
+          <h1 class="hero-title" id="heroTitle">
+            Making schools ready<br>
+            for the <em class="serif" style="position:relative;">future of learning
+              <svg class="hero-underline-svg" viewBox="0 0 320 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path class="hero-underline-path" d="M4 12 C80 4 200 2 316 10" stroke="#E8A317" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+            </em>
+          </h1>
+
+          <p class="hero-subline">
+            <strong>Schoolmate by OpenSoftwares</strong> unifies your entire campus — a fast Android app for parents and teachers, and a powerful web ERP for admins, finance, payroll and live bus tracking.
           </p>
-        </div>
 
-        <!-- Mobile edge-to-edge slider -->
-        <div class="hero-slider-mobile" aria-label="Product Showcase Slides" role="region">
-          <div class="slider-inner" id="sliderMobile">
-            <div class="slide-item active">
-              <img src="assets/slider-admin.svg" alt="Schoolmate Administration ERP dashboard" width="1200" height="640" loading="eager">
-              <div class="slide-caption">
-                <div class="slide-label">Administration</div>
-                <div class="slide-title-text">School Management ERP</div>
-                <div class="slide-caption-text">Biometric attendance, payroll and real-time reports</div>
-              </div>
-            </div>
-            <div class="slide-item">
-              <img src="assets/slider-parents.svg" alt="Schoolmate Android parent app with homework and attendance" width="1200" height="640" loading="lazy">
-              <div class="slide-caption">
-                <div class="slide-label">Parent App</div>
-                <div class="slide-title-text">Everything in one Android App</div>
-                <div class="slide-caption-text">Homework, fees, notices and live bus on one screen</div>
-              </div>
-            </div>
-            <div class="slide-item">
-              <img src="assets/slider-bus.svg" alt="Live GPS school bus tracking on route map" width="1200" height="640" loading="lazy">
-              <div class="slide-caption">
-                <div class="slide-label">Bus Tracking</div>
-                <div class="slide-title-text">Live GPS Safety Telemetry</div>
-                <div class="slide-caption-text">Real-time routes, speed alerts and arrival geofences</div>
-              </div>
-            </div>
-            <div class="slide-item">
-              <img src="assets/slider-classroom.svg" alt="Smart classroom, timetable and CBSE gradebook" width="1200" height="640" loading="lazy">
-              <div class="slide-caption">
-                <div class="slide-label">Academics</div>
-                <div class="slide-title-text">Timetable &amp; Gradebook</div>
-                <div class="slide-caption-text">Automated CBSE report cards and conflict-free schedules</div>
-              </div>
-            </div>
-            <div class="slide-item">
-              <img src="assets/slider-fees.svg" alt="Automated fees collection and accounts ledger" width="1200" height="640" loading="lazy">
-              <div class="slide-caption">
-                <div class="slide-label">Fees &amp; Finance</div>
-                <div class="slide-title-text">Automated Fee Collection</div>
-                <div class="slide-caption-text">UPI receipts, reminders and accounts ledger</div>
-              </div>
-            </div>
-            <!-- Progress bar -->
-            <div class="slider-progress-bar" aria-hidden="true"></div>
+          <div class="hero-actions">
+            <a href="schoolmate.html" class="btn btn-primary">
+              Explore Schoolmate
+              <svg class="icon icon-sm btn-arrow"><use href="#icon-arrow-up-right"></use></svg>
+            </a>
+            <a href="contact.html" class="btn btn-ghost">Book a free demo</a>
           </div>
-          <!-- Arrows (mobile: hidden via CSS on small screens, visible >=1024) -->
-          <button class="slider-arrow slider-arrow-prev" type="button" aria-label="Previous slide">
-            <svg class="icon"><use href="#icon-chevron-left"></use></svg>
-          </button>
-          <button class="slider-arrow slider-arrow-next" type="button" aria-label="Next slide">
-            <svg class="icon"><use href="#icon-chevron-right"></use></svg>
-          </button>
-        </div>
 
-        <!-- Hero content below slider (mobile) -->
-        <div class="container">
-          <div class="hero-content">
-            <h1 class="hero-title" id="heroTitle">
-              Making schools ready<br>for the <em class="serif" style="position:relative;">future of learning<svg class="hero-underline-svg" viewBox="0 0 320 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path class="hero-underline-path" d="M4 12 C80 4 200 2 316 10" stroke="#E8A317" stroke-width="3" stroke-linecap="round"/></svg></em>
-            </h1>
-            <p class="hero-subline">
-              <strong>Schoolmate by OpenSoftwares</strong> unifies your entire campus — a fast Android app for parents and teachers, and a powerful web ERP for admins, finance, payroll and live bus tracking.
-            </p>
-            <div class="hero-actions">
-              <a href="schoolmate.html" class="btn btn-primary">
-                Explore Schoolmate
-                <svg class="icon icon-sm btn-arrow"><use href="#icon-arrow-up-right"></use></svg>
-              </a>
-              <a href="contact.html" class="btn btn-ghost">Book a free demo</a>
+          <!-- Stats row (desktop) -->
+          <div class="hero-stats-row hero-stats-desktop" aria-label="Key metrics">
+            <div class="hero-stat-item">
+              <span class="hero-stat-num">500<span style="color:var(--saffron)">+</span></span>
+              <span class="hero-stat-label">Schools</span>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ---- DESKTOP HERO (two-column, 1024px+) ---- -->
-      <div class="container hero-desktop" aria-label="Hero desktop layout">
-        <!-- Left column -->
-        <div class="hero-desktop-left">
-          <div class="hero-content">
-            <p class="hero-trust-line-desktop">Trusted by thousands of schools across Maharashtra</p>
-            <h1 class="hero-title" id="heroTitleDesktop">
-              Making schools ready<br>for the <em class="serif" style="position:relative;">future of learning<svg class="hero-underline-svg" viewBox="0 0 320 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path class="hero-underline-path" d="M4 12 C80 4 200 2 316 10" stroke="#E8A317" stroke-width="3" stroke-linecap="round"/></svg></em>
-            </h1>
-            <p class="hero-subline">
-              <strong>Schoolmate by OpenSoftwares</strong> unifies your entire campus — a fast Android app for parents and teachers, and a powerful web ERP for admins, finance, payroll and live bus tracking.
-            </p>
-            <div class="hero-actions">
-              <a href="schoolmate.html" class="btn btn-primary">
-                Explore Schoolmate
-                <svg class="icon icon-sm btn-arrow"><use href="#icon-arrow-up-right"></use></svg>
-              </a>
-              <a href="contact.html" class="btn btn-ghost">Book a free demo</a>
+            <div class="hero-stats-divider" aria-hidden="true"></div>
+            <div class="hero-stat-item">
+              <span class="hero-stat-num">1.2L<span style="color:var(--saffron)">+</span></span>
+              <span class="hero-stat-label">Students</span>
             </div>
-
-            <!-- Mini stats below buttons -->
-            <div class="hero-stats-row" aria-label="Key metrics">
-              <div class="hero-stat-item">
-                <span class="hero-stat-num">500<span style="color:var(--saffron)">+</span></span>
-                <span class="hero-stat-label">Schools</span>
-              </div>
-              <div class="hero-stats-divider" aria-hidden="true"></div>
-              <div class="hero-stat-item">
-                <span class="hero-stat-num">1.2L<span style="color:var(--saffron)">+</span></span>
-                <span class="hero-stat-label">Students</span>
-              </div>
-              <div class="hero-stats-divider" aria-hidden="true"></div>
-              <div class="hero-stat-item">
-                <span class="hero-stat-num">40<span style="color:var(--saffron)">+</span></span>
-                <span class="hero-stat-label">Cities</span>
-              </div>
+            <div class="hero-stats-divider" aria-hidden="true"></div>
+            <div class="hero-stat-item">
+              <span class="hero-stat-num">40<span style="color:var(--saffron)">+</span></span>
+              <span class="hero-stat-label">Cities</span>
             </div>
           </div>
         </div>
 
-        <!-- Right column: contained slider -->
-        <div class="hero-desktop-right">
-          <div class="hero-slider-desktop" aria-label="Product showcase slides">
-            <div class="slider-inner" id="sliderDesktop">
+        <!-- Right / Slider Showcase Column -->
+        <div class="hero-slider-col">
+          <div class="hero-slider-card" aria-label="Product showcase slides">
+            <div class="slider-inner" id="heroSlider">
               <div class="slide-item active">
-                <img src="assets/slider-admin.svg" alt="Schoolmate Administration ERP dashboard" width="560" height="640" loading="eager">
-                <div class="slide-caption">
-                  <div class="slide-label">Administration</div>
-                  <div class="slide-title-text">School Management ERP</div>
-                  <div class="slide-caption-text">Biometric attendance, payroll and real-time reports</div>
-                </div>
+                <img src="assets/slider-admin.svg" alt="Schoolmate Administration ERP dashboard" width="1200" height="600" loading="eager">
               </div>
               <div class="slide-item">
-                <img src="assets/slider-parents.svg" alt="Schoolmate Android parent app" width="560" height="640" loading="lazy">
-                <div class="slide-caption">
-                  <div class="slide-label">Parent App</div>
-                  <div class="slide-title-text">Everything in one Android App</div>
-                  <div class="slide-caption-text">Homework, fees, notices and live bus on one screen</div>
-                </div>
+                <img src="assets/slider-parents.svg" alt="Schoolmate Android parent app" width="1200" height="600" loading="lazy">
               </div>
               <div class="slide-item">
-                <img src="assets/slider-bus.svg" alt="Live GPS school bus tracking" width="560" height="640" loading="lazy">
-                <div class="slide-caption">
-                  <div class="slide-label">Bus Tracking</div>
-                  <div class="slide-title-text">Live GPS Safety Telemetry</div>
-                  <div class="slide-caption-text">Real-time routes, speed alerts and arrival geofences</div>
-                </div>
+                <img src="assets/slider-bus.svg" alt="Live GPS school bus tracking" width="1200" height="600" loading="lazy">
               </div>
               <div class="slide-item">
-                <img src="assets/slider-classroom.svg" alt="Smart classroom and CBSE gradebook" width="560" height="640" loading="lazy">
-                <div class="slide-caption">
-                  <div class="slide-label">Academics</div>
-                  <div class="slide-title-text">Timetable &amp; Gradebook</div>
-                  <div class="slide-caption-text">Automated CBSE report cards and conflict-free schedules</div>
-                </div>
+                <img src="assets/slider-classroom.svg" alt="Smart classroom and CBSE gradebook" width="1200" height="600" loading="lazy">
               </div>
               <div class="slide-item">
-                <img src="assets/slider-fees.svg" alt="Automated fees and accounts" width="560" height="640" loading="lazy">
-                <div class="slide-caption">
-                  <div class="slide-label">Fees &amp; Finance</div>
-                  <div class="slide-title-text">Automated Fee Collection</div>
-                  <div class="slide-caption-text">UPI receipts, reminders and accounts ledger</div>
-                </div>
+                <img src="assets/slider-fees.svg" alt="Automated fees and accounts" width="1200" height="600" loading="lazy">
               </div>
               <!-- Progress bar -->
               <div class="slider-progress-bar" aria-hidden="true"></div>
@@ -513,9 +412,27 @@
               <svg class="icon"><use href="#icon-chevron-right"></use></svg>
             </button>
           </div>
-        </div>
-      </div>
 
+          <!-- Stats row (mobile) -->
+          <div class="hero-stats-row hero-stats-mobile" aria-label="Key metrics">
+            <div class="hero-stat-item">
+              <span class="hero-stat-num">500<span style="color:var(--saffron)">+</span></span>
+              <span class="hero-stat-label">Schools</span>
+            </div>
+            <div class="hero-stats-divider" aria-hidden="true"></div>
+            <div class="hero-stat-item">
+              <span class="hero-stat-num">1.2L<span style="color:var(--saffron)">+</span></span>
+              <span class="hero-stat-label">Students</span>
+            </div>
+            <div class="hero-stats-divider" aria-hidden="true"></div>
+            <div class="hero-stat-item">
+              <span class="hero-stat-num">40<span style="color:var(--saffron)">+</span></span>
+              <span class="hero-stat-label">Cities</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </section>
 
     <!-- ==================================================================
@@ -1419,7 +1336,7 @@
   </div>
 
   <!-- Scripts -->
-  <script src="/js/main.js?v=2.1" defer></script>
-  <script src="/js/home.js?v=2.1" defer></script>
+  <script src="/js/main.js?v=2.2" defer></script>
+  <script src="/js/home.js?v=2.2" defer></script>
 </body>
 </html>

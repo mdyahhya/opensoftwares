@@ -137,22 +137,22 @@
     startAuto();
   }
 
-  initSlider('.hero-slider-mobile .slider-inner');
-  initSlider('.hero-slider-desktop');
+  initSlider('.hero-slider-card');
 
   // =========================================================================
   // 3. Parallax on desktop hero slider (mouse move)
   // =========================================================================
-  const desktopSliderWrap = document.querySelector('.hero-desktop-right');
+  const desktopSliderWrap = document.querySelector('.hero-slider-col');
   if (desktopSliderWrap && !prefersReducedMotion) {
     document.addEventListener('mousemove', (e) => {
+      if (window.innerWidth < 1024) return;
       const cx = window.innerWidth / 2;
       const cy = window.innerHeight / 2;
       const dx = (e.clientX - cx) / cx;
       const dy = (e.clientY - cy) / cy;
-      const slider = desktopSliderWrap.querySelector('.hero-slider-desktop');
+      const slider = desktopSliderWrap.querySelector('.hero-slider-card');
       if (slider) {
-        slider.style.transform = `translate(${dx * 8}px, ${dy * 8}px)`;
+        slider.style.transform = `translate(${dx * 6}px, ${dy * 6}px)`;
       }
     });
   }
