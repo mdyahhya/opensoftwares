@@ -3,1408 +3,1397 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OpenSoftwares | Future-Ready School ERP &amp; Mobile App Suite</title>
-  <meta name="description" content="OpenSoftwares develops Schoolmate — Maharashtra's leading unified school ERP and Android app suite for school administration, parent-teacher collaboration, live GPS bus tracking, fee collection, and digital report cards.">
+  <title>Schoolmate, School ERP and App | OpenSoftwares</title>
+  <meta name="description" content="OpenSoftwares develops Schoolmate — Maharashtra's leading unified school ERP and Android app suite for administration, parent-teacher collaboration, live GPS bus tracking, fee collection, and digital report cards.">
   <link rel="canonical" href="https://opensoftwares.in/">
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 
-  <!-- Open Graph -->
+  <!-- Favicon and Brand Icons -->
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/logo-mark-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/brand/logo-mark-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/brand/logo-mark-180.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#F6F4EF">
+  <link rel="preload" href="/assets/brand/logo.png" as="image">
+
+  <!-- Open Graph & Social -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://opensoftwares.in/">
-  <meta property="og:title" content="OpenSoftwares | Schoolmate ERP &amp; Android App Suite">
-  <meta property="og:description" content="Unified school administration software, Android app for parents, live GPS bus telemetry, and automated fee collections.">
-  <meta property="og:image" content="https://opensoftwares.in/assets/slider-admin.svg">
-
-  <!-- Twitter -->
+  <meta property="og:site_name" content="OpenSoftwares">
+  <meta property="og:title" content="Schoolmate, School ERP and App | OpenSoftwares">
+  <meta property="og:description" content="Schoolmate, school software for the future of learning. Native Android app for parents and unified web ERP for modern institutions.">
+  <meta property="og:image" content="https://opensoftwares.in/assets/brand/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="OpenSoftwares — Schoolmate School ERP and App">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="OpenSoftwares | Schoolmate ERP &amp; Android App Suite">
-  <meta name="twitter:description" content="Making schools ready for the future of learning across Maharashtra.">
-  <meta name="twitter:image" content="https://opensoftwares.in/assets/slider-admin.svg">
+  <meta name="twitter:title" content="Schoolmate, School ERP and App | OpenSoftwares">
+  <meta name="twitter:description" content="Schoolmate, school software for the future of learning. Native Android app for parents and unified web ERP for modern institutions.">
+  <meta name="twitter:image" content="https://opensoftwares.in/assets/brand/og-image.png">
 
-  <!-- Google Fonts Inter -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/home.css">
 
-  <!-- JSON-LD Schema.org Organization -->
+  <!-- Structured Data JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "OpenSoftwares",
-    "url": "https://opensoftwares.in",
-    "logo": "https://opensoftwares.in/assets/favicon.svg",
-    "description": "OpenSoftwares is a group of companies managing software in education, manufacturing, and real estate, featuring Schoolmate ERP.",
-    "telephone": "+917204726501",
-    "address": {
-      "@type": "PostalAddress",
-      "addressRegion": "Maharashtra",
-      "addressCountry": "IN"
-    },
-    "sameAs": [
-      "https://opensoftwares.in"
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://opensoftwares.in/#organization",
+        "name": "OpenSoftwares",
+        "url": "https://opensoftwares.in",
+        "logo": "https://opensoftwares.in/assets/brand/logo-mark-512.png",
+        "description": "OpenSoftwares is a group of companies managing software in education, manufacturing and real estate, featuring Schoolmate ERP.",
+        "telephone": "+917204726501",
+        "email": "contact@opensoftwares.in",
+        "address": {
+          "@type": "PostalAddress",
+          "addressRegion": "Maharashtra",
+          "addressCountry": "IN"
+        },
+        "sameAs": [
+          "https://opensoftwares.in",
+          "https://wa.me/917204726501"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+91-72047-26501",
+          "contactType": "sales",
+          "areaServed": "IN",
+          "availableLanguage": ["English", "Hindi", "Marathi"]
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://opensoftwares.in/#website",
+        "name": "OpenSoftwares",
+        "alternateName": "Schoolmate by OpenSoftwares",
+        "url": "https://opensoftwares.in",
+        "publisher": {
+          "@id": "https://opensoftwares.in/#organization"
+        }
+      }
     ]
   }
   </script>
+  <script>
+    if (sessionStorage.getItem('opensoftwares_splash_shown')) {
+      document.documentElement.classList.add('splash-skip');
+    }
+  </script>
 </head>
-<body>
+<body class="home-page">
 
-  <!-- =========================================================================
-       Global Reusable SVG Icon Sprite
-       ========================================================================= -->
-  <svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+  <!-- Loading Splash Screen (First visit per session) -->
+  <div class="site-splash" id="siteSplash" role="dialog" aria-modal="true" aria-label="Loading OpenSoftwares">
+    <div class="splash-inner">
+      <div class="splash-brand">
+        <div class="splash-text" aria-label="OpenSoftwares">
+          <span class="splash-letter splash-cap" style="--i:0">O</span><span class="splash-letter" style="--i:1">p</span><span class="splash-letter" style="--i:2">e</span><span class="splash-letter" style="--i:3">n</span><span class="splash-letter splash-cap" style="--i:4">S</span><span class="splash-letter" style="--i:5">o</span><span class="splash-letter" style="--i:6">f</span><span class="splash-letter" style="--i:7">t</span><span class="splash-letter" style="--i:8">w</span><span class="splash-letter" style="--i:9">a</span><span class="splash-letter" style="--i:10">r</span><span class="splash-letter" style="--i:11">e</span><span class="splash-letter" style="--i:12">s</span><span class="splash-dot" style="--i:13"></span>
+        </div>
+        <div class="splash-logo-wrap">
+          <img src="/assets/brand/logo.png" 
+               srcset="/assets/brand/logo-mark-72.png 1x, /assets/brand/logo-mark-192.png 2x" 
+               width="76" height="76" 
+               alt="OpenSoftwares logo" 
+               class="splash-logo-img">
+        </div>
+      </div>
+      <div class="splash-progress-track" aria-hidden="true">
+        <div class="splash-progress-bar" id="splashBar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SVG Sprite (all icons in one place) -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none;" aria-hidden="true">
     <defs>
-      <symbol id="icon-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="currentColor" />
+      <symbol id="icon-bus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8 6v6M15 6v6M2 12h20M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"/><circle cx="7" cy="18" r="1"/><circle cx="17" cy="18" r="1"/>
       </symbol>
-      <symbol id="icon-bus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-        <rect x="3" y="4" width="18" height="14" rx="3" />
-        <path d="M3 10h18M7 14h.01M17 14h.01M6 18v2M18 18v2M8 4v-1M16 4v-1" />
+      <symbol id="icon-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
       </symbol>
-      <symbol id="icon-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
-        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+      <symbol id="icon-bell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/>
       </symbol>
-      <symbol id="icon-pencil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z" />
+      <symbol id="icon-trophy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.45 1-1 1H8c-.55 0-1 .45-1 1v1h10v-1c0-.55-.45-1-1-1h-1c-.55 0-1-.45-1-1v-2.34"/><path d="M18 4H6v7a6 6 0 0 0 12 0V4z"/>
       </symbol>
-      <symbol id="icon-graduation-cap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
-        <path d="M6 12v5c0 2 2.5 3.5 6 3.5s6-1.5 6-3.5v-5" />
+      <symbol id="icon-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
       </symbol>
-      <symbol id="icon-mobile" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-        <rect x="5" y="2" width="14" height="20" rx="3" />
-        <path d="M12 18h.01" />
+      <symbol id="icon-wallet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/><path d="M18 12a2 2 0 0 0 0 4h4v-4z"/>
       </symbol>
-      <symbol id="icon-desktop" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-        <rect x="2" y="3" width="20" height="14" rx="2" />
-        <path d="M8 21h8M12 17v4" />
+      <symbol id="icon-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
       </symbol>
-      <symbol id="icon-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+      <symbol id="icon-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      </symbol>
+      <symbol id="icon-video" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+      </symbol>
+      <symbol id="icon-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+      </symbol>
+      <symbol id="icon-map-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+      </symbol>
+      <symbol id="icon-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/>
+      </symbol>
+      <symbol id="icon-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+      </symbol>
+      <symbol id="icon-graduation-cap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 2.5 3.5 6 3.5s6-1.5 6-3.5v-5"/>
+      </symbol>
+      <symbol id="icon-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+      </symbol>
+      <symbol id="icon-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
       </symbol>
       <symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <polyline points="20 6 9 17 4 12" />
+        <polyline points="20 6 9 17 4 12"/>
       </symbol>
-      <symbol id="icon-wallet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-        <rect x="2" y="5" width="20" height="14" rx="2" />
-        <line x1="2" y1="10" x2="22" y2="10" />
-      </symbol>
-      <symbol id="icon-bell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
-        <path d="M13.73 21a2 2 0 0 1-3.46 0" />
-      </symbol>
-      <symbol id="icon-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="18" y1="20" x2="18" y2="10" />
-        <line x1="12" y1="20" x2="12" y2="4" />
-        <line x1="6" y1="20" x2="6" y2="14" />
-        <line x1="2" y1="20" x2="22" y2="20" />
-      </symbol>
-      <symbol id="icon-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
-      </symbol>
-      <symbol id="icon-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-        <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
-        <line x1="16" y1="2" x2="16" y2="6" />
-        <line x1="8" y1="2" x2="8" y2="6" />
-        <line x1="3" y1="10" x2="21" y2="10" />
-      </symbol>
-      <symbol id="icon-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-        <circle cx="9" cy="7" r="4" />
-        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-      </symbol>
-      <symbol id="icon-video" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-        <polygon points="23 7 16 12 23 17 23 7" />
-        <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
-      </symbol>
-      <symbol id="icon-play" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-        <polygon points="5 3 19 12 5 21 5 3" fill="currentColor" />
-      </symbol>
-      <symbol id="icon-map-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-        <circle cx="12" cy="10" r="3" />
-      </symbol>
-      <symbol id="icon-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="12" cy="12" r="10" />
-        <polyline points="12 6 12 12 16 14" />
-      </symbol>
-      <symbol id="icon-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="5" y1="12" x2="19" y2="12" />
-        <polyline points="12 5 19 12 12 19" />
-      </symbol>
-      <symbol id="icon-trophy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
-        <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
-        <path d="M4 22h16" />
-        <path d="M10 14.66V17c0 .55-.45 1-1 1H8c-.55 0-1 .45-1 1v1h10v-1c0-.55-.45-1-1-1h-1c-.55 0-1-.45-1-1v-2.34" />
-        <path d="M18 4H6v7a6 6 0 0 0 12 0V4z" />
-      </symbol>
-      <symbol id="icon-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-      </symbol>
-      <symbol id="icon-leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
-        <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
-      </symbol>
-      <symbol id="icon-building" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-        <rect x="4" y="2" width="16" height="20" rx="2" ry="2" />
-        <path d="M9 22v-4h6v4M8 6h.01M16 6h.01M12 6h.01M12 10h.01M12 14h.01M16 10h.01M16 14h.01M8 10h.01M8 14h.01" />
-      </symbol>
-      <symbol id="icon-handshake" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-        <path d="m11 17 2 2a1 1 0 0 0 1.4 0l4.3-4.3a1 1 0 0 0 0-1.4L16 11.5" />
-        <path d="m18 10 1.5-1.5a1 1 0 0 0 0-1.4l-2.6-2.6a1 1 0 0 0-1.4 0L12 8" />
-        <path d="m15 13-3-3a1 1 0 0 0-1.4 0L7 13.6a1 1 0 0 0 0 1.4L9.6 17.6a1 1 0 0 0 1.4 0L14 14.6" />
-        <path d="m3 7 3-3a1 1 0 0 1 1.4 0L10 6.6" />
-      </symbol>
-      <symbol id="icon-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-      </symbol>
-      <symbol id="icon-whatsapp" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.15 8.15 0 01-1.25-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 012.41 5.82c0 4.54-3.7 8.24-8.23 8.24zm4.51-6.17c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.89.87-.89 2.12s.91 2.46 1.04 2.63c.12.17 1.79 2.73 4.33 3.83.61.26 1.08.42 1.45.54.61.19 1.16.17 1.6.1 1.48-.07 1.47-.6 1.68-1.18.21-.59.21-1.09.15-1.19-.06-.11-.22-.17-.47-.3z"/>
+      <symbol id="icon-play" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+        <polygon points="5 3 19 12 5 21 5 3"/>
       </symbol>
       <symbol id="icon-chevron-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <polyline points="15 18 9 12 15 6" />
+        <polyline points="15 18 9 12 15 6"/>
       </symbol>
       <symbol id="icon-chevron-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <polyline points="9 18 15 12 9 6" />
+        <polyline points="9 18 15 12 9 6"/>
+      </symbol>
+      <symbol id="icon-chevron-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"/>
       </symbol>
       <symbol id="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="18" y1="6" x2="6" y2="18" />
-        <line x1="6" y1="6" x2="18" y2="18" />
+        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+      </symbol>
+      <symbol id="icon-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+      </symbol>
+      <symbol id="icon-whatsapp" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.15 8.15 0 01-1.25-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 012.41 5.82c0 4.54-3.7 8.24-8.23 8.24zm4.51-6.17c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.89.87-.89 2.12s.91 2.46 1.04 2.63c.12.17 1.79 2.73 4.33 3.83.61.26 1.08.42 1.45.54.61.19 1.16.17 1.6.1.49-.08 1.47-.6 1.68-1.18.21-.59.21-1.09.15-1.19-.06-.11-.22-.17-.47-.3z"/>
+      </symbol>
+      <symbol id="icon-mobile" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="5" y="2" width="14" height="20" rx="3"/><path d="M12 18h.01"/>
+      </symbol>
+      <symbol id="icon-desktop" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+      </symbol>
+      <symbol id="icon-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/>
+      </symbol>
+      <symbol id="icon-building" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><path d="M9 22v-4h6v4M8 6h.01M16 6h.01M12 6h.01M12 10h.01M12 14h.01M16 10h.01M16 14h.01M8 10h.01M8 14h.01"/>
+      </symbol>
+      <symbol id="icon-signal" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+        <rect x="2" y="16" width="3" height="6" rx="1"/><rect x="7.5" y="12" width="3" height="10" rx="1"/><rect x="13" y="8" width="3" height="14" rx="1"/><rect x="18.5" y="4" width="3" height="18" rx="1"/>
+      </symbol>
+      <symbol id="icon-battery" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+        <rect x="2" y="7" width="17" height="10" rx="2"/><rect x="4" y="9" width="11" height="6" rx="1" opacity="0.4"/><rect x="4" y="9" width="8" height="6" rx="1"/><path d="M20 11h2v2h-2z"/>
       </symbol>
     </defs>
   </svg>
 
-  <!-- =========================================================================
-       Header & Sticky Navigation
-       ========================================================================= -->
-  <header class="site-header" id="siteHeader">
-    <div class="container header-container">
-      <!-- Styled Wordmark Logo -->
-      <a href="index.html" class="brand-wordmark" aria-label="OpenSoftwares Homepage">
-        <span class="brand-cap">O</span>pen<span class="brand-cap">S</span>oftwares<span class="brand-dot"></span>
+  <!-- ======================================================================
+       HEADER — Floating Pill Nav
+       ====================================================================== -->
+  <header class="site-header" id="siteHeader" role="banner">
+    <div class="header-inner">
+      <!-- Logo -->
+      <a href="index.html" class="brand-link" aria-label="OpenSoftwares Homepage">
+        <img src="/assets/brand/logo.png" 
+             srcset="/assets/brand/logo-mark-36.png 1x, /assets/brand/logo-mark-72.png 2x" 
+             width="36" height="36" 
+             alt="OpenSoftwares logo" 
+             class="brand-logo-img">
+        <span class="brand-wordmark">
+          <span class="brand-cap">O</span>pen<span class="brand-cap">S</span>oftwares<span class="brand-dot" aria-hidden="true"></span>
+        </span>
       </a>
 
       <!-- Desktop Nav -->
       <nav class="nav-desktop" aria-label="Main Navigation">
         <ul class="nav-links">
-          <li><a href="index.html" class="nav-link active">Home</a></li>
-          <li><a href="schoolmate.html" class="nav-link">Schoolmate</a></li>
-          <li><a href="about.html" class="nav-link">About Us</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="index.html" class="nav-link active" aria-current="page"><span class="nav-text-front">Home</span><span class="nav-text-back" aria-hidden="true">Home</span></a></li>
+          <li><a href="schoolmate.html" class="nav-link"><span class="nav-text-front">Schoolmate</span><span class="nav-text-back" aria-hidden="true">Schoolmate</span></a></li>
+          <li><a href="about.html" class="nav-link"><span class="nav-text-front">About</span><span class="nav-text-back" aria-hidden="true">About</span></a></li>
+          <li><a href="contact.html" class="nav-link"><span class="nav-text-front">Contact</span><span class="nav-text-back" aria-hidden="true">Contact</span></a></li>
         </ul>
       </nav>
 
-      <!-- Desktop CTA Button -->
-      <div class="header-cta-group">
+      <div class="header-cta">
         <a href="contact.html" class="btn btn-primary btn-sm">Book a Demo</a>
+        <!-- Hamburger -->
+        <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="mobileOverlay" aria-label="Open navigation menu">
+          <span class="nav-bar"></span>
+          <span class="nav-bar"></span>
+        </button>
       </div>
-
-      <!-- Mobile Hamburger Toggle -->
-      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="mobileDrawer" aria-label="Toggle mobile menu">
-        <span class="nav-toggle-bar"></span>
-        <span class="nav-toggle-bar"></span>
-        <span class="nav-toggle-bar"></span>
-      </button>
     </div>
   </header>
 
-  <!-- Mobile Slide-in Drawer -->
-  <div class="mobile-nav-backdrop" id="mobileBackdrop"></div>
-  <aside class="mobile-nav-drawer" id="mobileDrawer" aria-label="Mobile Navigation Menu">
-    <div class="mobile-drawer-header">
-      <a href="index.html" class="brand-wordmark">
-        <span class="brand-cap">O</span>pen<span class="brand-cap">S</span>oftwares<span class="brand-dot"></span>
+  <!-- Mobile Full-Screen Overlay Menu -->
+  <nav class="mobile-overlay" id="mobileOverlay" aria-label="Mobile Navigation" aria-hidden="true">
+    <div class="mobile-overlay-header">
+      <a href="index.html" class="brand-link brand-link-light" aria-label="OpenSoftwares Homepage">
+        <img src="/assets/brand/logo.png" 
+             srcset="/assets/brand/logo-mark-32.png 1x, /assets/brand/logo-mark-72.png 2x" 
+             width="32" height="32" 
+             alt="OpenSoftwares logo" 
+             class="brand-logo-img brand-logo-darkmode">
+        <span class="brand-wordmark">
+          <span class="brand-cap">O</span>pen<span class="brand-cap">S</span>oftwares<span class="brand-dot"></span>
+        </span>
       </a>
-      <button class="drawer-close-btn" id="drawerCloseBtn" type="button" aria-label="Close navigation menu">
-        <svg class="svg-icon"><use href="#icon-close"></use></svg>
+      <button class="overlay-close" id="overlayClose" type="button" aria-label="Close navigation menu">
+        <svg class="icon"><use href="#icon-close"></use></svg>
       </button>
     </div>
-    <ul class="mobile-nav-links">
-      <li><a href="index.html" class="mobile-nav-link active">Home</a></li>
-      <li><a href="schoolmate.html" class="mobile-nav-link">Schoolmate Software</a></li>
-      <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
-      <li><a href="contact.html" class="mobile-nav-link">Contact &amp; Demo</a></li>
-    </ul>
-    <div class="mobile-drawer-footer">
-      <a href="contact.html" class="btn btn-primary btn-lg" style="width: 100%;">Book a Free Demo</a>
-      <a href="tel:+917204726501" class="btn btn-secondary btn-sm" style="width: 100%;">Call +91 72047 26501</a>
-    </div>
-  </aside>
 
-  <!-- =========================================================================
-       MAIN CONTENT: New Order (Slider First Flow)
-       ========================================================================= -->
+    <ul class="mobile-nav-list">
+      <li class="mobile-nav-item">
+        <span class="mobile-nav-index">01</span>
+        <a href="index.html" class="mobile-nav-link">Home</a>
+      </li>
+      <li class="mobile-nav-item">
+        <span class="mobile-nav-index">02</span>
+        <a href="schoolmate.html" class="mobile-nav-link">Schoolmate</a>
+      </li>
+      <li class="mobile-nav-item">
+        <span class="mobile-nav-index">03</span>
+        <a href="about.html" class="mobile-nav-link">About</a>
+      </li>
+      <li class="mobile-nav-item">
+        <span class="mobile-nav-index">04</span>
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+      </li>
+    </ul>
+
+    <div class="mobile-overlay-footer">
+      <p class="mobile-footer-notice">Schoolmate app — coming soon on Google Play</p>
+      <div class="mobile-footer-contacts">
+        <a href="tel:+917204726501" class="mobile-footer-link">
+          <svg class="icon icon-sm"><use href="#icon-phone"></use></svg>
+          +91 72047 26501
+        </a>
+        <a href="https://wa.me/917204726501?text=Hi%2C%20I%20want%20to%20know%20more%20about%20school%20software" class="mobile-footer-link">
+          <svg class="icon icon-sm icon-filled"><use href="#icon-whatsapp"></use></svg>
+          WhatsApp
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ======================================================================
+       MAIN CONTENT
+       ====================================================================== -->
   <main id="mainContent">
 
-    <!-- 1. HERO FLOW: Trust Pill -> Slider FIRST -> Headline & Action Buttons -->
-    <section class="home-hero-flow" aria-labelledby="heroTitle">
-      <div class="container">
+    <!-- ==================================================================
+         A. HERO SECTION
+         ================================================================== -->
+    <section class="hero" aria-labelledby="heroTitle">
 
-        <!-- a) Top Trust Pill -->
-        <div class="home-top-bar">
-          <div class="hero-trust-badge">
-            <span class="badge-icon" aria-hidden="true">
-              <svg class="svg-icon"><use href="#icon-star"></use></svg>
-            </span>
-            <span>Trusted by thousands of schools and institutions across Maharashtra</span>
-          </div>
+      <!-- ---- MOBILE HERO (default up to 1023px) ---- -->
+      <div class="container" style="display:contents;">
+        <!-- Trust Line -->
+        <div class="container">
+          <p class="hero-trust-line" aria-label="Social proof">
+            Trusted by thousands of schools across Maharashtra
+          </p>
         </div>
 
-        <!-- b) Image Slider FIRST (Full-Width Rounded, 5 Slides, Dots BELOW) -->
-        <div class="slider-container-wrapper" aria-label="Product Showcase Highlights">
-          <div class="slider-wrapper" id="sliderWrapper">
-            <div class="slider-track-container">
-              <div class="slider-track" id="sliderTrack">
-                <!-- Slide 1: School Administration -->
-                <div class="slide-item">
-                  <img src="assets/slider-admin.svg" alt="Unified School Administration ERP Dashboard screen showing automated admissions, collections, and biometric staff" width="1200" height="600" loading="eager">
-                </div>
-                <!-- Slide 2: Parent App -->
-                <div class="slide-item">
-                  <img src="assets/slider-parents.svg" alt="Parents using Schoolmate Android App with real-time homework, instant fee receipts, and teacher chat" width="1200" height="600" loading="lazy">
-                </div>
-                <!-- Slide 3: Live Bus Tracking -->
-                <div class="slide-item">
-                  <img src="assets/slider-bus.svg" alt="Real-time School Bus GPS Tracking on active route map with speed telemetry and geofence alerts" width="1200" height="600" loading="lazy">
-                </div>
-                <!-- Slide 4: Classroom Learning -->
-                <div class="slide-item">
-                  <img src="assets/slider-classroom.svg" alt="Smart Classroom and digital learning interface with timetable scheduler and CBSE gradebook" width="1200" height="600" loading="lazy">
-                </div>
-                <!-- Slide 5: Fee & Accounts Ledger -->
-                <div class="slide-item">
-                  <img src="assets/slider-fees.svg" alt="Automated fees and accounts ledger with direct UPI and instant receipts" width="1200" height="600" loading="lazy">
-                </div>
+        <!-- Mobile edge-to-edge slider -->
+        <div class="hero-slider-mobile" aria-label="Product Showcase Slides" role="region">
+          <div class="slider-inner" id="sliderMobile">
+            <div class="slide-item active">
+              <img src="assets/slider-admin.svg" alt="Schoolmate Administration ERP dashboard" width="1200" height="640" loading="eager">
+              <div class="slide-caption">
+                <div class="slide-label">Administration</div>
+                <div class="slide-title-text">School Management ERP</div>
+                <div class="slide-caption-text">Biometric attendance, payroll and real-time reports</div>
               </div>
             </div>
-
-            <!-- Slider Arrows -->
-            <button class="slider-arrow slider-arrow-prev" id="sliderPrev" type="button" aria-label="Previous slide">
-              <svg class="svg-icon"><use href="#icon-chevron-left"></use></svg>
-            </button>
-            <button class="slider-arrow slider-arrow-next" id="sliderNext" type="button" aria-label="Next slide">
-              <svg class="svg-icon"><use href="#icon-chevron-right"></use></svg>
-            </button>
+            <div class="slide-item">
+              <img src="assets/slider-parents.svg" alt="Schoolmate Android parent app with homework and attendance" width="1200" height="640" loading="lazy">
+              <div class="slide-caption">
+                <div class="slide-label">Parent App</div>
+                <div class="slide-title-text">Everything in one Android App</div>
+                <div class="slide-caption-text">Homework, fees, notices and live bus on one screen</div>
+              </div>
+            </div>
+            <div class="slide-item">
+              <img src="assets/slider-bus.svg" alt="Live GPS school bus tracking on route map" width="1200" height="640" loading="lazy">
+              <div class="slide-caption">
+                <div class="slide-label">Bus Tracking</div>
+                <div class="slide-title-text">Live GPS Safety Telemetry</div>
+                <div class="slide-caption-text">Real-time routes, speed alerts and arrival geofences</div>
+              </div>
+            </div>
+            <div class="slide-item">
+              <img src="assets/slider-classroom.svg" alt="Smart classroom, timetable and CBSE gradebook" width="1200" height="640" loading="lazy">
+              <div class="slide-caption">
+                <div class="slide-label">Academics</div>
+                <div class="slide-title-text">Timetable &amp; Gradebook</div>
+                <div class="slide-caption-text">Automated CBSE report cards and conflict-free schedules</div>
+              </div>
+            </div>
+            <div class="slide-item">
+              <img src="assets/slider-fees.svg" alt="Automated fees collection and accounts ledger" width="1200" height="640" loading="lazy">
+              <div class="slide-caption">
+                <div class="slide-label">Fees &amp; Finance</div>
+                <div class="slide-title-text">Automated Fee Collection</div>
+                <div class="slide-caption-text">UPI receipts, reminders and accounts ledger</div>
+              </div>
+            </div>
+            <!-- Progress bar -->
+            <div class="slider-progress-bar" aria-hidden="true"></div>
           </div>
-
-          <!-- Slide Dots: Cleanly Below the Slider (Never overlapping images) -->
-          <div class="slider-dots-wrapper" id="sliderDots" role="tablist" aria-label="Slider Pagination"></div>
+          <!-- Arrows (mobile: hidden via CSS on small screens, visible >=1024) -->
+          <button class="slider-arrow slider-arrow-prev" type="button" aria-label="Previous slide">
+            <svg class="icon"><use href="#icon-chevron-left"></use></svg>
+          </button>
+          <button class="slider-arrow slider-arrow-next" type="button" aria-label="Next slide">
+            <svg class="icon"><use href="#icon-chevron-right"></use></svg>
+          </button>
         </div>
 
-        <!-- c) Big Headline Below Slider with Animated SVG Underline -->
-        <div class="hero-content-below">
-          <h1 class="hero-title" id="heroTitle">
-            Making schools ready for the <br>
-            <span class="hero-highlight-wrap">
-              future of learning
-              <svg class="hero-draw-svg" viewBox="0 0 340 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path class="hero-draw-path" d="M3 14C80 4 240 2 337 11" stroke="#0A2A5E" stroke-width="4.5" stroke-linecap="round" />
-              </svg>
-            </span>
-          </h1>
-
-          <p class="hero-description text-lead">
-            <strong>Schoolmate by OpenSoftwares</strong> unifies your entire campus: a high-speed Android app for parents and teachers, alongside a rock-solid web ERP for administration, fee collections, staff payroll, and live bus GPS safety.
-          </p>
-
-          <!-- Two Equal-Size Buttons (Stacked on mobile, side-by-side on desktop) -->
-          <div class="hero-actions">
-            <a href="schoolmate.html" class="btn btn-outline btn-lg">Explore Schoolmate</a>
-            <a href="contact.html" class="btn btn-primary btn-lg">Book a Free Demo</a>
+        <!-- Hero content below slider (mobile) -->
+        <div class="container">
+          <div class="hero-content">
+            <h1 class="hero-title" id="heroTitle">
+              Making schools ready<br>for the <em class="serif" style="position:relative;">future of learning<svg class="hero-underline-svg" viewBox="0 0 320 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path class="hero-underline-path" d="M4 12 C80 4 200 2 316 10" stroke="#E8A317" stroke-width="3" stroke-linecap="round"/></svg></em>
+            </h1>
+            <p class="hero-subline">
+              <strong>Schoolmate by OpenSoftwares</strong> unifies your entire campus — a fast Android app for parents and teachers, and a powerful web ERP for admins, finance, payroll and live bus tracking.
+            </p>
+            <div class="hero-actions">
+              <a href="schoolmate.html" class="btn btn-primary">
+                Explore Schoolmate
+                <svg class="icon icon-sm btn-arrow"><use href="#icon-arrow-up-right"></use></svg>
+              </a>
+              <a href="contact.html" class="btn btn-ghost">Book a free demo</a>
+            </div>
           </div>
         </div>
+      </div>
+
+      <!-- ---- DESKTOP HERO (two-column, 1024px+) ---- -->
+      <div class="container hero-desktop" aria-label="Hero desktop layout">
+        <!-- Left column -->
+        <div class="hero-desktop-left">
+          <div class="hero-content">
+            <p class="hero-trust-line-desktop">Trusted by thousands of schools across Maharashtra</p>
+            <h1 class="hero-title" id="heroTitleDesktop">
+              Making schools ready<br>for the <em class="serif" style="position:relative;">future of learning<svg class="hero-underline-svg" viewBox="0 0 320 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path class="hero-underline-path" d="M4 12 C80 4 200 2 316 10" stroke="#E8A317" stroke-width="3" stroke-linecap="round"/></svg></em>
+            </h1>
+            <p class="hero-subline">
+              <strong>Schoolmate by OpenSoftwares</strong> unifies your entire campus — a fast Android app for parents and teachers, and a powerful web ERP for admins, finance, payroll and live bus tracking.
+            </p>
+            <div class="hero-actions">
+              <a href="schoolmate.html" class="btn btn-primary">
+                Explore Schoolmate
+                <svg class="icon icon-sm btn-arrow"><use href="#icon-arrow-up-right"></use></svg>
+              </a>
+              <a href="contact.html" class="btn btn-ghost">Book a free demo</a>
+            </div>
+
+            <!-- Mini stats below buttons -->
+            <div class="hero-stats-row" aria-label="Key metrics">
+              <div class="hero-stat-item">
+                <span class="hero-stat-num">500<span style="color:var(--saffron)">+</span></span>
+                <span class="hero-stat-label">Schools</span>
+              </div>
+              <div class="hero-stats-divider" aria-hidden="true"></div>
+              <div class="hero-stat-item">
+                <span class="hero-stat-num">1.2L<span style="color:var(--saffron)">+</span></span>
+                <span class="hero-stat-label">Students</span>
+              </div>
+              <div class="hero-stats-divider" aria-hidden="true"></div>
+              <div class="hero-stat-item">
+                <span class="hero-stat-num">40<span style="color:var(--saffron)">+</span></span>
+                <span class="hero-stat-label">Cities</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right column: contained slider -->
+        <div class="hero-desktop-right">
+          <div class="hero-slider-desktop" aria-label="Product showcase slides">
+            <div class="slider-inner" id="sliderDesktop">
+              <div class="slide-item active">
+                <img src="assets/slider-admin.svg" alt="Schoolmate Administration ERP dashboard" width="560" height="640" loading="eager">
+                <div class="slide-caption">
+                  <div class="slide-label">Administration</div>
+                  <div class="slide-title-text">School Management ERP</div>
+                  <div class="slide-caption-text">Biometric attendance, payroll and real-time reports</div>
+                </div>
+              </div>
+              <div class="slide-item">
+                <img src="assets/slider-parents.svg" alt="Schoolmate Android parent app" width="560" height="640" loading="lazy">
+                <div class="slide-caption">
+                  <div class="slide-label">Parent App</div>
+                  <div class="slide-title-text">Everything in one Android App</div>
+                  <div class="slide-caption-text">Homework, fees, notices and live bus on one screen</div>
+                </div>
+              </div>
+              <div class="slide-item">
+                <img src="assets/slider-bus.svg" alt="Live GPS school bus tracking" width="560" height="640" loading="lazy">
+                <div class="slide-caption">
+                  <div class="slide-label">Bus Tracking</div>
+                  <div class="slide-title-text">Live GPS Safety Telemetry</div>
+                  <div class="slide-caption-text">Real-time routes, speed alerts and arrival geofences</div>
+                </div>
+              </div>
+              <div class="slide-item">
+                <img src="assets/slider-classroom.svg" alt="Smart classroom and CBSE gradebook" width="560" height="640" loading="lazy">
+                <div class="slide-caption">
+                  <div class="slide-label">Academics</div>
+                  <div class="slide-title-text">Timetable &amp; Gradebook</div>
+                  <div class="slide-caption-text">Automated CBSE report cards and conflict-free schedules</div>
+                </div>
+              </div>
+              <div class="slide-item">
+                <img src="assets/slider-fees.svg" alt="Automated fees and accounts" width="560" height="640" loading="lazy">
+                <div class="slide-caption">
+                  <div class="slide-label">Fees &amp; Finance</div>
+                  <div class="slide-title-text">Automated Fee Collection</div>
+                  <div class="slide-caption-text">UPI receipts, reminders and accounts ledger</div>
+                </div>
+              </div>
+              <!-- Progress bar -->
+              <div class="slider-progress-bar" aria-hidden="true"></div>
+            </div>
+            <button class="slider-arrow slider-arrow-prev" type="button" aria-label="Previous slide">
+              <svg class="icon"><use href="#icon-chevron-left"></use></svg>
+            </button>
+            <button class="slider-arrow slider-arrow-next" type="button" aria-label="Next slide">
+              <svg class="icon"><use href="#icon-chevron-right"></use></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ==================================================================
+         B. APP SHOWCASE SECTION
+         ================================================================== -->
+    <section class="section app-section" id="appShowcase" aria-labelledby="appHeading">
+      <div class="container">
+
+        <div class="app-layout">
+
+          <!-- Text Column -->
+          <div class="app-text-col reveal">
+            <span class="section-label">01 / Mobile App</span>
+
+            <!-- Google Play Notice (above phone) -->
+            <div class="app-play-notice" aria-label="Schoolmate app availability">
+              <div class="app-play-badge">
+                <!-- Google Play icon (simplified SVG) -->
+                <svg class="gp-logo" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M3.18 23.76c.37.2.78.24 1.16.13L14.48 12 4.34.11C3.96 0 3.55.04 3.18.24 2.46.64 2 1.4 2 2.25v19.5c0 .85.46 1.61 1.18 2.01z" fill="#EA4335"/>
+                  <path d="M21.14 9.75L17.88 8 14.48 12l3.4 4 3.26-1.75c.93-.5.93-1.99.0-2.5z" fill="#FBBC04"/>
+                  <path d="M4.34.11L14.48 12l-3.4-3.5L4.34.11z" fill="#4285F4"/>
+                  <path d="M4.34 23.89l6.74-7.39L14.48 12 4.34 23.89z" fill="#34A853"/>
+                </svg>
+                <div>
+                  <div class="app-play-name">Schoolmate</div>
+                  <div class="app-play-sub">Coming soon on Google Play</div>
+                </div>
+              </div>
+              <div class="app-play-divider" aria-hidden="true"></div>
+              <div class="app-play-dot" aria-hidden="true"></div>
+              <a href="https://wa.me/917204726501?text=Hi%2C%20please%20notify%20me%20when%20the%20Schoolmate%20app%20launches%20on%20Google%20Play" class="app-notify-link" aria-label="Get notified about Schoolmate app launch">Notify me</a>
+            </div>
+
+            <h2 class="app-section-title" id="appHeading">
+              Everything a parent needs, in one <em class="serif">app.</em>
+            </h2>
+            <p class="app-section-body">
+              Homework alerts, attendance records, live bus location, educational videos, fee receipts and school notices — all in a single, beautifully designed Android app.
+            </p>
+          </div>
+
+          <!-- Phone Device Column -->
+          <div class="app-phone-col reveal reveal-delay-2">
+            <div class="phone-device" aria-label="Schoolmate Android App interactive demo" role="region">
+              <div class="phone-frame">
+
+                <!-- Notch / punch-hole camera -->
+                <div class="phone-notch-bar">
+                  <div class="phone-camera" aria-hidden="true"></div>
+                </div>
+
+                <!-- Status Bar -->
+                <div class="phone-status-bar" aria-hidden="true">
+                  <span class="phone-status-time">9:41 AM</span>
+                  <div class="phone-status-icons">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><use href="#icon-signal"></use></svg>
+                    <svg width="14" height="12" viewBox="0 0 24 24" fill="currentColor"><use href="#icon-battery"></use></svg>
+                  </div>
+                </div>
+
+                <!-- Phone Screen -->
+                <div class="phone-screen-wrap" id="phoneScreenWrap">
+
+                  <!-- Screen 0: Dashboard -->
+                  <div class="phone-screen screen-dashboard active" id="screen-0" role="tabpanel" aria-labelledby="tab-0">
+                    <div class="screen-dashboard" style="height:100%;overflow-y:auto;padding:12px 10px 8px;">
+                      <div class="dash-profile-row">
+                        <div class="dash-avatar">AA</div>
+                        <div>
+                          <div class="dash-name">Aanya Agarwal</div>
+                          <div class="dash-class">Class X-B &nbsp;•&nbsp; Roll No. 14</div>
+                        </div>
+                        <div class="dash-greeting">Good morning</div>
+                      </div>
+
+                      <!-- Attendance ring mini -->
+                      <div class="dash-attend-row">
+                        <div class="attend-ring-mini">
+                          <svg class="attend-ring-mini-svg" viewBox="0 0 44 44">
+                            <circle class="attend-track" cx="22" cy="22" r="18"/>
+                            <circle class="attend-fill" cx="22" cy="22" r="18"/>
+                          </svg>
+                        </div>
+                        <div>
+                          <div class="attend-pct">94.2%</div>
+                          <div class="attend-label">Attendance this month</div>
+                        </div>
+                      </div>
+
+                      <!-- Homework -->
+                      <div class="dash-hw-section">
+                        <div class="dash-hw-title">Due Today</div>
+                        <div class="hw-item">
+                          <div class="hw-dot"></div>
+                          <span class="hw-subject">Mathematics</span>
+                          <span style="font-size:9px;color:var(--ink-soft);">Chapter 7 — Ex 7.2</span>
+                          <span class="hw-due">Today</span>
+                        </div>
+                        <div class="hw-item">
+                          <div class="hw-dot" style="background:var(--success);"></div>
+                          <span class="hw-subject">Science</span>
+                          <span style="font-size:9px;color:var(--ink-soft);">Lab Report</span>
+                          <span class="hw-due">Tomorrow</span>
+                        </div>
+                      </div>
+
+                      <!-- Quick Actions -->
+                      <div class="dash-quick-actions">
+                        <div class="qa-btn">
+                          <div class="qa-btn-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><use href="#icon-wallet"></use></svg></div>
+                          <div class="qa-btn-label">Pay Fees</div>
+                        </div>
+                        <div class="qa-btn">
+                          <div class="qa-btn-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><use href="#icon-chat"></use></svg></div>
+                          <div class="qa-btn-label">Message Teacher</div>
+                        </div>
+                        <div class="qa-btn">
+                          <div class="qa-btn-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><use href="#icon-clock"></use></svg></div>
+                          <div class="qa-btn-label">Timetable</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Screen 1: Attendance -->
+                  <div class="phone-screen screen-attendance" id="screen-1" role="tabpanel" aria-labelledby="tab-1">
+                    <div style="height:100%;padding:10px;background:#f6f4ef;overflow-y:auto;">
+                      <div class="attend-header">
+                        <span class="attend-month-name">October 2026</span>
+                      </div>
+                      <div class="attend-big-ring">
+                        <svg class="attend-big-ring-svg" viewBox="0 0 70 70">
+                          <circle class="attend-big-track" cx="35" cy="35" r="28"/>
+                          <circle class="attend-big-fill" cx="35" cy="35" r="28"/>
+                          <text class="attend-big-text" x="35" y="35">94%</text>
+                        </svg>
+                      </div>
+                      <div class="cal-grid" aria-label="Attendance calendar">
+                        <div class="cal-dow">S</div><div class="cal-dow">M</div><div class="cal-dow">T</div><div class="cal-dow">W</div><div class="cal-dow">T</div><div class="cal-dow">F</div><div class="cal-dow">S</div>
+                        <!-- Week 1 -->
+                        <div class="cal-day future">29</div><div class="cal-day future">30</div><div class="cal-day present">1</div><div class="cal-day present">2</div><div class="cal-day present">3</div><div class="cal-day present">4</div><div class="cal-day future">5</div>
+                        <!-- Week 2 -->
+                        <div class="cal-day future">6</div><div class="cal-day present">7</div><div class="cal-day absent">8</div><div class="cal-day present">9</div><div class="cal-day present">10</div><div class="cal-day present">11</div><div class="cal-day future">12</div>
+                        <!-- Week 3 -->
+                        <div class="cal-day future">13</div><div class="cal-day present">14</div><div class="cal-day present">15</div><div class="cal-day leave">16</div><div class="cal-day present">17</div><div class="cal-day present">18</div><div class="cal-day future">19</div>
+                        <!-- Week 4 -->
+                        <div class="cal-day future">20</div><div class="cal-day present">21</div><div class="cal-day today">22</div><div class="cal-day future">23</div><div class="cal-day future">24</div><div class="cal-day future">25</div><div class="cal-day future">26</div>
+                      </div>
+                      <div style="display:flex;gap:10px;margin-top:10px;font-family:var(--font-mono);font-size:8px;">
+                        <span style="color:var(--success)">&#9632; Present</span>
+                        <span style="color:var(--danger)">&#9632; Absent</span>
+                        <span style="color:#b07800">&#9632; Leave</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Screen 2: Videos -->
+                  <div class="phone-screen screen-videos" id="screen-2" role="tabpanel" aria-labelledby="tab-2">
+                    <div style="height:100%;background:#f6f4ef;padding:10px;overflow-y:auto;">
+                      <div class="videos-title">Learning Videos</div>
+
+                      <div class="video-card">
+                        <div class="video-thumb">
+                          <div class="video-thumb-pattern"></div>
+                          <div class="video-play-btn"><svg viewBox="0 0 24 24"><use href="#icon-play"></use></svg></div>
+                        </div>
+                        <div class="video-info">
+                          <div class="video-subject">CBSE &bull; Mathematics</div>
+                          <div class="video-name">Quadratic Equations — Finding Roots &amp; Discriminant</div>
+                          <div class="video-meta">
+                            <span class="video-duration">18:42</span>
+                          </div>
+                          <div class="video-progress-bar" style="margin-top:4px;"><div class="video-progress-fill" style="width:65%;"></div></div>
+                        </div>
+                      </div>
+
+                      <div class="video-card">
+                        <div class="video-thumb" style="background:#0f2a1a;">
+                          <div class="video-thumb-pattern"></div>
+                          <div class="video-play-btn"><svg viewBox="0 0 24 24"><use href="#icon-play"></use></svg></div>
+                        </div>
+                        <div class="video-info">
+                          <div class="video-subject">CBSE &bull; Science</div>
+                          <div class="video-name">Chemical Reactions and Equations — Balancing</div>
+                          <div class="video-meta">
+                            <span class="video-duration">24:10</span>
+                          </div>
+                          <div class="video-progress-bar" style="margin-top:4px;"><div class="video-progress-fill" style="width:10%;"></div></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Screen 3: Bus Tracking -->
+                  <div class="phone-screen screen-bus" id="screen-3" role="tabpanel" aria-labelledby="tab-3">
+                    <!-- Map background SVG -->
+                    <div class="bus-map-bg" aria-hidden="true">
+                      <svg width="100%" height="100%" viewBox="0 0 280 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Roads -->
+                        <rect width="280" height="450" fill="#1e2435"/>
+                        <line x1="0" y1="120" x2="280" y2="120" stroke="#252e42" stroke-width="20"/>
+                        <line x1="0" y1="280" x2="280" y2="280" stroke="#252e42" stroke-width="20"/>
+                        <line x1="80" y1="0" x2="80" y2="450" stroke="#252e42" stroke-width="20"/>
+                        <line x1="200" y1="0" x2="200" y2="450" stroke="#252e42" stroke-width="20"/>
+                        <!-- Road lines -->
+                        <line x1="0" y1="120" x2="280" y2="120" stroke="#3a4260" stroke-width="1" stroke-dasharray="20 10"/>
+                        <line x1="80" y1="0" x2="80" y2="450" stroke="#3a4260" stroke-width="1" stroke-dasharray="20 10"/>
+                        <!-- Route path -->
+                        <path d="M 40 380 L 40 280 L 80 280 L 80 120 L 200 120 L 200 60" stroke="#E8A317" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="6 3" opacity="0.6"/>
+                        <!-- Bus icon -->
+                        <rect x="70" y="200" width="20" height="14" rx="3" fill="#E8A317"/>
+                        <rect x="72" y="202" width="16" height="7" rx="1" fill="#fff" opacity="0.6"/>
+                        <circle cx="74" cy="216" r="3" fill="#0B1630"/>
+                        <circle cx="84" cy="216" r="3" fill="#0B1630"/>
+                        <!-- Pulsing pin at school end -->
+                        <circle cx="200" cy="56" r="8" fill="rgba(232,163,23,0.2)"/>
+                        <circle cx="200" cy="56" r="5" fill="#E8A317"/>
+                        <circle cx="200" cy="56" r="2" fill="#fff"/>
+                      </svg>
+                    </div>
+                    <!-- Overlay ETA card -->
+                    <div class="bus-overlay">
+                      <div class="bus-eta-card">
+                        <div class="bus-live-dot" aria-hidden="true"></div>
+                        <div>
+                          <div class="bus-eta-label">Bus 03 — Live ETA</div>
+                          <div class="bus-eta-time">7 min away</div>
+                          <div class="bus-driver">Driver: Rajesh S. &nbsp;&bull;&nbsp; MH-12 3456</div>
+                        </div>
+                        <div class="bus-route-info">
+                          <div class="bus-from-to">Current: Kharadi</div>
+                          <div class="bus-from-to">To: School Gate</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Screen 4: Notices -->
+                  <div class="phone-screen screen-notices" id="screen-4" role="tabpanel" aria-labelledby="tab-4">
+                    <div style="height:100%;background:#f6f4ef;padding:10px;overflow-y:auto;">
+                      <div class="notices-title">School Notices</div>
+
+                      <div class="notice-card">
+                        <div class="notice-tag">Academic</div>
+                        <div class="notice-text">Annual Day rehearsals begin from Monday. All students of Class IX and X are required to report to the assembly hall at 7:30 AM.</div>
+                        <div class="notice-date">21 Oct 2026</div>
+                      </div>
+                      <div class="notice-card">
+                        <div class="notice-tag">Examination</div>
+                        <div class="notice-text">Unit Test 2 for Mathematics and Science will be held on 28th October 2026. Syllabus: Ch. 5–8.</div>
+                        <div class="notice-date">19 Oct 2026</div>
+                      </div>
+                      <div class="notice-card">
+                        <div class="notice-tag">Holiday</div>
+                        <div class="notice-text">School will remain closed on 24th October on account of Diwali. Classes resume on 27th October.</div>
+                        <div class="notice-date">18 Oct 2026</div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div><!-- /phone-screen-wrap -->
+
+                <!-- Bottom Tab Bar -->
+                <div class="phone-tab-bar" role="tablist" aria-label="App navigation">
+                  <!-- Sliding saffron indicator -->
+                  <div class="tab-indicator" id="tabIndicator" aria-hidden="true"></div>
+
+                  <button class="phone-tab-btn active" id="tab-0" role="tab" aria-selected="true" aria-controls="screen-0" type="button">
+                    <svg class="icon icon-sm"><use href="#icon-book"></use></svg>
+                    Home
+                  </button>
+                  <button class="phone-tab-btn" id="tab-1" role="tab" aria-selected="false" aria-controls="screen-1" type="button">
+                    <svg class="icon icon-sm"><use href="#icon-calendar"></use></svg>
+                    Attend.
+                  </button>
+                  <button class="phone-tab-btn" id="tab-2" role="tab" aria-selected="false" aria-controls="screen-2" type="button">
+                    <svg class="icon icon-sm"><use href="#icon-video"></use></svg>
+                    Videos
+                  </button>
+                  <button class="phone-tab-btn" id="tab-3" role="tab" aria-selected="false" aria-controls="screen-3" type="button">
+                    <svg class="icon icon-sm"><use href="#icon-bus"></use></svg>
+                    Bus
+                  </button>
+                  <button class="phone-tab-btn" id="tab-4" role="tab" aria-selected="false" aria-controls="screen-4" type="button">
+                    <svg class="icon icon-sm"><use href="#icon-bell"></use></svg>
+                    Notices
+                  </button>
+                </div>
+
+                <!-- Gesture bar -->
+                <div class="phone-gesture-bar" aria-hidden="true">
+                  <div class="gesture-pill"></div>
+                </div>
+
+              </div><!-- /phone-frame -->
+            </div><!-- /phone-device -->
+          </div><!-- /app-phone-col -->
+
+        </div><!-- /app-layout -->
 
       </div>
     </section>
 
-    <!-- 2. SECTION 2: Interactive Schoolmate Android App (Main Showpiece) -->
-    <section class="section app-showcase-section" id="appShowcase" aria-labelledby="appShowcaseHeading">
+    <!-- ==================================================================
+         C. ERP SECTION (dark band)
+         ================================================================== -->
+    <section class="section erp-section" id="erpShowcase" aria-labelledby="erpHeading">
       <div class="container">
-        <div class="section-header reveal">
-          <span class="section-badge">
-            <svg class="svg-icon"><use href="#icon-mobile"></use></svg>
-            Interactive Smartphone Suite
-          </span>
-          <h2 class="section-title" id="appShowcaseHeading">The Schoolmate Android App</h2>
-          <p class="section-desc">
-            Experience the actual parent app interface below. Tap the bottom navigation tabs inside the phone to inspect live features.
-          </p>
-        </div>
 
-        <div class="app-showcase-grid">
-          <!-- Feature labels beside the phone (highlight in sync and clickable) -->
-          <div class="app-labels-list" role="tablist" aria-label="Schoolmate Android App Features">
-            <!-- Label 0: Dashboard / Homework -->
-            <div class="app-label-item active" role="tab" aria-selected="true" tabindex="0" data-tab-index="0">
-              <div class="app-label-icon" aria-hidden="true">
-                <svg class="svg-icon"><use href="#icon-book"></use></svg>
-              </div>
-              <div class="app-label-info">
-                <h4>Parent Dashboard &amp; Homework</h4>
-                <p>Child profile overview, homework assignments due with checklist, and instant term fee status.</p>
-              </div>
-            </div>
+        <span class="section-label">02 / Web ERP</span>
+        <h2 class="erp-heading reveal" id="erpHeading">Schoolmate ERP</h2>
+        <p class="erp-subline reveal reveal-delay-1">
+          One system for school management, finance, staff, payroll and everything in between.
+        </p>
 
-            <!-- Label 1: Attendance -->
-            <div class="app-label-item" role="tab" aria-selected="false" tabindex="0" data-tab-index="1">
-              <div class="app-label-icon" aria-hidden="true">
-                <svg class="svg-icon"><use href="#icon-calendar"></use></svg>
-              </div>
-              <div class="app-label-info">
-                <h4>School Attendance &amp; RFID Sync</h4>
-                <p>Monthly calendar grid with animated present, absent and leave records plus an attendance percentage ring.</p>
-              </div>
-            </div>
+        <!-- Scaled Laptop/Monitor Mockup -->
+        <div class="erp-mockup-host reveal reveal-delay-2" aria-label="Schoolmate ERP interface demo">
+          <div class="erp-mockup-scaler">
+            <div class="erp-mockup-canvas" id="erpCanvas">
 
-            <!-- Label 2: Educational Videos -->
-            <div class="app-label-item" role="tab" aria-selected="false" tabindex="0" data-tab-index="2">
-              <div class="app-label-icon" aria-hidden="true">
-                <svg class="svg-icon"><use href="#icon-video"></use></svg>
-              </div>
-              <div class="app-label-info">
-                <h4>Educational Video Lessons</h4>
-                <p>Curated subject lessons with video progress bars, chapter clips, and teacher lecture summaries.</p>
-              </div>
-            </div>
-
-            <!-- Label 3: Bus Tracking -->
-            <div class="app-label-item" role="tab" aria-selected="false" tabindex="0" data-tab-index="3">
-              <div class="app-label-icon" aria-hidden="true">
-                <svg class="svg-icon"><use href="#icon-bus"></use></svg>
-              </div>
-              <div class="app-label-info">
-                <h4>Live GPS Bus Tracking</h4>
-                <p>Watch the school bus move live along its route with a pulsing location pin and real-time arrival ETA.</p>
-              </div>
-            </div>
-
-            <!-- Label 4: Notices -->
-            <div class="app-label-item" role="tab" aria-selected="false" tabindex="0" data-tab-index="4">
-              <div class="app-label-icon" aria-hidden="true">
-                <svg class="svg-icon"><use href="#icon-bell"></use></svg>
-              </div>
-              <div class="app-label-info">
-                <h4>Digital Notices &amp; Circulars</h4>
-                <p>Clean, beautifully wrapped official school circulars and event announcements with zero text cutoff.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Realistic Clickable Phone Mockup in HTML/CSS -->
-          <div class="phone-mockup-outer">
-            <div class="phone-device">
-              <div class="phone-screen-container">
-
-                <!-- Status Bar -->
-                <div class="phone-status-bar">
-                  <span>9:41</span>
-                  <div class="phone-notch">
-                    <div class="phone-camera-dot"></div>
-                  </div>
-                  <div style="display: flex; gap: 4px; align-items: center;">
-                    <svg class="svg-icon" style="width: 14px; height: 14px;"><use href="#icon-shield"></use></svg>
-                    <span>100%</span>
-                  </div>
+              <!-- Browser bar -->
+              <div class="erp-browser-bar">
+                <div class="erp-traffic-dots" aria-hidden="true">
+                  <div class="erp-dot erp-dot-red"></div>
+                  <div class="erp-dot erp-dot-amber"></div>
+                  <div class="erp-dot erp-dot-green"></div>
                 </div>
-
-                <!-- App Header -->
-                <div class="phone-app-header">
-                  <div>
-                    <span style="font-size: 0.72rem; color: #93C5FD; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700;">PARENT PORTAL</span>
-                    <div class="phone-app-title">Schoolmate</div>
-                  </div>
-                  <div class="phone-badge-notification" title="3 unread notifications">3</div>
+                <div class="erp-url-field" aria-label="Browser address bar">
+                  <svg class="erp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                  <span class="erp-url-text">schoolmate.opensoftwares.in/erp-admin</span>
                 </div>
+              </div>
 
-                <!-- Screen Viewport Containing 5 Interactive Screens -->
-                <div class="phone-screens-viewport">
+              <!-- ERP body -->
+              <div class="erp-body">
 
-                  <!-- ================= SCREEN 0: Dashboard ================= -->
-                  <div class="phone-screen active" id="screenDashboard">
-                    <!-- Child Profile Card -->
-                    <div class="mock-card" style="background: linear-gradient(135deg, #0A2A5E 0%, #164082 100%); color: #FFFFFF;">
-                      <div style="display: flex; align-items: center; gap: 0.75rem;">
-                        <div style="width: 44px; height: 44px; border-radius: 50%; background: #2563EB; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; color: #FFFFFF;">
-                          A
-                        </div>
-                        <div>
-                          <div style="font-weight: 700; font-size: 1.05rem;">Aarav Kulkarni</div>
-                          <div style="font-size: 0.78rem; color: #93C5FD;">Grade 9-B • Roll #14</div>
-                        </div>
-                      </div>
-                      <div style="margin-top: 0.75rem; padding-top: 0.65rem; border-top: 1px solid rgba(255,255,255,0.15); display: flex; justify-content: space-between; font-size: 0.78rem;">
-                        <span style="color: #60A5FA;">Status: <strong style="color: #FFFFFF;">Enrolled</strong></span>
-                        <span style="color: #34D399;">● Present Today</span>
-                      </div>
-                    </div>
-
-                    <!-- Attendance Ring & Fee Card -->
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.65rem; margin-bottom: 0.85rem;">
-                      <div class="mock-card" style="text-align: center; margin-bottom: 0;">
-                        <div style="font-size: 0.75rem; color: #64748B; font-weight: 600; margin-bottom: 0.3rem;">ATTENDANCE</div>
-                        <div style="font-size: 1.5rem; font-weight: 800; color: #166534;">96.4%</div>
-                        <span class="mock-badge mock-badge-success">Regular</span>
-                      </div>
-                      <div class="mock-card" style="text-align: center; margin-bottom: 0;">
-                        <div style="font-size: 0.75rem; color: #64748B; font-weight: 600; margin-bottom: 0.3rem;">TERM-2 FEES</div>
-                        <div style="font-size: 1.25rem; font-weight: 800; color: #0A2A5E;">PAID</div>
-                        <span class="mock-badge mock-badge-info">Receipt #8902</span>
-                      </div>
-                    </div>
-
-                    <!-- Homework Due Card -->
-                    <div class="mock-card">
-                      <div class="mock-card-header">
-                        <span style="font-size: 0.8rem; font-weight: 700; color: #0F172A;">Today's Homework</span>
-                        <span class="mock-badge mock-badge-warning">2 Due Tomorrow</span>
-                      </div>
-                      <div style="font-size: 0.82rem; color: #334155; margin-bottom: 0.4rem;">
-                        <strong style="color: #0A2A5E;">Maths:</strong> Quadratic Equations Exercise 4.2
-                      </div>
-                      <div style="font-size: 0.82rem; color: #334155;">
-                        <strong style="color: #0A2A5E;">Science:</strong> Chemical reactions experiment note
-                      </div>
-                    </div>
-
-                    <!-- Upcoming Exam Alert -->
-                    <div class="mock-card" style="background: #EFF6FF; border-color: #BFDBFE;">
-                      <div style="font-size: 0.78rem; font-weight: 700; color: #1E40AF; margin-bottom: 0.2rem;">
-                        UPCOMING EXAM • UNIT TEST 2
-                      </div>
-                      <div style="font-size: 0.82rem; color: #1E3A8A;">
-                        Starts next Monday (Nov 3). Hall ticket ready in app.
-                      </div>
-                    </div>
+                <!-- Sidebar -->
+                <nav class="erp-sidebar" aria-label="ERP Modules">
+                  <div class="erp-sidebar-logo">
+                    <img src="/assets/brand/logo.png" 
+                         srcset="/assets/brand/logo-mark-32.png 1x, /assets/brand/logo-mark-72.png 2x" 
+                         width="26" height="26" 
+                         alt="OpenSoftwares logo" 
+                         class="brand-logo-img brand-logo-darkmode">
+                    <div class="erp-sidebar-logo-text">Schoolmate ERP</div>
                   </div>
-
-                  <!-- ================= SCREEN 1: Attendance ================= -->
-                  <div class="phone-screen" id="screenAttendance">
-                    <div class="mock-card">
-                      <div class="mock-card-header">
-                        <span style="font-weight: 700; font-size: 0.9rem; color: #0A2A5E;">October 2026 Attendance</span>
-                        <span class="mock-badge mock-badge-success">96.4% Rate</span>
-                      </div>
-                      <p style="font-size: 0.78rem; color: #64748B; margin-bottom: 0.5rem;">23 Working Days • 22 Present • 1 Leave</p>
-
-                      <!-- Month Calendar Grid -->
-                      <div class="mock-calendar-grid">
-                        <div class="mock-cal-day-header">M</div>
-                        <div class="mock-cal-day-header">T</div>
-                        <div class="mock-cal-day-header">W</div>
-                        <div class="mock-cal-day-header">T</div>
-                        <div class="mock-cal-day-header">F</div>
-                        <div class="mock-cal-day-header">S</div>
-                        <div class="mock-cal-day-header">S</div>
-
-                        <!-- Days 1 to 28 -->
-                        <div class="mock-cal-day mock-cal-p">1</div>
-                        <div class="mock-cal-day mock-cal-p">2</div>
-                        <div class="mock-cal-day mock-cal-p">3</div>
-                        <div class="mock-cal-day mock-cal-p">4</div>
-                        <div class="mock-cal-day mock-cal-p">5</div>
-                        <div class="mock-cal-day mock-cal-p">6</div>
-                        <div class="mock-cal-day" style="color: #94A3B8;">7</div>
-
-                        <div class="mock-cal-day mock-cal-p">8</div>
-                        <div class="mock-cal-day mock-cal-p">9</div>
-                        <div class="mock-cal-day mock-cal-p">10</div>
-                        <div class="mock-cal-day mock-cal-p">11</div>
-                        <div class="mock-cal-day mock-cal-l">12</div>
-                        <div class="mock-cal-day mock-cal-p">13</div>
-                        <div class="mock-cal-day" style="color: #94A3B8;">14</div>
-
-                        <div class="mock-cal-day mock-cal-p">15</div>
-                        <div class="mock-cal-day mock-cal-p">16</div>
-                        <div class="mock-cal-day mock-cal-p">17</div>
-                        <div class="mock-cal-day mock-cal-p">18</div>
-                        <div class="mock-cal-day mock-cal-p">19</div>
-                        <div class="mock-cal-day mock-cal-p">20</div>
-                        <div class="mock-cal-day" style="color: #94A3B8;">21</div>
-                      </div>
-
-                      <div style="display: flex; gap: 0.8rem; margin-top: 0.75rem; font-size: 0.72rem; color: #475569;">
-                        <span><strong style="color: #166534;">●</strong> Present</span>
-                        <span><strong style="color: #92400E;">●</strong> Approved Leave</span>
-                        <span><strong style="color: #991B1B;">●</strong> Absent</span>
-                      </div>
-                    </div>
-
-                    <div class="mock-card">
-                      <div style="font-size: 0.8rem; font-weight: 700; color: #0F172A; margin-bottom: 0.3rem;">Gate Punch RFID Telemetry</div>
-                      <div style="font-size: 0.78rem; color: #64748B;">Morning In: 08:32 AM (Main Gate)</div>
-                      <div style="font-size: 0.78rem; color: #64748B;">Evening Out: 03:15 PM (Bus Bay 2)</div>
-                    </div>
-                  </div>
-
-                  <!-- ================= SCREEN 2: Educational Videos ================= -->
-                  <div class="phone-screen" id="screenVideos">
-                    <div style="font-size: 0.85rem; font-weight: 700; color: #0A2A5E; margin-bottom: 0.6rem;">Recorded Video Lessons</div>
-
-                    <!-- Continue Watching -->
-                    <div class="mock-card" style="background: #0A2A5E; color: #FFFFFF;">
-                      <div style="font-size: 0.72rem; color: #60A5FA; text-transform: uppercase; font-weight: 700;">CONTINUE WATCHING</div>
-                      <div style="font-weight: 700; font-size: 0.95rem; margin: 0.2rem 0;">Physics: Laws of Motion (Part 2)</div>
-                      <div style="font-size: 0.78rem; color: #CBD5E1; margin-bottom: 0.5rem;">Prof. V. Kulkarni • 14 mins left</div>
-                      <!-- Progress bar -->
-                      <div style="height: 4px; background: rgba(255,255,255,0.2); border-radius: 2px;">
-                        <div style="width: 65%; height: 100%; background: #38BDF8; border-radius: 2px;"></div>
-                      </div>
-                    </div>
-
-                    <!-- Video 1 -->
-                    <div class="mock-video-item">
-                      <div class="mock-video-thumb">
-                        <svg class="svg-icon" style="fill: #FFFFFF; stroke: none;"><use href="#icon-play"></use></svg>
-                      </div>
-                      <div style="flex: 1;">
-                        <div style="font-size: 0.84rem; font-weight: 700; color: #0F172A;">Geometry: Triangle Theorems</div>
-                        <div style="font-size: 0.74rem; color: #64748B;">Maths • 24 mins • Class 9</div>
-                      </div>
-                    </div>
-
-                    <!-- Video 2 -->
-                    <div class="mock-video-item">
-                      <div class="mock-video-thumb">
-                        <svg class="svg-icon" style="fill: #FFFFFF; stroke: none;"><use href="#icon-play"></use></svg>
-                      </div>
-                      <div style="flex: 1;">
-                        <div style="font-size: 0.84rem; font-weight: 700; color: #0F172A;">Chemistry: Chemical Bonding</div>
-                        <div style="font-size: 0.74rem; color: #64748B;">Science • 18 mins • Class 9</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- ================= SCREEN 3: Live Bus Tracking ================= -->
-                  <div class="phone-screen" id="screenBus">
-                    <!-- Route Map Graphic -->
-                    <div class="mock-card" style="padding: 0; overflow: hidden; background: #0F172A; position: relative;">
-                      <svg viewBox="0 0 280 200" width="100%" height="160" fill="none">
-                        <!-- Roads -->
-                        <path d="M 20 160 C 80 150, 120 110, 150 90 C 180 70, 220 50, 260 40" stroke="#334155" stroke-width="12" stroke-linecap="round" fill="none" />
-                        <path d="M 20 160 C 80 150, 120 110, 150 90 C 180 70, 220 50, 260 40" stroke="#F59E0B" stroke-width="2" stroke-dasharray="4 4" fill="none" />
-                        <path d="M 20 160 C 80 150, 120 110, 150 90" stroke="#10B981" stroke-width="5" stroke-linecap="round" fill="none" />
-
-                        <!-- Active Bus with Pulse -->
-                        <g transform="translate(150, 90)">
-                          <circle cx="0" cy="0" r="16" fill="#F59E0B" opacity="0.3">
-                            <animate attributeName="r" values="12;20;12" dur="2s" repeatCount="indefinite" />
-                          </circle>
-                          <circle cx="0" cy="0" r="10" fill="#F59E0B" />
-                        </g>
-
-                        <!-- Destination Pin -->
-                        <circle cx="260" cy="40" r="7" fill="#3B82F6" />
-                        <circle cx="260" cy="40" r="3" fill="#FFFFFF" />
-                      </svg>
-
-                      <!-- Live ETA Strip -->
-                      <div style="background: #0A2A5E; color: #FFFFFF; padding: 0.65rem 0.85rem; display: flex; justify-content: space-between; align-items: center;">
-                        <div>
-                          <div style="font-size: 0.8rem; font-weight: 700;">Bus MH-12-AQ-8842</div>
-                          <div style="font-size: 0.72rem; color: #93C5FD;">Speed: 36 km/h • Route 14</div>
-                        </div>
-                        <span style="font-size: 0.78rem; font-weight: 700; color: #34D399;">8 mins away</span>
-                      </div>
-                    </div>
-
-                    <div class="mock-card">
-                      <div style="font-size: 0.82rem; font-weight: 700; color: #0F172A; margin-bottom: 0.2rem;">Next Pickup Stop</div>
-                      <div style="font-size: 0.78rem; color: #64748B;">Sector 4 Garden Gate (Estimated 08:14 AM)</div>
-                      <div style="font-size: 0.75rem; color: #10B981; font-weight: 600; margin-top: 0.3rem;">● Notification sent when bus is 1 km away</div>
-                    </div>
-                  </div>
-
-                  <!-- ================= SCREEN 4: Notices ================= -->
-                  <div class="phone-screen" id="screenNotices">
-                    <div style="font-size: 0.85rem; font-weight: 700; color: #0A2A5E; margin-bottom: 0.6rem;">Official School Circulars</div>
-
-                    <!-- Notice 1 -->
-                    <div class="mock-notice-card">
-                      <div style="display: flex; justify-content: space-between; margin-bottom: 0.25rem;">
-                        <span class="mock-badge mock-badge-info">Principal's Desk</span>
-                        <span style="font-size: 0.7rem; color: #94A3B8;">Today</span>
-                      </div>
-                      <div class="mock-notice-title">Diwali Vacation Schedule 2026</div>
-                      <div class="mock-notice-text">
-                        The school campus will observe Diwali break from October 28 to November 10. Digital homework is accessible in the app.
-                      </div>
-                    </div>
-
-                    <!-- Notice 2 -->
-                    <div class="mock-notice-card">
-                      <div style="display: flex; justify-content: space-between; margin-bottom: 0.25rem;">
-                        <span class="mock-badge mock-badge-success">Sports Dept</span>
-                        <span style="font-size: 0.7rem; color: #94A3B8;">Yesterday</span>
-                      </div>
-                      <div class="mock-notice-title">Inter-House Athletics Meet Registration</div>
-                      <div class="mock-notice-text">
-                        Students from grades 6 through 12 may submit entries for 100m sprint, relay, and chess tournament.
-                      </div>
-                    </div>
-
-                    <!-- Notice 3 -->
-                    <div class="mock-notice-card">
-                      <div style="display: flex; justify-content: space-between; margin-bottom: 0.25rem;">
-                        <span class="mock-badge mock-badge-warning">Transport</span>
-                        <span style="font-size: 0.7rem; color: #94A3B8;">Oct 18</span>
-                      </div>
-                      <div class="mock-notice-title">Route 4 Timing Update</div>
-                      <div class="mock-notice-text">
-                        Morning pickup will be 10 minutes earlier due to road expansion work. All parents on Route 4 notified.
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-
-                <!-- Bottom Tab Bar with Animated Sliding Pill Indicator -->
-                <nav class="phone-tab-bar" aria-label="Phone App Navigation">
-                  <div class="phone-tab-indicator" id="phoneTabIndicator"></div>
-
-                  <button class="phone-tab-btn active" type="button" aria-selected="true" data-index="0" aria-label="Dashboard Tab">
-                    <svg class="svg-icon"><use href="#icon-desktop"></use></svg>
-                    <span>Dashboard</span>
+                  <button class="erp-module-btn active" data-erp-panel="erpDashboard" aria-selected="true" type="button">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+                    Dashboard
                   </button>
-                  <button class="phone-tab-btn" type="button" aria-selected="false" data-index="1" aria-label="Attendance Tab">
-                    <svg class="svg-icon"><use href="#icon-calendar"></use></svg>
-                    <span>Attendance</span>
+                  <button class="erp-module-btn" data-erp-panel="erpStudents" aria-selected="false" type="button">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                    Students
                   </button>
-                  <button class="phone-tab-btn" type="button" aria-selected="false" data-index="2" aria-label="Videos Tab">
-                    <svg class="svg-icon"><use href="#icon-video"></use></svg>
-                    <span>Videos</span>
+                  <button class="erp-module-btn" data-erp-panel="erpStaff" aria-selected="false" type="button">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    Staff
                   </button>
-                  <button class="phone-tab-btn" type="button" aria-selected="false" data-index="3" aria-label="Bus Tab">
-                    <svg class="svg-icon"><use href="#icon-bus"></use></svg>
-                    <span>Bus</span>
+                  <button class="erp-module-btn" data-erp-panel="erpPayroll" aria-selected="false" type="button">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/></svg>
+                    Payroll
                   </button>
-                  <button class="phone-tab-btn" type="button" aria-selected="false" data-index="4" aria-label="Notices Tab">
-                    <svg class="svg-icon"><use href="#icon-bell"></use></svg>
-                    <span>Notices</span>
+                  <button class="erp-module-btn" data-erp-panel="erpTimetable" aria-selected="false" type="button">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    Timetable
+                  </button>
+                  <button class="erp-module-btn" data-erp-panel="erpExams" aria-selected="false" type="button">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    Exams
+                  </button>
+                  <button class="erp-module-btn" data-erp-panel="erpFees" aria-selected="false" type="button">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                    Fees &amp; Accounts
+                  </button>
+                  <button class="erp-module-btn" data-erp-panel="erpTransport" aria-selected="false" type="button">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 6v6M15 6v6M2 12h20M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"/><circle cx="7" cy="18" r="1"/><circle cx="17" cy="18" r="1"/></svg>
+                    Transport
+                  </button>
+                  <button class="erp-module-btn" data-erp-panel="erpReports" aria-selected="false" type="button">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg>
+                    Reports
                   </button>
                 </nav>
 
-                <!-- Phone Home Indicator Bar -->
-                <div class="phone-home-indicator"></div>
+                <!-- ERP Panel -->
+                <div class="erp-panel" role="main">
 
-              </div>
+                  <!-- Dashboard Panel -->
+                  <div class="erp-panel-view active" id="erpDashboard" role="tabpanel">
+                    <div class="erp-panel-header">
+                      <div class="erp-panel-title">Dashboard</div>
+                      <div class="erp-panel-date">Oct 22, 2026</div>
+                    </div>
+                    <div class="erp-kpi-row">
+                      <div class="erp-kpi-card">
+                        <div class="erp-kpi-label">Total Students</div>
+                        <div class="erp-kpi-value" data-target="1248" data-suffix="">1,248</div>
+                        <div class="erp-kpi-trend">+48 this month</div>
+                      </div>
+                      <div class="erp-kpi-card">
+                        <div class="erp-kpi-label">Attendance Today</div>
+                        <div class="erp-kpi-value">94.2%</div>
+                        <div class="erp-kpi-trend">+1.3% vs yesterday</div>
+                      </div>
+                      <div class="erp-kpi-card">
+                        <div class="erp-kpi-label">Fees Collected</div>
+                        <div class="erp-kpi-value">&#8377;12.4L</div>
+                        <div class="erp-kpi-trend">82% of October target</div>
+                      </div>
+                      <div class="erp-kpi-card">
+                        <div class="erp-kpi-label">Staff Present</div>
+                        <div class="erp-kpi-value">68/72</div>
+                        <div class="erp-kpi-trend">4 on leave</div>
+                      </div>
+                    </div>
+                    <div class="erp-chart-area">
+                      <div class="erp-chart-title">Monthly Fee Collection — Oct 2026</div>
+                      <svg class="erp-chart-svg" viewBox="0 0 780 120" preserveAspectRatio="none">
+                        <!-- Area fill -->
+                        <path class="erp-chart-area-fill" d="M0,110 L65,80 L130,90 L195,55 L260,70 L325,40 L390,55 L455,30 L520,45 L585,20 L650,35 L715,15 L780,25 L780,120 L0,120 Z"/>
+                        <!-- Line -->
+                        <path class="erp-chart-line" d="M0,110 L65,80 L130,90 L195,55 L260,70 L325,40 L390,55 L455,30 L520,45 L585,20 L650,35 L715,15 L780,25"/>
+                        <!-- Data point dots -->
+                        <circle cx="780" cy="25" r="3" fill="#E8A317"/>
+                      </svg>
+                    </div>
+                  </div>
+
+                  <!-- Students Panel -->
+                  <div class="erp-panel-view" id="erpStudents" role="tabpanel">
+                    <div class="erp-panel-header">
+                      <div class="erp-panel-title">Students</div>
+                      <div class="erp-panel-date">1,248 enrolled</div>
+                    </div>
+                    <table class="erp-table">
+                      <thead>
+                        <tr>
+                          <th>Name</th><th>Class</th><th>Roll</th><th>Attendance</th><th>Status</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr><td>Aanya Agarwal</td><td>X-B</td><td>14</td><td>94.2%</td><td><span class="erp-badge erp-badge-present">Present</span></td></tr>
+                        <tr><td>Rohan Mehta</td><td>X-B</td><td>22</td><td>88.1%</td><td><span class="erp-badge erp-badge-present">Present</span></td></tr>
+                        <tr><td>Priya Desai</td><td>X-A</td><td>7</td><td>91.5%</td><td><span class="erp-badge erp-badge-absent">Absent</span></td></tr>
+                        <tr><td>Karan Joshi</td><td>IX-C</td><td>31</td><td>97.0%</td><td><span class="erp-badge erp-badge-present">Present</span></td></tr>
+                        <tr><td>Sneha Patil</td><td>IX-A</td><td>11</td><td>82.4%</td><td><span class="erp-badge erp-badge-present">Present</span></td></tr>
+                        <tr><td>Amit Kulkarni</td><td>VIII-B</td><td>5</td><td>95.8%</td><td><span class="erp-badge erp-badge-absent">Absent</span></td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <!-- Staff Panel -->
+                  <div class="erp-panel-view" id="erpStaff" role="tabpanel">
+                    <div class="erp-panel-header">
+                      <div class="erp-panel-title">Staff &amp; HR</div>
+                      <div class="erp-panel-date">72 staff members</div>
+                    </div>
+                    <table class="erp-table">
+                      <thead>
+                        <tr><th>Name</th><th>Designation</th><th>Dept.</th><th>Biometric</th><th>Status</th></tr>
+                      </thead>
+                      <tbody>
+                        <tr><td>Mrs. Sharma</td><td>Principal</td><td>Admin</td><td>08:12 AM</td><td><span class="erp-badge erp-badge-present">Present</span></td></tr>
+                        <tr><td>Mr. Patil</td><td>Mathematics</td><td>Academics</td><td>08:24 AM</td><td><span class="erp-badge erp-badge-present">Present</span></td></tr>
+                        <tr><td>Ms. Kulkarni</td><td>Science</td><td>Academics</td><td>—</td><td><span class="erp-badge erp-badge-absent">Leave</span></td></tr>
+                        <tr><td>Mr. Khan</td><td>Driver — Bus 03</td><td>Transport</td><td>07:45 AM</td><td><span class="erp-badge erp-badge-present">Present</span></td></tr>
+                        <tr><td>Mrs. Joshi</td><td>Accountant</td><td>Finance</td><td>08:35 AM</td><td><span class="erp-badge erp-badge-present">Present</span></td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <!-- Payroll Panel -->
+                  <div class="erp-panel-view" id="erpPayroll" role="tabpanel">
+                    <div class="erp-panel-header">
+                      <div class="erp-panel-title">Payroll &amp; Salaries</div>
+                      <div class="erp-panel-date">October 2026</div>
+                    </div>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+                      <div class="erp-kpi-card"><div class="erp-kpi-label">Gross Payroll</div><div class="erp-kpi-value">&#8377;8.4L</div><div class="erp-kpi-trend">72 employees</div></div>
+                      <div class="erp-kpi-card"><div class="erp-kpi-label">PT Deductions</div><div class="erp-kpi-value">&#8377;21,600</div><div class="erp-kpi-trend">Maharashtra PT compliant</div></div>
+                    </div>
+                    <table class="erp-table">
+                      <thead><tr><th>Employee</th><th>Basic</th><th>HRA</th><th>PT</th><th>Net Pay</th></tr></thead>
+                      <tbody>
+                        <tr><td>Mrs. Sharma</td><td>&#8377;55,000</td><td>&#8377;22,000</td><td>&#8377;200</td><td>&#8377;76,800</td></tr>
+                        <tr><td>Mr. Patil</td><td>&#8377;38,000</td><td>&#8377;15,200</td><td>&#8377;200</td><td>&#8377;53,000</td></tr>
+                        <tr><td>Ms. Kulkarni</td><td>&#8377;36,000</td><td>&#8377;14,400</td><td>&#8377;200</td><td>&#8377;50,200</td></tr>
+                        <tr><td>Mr. Khan</td><td>&#8377;22,000</td><td>&#8377;8,800</td><td>&#8377;175</td><td>&#8377;30,625</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <!-- Timetable Panel -->
+                  <div class="erp-panel-view" id="erpTimetable" role="tabpanel">
+                    <div class="erp-panel-header">
+                      <div class="erp-panel-title">Timetable — Class X-B</div>
+                    </div>
+                    <div class="erp-timetable">
+                      <div class="erp-tt-header">
+                        <div></div>
+                        <div class="erp-tt-daylabel">Mon</div>
+                        <div class="erp-tt-daylabel">Tue</div>
+                        <div class="erp-tt-daylabel">Wed</div>
+                        <div class="erp-tt-daylabel">Thu</div>
+                        <div class="erp-tt-daylabel">Fri</div>
+                      </div>
+                      <div class="erp-tt-row">
+                        <div class="erp-tt-time">07:30</div>
+                        <div class="erp-tt-cell math">Maths</div>
+                        <div class="erp-tt-cell sci">Science</div>
+                        <div class="erp-tt-cell eng">English</div>
+                        <div class="erp-tt-cell math">Maths</div>
+                        <div class="erp-tt-cell sci">Science</div>
+                      </div>
+                      <div class="erp-tt-row">
+                        <div class="erp-tt-time">08:30</div>
+                        <div class="erp-tt-cell eng">English</div>
+                        <div class="erp-tt-cell math">Maths</div>
+                        <div class="erp-tt-cell sci">Science</div>
+                        <div class="erp-tt-cell eng">English</div>
+                        <div class="erp-tt-cell math">Maths</div>
+                      </div>
+                      <div class="erp-tt-row">
+                        <div class="erp-tt-time">09:30</div>
+                        <div class="erp-tt-cell sci">Science</div>
+                        <div class="erp-tt-cell eng">English</div>
+                        <div class="erp-tt-cell math">Maths</div>
+                        <div class="erp-tt-cell sci">Science</div>
+                        <div class="erp-tt-cell eng">English</div>
+                      </div>
+                      <div class="erp-tt-row">
+                        <div class="erp-tt-time">10:30</div>
+                        <div class="erp-tt-cell" style="background:rgba(255,255,255,0.03);color:rgba(255,255,255,0.3);font-style:italic;">Break</div>
+                        <div class="erp-tt-cell" style="background:rgba(255,255,255,0.03);color:rgba(255,255,255,0.3);font-style:italic;">Break</div>
+                        <div class="erp-tt-cell" style="background:rgba(255,255,255,0.03);color:rgba(255,255,255,0.3);font-style:italic;">Break</div>
+                        <div class="erp-tt-cell" style="background:rgba(255,255,255,0.03);color:rgba(255,255,255,0.3);font-style:italic;">Break</div>
+                        <div class="erp-tt-cell" style="background:rgba(255,255,255,0.03);color:rgba(255,255,255,0.3);font-style:italic;">Break</div>
+                      </div>
+                      <div class="erp-tt-row">
+                        <div class="erp-tt-time">11:00</div>
+                        <div class="erp-tt-cell math">Maths</div>
+                        <div class="erp-tt-cell sci">Science</div>
+                        <div class="erp-tt-cell eng">English</div>
+                        <div class="erp-tt-cell math">Maths</div>
+                        <div class="erp-tt-cell">Social Sc.</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Exams Panel -->
+                  <div class="erp-panel-view" id="erpExams" role="tabpanel">
+                    <div class="erp-panel-header">
+                      <div class="erp-panel-title">Exams &amp; Results</div>
+                    </div>
+                    <table class="erp-table">
+                      <thead><tr><th>Subject</th><th>Max</th><th>Class Avg</th><th>Pass%</th></tr></thead>
+                      <tbody>
+                        <tr><td>Mathematics</td><td>100</td><td>72.4</td><td>94.2%</td></tr>
+                        <tr><td>Science</td><td>100</td><td>68.8</td><td>91.7%</td></tr>
+                        <tr><td>English</td><td>100</td><td>76.1</td><td>97.3%</td></tr>
+                        <tr><td>Social Science</td><td>100</td><td>80.2</td><td>98.9%</td></tr>
+                        <tr><td>Hindi</td><td>100</td><td>74.5</td><td>96.1%</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <!-- Fees Panel -->
+                  <div class="erp-panel-view" id="erpFees" role="tabpanel">
+                    <div class="erp-panel-header">
+                      <div class="erp-panel-title">Fees &amp; Accounts</div>
+                      <div class="erp-panel-date">Oct 2026</div>
+                    </div>
+                    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
+                      <div class="erp-kpi-card"><div class="erp-kpi-label">Collected</div><div class="erp-kpi-value">&#8377;12.4L</div><div class="erp-kpi-trend">82% of target</div></div>
+                      <div class="erp-kpi-card"><div class="erp-kpi-label">Pending</div><div class="erp-kpi-value">&#8377;2.7L</div><div class="erp-kpi-trend">Reminders sent</div></div>
+                      <div class="erp-kpi-card"><div class="erp-kpi-label">Defaulters</div><div class="erp-kpi-value">47</div><div class="erp-kpi-trend">Students</div></div>
+                    </div>
+                    <div class="erp-chart-area" style="flex:1;">
+                      <div class="erp-chart-title">Daily Collection — Oct 2026</div>
+                      <svg class="erp-chart-svg" viewBox="0 0 780 100" preserveAspectRatio="none">
+                        <path class="erp-chart-area-fill" d="M0,90 L45,60 L90,75 L135,40 L180,55 L225,25 L270,45 L315,20 L360,35 L405,15 L450,30 L495,10 L540,25 L585,8 L630,20 L675,12 L720,18 L780,15 L780,100 L0,100 Z"/>
+                        <path class="erp-chart-line" d="M0,90 L45,60 L90,75 L135,40 L180,55 L225,25 L270,45 L315,20 L360,35 L405,15 L450,30 L495,10 L540,25 L585,8 L630,20 L675,12 L720,18 L780,15"/>
+                      </svg>
+                    </div>
+                  </div>
+
+                  <!-- Transport Panel -->
+                  <div class="erp-panel-view" id="erpTransport" role="tabpanel">
+                    <div class="erp-panel-header">
+                      <div class="erp-panel-title">Transport Management</div>
+                    </div>
+                    <table class="erp-table">
+                      <thead><tr><th>Bus No.</th><th>Driver</th><th>Route</th><th>Students</th><th>Status</th></tr></thead>
+                      <tbody>
+                        <tr><td>Bus 01</td><td>Mahesh P.</td><td>Wakad — School</td><td>42</td><td><span class="erp-badge erp-badge-present">Active</span></td></tr>
+                        <tr><td>Bus 02</td><td>Sanjay K.</td><td>Baner — School</td><td>38</td><td><span class="erp-badge erp-badge-present">Active</span></td></tr>
+                        <tr><td>Bus 03</td><td>Rajesh S.</td><td>Kharadi — School</td><td>45</td><td><span class="erp-badge erp-badge-present">Active</span></td></tr>
+                        <tr><td>Bus 04</td><td>Vinod M.</td><td>Hadapsar — School</td><td>29</td><td><span class="erp-badge erp-badge-absent">Maintenance</span></td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <!-- Reports Panel -->
+                  <div class="erp-panel-view" id="erpReports" role="tabpanel">
+                    <div class="erp-panel-header">
+                      <div class="erp-panel-title">Reports</div>
+                    </div>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+                      <div class="erp-kpi-card" style="cursor:pointer;"><div class="erp-kpi-label">Report Type</div><div style="color:#fff;font-size:13px;font-weight:600;margin-top:6px;">Attendance Summary</div></div>
+                      <div class="erp-kpi-card" style="cursor:pointer;"><div class="erp-kpi-label">Report Type</div><div style="color:#fff;font-size:13px;font-weight:600;margin-top:6px;">Fee Collection Report</div></div>
+                      <div class="erp-kpi-card" style="cursor:pointer;"><div class="erp-kpi-label">Report Type</div><div style="color:#fff;font-size:13px;font-weight:600;margin-top:6px;">Payroll Statement</div></div>
+                      <div class="erp-kpi-card" style="cursor:pointer;"><div class="erp-kpi-label">Report Type</div><div style="color:#fff;font-size:13px;font-weight:600;margin-top:6px;">CBSE Report Cards</div></div>
+                      <div class="erp-kpi-card" style="cursor:pointer;"><div class="erp-kpi-label">Report Type</div><div style="color:#fff;font-size:13px;font-weight:600;margin-top:6px;">Bus Route Report</div></div>
+                      <div class="erp-kpi-card" style="cursor:pointer;"><div class="erp-kpi-label">Report Type</div><div style="color:#fff;font-size:13px;font-weight:600;margin-top:6px;">Exam Results Export</div></div>
+                    </div>
+                  </div>
+
+                </div><!-- /erp-panel -->
+
+              </div><!-- /erp-body -->
+            </div><!-- /erp-mockup-canvas -->
+          </div><!-- /erp-mockup-scaler -->
+        </div><!-- /erp-mockup-host -->
+
+        <!-- ERP Capabilities list below mockup -->
+        <div class="erp-capabilities reveal">
+          <div class="erp-cap-item">
+            <span class="erp-cap-num">01</span>
+            <div class="erp-cap-text">
+              <h4>Biometric Attendance &amp; RFID</h4>
+              <p>Automated student and staff punch-in with real-time alerts to parents and admin.</p>
             </div>
+          </div>
+          <div class="erp-cap-item">
+            <span class="erp-cap-num">02</span>
+            <div class="erp-cap-text">
+              <h4>Maharashtra PT/PF Compliant Payroll</h4>
+              <p>Fully automated salary slips, PT deductions and compliance with state labour norms.</p>
+            </div>
+          </div>
+          <div class="erp-cap-item">
+            <span class="erp-cap-num">03</span>
+            <div class="erp-cap-text">
+              <h4>Conflict-Free Timetable Generation</h4>
+              <p>AI-assisted scheduling that avoids teacher clashes and room conflicts across branches.</p>
+            </div>
+          </div>
+          <div class="erp-cap-item">
+            <span class="erp-cap-num">04</span>
+            <div class="erp-cap-text">
+              <h4>CBSE &amp; State Board Report Cards</h4>
+              <p>Automated report card generation, co-scholastic grading and digital marksheets.</p>
+            </div>
+          </div>
+          <div class="erp-cap-item">
+            <span class="erp-cap-num">05</span>
+            <div class="erp-cap-text">
+              <h4>Automated Fee Collection &amp; Ledger</h4>
+              <p>UPI-linked instant receipts, defaulter reminders and a complete accounts ledger.</p>
+            </div>
+          </div>
+          <div class="erp-cap-item">
+            <span class="erp-cap-num">06</span>
+            <div class="erp-cap-text">
+              <h4>Multi-Branch &amp; Cloud Reports</h4>
+              <p>Centralised visibility across all branches, campuses and divisions in a single login.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         D. STATS SECTION
+         ================================================================== -->
+    <section class="section stats-section" id="statsSection" aria-labelledby="statsHeading">
+      <div class="container">
+        <h2 id="statsHeading" class="sr-only">Our Numbers</h2>
+        <div class="stats-row">
+          <div class="stat-item reveal">
+            <span class="stat-num"><span data-target="500" data-suffix="+">0</span></span>
+            <div class="stat-label">Schools</div>
+          </div>
+          <div class="stat-item reveal reveal-delay-1">
+            <span class="stat-num"><span data-target="120000" data-suffix="+">0</span></span>
+            <div class="stat-label">Students</div>
+          </div>
+          <div class="stat-item reveal reveal-delay-2">
+            <span class="stat-num"><span data-target="200000" data-suffix="+">0</span></span>
+            <div class="stat-label">Parents</div>
+          </div>
+          <div class="stat-item reveal reveal-delay-3">
+            <span class="stat-num"><span data-target="40" data-suffix="+">0</span></span>
+            <div class="stat-label">Cities</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 3. SECTION 3: Schoolmate ERP (Responsive Desktop / Laptop Mockup) -->
-    <section class="section erp-showcase-section" id="erpShowcase" aria-labelledby="erpHeading">
+    <!-- ==================================================================
+         E. TESTIMONIALS (editorial pull quotes, not cards)
+         ================================================================== -->
+    <section class="section testimonials-section section-alt" aria-labelledby="testimonialsHeading">
       <div class="container">
-        <div class="section-header reveal">
-          <span class="section-badge">
-            <svg class="svg-icon"><use href="#icon-desktop"></use></svg>
-            Institutional Central Engine
-          </span>
-          <h2 class="section-title" id="erpHeading">Schoolmate ERP</h2>
-          <p class="section-desc">
-            A comprehensive, high-security cloud dashboard engineered for principals, trustees, accountants, and staff. Seamlessly scales from desktop workstations to mobile devices.
-          </p>
+        <span class="section-label">What schools say</span>
+        <h2 id="testimonialsHeading" class="sr-only">Testimonials</h2>
+
+        <div class="testimonial-list" role="list">
+          <article class="testimonial-item reveal" role="listitem">
+            <blockquote class="testimonial-quote">
+              "Schoolmate transformed our administration. We saved hours of manual work daily — attendance, payroll, fees — it just works. Our parents now feel more connected to their children's school life."
+            </blockquote>
+            <div class="testimonial-source">
+              <div class="testimonial-name">Mrs. Sunita Deshpande</div>
+              <div class="testimonial-role">Principal — Pune</div>
+            </div>
+          </article>
+
+          <article class="testimonial-item reveal reveal-delay-1" role="listitem">
+            <blockquote class="testimonial-quote">
+              "The live bus tracking alone was worth the switch. Parents stopped calling every morning asking about bus arrivals — they just open the app."
+            </blockquote>
+            <div class="testimonial-source">
+              <div class="testimonial-name">Mr. Rakesh Jadhav</div>
+              <div class="testimonial-role">School Management — Nashik</div>
+            </div>
+          </article>
+
+          <article class="testimonial-item reveal reveal-delay-2" role="listitem">
+            <blockquote class="testimonial-quote">
+              "Fee collection and automated reminders cut our outstanding dues by 60% in the first term. The accounts module is clean and Maharashtra-compliant out of the box."
+            </blockquote>
+            <div class="testimonial-source">
+              <div class="testimonial-name">Mr. Sandesh Kulkarni</div>
+              <div class="testimonial-role">School Trustee — Aurangabad</div>
+            </div>
+          </article>
         </div>
 
-        <!-- Laptop / Browser Mockup -->
-        <div class="erp-browser-mockup reveal delay-100">
-          <!-- Browser Top Window Bar -->
-          <div class="erp-browser-bar">
-            <div class="erp-window-controls">
-              <span class="erp-dot erp-dot-red"></span>
-              <span class="erp-dot erp-dot-amber"></span>
-              <span class="erp-dot erp-dot-green"></span>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         F. GROUP OF COMPANIES
+         ================================================================== -->
+    <section class="section group-section" id="groupSection" aria-labelledby="groupHeading">
+      <div class="container">
+        <span class="section-label">03 / The Group</span>
+        <h2 id="groupHeading" class="reveal" style="max-width:18ch;margin-bottom:var(--s7);">
+          Software for the industries that build things.
+        </h2>
+
+        <div class="group-rows reveal reveal-delay-1" role="list">
+
+          <a href="schoolmate.html" class="group-row" role="listitem" aria-label="Schoolmate — Education, live">
+            <div class="group-row-num">01</div>
+            <div class="group-row-info">
+              <h3>Schoolmate by OpenSoftwares</h3>
+              <p>Unified school management ERP, Android parent app and live bus GPS — serving schools across Maharashtra.</p>
             </div>
-            <!-- Truncated URL with Ellipsis on Mobile -->
-            <div class="erp-url-bar" title="https://schoolmate.opensoftwares.in/erp-admin">
-              https://schoolmate.opensoftwares.in/erp-admin
+            <div class="group-row-status live" aria-label="Product status: live">Live</div>
+            <svg class="group-row-arrow icon icon-sm"><use href="#icon-arrow-up-right"></use></svg>
+          </a>
+
+          <div class="group-row" role="listitem" aria-label="Manufacturing ERP — coming soon">
+            <div class="group-row-num">02</div>
+            <div class="group-row-info">
+              <h3>Manufacturing ERP</h3>
+              <p>Production scheduling, inventory, BOM management and quality control for small and medium manufacturers.</p>
             </div>
-            <div class="erp-version-tag">Schoolmate ERP v4.2</div>
+            <div class="group-row-status" aria-label="Product status: coming soon">Coming Soon</div>
           </div>
 
-          <!-- ERP Body: Sidebar (desktop) / Horizontal Chips (mobile) + Main Panel -->
-          <div class="erp-body-grid">
-
-            <!-- Sidebar Modules -->
-            <aside class="erp-sidebar" role="tablist" aria-label="Schoolmate ERP Modules">
-              <button class="erp-module-btn active" role="tab" aria-selected="true" data-erp-panel="panelDashboard" type="button">
-                <svg class="svg-icon"><use href="#icon-chart"></use></svg>
-                <span>Dashboard</span>
-              </button>
-              <button class="erp-module-btn" role="tab" aria-selected="false" data-erp-panel="panelStudents" type="button">
-                <svg class="svg-icon"><use href="#icon-graduation-cap"></use></svg>
-                <span>Students</span>
-              </button>
-              <button class="erp-module-btn" role="tab" aria-selected="false" data-erp-panel="panelEmployees" type="button">
-                <svg class="svg-icon"><use href="#icon-users"></use></svg>
-                <span>Employees</span>
-              </button>
-              <button class="erp-module-btn" role="tab" aria-selected="false" data-erp-panel="panelPayroll" type="button">
-                <svg class="svg-icon"><use href="#icon-wallet"></use></svg>
-                <span>Payroll &amp; Salaries</span>
-              </button>
-              <button class="erp-module-btn" role="tab" aria-selected="false" data-erp-panel="panelTimetable" type="button">
-                <svg class="svg-icon"><use href="#icon-calendar"></use></svg>
-                <span>Timetable</span>
-              </button>
-              <button class="erp-module-btn" role="tab" aria-selected="false" data-erp-panel="panelExams" type="button">
-                <svg class="svg-icon"><use href="#icon-pencil"></use></svg>
-                <span>Exams &amp; Results</span>
-              </button>
-              <button class="erp-module-btn" role="tab" aria-selected="false" data-erp-panel="panelFees" type="button">
-                <svg class="svg-icon"><use href="#icon-wallet"></use></svg>
-                <span>Fees &amp; Accounts</span>
-              </button>
-              <button class="erp-module-btn" role="tab" aria-selected="false" data-erp-panel="panelTransport" type="button">
-                <svg class="svg-icon"><use href="#icon-bus"></use></svg>
-                <span>Transport</span>
-              </button>
-              <button class="erp-module-btn" role="tab" aria-selected="false" data-erp-panel="panelLibrary" type="button">
-                <svg class="svg-icon"><use href="#icon-book"></use></svg>
-                <span>Library</span>
-              </button>
-              <button class="erp-module-btn" role="tab" aria-selected="false" data-erp-panel="panelReports" type="button">
-                <svg class="svg-icon"><use href="#icon-chart"></use></svg>
-                <span>Reports</span>
-              </button>
-            </aside>
-
-            <!-- Main Panel Views -->
-            <div class="erp-main-panel">
-
-              <!-- PANEL 1: Dashboard -->
-              <div class="erp-panel-view active" id="panelDashboard">
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
-                  <div class="card" style="padding: 1.25rem; background: #FFFFFF;">
-                    <div style="color: #64748B; font-size: 0.8rem; font-weight: 600;">ACTIVE STUDENTS</div>
-                    <div style="font-size: 2rem; font-weight: 800; color: #0A2A5E; margin: 0.3rem 0;">3,420</div>
-                    <div style="color: #10B981; font-size: 0.78rem; font-weight: 600;">+14% vs last academic year</div>
-                  </div>
-                  <div class="card" style="padding: 1.25rem; background: #FFFFFF;">
-                    <div style="color: #64748B; font-size: 0.8rem; font-weight: 600;">STAFF ATTENDANCE</div>
-                    <div style="font-size: 2rem; font-weight: 800; color: #0A2A5E; margin: 0.3rem 0;">97.4%</div>
-                    <div style="color: #10B981; font-size: 0.78rem; font-weight: 600;">Biometric synced at gate</div>
-                  </div>
-                  <div class="card" style="padding: 1.25rem; background: #FFFFFF;">
-                    <div style="color: #64748B; font-size: 0.8rem; font-weight: 600;">TERM FEE RECOVERY</div>
-                    <div style="font-size: 2rem; font-weight: 800; color: #0A2A5E; margin: 0.3rem 0;">₹1.84 Cr</div>
-                    <div style="color: #2563EB; font-size: 0.78rem; font-weight: 600;">91.2% target collected on-time</div>
-                  </div>
-                </div>
-
-                <!-- Recent Admissions Table -->
-                <div class="card" style="padding: 1.25rem; background: #FFFFFF; overflow-x: auto;">
-                  <h4 style="color: #0F172A; margin-bottom: 0.75rem;">Recent Student Registrations</h4>
-                  <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.88rem; min-width: 500px;">
-                    <thead>
-                      <tr style="border-bottom: 2px solid #E2E8F0; color: #64748B;">
-                        <th style="padding: 8px;">Reg ID</th>
-                        <th style="padding: 8px;">Student Name</th>
-                        <th style="padding: 8px;">Class</th>
-                        <th style="padding: 8px;">Parent Phone</th>
-                        <th style="padding: 8px;">Status</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr style="border-bottom: 1px solid #F1F5F9;">
-                        <td style="padding: 10px 8px; font-weight: 600; color: #0A2A5E;">#ADM-881</td>
-                        <td style="padding: 10px 8px;">Aarav Rajesh Kulkarni</td>
-                        <td style="padding: 10px 8px;">Grade 8-B</td>
-                        <td style="padding: 10px 8px;">+91 98230 44102</td>
-                        <td style="padding: 10px 8px;"><span style="background: #DCFCE7; color: #15803D; padding: 2px 8px; border-radius: 10px; font-weight: 700; font-size: 0.74rem;">Verified</span></td>
-                      </tr>
-                      <tr style="border-bottom: 1px solid #F1F5F9;">
-                        <td style="padding: 10px 8px; font-weight: 600; color: #0A2A5E;">#ADM-882</td>
-                        <td style="padding: 10px 8px;">Tanvi Prashant Shinde</td>
-                        <td style="padding: 10px 8px;">Grade 5-A</td>
-                        <td style="padding: 10px 8px;">+91 97654 88310</td>
-                        <td style="padding: 10px 8px;"><span style="background: #DCFCE7; color: #15803D; padding: 2px 8px; border-radius: 10px; font-weight: 700; font-size: 0.74rem;">Verified</span></td>
-                      </tr>
-                      <tr>
-                        <td style="padding: 10px 8px; font-weight: 600; color: #0A2A5E;">#ADM-883</td>
-                        <td style="padding: 10px 8px;">Ishaan Amit More</td>
-                        <td style="padding: 10px 8px;">Grade 11 Sci</td>
-                        <td style="padding: 10px 8px;">+91 94220 11985</td>
-                        <td style="padding: 10px 8px;"><span style="background: #FEF3C7; color: #92400E; padding: 2px 8px; border-radius: 10px; font-weight: 700; font-size: 0.74rem;">Pending</span></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-
-              <!-- PANEL 2: Students -->
-              <div class="erp-panel-view" id="panelStudents">
-                <div class="card" style="padding: 1.5rem; background: #FFFFFF;">
-                  <h4 style="color: #0A2A5E; margin-bottom: 0.5rem;">Comprehensive Student Information System</h4>
-                  <p style="color: #64748B; font-size: 0.92rem; margin-bottom: 1.25rem;">360-degree digital student profile: academic history, health records, sibling mapping, fee concessions, and board registration details.</p>
-                  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem;">
-                    <div style="background: #F8FAFC; border: 1px solid #E2E8F0; padding: 1rem; border-radius: 8px;">
-                      <div style="font-size: 0.8rem; color: #64748B;">Total Enrolled</div>
-                      <div style="font-size: 1.5rem; font-weight: 800; color: #0A2A5E;">3,420</div>
-                    </div>
-                    <div style="background: #F8FAFC; border: 1px solid #E2E8F0; padding: 1rem; border-radius: 8px;">
-                      <div style="font-size: 0.8rem; color: #64748B;">RTE Students</div>
-                      <div style="font-size: 1.5rem; font-weight: 800; color: #0A2A5E;">428</div>
-                    </div>
-                    <div style="background: #F8FAFC; border: 1px solid #E2E8F0; padding: 1rem; border-radius: 8px;">
-                      <div style="font-size: 0.8rem; color: #64748B;">CBSE Roster Ready</div>
-                      <div style="font-size: 1.5rem; font-weight: 800; color: #10B981;">100%</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- PANEL 3: Employees -->
-              <div class="erp-panel-view" id="panelEmployees">
-                <div class="card" style="padding: 1.5rem; background: #FFFFFF;">
-                  <h4 style="color: #0A2A5E; margin-bottom: 0.5rem;">Faculty &amp; Staff Directory</h4>
-                  <p style="color: #64748B; font-size: 0.92rem; margin-bottom: 1.25rem;">Staff service books, qualification records, biometric attendance mapping, and leave quota tracking for teachers, administrative clerks, and support staff.</p>
-                  <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                    <span style="background: #EEF4FD; color: #0A2A5E; padding: 6px 12px; border-radius: 8px; font-size: 0.85rem; font-weight: 600;">142 Teaching Staff</span>
-                    <span style="background: #EEF4FD; color: #0A2A5E; padding: 6px 12px; border-radius: 8px; font-size: 0.85rem; font-weight: 600;">28 Admin Staff</span>
-                    <span style="background: #EEF4FD; color: #0A2A5E; padding: 6px 12px; border-radius: 8px; font-size: 0.85rem; font-weight: 600;">34 Transport &amp; Support</span>
-                  </div>
-                </div>
-              </div>
-
-              <!-- PANEL 4: Payroll and Salaries -->
-              <div class="erp-panel-view" id="panelPayroll">
-                <div class="card" style="padding: 1.5rem; background: #FFFFFF;">
-                  <h4 style="color: #0A2A5E; margin-bottom: 0.5rem;">Automated Payroll &amp; Maharashtra PT Compliance</h4>
-                  <p style="color: #64748B; font-size: 0.92rem; margin-bottom: 1.25rem;">One-click generation of bank salary transfer files, PF challans, TDS calculation, and automated payslip delivery via the staff mobile app.</p>
-                  <div style="background: #F0FDF4; border: 1px solid #BBF7D0; padding: 1.25rem; border-radius: 10px;">
-                    <div style="font-weight: 700; color: #166534; font-size: 1.05rem;">October 2026 Payroll Processed: ₹42.8 Lakh</div>
-                    <div style="font-size: 0.85rem; color: #15803D; margin-top: 0.25rem;">204 salary slips generated with automated direct bank NEFT file.</div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- PANEL 5: Timetable -->
-              <div class="erp-panel-view" id="panelTimetable">
-                <div class="card" style="padding: 1.5rem; background: #FFFFFF; overflow-x: auto;">
-                  <h4 style="color: #0A2A5E; margin-bottom: 0.5rem;">Conflict-Free Timetable Scheduler</h4>
-                  <p style="color: #64748B; font-size: 0.88rem; margin-bottom: 1rem;">Algorithmic period distribution preventing teacher clashes and lab overlaps.</p>
-                  <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; text-align: center; font-size: 0.82rem; min-width: 520px;">
-                    <div style="background: #0A2A5E; color: #FFF; padding: 8px; font-weight: 700; border-radius: 6px;">Period</div>
-                    <div style="background: #0A2A5E; color: #FFF; padding: 8px; font-weight: 700; border-radius: 6px;">Monday</div>
-                    <div style="background: #0A2A5E; color: #FFF; padding: 8px; font-weight: 700; border-radius: 6px;">Tuesday</div>
-                    <div style="background: #0A2A5E; color: #FFF; padding: 8px; font-weight: 700; border-radius: 6px;">Wednesday</div>
-                    <div style="background: #0A2A5E; color: #FFF; padding: 8px; font-weight: 700; border-radius: 6px;">Thursday</div>
-                    <div style="background: #0A2A5E; color: #FFF; padding: 8px; font-weight: 700; border-radius: 6px;">Friday</div>
-
-                    <div style="background: #EEF4FD; padding: 10px 4px; border-radius: 6px; font-weight: 600;">09:00 - 09:45</div>
-                    <div style="background: #FFFFFF; border: 1px solid #E2E8F0; padding: 10px 4px; border-radius: 6px;">Maths</div>
-                    <div style="background: #FFFFFF; border: 1px solid #E2E8F0; padding: 10px 4px; border-radius: 6px;">English</div>
-                    <div style="background: #FFFFFF; border: 1px solid #E2E8F0; padding: 10px 4px; border-radius: 6px;">Physics</div>
-                    <div style="background: #FFFFFF; border: 1px solid #E2E8F0; padding: 10px 4px; border-radius: 6px;">Maths</div>
-                    <div style="background: #FFFFFF; border: 1px solid #E2E8F0; padding: 10px 4px; border-radius: 6px;">Chemistry</div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- PANEL 6: Exams and Results -->
-              <div class="erp-panel-view" id="panelExams">
-                <div class="card" style="padding: 1.5rem; background: #FFFFFF;">
-                  <h4 style="color: #0A2A5E; margin-bottom: 0.5rem;">CBSE &amp; Maharashtra Board Exam Engine</h4>
-                  <p style="color: #64748B; font-size: 0.92rem; margin-bottom: 1.25rem;">Admit card generator with QR validation, marks entry portal, and multi-format printable report card designer.</p>
-                  <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                    <div style="flex: 1; min-width: 200px; background: #EFF6FF; padding: 1.25rem; border-radius: 10px; border: 1px solid #BFDBFE;">
-                      <div style="font-weight: 700; color: #1E40AF;">CBSE 9-Point Grading</div>
-                      <div style="font-size: 0.82rem; color: #1D4ED8; margin-top: 0.2rem;">Pre-configured formulas for FA, SA, and periodic evaluations.</div>
-                    </div>
-                    <div style="flex: 1; min-width: 200px; background: #F0FDF4; padding: 1.25rem; border-radius: 10px; border: 1px solid #BBF7D0;">
-                      <div style="font-weight: 700; color: #166534;">Hall Ticket QR Verification</div>
-                      <div style="font-size: 0.82rem; color: #15803D; margin-top: 0.2rem;">Batch export hall tickets with photograph and room allocation.</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- PANEL 7: Fees and Accounts -->
-              <div class="erp-panel-view" id="panelFees">
-                <div class="card" style="padding: 1.5rem; background: #FFFFFF;">
-                  <h4 style="color: #0A2A5E; margin-bottom: 0.5rem;">Multi-Head Fee Collection &amp; Tally Reconciliation</h4>
-                  <p style="color: #64748B; font-size: 0.92rem; margin-bottom: 1.25rem;">Tuition, bus, laboratory, exam, and library fee heads with installment plans, sibling concessions, and automated SMS alerts.</p>
-                  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem;">
-                    <div style="background: #F8FAFC; border: 1px solid #E2E8F0; padding: 1rem; border-radius: 8px;">
-                      <div style="font-size: 0.8rem; color: #64748B;">UPI &amp; Gateway Share</div>
-                      <div style="font-size: 1.4rem; font-weight: 800; color: #0A2A5E;">88.4%</div>
-                    </div>
-                    <div style="background: #F8FAFC; border: 1px solid #E2E8F0; padding: 1rem; border-radius: 8px;">
-                      <div style="font-size: 0.8rem; color: #64748B;">Counter POS Receipts</div>
-                      <div style="font-size: 1.4rem; font-weight: 800; color: #0A2A5E;">Laser / Thermal</div>
-                    </div>
-                    <div style="background: #F8FAFC; border: 1px solid #E2E8F0; padding: 1rem; border-radius: 8px;">
-                      <div style="font-size: 0.8rem; color: #64748B;">Bank Reconciliation</div>
-                      <div style="font-size: 1.4rem; font-weight: 800; color: #10B981;">1-Click Sync</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- PANEL 8: Transport -->
-              <div class="erp-panel-view" id="panelTransport">
-                <div class="card" style="padding: 1.5rem; background: #FFFFFF;">
-                  <h4 style="color: #0A2A5E; margin-bottom: 0.5rem;">Fleet Telemetry &amp; Route Management</h4>
-                  <p style="color: #64748B; font-size: 0.92rem; margin-bottom: 1.25rem;">Manage 50+ school buses with live speed tracking, driver document renewals, student route allocation, and maintenance records.</p>
-                  <div style="background: #FFFBEB; border: 1px solid #FDE68A; padding: 1rem; border-radius: 8px;">
-                    <div style="font-weight: 700; color: #92400E; font-size: 0.92rem;">RTO Fitness &amp; Insurance Alerts</div>
-                    <div style="font-size: 0.82rem; color: #78350F; margin-top: 0.2rem;">30-day proactive expiry notifications for school fleet compliance.</div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- PANEL 9: Library -->
-              <div class="erp-panel-view" id="panelLibrary">
-                <div class="card" style="padding: 1.5rem; background: #FFFFFF;">
-                  <h4 style="color: #0A2A5E; margin-bottom: 0.5rem;">Barcode Book Cataloging &amp; Issue System</h4>
-                  <p style="color: #64748B; font-size: 0.92rem; margin-bottom: 1.25rem;">Rapid 3-second book issue and return with any handheld USB barcode scanner, automated overdue fine accounting, and digital inventory checks.</p>
-                  <div style="background: #F8FAFC; border: 1px solid #E2E8F0; padding: 1rem; border-radius: 8px;">
-                    <div style="font-weight: 700; color: #0F172A; font-size: 0.92rem;">12,500+ Books Cataloged</div>
-                    <div style="font-size: 0.82rem; color: #64748B; margin-top: 0.2rem;">Searchable by title, author, Dewey decimal category, or barcode.</div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- PANEL 10: Reports -->
-              <div class="erp-panel-view" id="panelReports">
-                <div class="card" style="padding: 1.5rem; background: #FFFFFF;">
-                  <h4 style="color: #0A2A5E; margin-bottom: 0.5rem;">Trustee &amp; Board Analytical Reports</h4>
-                  <p style="color: #64748B; font-size: 0.92rem; margin-bottom: 1.25rem;">Generate government inspection records, Sarva Shiksha Abhiyan data, financial audits, and multi-branch comparative graphs.</p>
-                  
-                  <!-- Bar Chart Preview -->
-                  <div style="display: flex; align-items: flex-end; gap: 1.5rem; height: 140px; padding-top: 20px; border-bottom: 2px solid #E2E8F0;">
-                    <div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px;">
-                      <span style="font-size: 0.72rem; font-weight: 700; color: #0A2A5E;">₹24L</span>
-                      <div style="width: 100%; height: 50px; background: #93C5FD; border-radius: 4px 4px 0 0;"></div>
-                      <span style="font-size: 0.76rem; color: #64748B;">Jun</span>
-                    </div>
-                    <div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px;">
-                      <span style="font-size: 0.72rem; font-weight: 700; color: #0A2A5E;">₹58L</span>
-                      <div style="width: 100%; height: 110px; background: #3B82F6; border-radius: 4px 4px 0 0;"></div>
-                      <span style="font-size: 0.76rem; color: #64748B;">Jul</span>
-                    </div>
-                    <div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px;">
-                      <span style="font-size: 0.72rem; font-weight: 700; color: #0A2A5E;">₹36L</span>
-                      <div style="width: 100%; height: 75px; background: #2563EB; border-radius: 4px 4px 0 0;"></div>
-                      <span style="font-size: 0.76rem; color: #64748B;">Aug</span>
-                    </div>
-                    <div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px;">
-                      <span style="font-size: 0.72rem; font-weight: 700; color: #0A2A5E;">₹49L</span>
-                      <div style="width: 100%; height: 95px; background: #1D4ED8; border-radius: 4px 4px 0 0;"></div>
-                      <span style="font-size: 0.76rem; color: #64748B;">Sep</span>
-                    </div>
-                    <div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px;">
-                      <span style="font-size: 0.72rem; font-weight: 700; color: #0A2A5E;">₹72L</span>
-                      <div style="width: 100%; height: 130px; background: #0A2A5E; border-radius: 4px 4px 0 0;"></div>
-                      <span style="font-size: 0.76rem; color: #64748B;">Oct</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
+          <div class="group-row" role="listitem" aria-label="Real Estate Platform — coming soon">
+            <div class="group-row-num">03</div>
+            <div class="group-row-info">
+              <h3>Real Estate Platform</h3>
+              <p>PropTech developer suite covering lead pipelines, broker commissions, RERA stage billing and buyer milestones.</p>
             </div>
+            <div class="group-row-status" aria-label="Product status: coming soon">Coming Soon</div>
           </div>
+
         </div>
       </div>
     </section>
 
-    <!-- 4. Stats Counters (Animated on Scroll) -->
-    <section class="stats-section" id="statsSection" aria-label="Key Performance Statistics">
-      <div class="container">
-        <div class="stats-grid">
-          <div class="stat-item reveal delay-100">
-            <div class="stat-number">
-              <span class="stat-count" data-target="250">0</span><span class="stat-plus">+</span>
-            </div>
-            <div class="stat-label">Schools &amp; Institutions Served</div>
-          </div>
-          <div class="stat-item reveal delay-200">
-            <div class="stat-number">
-              <span class="stat-count" data-target="185000">0</span><span class="stat-plus">+</span>
-            </div>
-            <div class="stat-label">Active Students on Platform</div>
-          </div>
-          <div class="stat-item reveal delay-300">
-            <div class="stat-number">
-              <span class="stat-count" data-target="320000">0</span><span class="stat-plus">+</span>
-            </div>
-            <div class="stat-label">Satisfied Parents Connected</div>
-          </div>
-          <div class="stat-item reveal delay-400">
-            <div class="stat-number">
-              <span class="stat-count" data-target="36">0</span><span class="stat-plus">+</span>
-            </div>
-            <div class="stat-label">Districts &amp; Cities in Maharashtra</div>
-          </div>
-        </div>
+    <!-- ==================================================================
+         G. FINAL CTA BAND
+         ================================================================== -->
+    <section class="cta-band" aria-labelledby="ctaHeading">
+      <div class="cta-logo-wrap">
+        <img src="/assets/brand/logo.png" 
+             srcset="/assets/brand/logo-mark-48.png 1x, /assets/brand/logo-mark-72.png 2x" 
+             width="48" height="48" 
+             alt="OpenSoftwares logo" 
+             class="brand-logo-img brand-logo-darkmode">
       </div>
-    </section>
-
-    <!-- 5. Why Schoolmate Grid -->
-    <section class="section" aria-labelledby="whyHeading">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-badge">
-            <svg class="svg-icon"><use href="#icon-shield"></use></svg>
-            Why Choose Us
-          </span>
-          <h2 class="section-title" id="whyHeading">Built with purpose for modern Indian schools</h2>
-          <p class="section-desc">
-            We partner with school managements to streamline everyday operations, eliminate paper waste, and build lasting trust with parents.
-          </p>
-        </div>
-
-        <div class="why-grid">
-          <div class="why-card reveal delay-100">
-            <div class="why-card-icon" aria-hidden="true">
-              <svg class="svg-icon"><use href="#icon-bolt"></use></svg>
-            </div>
-            <h3>99.98% Guaranteed Uptime</h3>
-            <p>Hosted on enterprise AWS infrastructure with automated geo-redundant backups and military-grade encryption.</p>
-          </div>
-          <div class="why-card reveal delay-200">
-            <div class="why-card-icon" aria-hidden="true">
-              <svg class="svg-icon"><use href="#icon-leaf"></use></svg>
-            </div>
-            <h3>100% Zero Paper Campus</h3>
-            <p>Eliminate paper admission registers, fee receipts, print notices, and grade sheets. Save thousands of trees annually.</p>
-          </div>
-          <div class="why-card reveal delay-300">
-            <div class="why-card-icon" aria-hidden="true">
-              <svg class="svg-icon"><use href="#icon-map-pin"></use></svg>
-            </div>
-            <h3>Hardware-Agnostic GPS</h3>
-            <p>Integrates seamlessly with existing GPS tracking devices or mobile app trackers without costly proprietary lock-in.</p>
-          </div>
-          <div class="why-card reveal delay-100">
-            <div class="why-card-icon" aria-hidden="true">
-              <svg class="svg-icon"><use href="#icon-building"></use></svg>
-            </div>
-            <h3>Multi-Branch Management</h3>
-            <p>Trustees managing 2 or 20 branches can monitor fee collections, admissions, and payroll centrally from one master login.</p>
-          </div>
-          <div class="why-card reveal delay-200">
-            <div class="why-card-icon" aria-hidden="true">
-              <svg class="svg-icon"><use href="#icon-handshake"></use></svg>
-            </div>
-            <h3>Dedicated On-Site Training</h3>
-            <p>Our Maharashtra-based implementation team trains your clerks, teachers, bus drivers, and principals in person.</p>
-          </div>
-          <div class="why-card reveal delay-300">
-            <div class="why-card-icon" aria-hidden="true">
-              <svg class="svg-icon"><use href="#icon-phone"></use></svg>
-            </div>
-            <h3>24/7 Local Marathi &amp; English Support</h3>
-            <p>Instant phone and WhatsApp assistance so morning bus dispatch and exam marks uploads never stall.</p>
-          </div>
-        </div>
-
-        <!-- 6. Testimonials -->
-        <div style="margin-top: 5.5rem;">
-          <div class="section-header reveal">
-            <span class="section-badge">
-              <svg class="svg-icon"><use href="#icon-chat"></use></svg>
-              Client Voices
-            </span>
-            <h2 class="section-title">What educational leaders say</h2>
-            <p class="section-desc">Real feedback from trustees, principals, and teachers who upgraded to Schoolmate.</p>
-          </div>
-
-          <div class="testimonials-grid">
-            <div class="testimonial-card reveal delay-100">
-              <div>
-                <div class="testimonial-stars" aria-label="5 stars out of 5">
-                  <svg class="svg-icon"><use href="#icon-star"></use></svg>
-                  <svg class="svg-icon"><use href="#icon-star"></use></svg>
-                  <svg class="svg-icon"><use href="#icon-star"></use></svg>
-                  <svg class="svg-icon"><use href="#icon-star"></use></svg>
-                  <svg class="svg-icon"><use href="#icon-star"></use></svg>
-                </div>
-                <p class="testimonial-quote">
-                  "Schoolmate simplified our entire fee collection process. Parents now pay via UPI straight from their phones, and counter queues at our Pune campus are completely gone. Outstanding support by OpenSoftwares."
-                </p>
-              </div>
-              <div class="testimonial-author">
-                <div class="author-avatar" aria-hidden="true">DK</div>
-                <div class="author-info">
-                  <h4>Dr. Dilip Kulkarni</h4>
-                  <span>Trustee, Vidya Pratishthan High School (Pune)</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="testimonial-card reveal delay-200">
-              <div>
-                <div class="testimonial-stars" aria-label="5 stars out of 5">
-                  <svg class="svg-icon"><use href="#icon-star"></use></svg>
-                  <svg class="svg-icon"><use href="#icon-star"></use></svg>
-                  <svg class="svg-icon"><use href="#icon-star"></use></svg>
-                  <svg class="svg-icon"><use href="#icon-star"></use></svg>
-                  <svg class="svg-icon"><use href="#icon-star"></use></svg>
-                </div>
-                <p class="testimonial-quote">
-                  "Live bus tracking with geofence notifications was an absolute game changer for our parent community. Calls inquiring 'where is the school bus' dropped by 95% within the very first week."
-                </p>
-              </div>
-              <div class="testimonial-author">
-                <div class="author-avatar" aria-hidden="true">SP</div>
-                <div class="author-info">
-                  <h4>Sunita Patil</h4>
-                  <span>Principal, Greenfield International School (Nashik)</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="testimonial-card reveal delay-300">
-              <div>
-                <div class="testimonial-stars" aria-label="5 stars out of 5">
-                  <svg class="svg-icon"><use href="#icon-star"></use></svg>
-                  <svg class="svg-icon"><use href="#icon-star"></use></svg>
-                  <svg class="svg-icon"><use href="#icon-star"></use></svg>
-                  <svg class="svg-icon"><use href="#icon-star"></use></svg>
-                  <svg class="svg-icon"><use href="#icon-star"></use></svg>
-                </div>
-                <p class="testimonial-quote">
-                  "The timetable generator and CBSE grade sheets save our teachers over 120 hours of manual work every exam cycle. The software is remarkably stable, intuitive, and thoughtfully crafted."
-                </p>
-              </div>
-              <div class="testimonial-author">
-                <div class="author-avatar" aria-hidden="true">RS</div>
-                <div class="author-info">
-                  <h4>Rajesh Shinde</h4>
-                  <span>Academic Director, Chhatrapati Shivaji Academy (Satara)</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 7. Final CTA Banner -->
-        <div style="margin-top: 5rem;" class="reveal">
-          <div class="cta-banner">
-            <h2>Ready to transform your school into a smart campus?</h2>
-            <p>Schedule a personalized 30-minute demonstration for your trustees and administrative staff. See Schoolmate live in action with your school's data.</p>
-            <div class="cta-banner-buttons">
-              <a href="contact.html" class="btn btn-white btn-lg">Book a Free Demo</a>
-              <a href="https://wa.me/917204726501?text=Hi%2C%20I%20want%20to%20know%20more%20about%20Schoolmate%20by%20OpenSoftwares" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-lg" style="color: #FFFFFF; border-color: rgba(255,255,255,0.4);">
-                Chat on WhatsApp
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 8. "A Group of Companies" Section -->
-    <section class="section group-section" aria-labelledby="groupHeading">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-badge">
-            <svg class="svg-icon"><use href="#icon-building"></use></svg>
-            Corporate Structure
-          </span>
-          <h2 class="section-title" id="groupHeading">OpenSoftwares — A Group of Companies</h2>
-          <p class="section-desc">
-            Behind Schoolmate is <strong>OpenSoftwares</strong>, a technology conglomerate architecting enterprise software across education, manufacturing, and real estate.
-          </p>
-        </div>
-
-        <div class="group-cards-grid">
-          <!-- Card 1: Education (Live Now — Primary Focus) -->
-          <div class="group-card highlight reveal delay-100">
-            <span class="group-status-pill status-live">Live Now</span>
-            <div class="group-card-icon" aria-hidden="true">
-              <svg class="svg-icon"><use href="#icon-graduation-cap"></use></svg>
-            </div>
-            <h3>Education Industry</h3>
-            <p>
-              Flagship product: <strong>Schoolmate by OpenSoftwares</strong>. End-to-end ERP, mobile apps, and safety telemetry for K-12 schools, junior colleges, and institutions across Maharashtra.
-            </p>
-            <ul class="group-card-features">
-              <li>
-                <svg class="svg-icon"><use href="#icon-check"></use></svg>
-                Android App for Parents &amp; Teachers
-              </li>
-              <li>
-                <svg class="svg-icon"><use href="#icon-check"></use></svg>
-                Complete Administrative Cloud ERP
-              </li>
-              <li>
-                <svg class="svg-icon"><use href="#icon-check"></use></svg>
-                Live GPS Bus &amp; Biometric Attendance
-              </li>
-            </ul>
-            <a href="schoolmate.html" class="btn btn-primary btn-sm" style="margin-top: auto;">Explore Schoolmate Features</a>
-          </div>
-
-          <!-- Card 2: Manufacturing (Coming Soon) -->
-          <div class="group-card reveal delay-200">
-            <span class="group-status-pill status-soon">Coming Soon</span>
-            <div class="group-card-icon" aria-hidden="true">
-              <svg class="svg-icon"><use href="#icon-building"></use></svg>
-            </div>
-            <h3>Manufacturing Industry</h3>
-            <p>
-              Next-generation Industrial ERP and shop-floor IoT management suite designed for MSME manufacturers, metal fabrication, and auto component assembly plants.
-            </p>
-            <ul class="group-card-features">
-              <li>
-                <svg class="svg-icon"><use href="#icon-check"></use></svg>
-                Bill of Materials (BOM) &amp; Inventory
-              </li>
-              <li>
-                <svg class="svg-icon"><use href="#icon-check"></use></svg>
-                Machine Downtime &amp; OEE Analytics
-              </li>
-              <li>
-                <svg class="svg-icon"><use href="#icon-check"></use></svg>
-                Quality Control &amp; Dispatch Tracking
-              </li>
-            </ul>
-            <span style="font-size: 0.85rem; color: #64748B; font-weight: 500; margin-top: auto;">In Engineering Development</span>
-          </div>
-
-          <!-- Card 3: Real Estate (Coming Soon) -->
-          <div class="group-card reveal delay-300">
-            <span class="group-status-pill status-soon">Coming Soon</span>
-            <div class="group-card-icon" aria-hidden="true">
-              <svg class="svg-icon"><use href="#icon-building"></use></svg>
-            </div>
-            <h3>Real Estate Industry</h3>
-            <p>
-              Comprehensive PropTech platform and developer ERP covering project lead pipelines, broker commissions, construction stage billing, and flat buyer milestone tracking.
-            </p>
-            <ul class="group-card-features">
-              <li>
-                <svg class="svg-icon"><use href="#icon-check"></use></svg>
-                Lead Management &amp; Channel Partner Portal
-              </li>
-              <li>
-                <svg class="svg-icon"><use href="#icon-check"></use></svg>
-                RERA Billing &amp; Milestone Receipts
-              </li>
-              <li>
-                <svg class="svg-icon"><use href="#icon-check"></use></svg>
-                Site Progress &amp; Material Procurement
-              </li>
-            </ul>
-            <span style="font-size: 0.85rem; color: #64748B; font-weight: 500; margin-top: auto;">In Architecture Stage</span>
-          </div>
-        </div>
+      <h2 id="ctaHeading">
+        See Schoolmate<br>live in your school.
+      </h2>
+      <p>Book a free, no-obligation 30-minute live demo — we'll walk you through every feature.</p>
+      <div class="cta-actions">
+        <a href="contact.html" class="btn-cta-primary">
+          Book a free demo
+          <svg class="icon icon-sm"><use href="#icon-arrow-up-right"></use></svg>
+        </a>
+        <a href="https://wa.me/917204726501?text=Hi%2C%20I%20want%20to%20know%20more%20about%20school%20software" class="btn-cta-wa" aria-label="Chat with us on WhatsApp">
+          <svg class="icon icon-sm icon-filled" style="color:#25D366;"><use href="#icon-whatsapp"></use></svg>
+          Chat on WhatsApp
+        </a>
       </div>
     </section>
 
   </main>
 
-  <!-- =========================================================================
-       Footer (Consistent Across All Pages)
-       ========================================================================= -->
-  <footer class="site-footer">
+  <!-- ======================================================================
+       FOOTER
+       ====================================================================== -->
+  <footer class="site-footer" role="contentinfo">
     <div class="container">
-      <div class="footer-top">
-        <!-- Col 1: Brand Info -->
-        <div class="footer-brand-col">
-          <a href="index.html" class="brand-wordmark">
-            <span class="brand-cap">O</span>pen<span class="brand-cap">S</span>oftwares<span class="brand-dot"></span>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-link brand-link-light" aria-label="OpenSoftwares Homepage">
+            <img src="/assets/brand/logo.png" 
+                 srcset="/assets/brand/logo-mark-36.png 1x, /assets/brand/logo-mark-72.png 2x" 
+                 width="36" height="36" 
+                 alt="OpenSoftwares logo" 
+                 class="brand-logo-img brand-logo-darkmode">
+            <span class="brand-wordmark">
+              <span class="brand-cap">O</span>pen<span class="brand-cap">S</span>oftwares<span class="brand-dot"></span>
+            </span>
           </a>
-          <p>
-            OpenSoftwares is a group of companies managing software in the education, manufacturing and real estate industries. Our core focus is delivering dependable, future-ready enterprise systems.
-          </p>
-          <div style="font-size: 0.85rem; color: #60A5FA; font-weight: 600;">
-            Flagship Product: Schoolmate by OpenSoftwares
-          </div>
-        </div>
-
-        <!-- Col 2: Schoolmate Product -->
-        <div class="footer-col">
-          <h3>Schoolmate</h3>
-          <ul class="footer-nav-list">
-            <li><a href="schoolmate.html#mobileApp">Android Parent App</a></li>
-            <li><a href="schoolmate.html#webErp">Administrative Web ERP</a></li>
-            <li><a href="schoolmate.html#gpsTracking">Live Bus GPS Tracking</a></li>
-            <li><a href="schoolmate.html#feeCollection">Online Fee Collections</a></li>
-            <li><a href="schoolmate.html#reportCards">CBSE Marksheets Engine</a></li>
-            <li><a href="schoolmate.html#faqSection">Frequently Asked Questions</a></li>
+          <p>OpenSoftwares is a group of companies managing software in education, manufacturing and real estate. Our flagship product is Schoolmate by OpenSoftwares.</p>
+          <ul class="footer-contact-list">
+            <li><a href="tel:+917204726501" aria-label="Call +91 72047 26501"><svg class="icon icon-sm"><use href="#icon-phone"></use></svg> +91 72047 26501</a></li>
+            <li><a href="mailto:contact@opensoftwares.in" aria-label="Email contact@opensoftwares.in"><svg class="icon icon-sm"><use href="#icon-chat"></use></svg> contact@opensoftwares.in</a></li>
+            <li><a href="https://wa.me/917204726501?text=Hi%2C%20I%20want%20to%20know%20more%20about%20school%20software" aria-label="Chat on WhatsApp"><svg class="icon icon-sm icon-filled"><use href="#icon-whatsapp"></use></svg> WhatsApp</a></li>
           </ul>
         </div>
 
-        <!-- Col 3: Group Companies & Navigation -->
-        <div class="footer-col">
-          <h3>Group &amp; Company</h3>
+        <div>
+          <p class="footer-col-title">Products</p>
           <ul class="footer-nav-list">
-            <li><a href="about.html">About OpenSoftwares</a></li>
-            <li><a href="about.html#mission">Mission &amp; Vision</a></li>
-            <li><a href="about.html#timeline">Company Journey</a></li>
-            <li><a href="contact.html">Request a Free Demo</a></li>
-            <li><a href="contact.html#officeLocation">Registered Office</a></li>
+            <li><a href="schoolmate.html">Schoolmate</a></li>
+            <li><a href="schoolmate.html#erpShowcase">Schoolmate ERP</a></li>
+            <li><a href="schoolmate.html#appShowcase">Android App</a></li>
+            <li><a href="contact.html">Book a Demo</a></li>
           </ul>
         </div>
 
-        <!-- Col 4: Contact Details -->
-        <div class="footer-col">
-          <h3>Contact Us</h3>
-          <div class="footer-contact-list">
-            <div class="footer-contact-item">
-              <svg class="svg-icon"><use href="#icon-map-pin"></use></svg>
-              <span>Maharashtra, India</span>
-            </div>
-            <div class="footer-contact-item">
-              <svg class="svg-icon"><use href="#icon-phone"></use></svg>
-              <a href="tel:+917204726501">+91 72047 26501</a>
-            </div>
-            <div class="footer-contact-item">
-              <svg class="svg-icon"><use href="#icon-chat"></use></svg>
-              <a href="mailto:contact@opensoftwares.in">contact@opensoftwares.in</a>
-            </div>
-            <div class="footer-contact-item">
-              <svg class="svg-icon"><use href="#icon-clock"></use></svg>
-              <span>Mon – Sat: 9:00 AM – 7:00 PM</span>
-            </div>
-          </div>
+        <div>
+          <p class="footer-col-title">Company</p>
+          <ul class="footer-nav-list">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="about.html#group">The Group</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="footer-col-title">Contact Us</p>
+          <ul class="footer-nav-list">
+            <li><a href="tel:+917204726501">+91 72047 26501</a></li>
+            <li><a href="mailto:contact@opensoftwares.in">contact@opensoftwares.in</a></li>
+            <li><a href="contact.html">Request a Demo</a></li>
+            <li><a href="https://wa.me/917204726501?text=Hi%2C%20I%20want%20to%20know%20more%20about%20school%20software">WhatsApp Us</a></li>
+          </ul>
         </div>
       </div>
 
-      <!-- Footer Bottom Bar -->
       <div class="footer-bottom">
-        <div>
-          &copy; OpenSoftwares. All rights reserved. Registered domain: <strong>opensoftwares.in</strong>
-        </div>
-        <div>
-          Empowering educational institutions across Maharashtra with high-performance software.
-        </div>
+        <p class="footer-copyright">&copy; OpenSoftwares</p>
+        <ul class="footer-legal-links">
+          <li><a href="contact.html">Privacy</a></li>
+          <li><a href="contact.html">Terms</a></li>
+          <li><a href="sitemap.xml">Sitemap</a></li>
+        </ul>
       </div>
     </div>
   </footer>
 
-  <!-- =========================================================================
-       Floating Action Buttons (Fixed Bottom-Right, Stacked)
-       WhatsApp (Green #25D366) + Phone Call (#0A2A5E)
-       ========================================================================= -->
-  <div class="floating-actions" aria-label="Quick Contact Actions">
-    <!-- Call Button -->
-    <a href="tel:+917204726501" class="floating-btn floating-btn-call" aria-label="Call OpenSoftwares support at +91 72047 26501">
-      <span class="floating-tooltip">Call +91 72047 26501</span>
-      <svg class="svg-icon" style="stroke: #FFFFFF;"><use href="#icon-phone"></use></svg>
+  <!-- ======================================================================
+       FLOATING ACTION BUTTONS (WhatsApp + Call)
+       ====================================================================== -->
+  <div class="floating-actions" aria-label="Contact shortcuts">
+    <a href="https://wa.me/917204726501?text=Hi%2C%20I%20want%20to%20know%20more%20about%20school%20software"
+       class="floating-btn floating-btn-whatsapp"
+       aria-label="Chat on WhatsApp"
+       target="_blank" rel="noopener noreferrer">
+      <svg class="icon icon-filled" width="28" height="28"><use href="#icon-whatsapp"></use></svg>
+      <span class="floating-tooltip">WhatsApp</span>
     </a>
-
-    <!-- WhatsApp Button -->
-    <a href="https://wa.me/917204726501?text=Hi%2C%20I%20want%20to%20know%20more%20about%20Schoolmate%20by%20OpenSoftwares" target="_blank" rel="noopener noreferrer" class="floating-btn floating-btn-whatsapp" aria-label="Chat with Schoolmate specialist on WhatsApp">
-      <span class="floating-tooltip">Chat on WhatsApp</span>
-      <svg class="svg-icon svg-icon-filled" style="fill: #FFFFFF;"><use href="#icon-whatsapp"></use></svg>
+    <a href="tel:+917204726501"
+       class="floating-btn floating-btn-call"
+       aria-label="Call +91 72047 26501">
+      <svg class="icon" width="24" height="24"><use href="#icon-phone"></use></svg>
+      <span class="floating-tooltip">Call Us</span>
     </a>
   </div>
 
-  <!-- JavaScript Modules -->
-  <script src="js/main.js"></script>
-  <script src="js/home.js"></script>
+  <!-- Scripts -->
+  <script src="js/main.js" defer></script>
+  <script src="js/home.js" defer></script>
 </body>
 </html>

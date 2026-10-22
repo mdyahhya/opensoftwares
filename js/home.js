@@ -1,323 +1,387 @@
 /**
  * OpenSoftwares — Home Page JavaScript (js/home.js)
  * Implements:
- * 1. Top Image Slider (5 slides, touch swipe, dots below, hover pause)
- * 2. Interactive Android App Phone Mockup: 5 tabs with animated sliding indicator,
- *    smooth screen transitions, auto-demo with 10s pause on user click, synced feature labels.
- * 3. Schoolmate ERP Mockup: sidebar / mobile horizontal chip switcher, animated panels.
- * 4. Scroll-Triggered Animated Number Counters for Statistics.
+ * 1. Image Slider (crossfade + Ken Burns, saffron progress bar, swipe, arrow keys)
+ * 2. Parallax mouse-move on desktop hero slider
+ * 3. Interactive Android App Phone Mockup (5 tabs, sliding saffron indicator, auto-demo)
+ * 4. Schoolmate ERP Mockup (scaled to container, clickable modules, auto-cycle)
+ * 5. Scroll-triggered animated number counters (Stats section)
+ * 6. Hero underline SVG draw animation
+ * 7. ERP mockup responsive scaling via ResizeObserver
  */
 
 (function () {
   'use strict';
 
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   // =========================================================================
-  // 1. Image Slider (5 Slides, Dots Below)
+  // 1. Hero Underline SVG Draw
   // =========================================================================
-  const sliderTrack = document.getElementById('sliderTrack');
-  const slides = document.querySelectorAll('.slide-item');
-  const prevBtn = document.getElementById('sliderPrev');
-  const nextBtn = document.getElementById('sliderNext');
-  const dotsContainer = document.getElementById('sliderDots');
-  const sliderWrapper = document.getElementById('sliderWrapper');
+  const underlinePath = document.querySelector('.hero-underline-path');
+  if (underlinePath) {
+    // Trigger draw after a brief delay
+    setTimeout(() => {
+      underlinePath.classList.add('draw');
+    }, 600);
+  }
 
-  let currentSlide = 0;
-  const totalSlides = slides.length;
-  let slideInterval = null;
-  const AUTOPLAY_DELAY = 5000;
+  // =========================================================================
+  // 2. Image Slider (crossfade, progress bar, Ken Burns, swipe, arrow keys)
+  // =========================================================================
+  function initSlider(wrapperSelector) {
+    const wrapper = document.querySelector(wrapperSelector);
+    if (!wrapper) return;
 
-  let touchStartX = 0;
-  let touchEndX = 0;
+    const slides       = Array.from(wrapper.querySelectorAll('.slide-item'));
+    const prevBtn      = wrapper.querySelector('.slider-arrow-prev');
+    const nextBtn      = wrapper.querySelector('.slider-arrow-next');
+    const progressWrap = wrapper.querySelector('.slider-progress-bar');
+    const DELAY        = 5500;
 
-  function updateSlider() {
-    if (!sliderTrack) return;
-    sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+    if (!slides.length) return;
 
-    const dots = dotsContainer ? dotsContainer.querySelectorAll('.slider-dot') : [];
-    dots.forEach((dot, index) => {
-      if (index === currentSlide) {
-        dot.classList.add('active');
-        dot.setAttribute('aria-current', 'true');
-      } else {
-        dot.classList.remove('active');
-        dot.removeAttribute('aria-current');
+    let current = 0;
+    let timer   = null;
+    let touchX  = 0;
+
+    // Build progress segments
+    if (progressWrap) {
+      progressWrap.innerHTML = '';
+      slides.forEach((_, i) => {
+        const seg = document.createElement('div');
+        seg.className = 'slider-progress-segment';
+        if (i === 0) seg.classList.add('filling');
+        progressWrap.appendChild(seg);
+      });
+    }
+
+    function getSegs() {
+      return progressWrap ? Array.from(progressWrap.querySelectorAll('.slider-progress-segment')) : [];
+    }
+
+    function showSlide(idx) {
+      slides.forEach((s, i) => {
+        s.classList.toggle('active', i === idx);
+        // Reset Ken Burns by cloning inner img/object
+        if (i === idx) {
+          const img = s.querySelector('img');
+          if (img && !prefersReducedMotion) {
+            img.style.animation = 'none';
+            requestAnimationFrame(() => {
+              requestAnimationFrame(() => { img.style.animation = ''; });
+            });
+          }
+        }
+      });
+
+      const segs = getSegs();
+      segs.forEach((seg, i) => {
+        seg.classList.remove('filling', 'done');
+        if (i < idx)  seg.classList.add('done');
+        if (i === idx) {
+          // Force reflow to restart animation
+          void seg.offsetWidth;
+          seg.style.setProperty('--slide-duration', DELAY + 'ms');
+          seg.classList.add('filling');
+        }
+      });
+
+      current = idx;
+    }
+
+    function nextSlide() {
+      showSlide((current + 1) % slides.length);
+    }
+
+    function prevSlide() {
+      showSlide((current - 1 + slides.length) % slides.length);
+    }
+
+    function startAuto() {
+      if (prefersReducedMotion) return;
+      stopAuto();
+      timer = setInterval(nextSlide, DELAY);
+    }
+
+    function stopAuto() {
+      clearInterval(timer);
+      timer = null;
+    }
+
+    // Pause on hover
+    wrapper.addEventListener('mouseenter', stopAuto);
+    wrapper.addEventListener('mouseleave', startAuto);
+
+    // Touch swipe
+    wrapper.addEventListener('touchstart', e => { touchX = e.changedTouches[0].screenX; stopAuto(); }, { passive: true });
+    wrapper.addEventListener('touchend',   e => {
+      const diff = e.changedTouches[0].screenX - touchX;
+      if (diff < -45)  nextSlide();
+      else if (diff > 45) prevSlide();
+      startAuto();
+    }, { passive: true });
+
+    // Buttons
+    if (prevBtn) prevBtn.addEventListener('click', () => { prevSlide(); startAuto(); });
+    if (nextBtn) nextBtn.addEventListener('click', () => { nextSlide(); startAuto(); });
+
+    // Arrow keys (when focused in slider area)
+    wrapper.setAttribute('tabindex', '0');
+    wrapper.addEventListener('keydown', e => {
+      if (e.key === 'ArrowLeft')  { prevSlide(); startAuto(); }
+      if (e.key === 'ArrowRight') { nextSlide(); startAuto(); }
+    });
+
+    showSlide(0);
+    startAuto();
+  }
+
+  initSlider('.hero-slider-mobile .slider-inner');
+  initSlider('.hero-slider-desktop');
+
+  // =========================================================================
+  // 3. Parallax on desktop hero slider (mouse move)
+  // =========================================================================
+  const desktopSliderWrap = document.querySelector('.hero-desktop-right');
+  if (desktopSliderWrap && !prefersReducedMotion) {
+    document.addEventListener('mousemove', (e) => {
+      const cx = window.innerWidth / 2;
+      const cy = window.innerHeight / 2;
+      const dx = (e.clientX - cx) / cx;
+      const dy = (e.clientY - cy) / cy;
+      const slider = desktopSliderWrap.querySelector('.hero-slider-desktop');
+      if (slider) {
+        slider.style.transform = `translate(${dx * 8}px, ${dy * 8}px)`;
       }
     });
   }
 
-  function nextSlide() {
-    currentSlide = (currentSlide + 1) % totalSlides;
-    updateSlider();
-  }
-
-  function prevSlide() {
-    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-    updateSlider();
-  }
-
-  function goToSlide(index) {
-    currentSlide = index;
-    updateSlider();
-  }
-
-  function startAutoplay() {
-    stopAutoplay();
-    slideInterval = setInterval(nextSlide, AUTOPLAY_DELAY);
-  }
-
-  function stopAutoplay() {
-    if (slideInterval) {
-      clearInterval(slideInterval);
-      slideInterval = null;
-    }
-  }
-
-  if (sliderTrack && totalSlides > 0) {
-    if (dotsContainer) {
-      dotsContainer.innerHTML = '';
-      for (let i = 0; i < totalSlides; i++) {
-        const dot = document.createElement('button');
-        dot.type = 'button';
-        dot.className = `slider-dot ${i === 0 ? 'active' : ''}`;
-        dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
-        dot.addEventListener('click', () => {
-          goToSlide(i);
-          startAutoplay();
-        });
-        dotsContainer.appendChild(dot);
-      }
-    }
-
-    if (nextBtn) {
-      nextBtn.addEventListener('click', () => {
-        nextSlide();
-        startAutoplay();
-      });
-    }
-
-    if (prevBtn) {
-      prevBtn.addEventListener('click', () => {
-        prevSlide();
-        startAutoplay();
-      });
-    }
-
-    if (sliderWrapper) {
-      sliderWrapper.addEventListener('mouseenter', stopAutoplay);
-      sliderWrapper.addEventListener('mouseleave', startAutoplay);
-
-      sliderWrapper.addEventListener(
-        'touchstart',
-        (e) => {
-          touchStartX = e.changedTouches[0].screenX;
-          stopAutoplay();
-        },
-        { passive: true }
-      );
-
-      sliderWrapper.addEventListener(
-        'touchend',
-        (e) => {
-          touchEndX = e.changedTouches[0].screenX;
-          const diff = touchEndX - touchStartX;
-          if (diff < -45) nextSlide();
-          else if (diff > 45) prevSlide();
-          startAutoplay();
-        },
-        { passive: true }
-      );
-    }
-
-    startAutoplay();
-  }
-
   // =========================================================================
-  // 2. Interactive Android App Mockup (5 Tabs + Sliding Pill + Auto-Demo)
+  // 4. Interactive Android App Phone Mockup
   // =========================================================================
-  const phoneTabs = document.querySelectorAll('.phone-tab-btn');
+  const phoneTabs    = document.querySelectorAll('.phone-tab-btn');
   const phoneScreens = document.querySelectorAll('.phone-screen');
-  const tabIndicator = document.getElementById('phoneTabIndicator');
-  const appFeatureLabels = document.querySelectorAll('.app-label-item');
+  const tabIndicator = document.querySelector('.tab-indicator');
 
-  let currentPhoneTabIndex = 0;
-  const totalPhoneTabs = phoneTabs.length;
+  let currentTab    = 0;
   let autoDemoTimer = null;
-  let userInteractionTimeout = null;
-  const AUTO_DEMO_INTERVAL = 4000;
-  const USER_PAUSE_DELAY = 10000;
+  let pauseTimer    = null;
+  const AUTO_INTERVAL = 4000;
+  const PAUSE_AFTER   = 10000;
 
-  function setPhoneTab(index, triggeredByUser = false) {
-    if (index < 0 || index >= totalPhoneTabs) return;
-    currentPhoneTabIndex = index;
+  function setTab(idx, byUser = false) {
+    if (idx < 0 || idx >= phoneTabs.length) return;
+    currentTab = idx;
 
-    // 1. Move sliding pill indicator
+    phoneTabs.forEach((btn, i) => {
+      btn.classList.toggle('active', i === idx);
+      btn.setAttribute('aria-selected', String(i === idx));
+    });
+
+    phoneScreens.forEach((screen, i) => {
+      screen.classList.toggle('active', i === idx);
+    });
+
     if (tabIndicator) {
-      tabIndicator.style.transform = `translateX(${index * 100}%)`;
+      tabIndicator.style.transform = `translateX(${idx * 100}%)`;
     }
 
-    // 2. Update Tab buttons
-    phoneTabs.forEach((tab, idx) => {
-      if (idx === index) {
-        tab.classList.add('active');
-        tab.setAttribute('aria-selected', 'true');
-      } else {
-        tab.classList.remove('active');
-        tab.setAttribute('aria-selected', 'false');
-      }
-    });
-
-    // 3. Swap Screen inside phone
-    phoneScreens.forEach((screen, idx) => {
-      if (idx === index) {
-        screen.classList.add('active');
-      } else {
-        screen.classList.remove('active');
-      }
-    });
-
-    // 4. Sync feature labels beside the phone
-    appFeatureLabels.forEach((label) => {
-      const targetIndex = parseInt(label.getAttribute('data-tab-index'), 10);
-      if (targetIndex === index) {
-        label.classList.add('active');
-        label.setAttribute('aria-selected', 'true');
-      } else {
-        label.classList.remove('active');
-        label.setAttribute('aria-selected', 'false');
-      }
-    });
-
-    // 5. If triggered by user, pause auto-demo for 10 seconds
-    if (triggeredByUser) {
-      pauseAutoDemoFor10s();
+    if (byUser) {
+      stopAutoDemo();
+      clearTimeout(pauseTimer);
+      pauseTimer = setTimeout(startAutoDemo, PAUSE_AFTER);
     }
-  }
-
-  function nextPhoneTab() {
-    const nextIdx = (currentPhoneTabIndex + 1) % totalPhoneTabs;
-    setPhoneTab(nextIdx, false);
   }
 
   function startAutoDemo() {
+    if (prefersReducedMotion) return;
     stopAutoDemo();
-    autoDemoTimer = setInterval(nextPhoneTab, AUTO_DEMO_INTERVAL);
+    autoDemoTimer = setInterval(() => {
+      setTab((currentTab + 1) % phoneTabs.length);
+    }, AUTO_INTERVAL);
   }
 
   function stopAutoDemo() {
-    if (autoDemoTimer) {
-      clearInterval(autoDemoTimer);
-      autoDemoTimer = null;
-    }
+    clearInterval(autoDemoTimer);
+    autoDemoTimer = null;
   }
 
-  function pauseAutoDemoFor10s() {
-    stopAutoDemo();
-    if (userInteractionTimeout) {
-      clearTimeout(userInteractionTimeout);
-    }
-    userInteractionTimeout = setTimeout(() => {
-      startAutoDemo();
-    }, USER_PAUSE_DELAY);
-  }
-
-  // Click on phone bottom tabs
-  phoneTabs.forEach((tab, idx) => {
-    tab.addEventListener('click', () => {
-      setPhoneTab(idx, true);
-    });
-  });
-
-  // Click on side feature labels
-  appFeatureLabels.forEach((label) => {
-    label.addEventListener('click', () => {
-      const targetIndex = parseInt(label.getAttribute('data-tab-index'), 10);
-      if (!isNaN(targetIndex)) {
-        setPhoneTab(targetIndex, true);
-      }
-    });
+  phoneTabs.forEach((btn, idx) => {
+    btn.addEventListener('click', () => setTab(idx, true));
   });
 
   if (phoneTabs.length > 0) {
+    setTab(0);
     startAutoDemo();
   }
 
   // =========================================================================
-  // 3. Schoolmate ERP Mockup: Modules Switcher
+  // 5. Schoolmate ERP Mockup — scaling + module switching + auto-cycle
   // =========================================================================
-  const erpModules = document.querySelectorAll('.erp-module-btn');
-  const erpPanels = document.querySelectorAll('.erp-panel-view');
+  const erpHost   = document.querySelector('.erp-mockup-host');
+  const erpScaler = document.querySelector('.erp-mockup-scaler');
+  const erpCanvas = document.querySelector('.erp-mockup-canvas');
+  const erpModBtns = document.querySelectorAll('.erp-module-btn');
+  const erpPanels  = document.querySelectorAll('.erp-panel-view');
 
-  if (erpModules.length > 0 && erpPanels.length > 0) {
-    erpModules.forEach((btn) => {
-      btn.addEventListener('click', function () {
-        const targetPanelId = this.getAttribute('data-erp-panel');
+  const DESIGN_WIDTH  = 1200;
+  const DESIGN_HEIGHT = 760;
 
-        erpModules.forEach((b) => {
-          b.classList.remove('active');
-          b.setAttribute('aria-selected', 'false');
-        });
-        erpPanels.forEach((p) => p.classList.remove('active'));
+  function scaleErpMockup() {
+    if (!erpScaler || !erpCanvas || !erpHost) return;
+    const containerWidth = erpHost.getBoundingClientRect().width;
+    const scale = containerWidth / DESIGN_WIDTH;
+    erpCanvas.style.transform = `scale(${scale})`;
+    erpScaler.style.height = (DESIGN_HEIGHT * scale) + 'px';
+  }
 
-        this.classList.add('active');
-        this.setAttribute('aria-selected', 'true');
+  scaleErpMockup();
 
-        const activePanel = document.getElementById(targetPanelId);
-        if (activePanel) {
-          activePanel.classList.add('active');
-        }
-      });
+  if ('ResizeObserver' in window && erpHost) {
+    const ro = new ResizeObserver(scaleErpMockup);
+    ro.observe(erpHost);
+  } else {
+    window.addEventListener('resize', scaleErpMockup);
+  }
+
+  // Module switching
+  let currentErpModule = 0;
+  let erpAutoTimer = null;
+
+  function setErpModule(idx, byUser = false) {
+    const btns   = Array.from(erpModBtns);
+    const panels = Array.from(erpPanels);
+    if (idx < 0 || idx >= btns.length) return;
+    currentErpModule = idx;
+
+    btns.forEach((b, i) => {
+      b.classList.toggle('active', i === idx);
+      b.setAttribute('aria-selected', String(i === idx));
     });
+    panels.forEach((p, i) => {
+      p.classList.toggle('active', i === idx);
+    });
+
+    // Animate chart line if dashboard
+    const chartLine = document.querySelector('.erp-panel-view.active .erp-chart-line');
+    if (chartLine) {
+      chartLine.classList.remove('draw');
+      void chartLine.offsetWidth;
+      chartLine.classList.add('draw');
+    }
+
+    if (byUser) {
+      stopErpAuto();
+    }
+  }
+
+  function startErpAuto() {
+    if (prefersReducedMotion) return;
+    stopErpAuto();
+    erpAutoTimer = setInterval(() => {
+      setErpModule((currentErpModule + 1) % erpModBtns.length);
+    }, 4000);
+  }
+
+  function stopErpAuto() {
+    clearInterval(erpAutoTimer);
+    erpAutoTimer = null;
+  }
+
+  erpModBtns.forEach((btn, idx) => {
+    btn.addEventListener('click', () => setErpModule(idx, true));
+  });
+
+  if (erpModBtns.length > 0) {
+    setErpModule(0);
+    // Start auto-cycle when ERP section is visible
+    if ('IntersectionObserver' in window && erpHost) {
+      const erpObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              startErpAuto();
+            } else {
+              stopErpAuto();
+            }
+          });
+        },
+        { threshold: 0.3 }
+      );
+      erpObserver.observe(erpHost);
+    }
   }
 
   // =========================================================================
-  // 4. Stats Counter (Animated On Scroll)
+  // 6. Animated Number Counters (Stats section)
   // =========================================================================
-  const statElements = document.querySelectorAll('.stat-count');
-  let statsCounted = false;
+  const statEls = document.querySelectorAll('[data-target]');
+  let counted   = false;
 
   function animateCounters() {
-    if (statsCounted) return;
-    statsCounted = true;
-
-    statElements.forEach((counter) => {
-      const target = parseInt(counter.getAttribute('data-target'), 10);
+    if (counted) return;
+    counted = true;
+    statEls.forEach(el => {
+      const target   = parseInt(el.dataset.target, 10);
+      const suffix   = el.dataset.suffix || '';
       const duration = 2000;
-      const frameDuration = 1000 / 60;
-      const totalFrames = Math.round(duration / frameDuration);
+      const frames   = Math.round(duration / (1000 / 60));
       let frame = 0;
 
-      const easeOutQuad = (t) => t * (2 - t);
+      const easeOut = t => 1 - Math.pow(1 - t, 3);
 
-      const timer = setInterval(() => {
+      const tick = setInterval(() => {
         frame++;
-        const progress = easeOutQuad(frame / totalFrames);
-        const currentVal = Math.round(target * progress);
-
-        counter.textContent = currentVal.toLocaleString();
-
-        if (frame >= totalFrames) {
-          clearInterval(timer);
-          counter.textContent = target.toLocaleString();
+        const progress = easeOut(frame / frames);
+        const val      = Math.round(target * progress);
+        el.textContent = val.toLocaleString() + suffix;
+        if (frame >= frames) {
+          clearInterval(tick);
+          el.textContent = target.toLocaleString() + suffix;
         }
-      }, frameDuration);
+      }, 1000 / 60);
     });
   }
 
   const statsSection = document.getElementById('statsSection');
   if (statsSection && 'IntersectionObserver' in window) {
-    const statsObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            animateCounters();
-            statsObserver.unobserve(entry.target);
-          }
+    const statsObs = new IntersectionObserver(
+      entries => {
+        entries.forEach(e => {
+          if (e.isIntersecting) { animateCounters(); statsObs.unobserve(e.target); }
         });
       },
-      { threshold: 0.25 }
+      { threshold: 0.3 }
     );
-    statsObserver.observe(statsSection);
+    statsObs.observe(statsSection);
   } else if (statsSection) {
     animateCounters();
   }
+
+  // =========================================================================
+  // 7. ERP chart draw on panel activation
+  // =========================================================================
+  // Triggered on initial ERP section visibility
+  const erpSection = document.querySelector('.erp-section');
+  if (erpSection && 'IntersectionObserver' in window) {
+    const erpVisObs = new IntersectionObserver(
+      entries => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            const chartLine = document.querySelector('.erp-chart-line');
+            if (chartLine) {
+              chartLine.classList.remove('draw');
+              void chartLine.offsetWidth;
+              chartLine.classList.add('draw');
+            }
+            erpVisObs.unobserve(e.target);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+    erpVisObs.observe(erpSection);
+  }
+
 })();

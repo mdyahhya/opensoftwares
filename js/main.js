@@ -1,172 +1,213 @@
 /**
- * OpenSoftwares — Main JavaScript (Shared)
- * Handles: Mobile Navigation, Sticky Header, Focus Trap, Scroll Reveal Animations
+ * OpenSoftwares — Main JavaScript (js/main.js)
+ * Handles: Floating Pill Nav, Mobile Overlay Menu, Scroll Reveal (IntersectionObserver)
  */
 
 (function () {
   'use strict';
 
-  // -------------------------------------------------------------------------
-  // 1. Mobile Slide-in Drawer Navigation & Focus Trap
-  // -------------------------------------------------------------------------
-  const navToggle = document.getElementById('navToggle');
-  const mobileDrawer = document.getElementById('mobileDrawer');
-  const mobileBackdrop = document.getElementById('mobileBackdrop');
-  const drawerCloseBtn = document.getElementById('drawerCloseBtn');
-  const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+  // =========================================================================
+  // 1. Floating Header — shrink on scroll
+  // =========================================================================
+  const siteHeader = document.getElementById('siteHeader');
 
-  let previouslyFocusedElement = null;
-
-  function openMobileNav() {
-    if (!mobileDrawer || !navToggle) return;
-    previouslyFocusedElement = document.activeElement;
-
-    mobileDrawer.classList.add('open');
-    if (mobileBackdrop) mobileBackdrop.classList.add('open');
-    navToggle.setAttribute('aria-expanded', 'true');
-    document.body.style.overflow = 'hidden';
-
-    // Focus on close button or first interactive link
-    setTimeout(() => {
-      if (drawerCloseBtn) {
-        drawerCloseBtn.focus();
+  if (siteHeader) {
+    function handleHeaderScroll() {
+      if (window.scrollY > 40) {
+        siteHeader.classList.add('scrolled');
       } else {
-        const firstFocusable = mobileDrawer.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
-        if (firstFocusable) firstFocusable.focus();
+        siteHeader.classList.remove('scrolled');
       }
-    }, 100);
+    }
+    window.addEventListener('scroll', handleHeaderScroll, { passive: true });
+    handleHeaderScroll();
   }
 
-  function closeMobileNav() {
-    if (!mobileDrawer || !navToggle) return;
+  // =========================================================================
+  // 2. Mobile Full-Screen Overlay Menu
+  // =========================================================================
+  const navToggle   = document.getElementById('navToggle');
+  const mobileOverlay = document.getElementById('mobileOverlay');
+  const overlayClose  = document.getElementById('overlayClose');
+  const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 
-    mobileDrawer.classList.remove('open');
-    if (mobileBackdrop) mobileBackdrop.classList.remove('open');
-    navToggle.setAttribute('aria-expanded', 'false');
+  let overlayOpen = false;
+  let prevFocused = null;
+
+  function openOverlay() {
+    if (!mobileOverlay || overlayOpen) return;
+    overlayOpen = true;
+    prevFocused = document.activeElement;
+
+    mobileOverlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+
+    if (navToggle) navToggle.setAttribute('aria-expanded', 'true');
+
+    // Focus trap — focus first link
+    const firstFocusable = mobileOverlay.querySelector('a, button');
+    setTimeout(() => { if (firstFocusable) firstFocusable.focus(); }, 100);
+  }
+
+  function closeOverlay() {
+    if (!mobileOverlay || !overlayOpen) return;
+    overlayOpen = false;
+
+    mobileOverlay.classList.remove('open');
     document.body.style.overflow = '';
 
-    if (previouslyFocusedElement && typeof previouslyFocusedElement.focus === 'function') {
-      previouslyFocusedElement.focus();
+    if (navToggle) navToggle.setAttribute('aria-expanded', 'false');
+
+    if (prevFocused && typeof prevFocused.focus === 'function') {
+      prevFocused.focus();
     }
   }
 
   if (navToggle) {
-    navToggle.addEventListener('click', function (e) {
+    navToggle.addEventListener('click', (e) => {
       e.stopPropagation();
-      const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
-      if (isExpanded) {
-        closeMobileNav();
+      if (overlayOpen) closeOverlay(); else openOverlay();
+    });
+  }
+
+  if (overlayClose) {
+    overlayClose.addEventListener('click', closeOverlay);
+  }
+
+  mobileNavLinks.forEach(link => {
+    link.addEventListener('click', closeOverlay);
+  });
+
+  // Close on Esc
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && overlayOpen) closeOverlay();
+  });
+
+  // Focus trap inside overlay
+  if (mobileOverlay) {
+    mobileOverlay.addEventListener('keydown', (e) => {
+      if (e.key !== 'Tab') return;
+      const focusables = Array.from(
+        mobileOverlay.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])')
+      ).filter(el => !el.disabled);
+      if (!focusables.length) return;
+      const first = focusables[0];
+      const last  = focusables[focusables.length - 1];
+      if (e.shiftKey) {
+        if (document.activeElement === first) { e.preventDefault(); last.focus(); }
       } else {
-        openMobileNav();
+        if (document.activeElement === last)  { e.preventDefault(); first.focus(); }
       }
     });
   }
 
-  if (drawerCloseBtn) {
-    drawerCloseBtn.addEventListener('click', closeMobileNav);
-  }
+  // =========================================================================
+  // 3. Scroll Reveal Animations via IntersectionObserver
+  // =========================================================================
+  if ('IntersectionObserver' in window) {
+    const revealEls = document.querySelectorAll('.reveal');
 
-  if (mobileBackdrop) {
-    mobileBackdrop.addEventListener('click', closeMobileNav);
-  }
-
-  // Close when clicking any menu link inside drawer
-  mobileNavLinks.forEach((link) => {
-    link.addEventListener('click', closeMobileNav);
-  });
-
-  // Close on Esc key & trap focus
-  document.addEventListener('keydown', function (e) {
-    if (mobileDrawer && mobileDrawer.classList.contains('open')) {
-      if (e.key === 'Escape') {
-        closeMobileNav();
-      }
-
-      if (e.key === 'Tab') {
-        const focusables = mobileDrawer.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
-        if (focusables.length === 0) return;
-
-        const first = focusables[0];
-        const last = focusables[focusables.length - 1];
-
-        if (e.shiftKey) {
-          if (document.activeElement === first) {
-            last.focus();
-            e.preventDefault();
-          }
-        } else {
-          if (document.activeElement === last) {
-            first.focus();
-            e.preventDefault();
-          }
-        }
-      }
-    }
-  });
-
-  // -------------------------------------------------------------------------
-  // 2. Sticky Header Elevation on Scroll
-  // -------------------------------------------------------------------------
-  const siteHeader = document.querySelector('.site-header');
-  function handleScrollHeader() {
-    if (!siteHeader) return;
-    if (window.scrollY > 20) {
-      siteHeader.classList.add('scrolled');
-    } else {
-      siteHeader.classList.remove('scrolled');
-    }
-  }
-
-  window.addEventListener('scroll', handleScrollHeader, { passive: true });
-  handleScrollHeader();
-
-  // -------------------------------------------------------------------------
-  // 3. Scroll Reveal Animations (IntersectionObserver)
-  // -------------------------------------------------------------------------
-  const revealElements = document.querySelectorAll('.reveal');
-
-  if ('IntersectionObserver' in window && revealElements.length > 0) {
     const revealObserver = new IntersectionObserver(
       (entries, observer) => {
-        entries.forEach((entry) => {
+        entries.forEach(entry => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
+            entry.target.classList.add('visible');
             observer.unobserve(entry.target);
           }
         });
       },
-      {
-        threshold: 0.12,
-        rootMargin: '0px 0px -40px 0px',
-      }
+      { threshold: 0.08, rootMargin: '0px 0px -32px 0px' }
     );
 
-    revealElements.forEach((el) => revealObserver.observe(el));
+    revealEls.forEach(el => revealObserver.observe(el));
   } else {
-    // Fallback if IntersectionObserver is not supported
-    revealElements.forEach((el) => el.classList.add('revealed'));
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
   }
 
-  // -------------------------------------------------------------------------
-  // 4. Smooth Anchor Scrolling with Header Offset
-  // -------------------------------------------------------------------------
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  // =========================================================================
+  // 4. Smooth anchor scroll with header offset
+  // =========================================================================
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-      const targetId = this.getAttribute('href');
-      if (targetId && targetId !== '#' && targetId.startsWith('#')) {
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-          e.preventDefault();
-          const headerOffset = 80;
-          const elementPosition = targetElement.getBoundingClientRect().top;
-          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth',
-          });
-        }
+      const id = this.getAttribute('href');
+      if (!id || id === '#') return;
+      const target = document.querySelector(id);
+      if (target) {
+        e.preventDefault();
+        const offset = 90;
+        const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
       }
     });
   });
+
+  // =========================================================================
+  // 5. Live clock in phone status bar
+  // =========================================================================
+  function updatePhoneClock() {
+    const clockEls = document.querySelectorAll('.phone-status-time');
+    if (!clockEls.length) return;
+    const now = new Date();
+    const h = now.getHours();
+    const m = String(now.getMinutes()).padStart(2, '0');
+    const ampm = h >= 12 ? 'PM' : 'AM';
+    const h12 = ((h % 12) || 12);
+    const timeStr = `${h12}:${m} ${ampm}`;
+    clockEls.forEach(el => { el.textContent = timeStr; });
+  }
+  updatePhoneClock();
+  setInterval(updatePhoneClock, 30000);
+
+  // =========================================================================
+  // 6. Loading Splash Screen (First visit per session)
+  // =========================================================================
+  const siteSplash = document.getElementById('siteSplash');
+  if (siteSplash) {
+    const SPLASH_KEY = 'opensoftwares_splash_shown';
+    const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (sessionStorage.getItem(SPLASH_KEY)) {
+      siteSplash.remove();
+    } else {
+      document.body.classList.add('splash-locked');
+      let splashDismissed = false;
+
+      function dismissSplash() {
+        if (splashDismissed) return;
+        splashDismissed = true;
+        try { sessionStorage.setItem(SPLASH_KEY, 'true'); } catch (e) {}
+
+        siteSplash.classList.add('splash-dismissed');
+        document.body.classList.remove('splash-locked');
+
+        setTimeout(() => {
+          if (siteSplash.parentNode) siteSplash.parentNode.removeChild(siteSplash);
+        }, 850);
+      }
+
+      siteSplash.addEventListener('click', dismissSplash);
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') {
+          dismissSplash();
+        }
+      });
+
+      const minAnimationTime = isReducedMotion ? 400 : 2300;
+      const startTime = Date.now();
+
+      function scheduleDismiss() {
+        const elapsed = Date.now() - startTime;
+        const remaining = Math.max(0, minAnimationTime - elapsed);
+        setTimeout(dismissSplash, remaining);
+      }
+
+      if (document.readyState === 'complete') {
+        scheduleDismiss();
+      } else {
+        window.addEventListener('load', scheduleDismiss);
+        setTimeout(dismissSplash, 2800);
+      }
+    }
+  }
+
 })();

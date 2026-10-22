@@ -3,22 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Schoolmate by OpenSoftwares | Complete School ERP &amp; Android App</title>
+  <title>Schoolmate — Features &amp; Web ERP Suite | OpenSoftwares</title>
   <meta name="description" content="Explore Schoolmate by OpenSoftwares: The unified school ERP and Android mobile app suite featuring live bus GPS, automated fees, biometric attendance, and CBSE gradebooks.">
   <link rel="canonical" href="https://opensoftwares.in/schoolmate.html">
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 
-  <!-- Open Graph -->
+  <!-- Favicon and Brand Icons -->
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/logo-mark-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/brand/logo-mark-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/brand/logo-mark-180.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#F6F4EF">
+  <link rel="preload" href="/assets/brand/logo.png" as="image">
+
+  <!-- Open Graph & Social -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://opensoftwares.in/schoolmate.html">
-  <meta property="og:title" content="Schoolmate by OpenSoftwares | School ERP &amp; Android App">
-  <meta property="og:description" content="Comprehensive software suite for schools across Maharashtra: Android parent app, bus GPS telemetry, automated payroll, and CBSE report cards.">
-  <meta property="og:image" content="https://opensoftwares.in/assets/slider-parents.svg">
+  <meta property="og:site_name" content="OpenSoftwares">
+  <meta property="og:title" content="Schoolmate — Features &amp; Web ERP Suite | OpenSoftwares">
+  <meta property="og:description" content="Explore Schoolmate by OpenSoftwares: The unified school ERP and Android mobile app suite featuring live bus GPS, automated fees, biometric attendance, and CBSE gradebooks.">
+  <meta property="og:image" content="https://opensoftwares.in/assets/brand/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Schoolmate by OpenSoftwares — School ERP &amp; App">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Schoolmate — Features &amp; Web ERP Suite | OpenSoftwares">
+  <meta name="twitter:description" content="Explore Schoolmate by OpenSoftwares: The unified school ERP and Android mobile app suite featuring live bus GPS, automated fees, biometric attendance, and CBSE gradebooks.">
+  <meta name="twitter:image" content="https://opensoftwares.in/assets/brand/og-image.png">
 
-  <!-- Google Fonts Inter -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
@@ -42,12 +58,39 @@
     "publisher": {
       "@type": "Organization",
       "name": "OpenSoftwares",
-      "url": "https://opensoftwares.in"
+      "url": "https://opensoftwares.in",
+      "logo": "https://opensoftwares.in/assets/brand/logo-mark-512.png"
     }
   }
   </script>
+  <script>
+    if (sessionStorage.getItem('opensoftwares_splash_shown')) {
+      document.documentElement.classList.add('splash-skip');
+    }
+  </script>
 </head>
-<body>
+<body class="inner-page">
+
+  <!-- Loading Splash Screen (First visit per session) -->
+  <div class="site-splash" id="siteSplash" role="dialog" aria-modal="true" aria-label="Loading OpenSoftwares">
+    <div class="splash-inner">
+      <div class="splash-brand">
+        <div class="splash-text" aria-label="OpenSoftwares">
+          <span class="splash-letter splash-cap" style="--i:0">O</span><span class="splash-letter" style="--i:1">p</span><span class="splash-letter" style="--i:2">e</span><span class="splash-letter" style="--i:3">n</span><span class="splash-letter splash-cap" style="--i:4">S</span><span class="splash-letter" style="--i:5">o</span><span class="splash-letter" style="--i:6">f</span><span class="splash-letter" style="--i:7">t</span><span class="splash-letter" style="--i:8">w</span><span class="splash-letter" style="--i:9">a</span><span class="splash-letter" style="--i:10">r</span><span class="splash-letter" style="--i:11">e</span><span class="splash-letter" style="--i:12">s</span><span class="splash-dot" style="--i:13"></span>
+        </div>
+        <div class="splash-logo-wrap">
+          <img src="/assets/brand/logo.png" 
+               srcset="/assets/brand/logo-mark-72.png 1x, /assets/brand/logo-mark-192.png 2x" 
+               width="76" height="76" 
+               alt="OpenSoftwares logo" 
+               class="splash-logo-img">
+        </div>
+      </div>
+      <div class="splash-progress-track" aria-hidden="true">
+        <div class="splash-progress-bar"></div>
+      </div>
+    </div>
+  </div>
 
   <!-- Reusable SVG Sprite -->
   <svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
@@ -125,55 +168,68 @@
   <!-- =========================================================================
        Header & Navigation
        ========================================================================= -->
-  <header class="site-header" id="siteHeader">
-    <div class="container header-container">
-      <a href="index.html" class="brand-wordmark" aria-label="OpenSoftwares Homepage">
-        <span class="brand-cap">O</span>pen<span class="brand-cap">S</span>oftwares<span class="brand-dot"></span>
+  <!-- Header -->
+  <header class="site-header" id="siteHeader" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="brand-link" aria-label="OpenSoftwares Homepage">
+        <img src="/assets/brand/logo.png" 
+             srcset="/assets/brand/logo-mark-36.png 1x, /assets/brand/logo-mark-72.png 2x" 
+             width="36" height="36" 
+             alt="OpenSoftwares logo" 
+             class="brand-logo-img">
+        <span class="brand-wordmark">
+          <span class="brand-cap">O</span>pen<span class="brand-cap">S</span>oftwares<span class="brand-dot" aria-hidden="true"></span>
+        </span>
       </a>
 
       <nav class="nav-desktop" aria-label="Main Navigation">
         <ul class="nav-links">
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="schoolmate.html" class="nav-link active">Schoolmate</a></li>
-          <li><a href="about.html" class="nav-link">About Us</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="index.html" class="nav-link"><span class="nav-text-front">Home</span><span class="nav-text-back" aria-hidden="true">Home</span></a></li>
+          <li><a href="schoolmate.html" class="nav-link active" aria-current="page"><span class="nav-text-front">Schoolmate</span><span class="nav-text-back" aria-hidden="true">Schoolmate</span></a></li>
+          <li><a href="about.html" class="nav-link"><span class="nav-text-front">About</span><span class="nav-text-back" aria-hidden="true">About</span></a></li>
+          <li><a href="contact.html" class="nav-link"><span class="nav-text-front">Contact</span><span class="nav-text-back" aria-hidden="true">Contact</span></a></li>
         </ul>
       </nav>
 
-      <div class="header-cta-group">
+      <div class="header-cta">
         <a href="contact.html" class="btn btn-primary btn-sm">Book a Demo</a>
+        <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="mobileOverlay" aria-label="Open navigation menu">
+          <span class="nav-bar"></span>
+          <span class="nav-bar"></span>
+        </button>
       </div>
-
-      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="mobileDrawer" aria-label="Toggle mobile menu">
-        <span class="nav-toggle-bar"></span>
-        <span class="nav-toggle-bar"></span>
-        <span class="nav-toggle-bar"></span>
-      </button>
     </div>
   </header>
 
-  <!-- Mobile Slide-in Drawer -->
-  <div class="mobile-nav-backdrop" id="mobileBackdrop"></div>
-  <aside class="mobile-nav-drawer" id="mobileDrawer" aria-label="Mobile Navigation Menu">
-    <div class="mobile-drawer-header">
-      <a href="index.html" class="brand-wordmark">
-        <span class="brand-cap">O</span>pen<span class="brand-cap">S</span>oftwares<span class="brand-dot"></span>
+  <!-- Mobile Overlay -->
+  <nav class="mobile-overlay" id="mobileOverlay" aria-label="Mobile Navigation" aria-hidden="true">
+    <div class="mobile-overlay-header">
+      <a href="index.html" class="brand-link brand-link-light" aria-label="OpenSoftwares Homepage">
+        <img src="/assets/brand/logo.png" 
+             srcset="/assets/brand/logo-mark-32.png 1x, /assets/brand/logo-mark-72.png 2x" 
+             width="32" height="32" 
+             alt="OpenSoftwares logo" 
+             class="brand-logo-img brand-logo-darkmode">
+        <span class="brand-wordmark"><span class="brand-cap">O</span>pen<span class="brand-cap">S</span>oftwares<span class="brand-dot"></span></span>
       </a>
-      <button class="drawer-close-btn" id="drawerCloseBtn" type="button" aria-label="Close navigation menu">
-        <svg class="svg-icon"><use href="#icon-close"></use></svg>
+      <button class="overlay-close" id="overlayClose" type="button" aria-label="Close navigation menu">
+        <svg class="icon"><use href="#icon-close"></use></svg>
       </button>
     </div>
-    <ul class="mobile-nav-links">
-      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
-      <li><a href="schoolmate.html" class="mobile-nav-link active">Schoolmate Software</a></li>
-      <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
-      <li><a href="contact.html" class="mobile-nav-link">Contact &amp; Demo</a></li>
+    <ul class="mobile-nav-list">
+      <li class="mobile-nav-item"><span class="mobile-nav-index">01</span><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li class="mobile-nav-item"><span class="mobile-nav-index">02</span><a href="schoolmate.html" class="mobile-nav-link">Schoolmate</a></li>
+      <li class="mobile-nav-item"><span class="mobile-nav-index">03</span><a href="about.html" class="mobile-nav-link">About</a></li>
+      <li class="mobile-nav-item"><span class="mobile-nav-index">04</span><a href="contact.html" class="mobile-nav-link">Contact</a></li>
     </ul>
-    <div class="mobile-drawer-footer">
-      <a href="contact.html" class="btn btn-primary btn-lg" style="width: 100%;">Book a Free Demo</a>
-      <a href="tel:+917204726501" class="btn btn-secondary btn-sm" style="width: 100%;">Call +91 72047 26501</a>
+    <div class="mobile-overlay-footer">
+      <p class="mobile-footer-notice">Schoolmate app — coming soon on Google Play</p>
+      <div class="mobile-footer-contacts">
+        <a href="tel:+917204726501" class="mobile-footer-link"><svg class="icon icon-sm"><use href="#icon-phone"></use></svg> +91 72047 26501</a>
+        <a href="https://wa.me/917204726501?text=Hi%2C%20I%20want%20to%20know%20more%20about%20school%20software" class="mobile-footer-link"><svg class="icon icon-sm icon-filled"><use href="#icon-whatsapp"></use></svg> WhatsApp</a>
+      </div>
     </div>
-  </aside>
+  </nav>
 
   <!-- =========================================================================
        MAIN CONTENT
@@ -443,6 +499,13 @@
     <section class="section">
       <div class="container reveal">
         <div class="cta-banner">
+          <div class="cta-logo-wrap">
+            <img src="/assets/brand/logo.png" 
+                 srcset="/assets/brand/logo-mark-48.png 1x, /assets/brand/logo-mark-72.png 2x" 
+                 width="48" height="48" 
+                 alt="OpenSoftwares logo" 
+                 class="brand-logo-img brand-logo-darkmode">
+          </div>
           <h2>Ready to experience Schoolmate in your institution?</h2>
           <p>Request an interactive walkthrough customized for your school board (CBSE, ICSE, or Maharashtra State Board).</p>
           <div class="cta-banner-buttons">
@@ -464,8 +527,15 @@
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand-col">
-          <a href="index.html" class="brand-wordmark">
-            <span class="brand-cap">O</span>pen<span class="brand-cap">S</span>oftwares<span class="brand-dot"></span>
+          <a href="index.html" class="brand-link brand-link-light" aria-label="OpenSoftwares Homepage">
+            <img src="/assets/brand/logo.png" 
+                 srcset="/assets/brand/logo-mark-36.png 1x, /assets/brand/logo-mark-72.png 2x" 
+                 width="36" height="36" 
+                 alt="OpenSoftwares logo" 
+                 class="brand-logo-img brand-logo-darkmode">
+            <span class="brand-wordmark">
+              <span class="brand-cap">O</span>pen<span class="brand-cap">S</span>oftwares<span class="brand-dot"></span>
+            </span>
           </a>
           <p>
             OpenSoftwares is a group of companies managing software in the education, manufacturing and real estate industries. Our core focus is delivering dependable, future-ready enterprise systems.
@@ -523,7 +593,7 @@
 
       <div class="footer-bottom">
         <div>
-          &copy; OpenSoftwares. All rights reserved. Registered domain: <strong>opensoftwares.in</strong>
+          &copy; OpenSoftwares
         </div>
         <div>
           Empowering educational institutions across Maharashtra with high-performance software.
