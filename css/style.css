@@ -798,8 +798,26 @@ em.serif {
 
 .floating-btn:hover .floating-tooltip { opacity: 1; transform: translateX(0); }
 
+.floating-btn svg,
+.floating-btn .icon,
+.floating-btn .svg-icon {
+  width: 24px !important;
+  height: 24px !important;
+  max-width: 24px !important;
+  max-height: 24px !important;
+  flex-shrink: 0;
+}
+
 @media (max-width: 768px) {
   .floating-btn { width: 48px; height: 48px; }
+  .floating-btn svg,
+  .floating-btn .icon,
+  .floating-btn .svg-icon {
+    width: 22px !important;
+    height: 22px !important;
+    max-width: 22px !important;
+    max-height: 22px !important;
+  }
   .floating-tooltip { display: none; }
 }
 
