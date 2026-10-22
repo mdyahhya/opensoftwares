@@ -1170,8 +1170,7 @@ body.splash-locked {
   width: 76px;
   height: 76px;
   object-fit: contain;
-  mix-blend-mode: multiply;
-  filter: drop-shadow(0 10px 25px rgba(14, 14, 16, 0.08));
+  display: block;
 }
 
 @keyframes splashLogoIn {

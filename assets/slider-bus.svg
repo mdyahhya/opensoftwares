@@ -1,120 +1,130 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600" fill="none">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600" fill="none">
   <defs>
     <filter id="shadowBus" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#0A2A5E" flood-opacity="0.08" />
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#0A2A5E" flood-opacity="0.08" />
     </filter>
   </defs>
 
-  <!-- Clean White Card Background -->
-  <rect width="600" height="600" rx="24" fill="#FFFFFF" />
-  <rect x="1" y="1" width="598" height="598" rx="23" stroke="#E2E8F0" stroke-width="2" />
-  <path d="M0 24 C0 10.7 10.7 0 24 0 L576 0 C589.3 0 600 10.7 600 24 L600 6 L0 6 Z" fill="#E8A317" />
+  <!-- Card Background: Exact Website Background (#F6F4EF) -->
+  <rect width="600" height="600" rx="20" fill="#F6F4EF" />
+  <rect x="1" y="1" width="598" height="598" rx="19" stroke="#E5E0D8" stroke-width="1.5" />
+  <path d="M0 20 C0 9 9 0 20 0 L580 0 C591 0 600 9 600 20 L600 6 L0 6 Z" fill="#E8A317" />
 
   <!-- Header -->
-  <g transform="translate(40, 36)">
-    <rect width="180" height="28" rx="14" fill="#FEF3C7" stroke="#FDE68A" />
-    <circle cx="16" cy="14" r="4" fill="#D97706" />
-    <text x="28" y="18" font-family="'Inter', sans-serif" font-weight="700" font-size="11" fill="#B45309" letter-spacing="0.6">GPS LIVE TELEMETRY</text>
+  <g transform="translate(36, 32)">
+    <rect width="180" height="26" rx="13" fill="#FEF3C7" stroke="#FDE68A" />
+    <circle cx="15" cy="13" r="4" fill="#D97706" />
+    <text x="26" y="17" font-family="'Inter', -apple-system, sans-serif" font-weight="700" font-size="10.5" fill="#B45309" letter-spacing="0.6">GPS LIVE TELEMETRY</text>
 
-    <text x="0" y="66" font-family="'Inter', sans-serif" font-weight="800" font-size="28" fill="#0B1630">Real-Time School Bus Tracking</text>
-    <text x="0" y="96" font-family="'Inter', sans-serif" font-weight="400" font-size="14" fill="#64748B">Live map, speed telemetry, geofence pickup alerts &amp; SOS key</text>
+    <text x="0" y="60" font-family="'Inter', -apple-system, sans-serif" font-weight="800" font-size="26" fill="#0B1630">Real-Time School Bus Tracking</text>
+    <text x="0" y="86" font-family="'Inter', -apple-system, sans-serif" font-weight="400" font-size="13.5" fill="#64748B">Live map, speed telemetry, geofence pickup alerts &amp; SOS key</text>
   </g>
 
-  <!-- High-Contrast Map Card Mockup -->
-  <g transform="translate(40, 160)" filter="url(#shadowBus)">
+  <!-- High-Contrast Map Card Mockup Container -->
+  <g transform="translate(36, 146)" filter="url(#shadowBus)">
     <!-- Container -->
-    <rect width="520" height="390" rx="18" fill="#EEF2F6" stroke="#CBD5E1" stroke-width="1.5" />
+    <rect width="528" height="412" rx="16" fill="#DCE5ED" stroke="#CBD5E1" stroke-width="1.5" />
 
     <!-- Map Elements inside Clip -->
     <g>
-      <!-- City Blocks -->
-      <rect x="20" y="20" width="110" height="90" rx="8" fill="#E2E8F0" />
-      <rect x="160" y="20" width="160" height="90" rx="8" fill="#E2E8F0" />
-      <rect x="350" y="20" width="150" height="90" rx="8" fill="#E2E8F0" />
+      <!-- City Blocks with Distinct Borders -->
+      <rect x="20" y="20" width="115" height="90" rx="8" fill="#E2E8F0" stroke="#CBD5E1" />
+      <rect x="165" y="20" width="165" height="90" rx="8" fill="#E2E8F0" stroke="#CBD5E1" />
+      <rect x="360" y="20" width="150" height="90" rx="8" fill="#E2E8F0" stroke="#CBD5E1" />
 
-      <!-- City Park (Green) -->
-      <rect x="160" y="140" width="160" height="110" rx="10" fill="#DCFCE7" stroke="#BBF7D0" />
-      <circle cx="210" cy="180" r="14" fill="#22C55E" opacity="0.3" />
-      <circle cx="270" cy="200" r="18" fill="#22C55E" opacity="0.3" />
-      <text x="240" y="224" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#15803D" text-anchor="middle">Shivaji City Park</text>
+      <!-- City Park (Vibrant Green) -->
+      <rect x="165" y="140" width="165" height="120" rx="10" fill="#DCFCE7" stroke="#86EFAC" />
+      <circle cx="215" cy="180" r="16" fill="#22C55E" opacity="0.35" />
+      <circle cx="280" cy="205" r="20" fill="#22C55E" opacity="0.35" />
+      <text x="248" y="235" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#15803D" text-anchor="middle">Shivaji City Park</text>
 
-      <!-- Water Canal (Blue) -->
-      <path d="M 0 310 Q 260 330 520 300" stroke="#BAE6FD" stroke-width="26" fill="none" />
-      <text x="90" y="314" font-family="'Inter', sans-serif" font-size="10" font-weight="600" fill="#0284C7">Mula-Mutha River Bypass</text>
+      <!-- Water Canal (Vibrant Blue) -->
+      <path d="M 0 320 Q 260 345 528 315" stroke="#7DD3FC" stroke-width="28" fill="none" />
+      <text x="80" y="324" font-family="'Inter', sans-serif" font-size="10.5" font-weight="700" fill="#0284C7">Mula-Mutha River Bypass</text>
 
-      <rect x="20" y="140" width="110" height="130" rx="8" fill="#E2E8F0" />
-      <rect x="350" y="140" width="150" height="130" rx="8" fill="#E2E8F0" />
+      <rect x="20" y="140" width="115" height="140" rx="8" fill="#E2E8F0" stroke="#CBD5E1" />
+      <rect x="360" y="140" width="150" height="140" rx="8" fill="#E2E8F0" stroke="#CBD5E1" />
 
-      <!-- Road Grid (Bright White with Borders) -->
-      <!-- Horizontal Main Road -->
-      <rect x="0" y="110" width="520" height="30" fill="#FFFFFF" />
-      <line x1="0" y1="110" x2="520" y2="110" stroke="#CBD5E1" stroke-width="1.5" />
-      <line x1="0" y1="140" x2="520" y2="140" stroke="#CBD5E1" stroke-width="1.5" />
-      <line x1="0" y1="125" x2="520" y2="125" stroke="#E2E8F0" stroke-width="1.5" stroke-dasharray="12 8" />
+      <!-- Road Grid (Crisp White with Outlines) -->
+      <rect x="0" y="110" width="528" height="30" fill="#FFFFFF" />
+      <line x1="0" y1="110" x2="528" y2="110" stroke="#CBD5E1" stroke-width="1.5" />
+      <line x1="0" y1="140" x2="528" y2="140" stroke="#CBD5E1" stroke-width="1.5" />
+      <line x1="0" y1="125" x2="528" y2="125" stroke="#E2E8F0" stroke-width="2" stroke-dasharray="14 10" />
 
       <!-- Vertical Main Avenue 1 -->
-      <rect x="130" y="0" width="30" height="390" fill="#FFFFFF" />
-      <line x1="130" y1="0" x2="130" y2="390" stroke="#CBD5E1" stroke-width="1.5" />
-      <line x1="160" y1="0" x2="160" y2="390" stroke="#CBD5E1" stroke-width="1.5" />
-      <line x1="145" y1="0" x2="145" y2="390" stroke="#E2E8F0" stroke-width="1.5" stroke-dasharray="12 8" />
+      <rect x="135" y="0" width="30" height="412" fill="#FFFFFF" />
+      <line x1="135" y1="0" x2="135" y2="412" stroke="#CBD5E1" stroke-width="1.5" />
+      <line x1="165" y1="0" x2="165" y2="412" stroke="#CBD5E1" stroke-width="1.5" />
+      <line x1="150" y1="0" x2="150" y2="412" stroke="#E2E8F0" stroke-width="2" stroke-dasharray="14 10" />
 
       <!-- Vertical Main Avenue 2 -->
-      <rect x="320" y="0" width="30" height="390" fill="#FFFFFF" />
-      <line x1="320" y1="0" x2="320" y2="390" stroke="#CBD5E1" stroke-width="1.5" />
-      <line x1="350" y1="0" x2="350" y2="390" stroke="#CBD5E1" stroke-width="1.5" />
+      <rect x="330" y="0" width="30" height="412" fill="#FFFFFF" />
+      <line x1="330" y1="0" x2="330" y2="412" stroke="#CBD5E1" stroke-width="1.5" />
+      <line x1="360" y1="0" x2="360" y2="412" stroke="#CBD5E1" stroke-width="1.5" />
 
       <!-- Bus Live Route Path (Navy Line) -->
-      <path d="M 60 270 L 60 125 L 145 125 L 145 50 L 335 50 L 335 25" stroke="#0A2A5E" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M 60 270 L 60 125 L 150 125 L 150 50 L 345 50 L 345 25" stroke="#0A2A5E" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
       <!-- Saffron Active Progress Path -->
-      <path d="M 60 270 L 60 125 L 145 125 L 145 80" stroke="#E8A317" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M 60 270 L 60 125 L 150 125 L 150 80" stroke="#E8A317" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
 
       <!-- Pickup Marker (Green Check) -->
       <circle cx="60" cy="270" r="14" fill="#10B981" stroke="#FFFFFF" stroke-width="3" />
-      <text x="60" y="275" font-family="'Inter', sans-serif" font-size="12" font-weight="800" fill="#FFFFFF" text-anchor="middle">âœ“</text>
-      <rect x="82" y="258" width="140" height="24" rx="6" fill="#FFFFFF" stroke="#CBD5E1" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.06))" />
+      <!-- Vector Checkmark -->
+      <path d="M55 270 l4 4 l7 -7" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+      <rect x="82" y="258" width="145" height="24" rx="6" fill="#FFFFFF" stroke="#CBD5E1" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.08))" />
       <text x="90" y="274" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#059669">Pickup: 7:42 AM (Done)</text>
 
-      <!-- School Destination Marker -->
-      <circle cx="335" cy="25" r="16" fill="#0A2A5E" stroke="#FFFFFF" stroke-width="3" />
-      <text x="335" y="30" font-family="'Inter', sans-serif" font-size="13" font-weight="800" fill="#FFFFFF" text-anchor="middle">ðŸ«</text>
-      <rect x="360" y="14" width="130" height="24" rx="6" fill="#0A2A5E" />
-      <text x="425" y="30" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">School Campus (End)</text>
+      <!-- School Destination Marker with Vector Building Icon -->
+      <circle cx="345" cy="25" r="16" fill="#0A2A5E" stroke="#FFFFFF" stroke-width="3" />
+      <!-- Vector School Building -->
+      <g transform="translate(337, 17)" fill="#FFFFFF">
+        <path d="M8 1 L1 6 v8 h14 v-8 z M5 14 v-5 h6 v5 z M7 4 h2 v2 h-2 z" />
+      </g>
+      <rect x="370" y="14" width="135" height="24" rx="6" fill="#0A2A5E" />
+      <text x="437" y="30" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">School Campus (End)</text>
 
-      <!-- Bus Marker with Radar Pulse at (145, 80) -->
-      <circle cx="145" cy="80" r="32" fill="#E8A317" opacity="0.18" />
-      <circle cx="145" cy="80" r="22" fill="#E8A317" opacity="0.32" />
-      <!-- 3D Bus Shape -->
-      <rect x="127" y="62" width="36" height="34" rx="8" fill="#E8A317" stroke="#FFFFFF" stroke-width="2.5" filter="drop-shadow(0 4px 8px rgba(0,0,0,0.25))" />
-      <rect x="131" y="66" width="28" height="12" rx="3" fill="#0A2A5E" />
-      <circle cx="134" cy="90" r="3.5" fill="#1F2937" />
-      <circle cx="156" cy="90" r="3.5" fill="#1F2937" />
-      <circle cx="132" cy="84" r="2" fill="#FEF08A" />
-      <circle cx="158" cy="84" r="2" fill="#FEF08A" />
+      <!-- Bus Marker with Radar Pulse at (150, 80) -->
+      <circle cx="150" cy="80" r="34" fill="#E8A317" opacity="0.2" />
+      <circle cx="150" cy="80" r="22" fill="#E8A317" opacity="0.35" />
+      <!-- 3D Bus Vector Shape -->
+      <rect x="132" y="62" width="36" height="34" rx="8" fill="#E8A317" stroke="#FFFFFF" stroke-width="2.5" filter="drop-shadow(0 4px 8px rgba(0,0,0,0.25))" />
+      <rect x="136" y="66" width="28" height="12" rx="3" fill="#0A2A5E" />
+      <circle cx="139" cy="90" r="3.5" fill="#1F2937" />
+      <circle cx="161" cy="90" r="3.5" fill="#1F2937" />
+      <circle cx="137" cy="84" r="2" fill="#FEF08A" />
+      <circle cx="163" cy="84" r="2" fill="#FEF08A" />
 
       <!-- Bus Speed Pill Tag -->
-      <rect x="100" y="36" width="90" height="20" rx="10" fill="#0B1630" />
-      <circle cx="112" cy="46" r="3.5" fill="#10B981" />
-      <text x="148" y="50" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">BUS 03 &#8226; 38 km/h</text>
+      <rect x="105" y="36" width="90" height="20" rx="10" fill="#0B1630" />
+      <circle cx="117" cy="46" r="3.5" fill="#10B981" />
+      <text x="153" y="50" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">BUS 03 &#8226; 38 km/h</text>
     </g>
 
     <!-- Floating ETA Status Card at Bottom -->
-    <g transform="translate(18, 290)">
-      <rect width="484" height="84" rx="14" fill="#FFFFFF" stroke="#CBD5E1" filter="drop-shadow(0 10px 20px rgba(10,42,94,0.12))" />
+    <g transform="translate(18, 304)">
+      <rect width="492" height="88" rx="14" fill="#FFFFFF" stroke="#CBD5E1" filter="drop-shadow(0 10px 24px rgba(10,42,94,0.14))" />
       
-      <circle cx="44" cy="42" r="22" fill="#FEF3C7" />
-      <text x="44" y="48" font-family="'Inter', sans-serif" font-size="18" text-anchor="middle">ðŸšŒ</text>
-
-      <g transform="translate(76, 16)">
-        <rect width="80" height="18" rx="4" fill="#DCFCE7" />
-        <text x="40" y="13" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#15803D" text-anchor="middle">ON SCHEDULE</text>
-        <text x="90" y="14" font-family="'Inter', sans-serif" font-size="13" font-weight="800" fill="#0B1630">7 mins away (1.8 km)</text>
-        <text x="0" y="36" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#0B1630">Next: Viman Nagar Bus Stop &#8226; 7:55 AM</text>
-        <text x="0" y="52" font-family="'Inter', sans-serif" font-size="10" font-weight="500" fill="#64748B">Driver: Rajesh Shinde &#8226; MH-12-Q-4521</text>
+      <circle cx="44" cy="44" r="24" fill="#FEF3C7" />
+      <!-- Vector Bus Icon inside circle -->
+      <g transform="translate(32, 32)">
+        <rect width="24" height="22" rx="4" fill="#D97706" />
+        <rect x="3" y="3" width="18" height="8" rx="2" fill="#FFFFFF" />
+        <circle cx="6" cy="18" r="2.5" fill="#1F2937" />
+        <circle cx="18" cy="18" r="2.5" fill="#1F2937" />
       </g>
 
-      <!-- Quick Call Button -->
-      <rect x="424" y="24" width="44" height="44" rx="22" fill="#0A2A5E" />
-      <text x="446" y="50" font-family="'Inter', sans-serif" font-size="18" fill="#FFFFFF" text-anchor="middle">ðŸ“ž</text>
+      <g transform="translate(80, 18)">
+        <rect width="84" height="18" rx="4" fill="#DCFCE7" />
+        <text x="42" y="13" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#15803D" text-anchor="middle">ON SCHEDULE</text>
+        <text x="96" y="14" font-family="'Inter', sans-serif" font-size="13" font-weight="800" fill="#0B1630">7 mins away (1.8 km)</text>
+        <text x="0" y="38" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#0B1630">Next: Viman Nagar Bus Stop &#8226; 7:55 AM</text>
+        <text x="0" y="54" font-family="'Inter', sans-serif" font-size="10" font-weight="500" fill="#64748B">Driver: Rajesh Shinde &#8226; MH-12-Q-4521</text>
+      </g>
+
+      <!-- Quick Call Button with Vector Phone Icon -->
+      <rect x="430" y="22" width="44" height="44" rx="22" fill="#0A2A5E" />
+      <path d="M447 38 c1.5 3 4 5.5 7 7 l2 -2 c.5 -.5 1.5 -.5 2 0 l3 3 c.5 .5 .5 1.5 0 2 l-1.5 1.5 c-3 0 -7 -4 -10 -7 s-7 -7 -7 -10 l1.5 -1.5 c.5 -.5 1.5 -.5 2 0 l3 3 c.5 .5 .5 1.5 0 2 z" fill="#FFFFFF" />
     </g>
   </g>
 </svg>

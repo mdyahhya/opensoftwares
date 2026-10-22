@@ -1,71 +1,76 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600" fill="none">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600" fill="none">
   <defs>
     <filter id="shadowParent" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#0A2A5E" flood-opacity="0.08" />
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#0A2A5E" flood-opacity="0.08" />
     </filter>
   </defs>
 
-  <!-- Clean White Card Background -->
-  <rect width="600" height="600" rx="24" fill="#FFFFFF" />
-  <rect x="1" y="1" width="598" height="598" rx="23" stroke="#E2E8F0" stroke-width="2" />
-  <path d="M0 24 C0 10.7 10.7 0 24 0 L576 0 C589.3 0 600 10.7 600 24 L600 6 L0 6 Z" fill="#2563EB" />
+  <!-- Card Background: Exact Website Background (#F6F4EF) -->
+  <rect width="600" height="600" rx="20" fill="#F6F4EF" />
+  <rect x="1" y="1" width="598" height="598" rx="19" stroke="#E5E0D8" stroke-width="1.5" />
+  <path d="M0 20 C0 9 9 0 20 0 L580 0 C591 0 600 9 600 20 L600 6 L0 6 Z" fill="#2563EB" />
 
   <!-- Header -->
-  <g transform="translate(40, 36)">
-    <rect width="180" height="28" rx="14" fill="#EFF6FF" stroke="#BFDBFE" />
-    <circle cx="16" cy="14" r="4" fill="#2563EB" />
-    <text x="28" y="18" font-family="'Inter', sans-serif" font-weight="700" font-size="11" fill="#1E40AF" letter-spacing="0.6">PARENT APP SUITE</text>
+  <g transform="translate(36, 32)">
+    <rect width="170" height="26" rx="13" fill="#EFF6FF" stroke="#BFDBFE" />
+    <circle cx="15" cy="13" r="4" fill="#2563EB" />
+    <text x="26" y="17" font-family="'Inter', -apple-system, sans-serif" font-weight="700" font-size="10.5" fill="#1E40AF" letter-spacing="0.6">PARENT APP SUITE</text>
 
-    <text x="0" y="66" font-family="'Inter', sans-serif" font-weight="800" font-size="28" fill="#0B1630">Empowering Parents Every Day</text>
-    <text x="0" y="96" font-family="'Inter', sans-serif" font-weight="400" font-size="14" fill="#64748B">Instant homework, teacher chat, digital remarks &amp; report cards</text>
+    <text x="0" y="60" font-family="'Inter', -apple-system, sans-serif" font-weight="800" font-size="26" fill="#0B1630">Empowering Parents Every Day</text>
+    <text x="0" y="86" font-family="'Inter', -apple-system, sans-serif" font-weight="400" font-size="13.5" fill="#64748B">Instant homework, teacher chat, digital remarks &amp; report cards</text>
   </g>
 
-  <!-- Interactive Parent View Mockup -->
-  <g transform="translate(40, 160)" filter="url(#shadowParent)">
-    <rect width="520" height="390" rx="18" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5" />
+  <!-- Interactive Parent View Mockup Container -->
+  <g transform="translate(36, 146)" filter="url(#shadowParent)">
+    <rect width="528" height="412" rx="16" fill="#FAF9F6" stroke="#E2E8F0" stroke-width="1.5" />
 
     <!-- Top Profile Row -->
-    <rect width="520" height="74" rx="18" fill="#FFFFFF" />
-    <line x1="0" y1="74" x2="520" y2="74" stroke="#E2E8F0" stroke-width="1" />
+    <rect width="528" height="74" rx="16" fill="#FFFFFF" />
+    <line x1="0" y1="74" x2="528" y2="74" stroke="#E2E8F0" stroke-width="1" />
 
-    <circle cx="45" cy="37" r="22" fill="#E0F2FE" />
-    <text x="45" y="43" font-family="'Inter', sans-serif" font-size="15" font-weight="800" fill="#0284C7" text-anchor="middle">AA</text>
+    <circle cx="44" cy="37" r="22" fill="#E0F2FE" />
+    <text x="44" y="43" font-family="'Inter', sans-serif" font-size="15" font-weight="800" fill="#0284C7" text-anchor="middle">AA</text>
     <text x="78" y="32" font-family="'Inter', sans-serif" font-size="15" font-weight="700" fill="#0B1630">Aanya Agarwal</text>
-    <text x="78" y="50" font-family="'Inter', sans-serif" font-size="12" font-weight="500" fill="#64748B">Class X-B &#8226; Delhi Public School, Pune</text>
+    <text x="78" y="50" font-family="'Inter', sans-serif" font-size="11.5" font-weight="500" fill="#64748B">Class X-B &#8226; Delhi Public School, Pune</text>
 
-    <rect x="390" y="24" width="105" height="28" rx="14" fill="#DCFCE7" />
-    <text x="442" y="42" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#15803D" text-anchor="middle">Active Parent</text>
+    <rect x="396" y="24" width="112" height="28" rx="14" fill="#DCFCE7" />
+    <text x="452" y="42" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#15803D" text-anchor="middle">Active Parent</text>
 
     <!-- Parent Cards Grid -->
-    <g transform="translate(24, 94)">
+    <g transform="translate(20, 92)">
       <!-- Card 1: Attendance Progress -->
-      <rect width="226" height="120" rx="12" fill="#FFFFFF" stroke="#E2E8F0" />
-      <text x="16" y="26" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#64748B">MONTHLY ATTENDANCE</text>
-      <text x="16" y="60" font-family="'Inter', sans-serif" font-size="32" font-weight="800" fill="#0B1630">94.2%</text>
-      <rect x="16" y="74" width="194" height="6" rx="3" fill="#E2E8F0" />
-      <rect x="16" y="74" width="182" height="6" rx="3" fill="#10B981" />
-      <text x="16" y="102" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#059669">âœ“ 21 of 22 Days Present</text>
+      <rect width="234" height="126" rx="12" fill="#FFFFFF" stroke="#E2E8F0" />
+      <text x="16" y="26" font-family="'Inter', sans-serif" font-size="10.5" font-weight="700" fill="#64748B">MONTHLY ATTENDANCE</text>
+      <text x="16" y="62" font-family="'Inter', sans-serif" font-size="32" font-weight="800" fill="#0B1630">94.2%</text>
+      <rect x="16" y="78" width="202" height="6" rx="3" fill="#E2E8F0" />
+      <rect x="16" y="78" width="190" height="6" rx="3" fill="#10B981" />
+      <!-- Vector checkmark -->
+      <path d="M16 106 l3 3 l6 -6" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+      <text x="30" y="109" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#059669">21 of 22 Days Present</text>
 
       <!-- Card 2: Homework Status -->
-      <rect x="246" width="226" height="120" rx="12" fill="#FFFFFF" stroke="#E2E8F0" />
-      <text x="262" y="26" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#64748B">HOMEWORK TODAY</text>
-      <rect x="262" y="38" width="8" height="8" rx="4" fill="#E8A317" />
-      <text x="278" y="46" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#0B1630">Maths: Chapter 7</text>
-      <text x="278" y="62" font-family="'Inter', sans-serif" font-size="10" fill="#64748B">Ex 7.2 â€¢ Complete by 5 PM</text>
+      <rect x="254" width="234" height="126" rx="12" fill="#FFFFFF" stroke="#E2E8F0" />
+      <text x="270" y="26" font-family="'Inter', sans-serif" font-size="10.5" font-weight="700" fill="#64748B">HOMEWORK TODAY</text>
+      <circle cx="274" cy="46" r="4" fill="#E8A317" />
+      <text x="286" y="50" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#0B1630">Maths: Chapter 7</text>
+      <text x="286" y="66" font-family="'Inter', sans-serif" font-size="10" fill="#64748B">Ex 7.2 &#8226; Complete by 5 PM</text>
 
-      <rect x="262" y="76" width="8" height="8" rx="4" fill="#10B981" />
-      <text x="278" y="84" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#0B1630">Science: Lab File</text>
-      <text x="278" y="100" font-family="'Inter', sans-serif" font-size="10" fill="#059669">Submitted &#8226; Graded A+</text>
+      <circle cx="274" cy="88" r="4" fill="#10B981" />
+      <text x="286" y="92" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#0B1630">Science: Lab File</text>
+      <text x="286" y="108" font-family="'Inter', sans-serif" font-size="10" fill="#059669">Submitted &#8226; Graded A+</text>
     </g>
 
-    <!-- Teacher Message / Notice Notification -->
-    <g transform="translate(24, 234)">
-      <rect width="472" height="68" rx="12" fill="#FFFFFF" stroke="#E2E8F0" />
-      <circle cx="28" cy="34" r="14" fill="#FEF3C7" />
-      <text x="28" y="39" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#D97706" text-anchor="middle">ðŸ’¬</text>
-      <text x="52" y="28" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#0B1630">Message from Class Teacher (Mrs. Sharma)</text>
-      <text x="52" y="46" font-family="'Inter', sans-serif" font-size="11" fill="#475569">"Aanya scored 48/50 in Science Quiz. Keep up the great work!"</text>
-      <text x="52" y="59" font-family="'Inter', sans-serif" font-size="9" fill="#94A3B8">Today at 10:15 AM &#8226; 1-Tap Reply</text>
+    <!-- Teacher Message / Notice Notification with Vector Chat Icon -->
+    <g transform="translate(20, 238)">
+      <rect width="488" height="74" rx="12" fill="#FFFFFF" stroke="#E2E8F0" />
+      <circle cx="32" cy="37" r="16" fill="#FEF3C7" />
+      <!-- Vector Chat Bubble -->
+      <path d="M26 31 h12 a2 2 0 0 1 2 2 v6 a2 2 0 0 1 -2 2 h-8 l-4 4 v-4 h-0 a2 2 0 0 1 -2 -2 v-6 a2 2 0 0 1 2 -2 z" fill="#D97706" />
+      
+      <text x="58" y="28" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#0B1630">Message from Class Teacher (Mrs. Sharma)</text>
+      <text x="58" y="46" font-family="'Inter', sans-serif" font-size="11" fill="#475569">"Aanya scored 48/50 in Science Quiz. Keep up the great work!"</text>
+      <text x="58" y="61" font-family="'Inter', sans-serif" font-size="9.5" fill="#94A3B8">Today at 10:15 AM &#8226; 1-Tap Reply</text>
     </g>
   </g>
 </svg>
