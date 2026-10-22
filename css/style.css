@@ -740,6 +740,12 @@ em.serif {
 
 .floating-btn-whatsapp { background-color: #25D366; }
 .floating-btn-call { background-color: var(--midnight); }
+.floating-btn-instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+.floating-btn-instagram:hover {
+  box-shadow: 0 8px 24px rgba(214, 36, 159, 0.45);
+}
 
 /* WhatsApp pulse */
 .floating-btn-whatsapp::before {
@@ -1103,7 +1109,22 @@ body.splash-locked {
   gap: 1.25rem;
 }
 
-/* Staggered letter rise & fade */
+/* Logo animation (First to appear) */
+.splash-logo-wrap {
+  opacity: 0;
+  transform: scale(0.85);
+  animation: splashLogoIn 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.12s;
+}
+
+@keyframes splashLogoIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Staggered letter rise & fade (Appears second, below the logo icon) */
 .splash-text {
   display: inline-flex;
   align-items: baseline;
@@ -1120,7 +1141,7 @@ body.splash-locked {
   opacity: 0;
   transform: translateY(18px);
   animation: splashLetterIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  animation-delay: calc(var(--i) * 0.045s);
+  animation-delay: calc(0.55s + var(--i) * 0.045s);
 }
 
 .splash-cap {
@@ -1140,7 +1161,7 @@ body.splash-locked {
   opacity: 0;
   transform: scale(0);
   animation: splashDotIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  animation-delay: 0.65s;
+  animation-delay: 1.2s;
 }
 
 @keyframes splashLetterIn {
@@ -1155,14 +1176,6 @@ body.splash-locked {
     opacity: 1;
     transform: scale(1);
   }
-}
-
-/* Logo fade and scale 0.9 -> 1 with soft shadow */
-.splash-logo-wrap {
-  opacity: 0;
-  transform: scale(0.9);
-  animation: splashLogoIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  animation-delay: 0.75s;
 }
 
 .splash-logo-img {

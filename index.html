@@ -63,8 +63,8 @@
   </style>
 
   <!-- CSS (Cache-busted) -->
-  <link rel="stylesheet" href="/css/style.css?v=2.6">
-  <link rel="stylesheet" href="/css/home.css?v=2.6">
+  <link rel="stylesheet" href="/css/style.css?v=2.7">
+  <link rel="stylesheet" href="/css/home.css?v=2.7">
 
   <!-- Structured Data JSON-LD -->
   <script type="application/ld+json">
@@ -122,15 +122,17 @@
   <div class="site-splash" id="siteSplash" role="dialog" aria-modal="true" aria-label="Loading OpenSoftwares">
     <div class="splash-inner">
       <div class="splash-brand">
-        <div class="splash-text" aria-label="OpenSoftwares">
-          <span class="splash-letter splash-cap" style="--i:0">O</span><span class="splash-letter" style="--i:1">p</span><span class="splash-letter" style="--i:2">e</span><span class="splash-letter" style="--i:3">n</span><span class="splash-letter splash-cap" style="--i:4">S</span><span class="splash-letter" style="--i:5">o</span><span class="splash-letter" style="--i:6">f</span><span class="splash-letter" style="--i:7">t</span><span class="splash-letter" style="--i:8">w</span><span class="splash-letter" style="--i:9">a</span><span class="splash-letter" style="--i:10">r</span><span class="splash-letter" style="--i:11">e</span><span class="splash-letter" style="--i:12">s</span><span class="splash-dot" style="--i:13"></span>
-        </div>
+        <!-- 1. Logo Icon First -->
         <div class="splash-logo-wrap">
           <img src="/assets/brand/logo-transparent.png" 
                srcset="/assets/brand/logo-transparent-76.png 1x, /assets/brand/logo-transparent-192.png 2x" 
                width="76" height="76" 
                alt="OpenSoftwares logo" 
                class="splash-logo-img">
+        </div>
+        <!-- 2. Name Below Icon -->
+        <div class="splash-text" aria-label="OpenSoftwares">
+          <span class="splash-letter splash-cap" style="--i:0">O</span><span class="splash-letter" style="--i:1">p</span><span class="splash-letter" style="--i:2">e</span><span class="splash-letter" style="--i:3">n</span><span class="splash-letter splash-cap" style="--i:4">S</span><span class="splash-letter" style="--i:5">o</span><span class="splash-letter" style="--i:6">f</span><span class="splash-letter" style="--i:7">t</span><span class="splash-letter" style="--i:8">w</span><span class="splash-letter" style="--i:9">a</span><span class="splash-letter" style="--i:10">r</span><span class="splash-letter" style="--i:11">e</span><span class="splash-letter" style="--i:12">s</span><span class="splash-dot" style="--i:13"></span>
         </div>
       </div>
       <div class="splash-progress-track" aria-hidden="true">
@@ -232,6 +234,11 @@
       <symbol id="icon-battery" viewBox="0 0 24 24" fill="currentColor" stroke="none">
         <rect x="2" y="7" width="17" height="10" rx="2"/><rect x="4" y="9" width="11" height="6" rx="1" opacity="0.4"/><rect x="4" y="9" width="8" height="6" rx="1"/><path d="M20 11h2v2h-2z"/>
       </symbol>
+          <symbol id="icon-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+        <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/>
+      </symbol>
     </defs>
   </svg>
 
@@ -317,7 +324,15 @@
           <svg class="icon icon-sm"><use href="#icon-phone"></use></svg>
           +91 72047 26501
         </a>
-        <a href="https://wa.me/917204726501?text=Hi%2C%20I%20want%20to%20know%20more%20about%20school%20software" class="mobile-footer-link">
+            <a href="https://www.instagram.com/opensoftwares.in" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="floating-btn floating-btn-instagram" 
+       aria-label="Follow OpenSoftwares on Instagram (@opensoftwares.in)">
+      <span class="floating-tooltip">Instagram @opensoftwares.in</span>
+      <svg class="icon icon-md" style="color:#fff;"><use href="#icon-instagram"></use></svg>
+    </a>
+    <a href="https://wa.me/917204726501?text=Hi%2C%20I%20want%20to%20know%20more%20about%20school%20software" class="mobile-footer-link">
           <svg class="icon icon-sm icon-filled"><use href="#icon-whatsapp"></use></svg>
           WhatsApp
         </a>
@@ -1356,7 +1371,9 @@
           <ul class="footer-contact-list">
             <li><a href="tel:+917204726501" aria-label="Call +91 72047 26501"><svg class="icon icon-sm"><use href="#icon-phone"></use></svg> +91 72047 26501</a></li>
             <li><a href="mailto:contact@opensoftwares.in" aria-label="Email contact@opensoftwares.in"><svg class="icon icon-sm"><use href="#icon-chat"></use></svg> contact@opensoftwares.in</a></li>
-            <li><a href="https://wa.me/917204726501?text=Hi%2C%20I%20want%20to%20know%20more%20about%20school%20software" aria-label="Chat on WhatsApp"><svg class="icon icon-sm icon-filled"><use href="#icon-whatsapp"></use></svg> WhatsApp</a></li>
+            <li><a href="https://wa.me/917204726501?text=Hi%2C%20I%20want%20to%20know%20more%20about%20school%20software" aria-label="Chat on WhatsApp"><svg class="icon icon-sm icon-filled"><use href="#icon-whatsapp"></use></svg> WhatsApp</a>
+        <a href="https://www.instagram.com/opensoftwares.in" target="_blank" rel="noopener noreferrer" class="mobile-footer-link"><svg class="icon icon-sm"><use href="#icon-instagram"></use></svg> @opensoftwares.in</a>
+</li>
           </ul>
         </div>
 
@@ -1404,24 +1421,33 @@
   <!-- ======================================================================
        FLOATING ACTION BUTTONS (WhatsApp + Call)
        ====================================================================== -->
-  <div class="floating-actions" aria-label="Contact shortcuts">
-    <a href="https://wa.me/917204726501?text=Hi%2C%20I%20want%20to%20know%20more%20about%20school%20software"
-       class="floating-btn floating-btn-whatsapp"
-       aria-label="Chat on WhatsApp"
-       target="_blank" rel="noopener noreferrer">
-      <svg class="icon icon-filled" width="28" height="28"><use href="#icon-whatsapp"></use></svg>
-      <span class="floating-tooltip">WhatsApp</span>
+    <div class="floating-actions" aria-label="Contact shortcuts">
+    <a href="https://www.instagram.com/opensoftwares.in" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="floating-btn floating-btn-instagram" 
+       aria-label="Follow OpenSoftwares on Instagram (@opensoftwares.in)">
+      <span class="floating-tooltip">Instagram @opensoftwares.in</span>
+      <svg class="icon icon-md" style="color:#fff;"><use href="#icon-instagram"></use></svg>
     </a>
-    <a href="tel:+917204726501"
-       class="floating-btn floating-btn-call"
-       aria-label="Call +91 72047 26501">
-      <svg class="icon" width="24" height="24"><use href="#icon-phone"></use></svg>
+    <a href="https://wa.me/917204726501?text=Hi%2C%20I%20want%20to%20know%20more%20about%20Schoolmate%20by%20OpenSoftwares" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="floating-btn floating-btn-whatsapp" 
+       aria-label="Chat with Schoolmate specialist on WhatsApp">
+      <span class="floating-tooltip">WhatsApp</span>
+      <svg class="icon icon-md" style="color:#fff;"><use href="#icon-whatsapp"></use></svg>
+    </a>
+    <a href="tel:+917204726501" 
+       class="floating-btn floating-btn-call" 
+       aria-label="Call OpenSoftwares support at +91 72047 26501">
       <span class="floating-tooltip">Call Us</span>
+      <svg class="icon icon-md"><use href="#icon-phone"></use></svg>
     </a>
   </div>
 
   <!-- Scripts -->
-  <script src="/js/main.js?v=2.6" defer></script>
+  <script src="/js/main.js?v=2.7" defer></script>
   <script src="/js/home.js?v=2.6" defer></script>
 </body>
 </html>
