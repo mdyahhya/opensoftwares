@@ -210,4 +210,47 @@
     }
   }
 
+  // =========================================================================
+  // 7. Service Worker Registration & Live Auto-Update
+  // =========================================================================
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker
+        .register('/sw.js', { updateViaCache: 'none' })
+        .then((registration) => {
+          // Immediately check for updates on each page visit
+          registration.update().catch(() => {});
+
+          // Re-check periodically every 15 minutes if page is kept open
+          setInterval(() => {
+            registration.update().catch(() => {});
+          }, 15 * 60 * 1000);
+
+          registration.addEventListener('updatefound', () => {
+            const installingWorker = registration.installing;
+            if (!installingWorker) return;
+            installingWorker.addEventListener('statechange', () => {
+              if (installingWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                // New service worker installed — notify it to take over immediately
+                installingWorker.postMessage({ action: 'skipWaiting' });
+              }
+            });
+          });
+        })
+        .catch((err) => {
+          console.debug('ServiceWorker registration skipped:', err);
+        });
+
+      // Reload page once the new service worker takes control (seamless update)
+      let refreshing = false;
+      navigator.serviceWorker.addEventListener('controllerchange', () => {
+        if (!refreshing) {
+          refreshing = true;
+          window.location.reload();
+        }
+      });
+    });
+  }
+
 })();
+

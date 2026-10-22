@@ -36,9 +36,35 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/home.css">
+  <!-- Critical Inline CSS: Guarantees zero FOUC even before external stylesheets arrive -->
+  <style>
+    .site-splash {
+      position: fixed; inset: 0; z-index: 99999;
+      background: #F6F4EF;
+      display: flex; align-items: center; justify-content: center;
+    }
+    html.splash-skip .site-splash { display: none !important; }
+    .mobile-overlay {
+      display: none !important;
+      position: fixed; inset: 0; z-index: 10000;
+      opacity: 0; pointer-events: none;
+    }
+    .mobile-overlay.open {
+      display: flex !important;
+      opacity: 1; pointer-events: auto;
+    }
+    .nav-link { position: relative; overflow: hidden; display: inline-flex; }
+    .nav-link .nav-text-back { position: absolute; top: 100%; left: 50%; transform: translateX(-50%); opacity: 0; }
+    .brand-logo-img { width: 36px; height: 36px; max-width: 36px; max-height: 36px; object-fit: contain; }
+    .splash-logo-img { width: 76px; height: 76px; max-width: 76px; max-height: 76px; object-fit: contain; }
+    .icon { width: 24px; height: 24px; }
+    .icon-lg { width: 28px; height: 28px; }
+    .overlay-close svg { width: 28px; height: 28px; }
+  </style>
+
+  <!-- CSS (Cache-busted) -->
+  <link rel="stylesheet" href="/css/style.css?v=2.1">
+  <link rel="stylesheet" href="/css/home.css?v=2.1">
 
   <!-- Structured Data JSON-LD -->
   <script type="application/ld+json">
@@ -1393,7 +1419,7 @@
   </div>
 
   <!-- Scripts -->
-  <script src="js/main.js" defer></script>
-  <script src="js/home.js" defer></script>
+  <script src="/js/main.js?v=2.1" defer></script>
+  <script src="/js/home.js?v=2.1" defer></script>
 </body>
 </html>
