@@ -240,13 +240,14 @@
   }
 
   // =========================================================================
-  // 5. Schoolmate ERP Mockup — scaling + module switching + auto-cycle
+  // 5. Schoolmate ERP Mockup — PC Desktop Screen Cursor Animation & Module Switching
   // =========================================================================
-  const erpHost   = document.querySelector('.erp-mockup-host');
-  const erpScaler = document.querySelector('.erp-mockup-scaler');
-  const erpCanvas = document.querySelector('.erp-mockup-canvas');
+  const erpHost    = document.querySelector('.erp-mockup-host');
+  const erpScaler  = document.querySelector('.erp-mockup-scaler');
+  const erpCanvas  = document.querySelector('.erp-mockup-canvas');
   const erpModBtns = document.querySelectorAll('.erp-module-btn');
   const erpPanels  = document.querySelectorAll('.erp-panel-view');
+  const pcCursor   = document.getElementById('erpPcCursor');
 
   const DESIGN_WIDTH  = 1200;
   const DESIGN_HEIGHT = 760;
@@ -268,15 +269,49 @@
     window.addEventListener('resize', scaleErpMockup);
   }
 
-  // Module switching
-  let currentErpModule = 0;
-  let erpAutoTimer = null;
+  // Waypoints for PC Cursor simulation (targets relative to 1200x760 PC screen)
+  // Modules: 0: Dashboard, 1: Students, 2: Staff, 3: Payroll, 4: Timetable, 5: Exams, 6: Fees
+  const pcTour = [
+    { modIdx: 0, clickX: 105, clickY: 96,  hoverX: 520, hoverY: 170 }, // Dashboard -> Total Students KPI
+    { modIdx: 1, clickX: 105, clickY: 136, hoverX: 490, hoverY: 260 }, // Students -> Table Row
+    { modIdx: 6, clickX: 105, clickY: 336, hoverX: 620, hoverY: 260 }, // Fees & Accounts -> Collection chart
+    { modIdx: 4, clickX: 105, clickY: 256, hoverX: 540, hoverY: 220 }, // Timetable -> Monday Maths
+    { modIdx: 5, clickX: 105, clickY: 296, hoverX: 500, hoverY: 230 }  // Exams -> Results
+  ];
+
+  let currentTourStep = 0;
+  let erpTourTimer = null;
+  let isUserOperating = false;
+
+  function setCursorPosition(x, y, onFinish) {
+    if (!pcCursor) {
+      if (onFinish) onFinish();
+      return;
+    }
+    pcCursor.style.setProperty('--cur-x', x + 'px');
+    pcCursor.style.setProperty('--cur-y', y + 'px');
+    pcCursor.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+    if (onFinish) {
+      setTimeout(onFinish, 680);
+    }
+  }
+
+  function simulateClick(done) {
+    if (!pcCursor) {
+      if (done) done();
+      return;
+    }
+    pcCursor.classList.add('clicking');
+    setTimeout(() => {
+      pcCursor.classList.remove('clicking');
+      if (done) done();
+    }, 280);
+  }
 
   function setErpModule(idx, byUser = false) {
     const btns   = Array.from(erpModBtns);
     const panels = Array.from(erpPanels);
     if (idx < 0 || idx >= btns.length) return;
-    currentErpModule = idx;
 
     btns.forEach((b, i) => {
       b.classList.toggle('active', i === idx);
@@ -286,30 +321,74 @@
       p.classList.toggle('active', i === idx);
     });
 
-    // Animate chart line if dashboard
-    const chartLine = document.querySelector('.erp-panel-view.active .erp-chart-line');
-    if (chartLine) {
-      chartLine.classList.remove('draw');
-      void chartLine.offsetWidth;
-      chartLine.classList.add('draw');
+    // Animate chart line if dashboard or fees panel is active
+    const activeChart = document.querySelector('.erp-panel-view.active .erp-chart-line');
+    if (activeChart) {
+      activeChart.classList.remove('draw');
+      void activeChart.offsetWidth;
+      activeChart.classList.add('draw');
     }
 
     if (byUser) {
-      stopErpAuto();
+      isUserOperating = true;
+      if (pcCursor) pcCursor.style.opacity = '0';
+      clearTimeout(erpTourTimer);
     }
   }
 
+  function playPcStep() {
+    if (prefersReducedMotion || isUserOperating) return;
+    const step = pcTour[currentTourStep];
+    if (!step) return;
+
+    // 1. Move simulated PC cursor to sidebar module button
+    setCursorPosition(step.clickX, step.clickY, () => {
+      // 2. Click sidebar button with tactile ripple
+      simulateClick(() => {
+        setErpModule(step.modIdx, false);
+
+        // 3. Move cursor inside the active PC window to inspect content
+        setTimeout(() => {
+          if (isUserOperating) return;
+          setCursorPosition(step.hoverX, step.hoverY, () => {
+            // 4. Stay briefly on panel, then glide to next module
+            erpTourTimer = setTimeout(() => {
+              currentTourStep = (currentTourStep + 1) % pcTour.length;
+              playPcStep();
+            }, 3000);
+          });
+        }, 500);
+      });
+    });
+  }
+
   function startErpAuto() {
-    if (prefersReducedMotion) return;
-    stopErpAuto();
-    erpAutoTimer = setInterval(() => {
-      setErpModule((currentErpModule + 1) % erpModBtns.length);
-    }, 4000);
+    if (prefersReducedMotion || isUserOperating) return;
+    clearTimeout(erpTourTimer);
+    if (pcCursor) pcCursor.style.opacity = '1';
+    playPcStep();
   }
 
   function stopErpAuto() {
-    clearInterval(erpAutoTimer);
-    erpAutoTimer = null;
+    clearTimeout(erpTourTimer);
+    erpTourTimer = null;
+  }
+
+  if (erpHost) {
+    erpHost.addEventListener('mouseenter', () => {
+      isUserOperating = true;
+      if (pcCursor) pcCursor.style.opacity = '0';
+      stopErpAuto();
+    });
+    erpHost.addEventListener('mouseleave', () => {
+      isUserOperating = false;
+      setTimeout(() => {
+        if (!isUserOperating) {
+          if (pcCursor) pcCursor.style.opacity = '1';
+          startErpAuto();
+        }
+      }, 1200);
+    });
   }
 
   erpModBtns.forEach((btn, idx) => {
@@ -318,7 +397,6 @@
 
   if (erpModBtns.length > 0) {
     setErpModule(0);
-    // Start auto-cycle when ERP section is visible
     if ('IntersectionObserver' in window && erpHost) {
       const erpObserver = new IntersectionObserver(
         (entries) => {
@@ -330,7 +408,7 @@
             }
           });
         },
-        { threshold: 0.3 }
+        { threshold: 0.25 }
       );
       erpObserver.observe(erpHost);
     }
