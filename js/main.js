@@ -199,20 +199,37 @@
         }
       });
 
+      // Preload the 3 industry showcase images during splash animation so they are fully loaded before reveal
+      const industryImgs = ['/education.png', '/real_estate.png', '/manufacturing.jpg'];
+      const imgPreloadPromises = industryImgs.map(src => {
+        return new Promise(resolve => {
+          const img = new Image();
+          img.onload = () => resolve();
+          img.onerror = () => resolve();
+          img.src = src;
+          if (img.complete) resolve();
+        });
+      });
+
       const minAnimationTime = isReducedMotion ? 400 : 1700;
       const startTime = Date.now();
 
       function scheduleDismiss() {
         const elapsed = Date.now() - startTime;
         const remaining = Math.max(0, minAnimationTime - elapsed);
-        setTimeout(dismissSplash, remaining);
+        Promise.all([
+          new Promise(r => setTimeout(r, remaining)),
+          Promise.all(imgPreloadPromises)
+        ]).then(() => {
+          dismissSplash();
+        });
       }
 
       if (document.readyState === 'complete') {
         scheduleDismiss();
       } else {
         window.addEventListener('load', scheduleDismiss);
-        setTimeout(dismissSplash, 2000);
+        setTimeout(dismissSplash, 2600);
       }
     }
   }

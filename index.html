@@ -16,8 +16,10 @@
   <meta name="theme-color" content="#F6F4EF">
   <meta name="google-site-verification" content="google6d72aa4235162711">
   <meta name="application-name" content="OpenSoftwares">
-  <meta name="apple-mobile-web-app-title" content="OpenSoftwares">
   <link rel="preload" href="/assets/brand/logo-transparent.png" as="image">
+  <link rel="preload" href="/education.png" as="image">
+  <link rel="preload" href="/real_estate.png" as="image">
+  <link rel="preload" href="/manufacturing.jpg" as="image">
 
   <!-- Open Graph & Social -->
   <meta property="og:type" content="website">
@@ -69,7 +71,7 @@
 
   <!-- CSS (Cache-busted) -->
   <link rel="stylesheet" href="/css/style.css?v=3.3">
-  <link rel="stylesheet" href="/css/home.css?v=3.6">
+  <link rel="stylesheet" href="/css/home.css?v=3.7">
 
   <!-- Structured Data JSON-LD -->
   <script type="application/ld+json">
@@ -386,7 +388,7 @@
         <!-- Right Column: Phone and Laptop Illustration -->
         <div class="hero-anim-col">
           <div class="hero-devices-wrap" id="heroDevicesWrap" aria-label="OpenSoftwares software preview on laptop and phone">
-            <svg class="hero-devices-svg" id="heroDevicesSvg" viewBox="0 0 1060 540" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+            <svg class="hero-devices-svg" id="heroDevicesSvg" viewBox="12 36 986 482" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
             <defs>
               <radialGradient id="hGroundGrad" cx="50%" cy="50%" r="50%">
                 <stop offset="0%" stop-color="#0E0E10" stop-opacity="0.10"/>
@@ -676,9 +678,9 @@
             </g><!-- /heroLaptop -->
 
             <!-- =============================================================
-                 2. REALISTIC SLIM MOBILE (Right Side with Subtle Perspective Curve & Floating Shadow, 90px+ Distance)
+                 2. REALISTIC SLIM MOBILE (Right Side, Straight & Upright, Center x=880)
                  ============================================================= -->
-            <g id="heroPhone" transform="rotate(-2 880 275) translate(0, -4)">
+            <g id="heroPhone">
               <!-- Side Hardware Buttons -->
               <!-- Left: Action button, Volume Up, Volume Down -->
               <rect x="766" y="130" width="4" height="18" rx="2" fill="#94A3B8"/>
@@ -860,62 +862,60 @@
             </p>
           </div>
 
-          <!-- Right Column: Three Fields (Directly next to the text!) -->
-          <div class="intro-fields-col" id="fields" role="list" aria-label="Our Three Industries">
+          <!-- Right Column: Products we master in (3 Industry Showcase) -->
+          <div class="intro-fields-col" id="fields" aria-label="Our Three Industries">
             
-            <!-- 01 Education -->
-            <a href="products.html#education" class="field-card-item reveal" role="listitem" aria-label="Education: Software that runs schools. Live now: Schoolmate">
-              <div class="field-card-icon-wrap" aria-hidden="true">
-                <img src="/education.png" alt="Education" class="field-card-img" width="48" height="48" loading="lazy">
-              </div>
-              <div class="field-card-body">
-                <div class="field-card-top">
-                  <span class="field-card-name">Education</span>
-                  <span class="fields-strip-status status-live">
-                    <span class="strip-status-dot" aria-hidden="true"></span>
+            <!-- Above: Header Line -->
+            <div class="fields-showcase-header reveal">
+              <span class="fields-showcase-kicker">Products we master in</span>
+            </div>
+
+            <!-- Row of 3 Showcase Cards: Big Image in Box, Outside Labels & Status Below -->
+            <div class="fields-showcase-grid" role="list">
+              
+              <!-- Education -->
+              <a href="products.html#education" class="field-showcase-card reveal" role="listitem" aria-label="Education: School management software. Live now: Schoolmate">
+                <div class="field-showcase-media">
+                  <img src="/education.png" alt="Education software" class="field-showcase-img" width="320" height="320" decoding="async">
+                </div>
+                <div class="field-showcase-meta">
+                  <span class="field-showcase-title">Education</span>
+                  <span class="field-showcase-badge badge-live">
+                    <span class="badge-dot" aria-hidden="true"></span>
                     Live
                   </span>
                 </div>
-                <p class="field-card-sub">School management software &amp; mobile app for parents and teachers</p>
-              </div>
-              <div class="field-card-action" aria-hidden="true">
-                <svg class="icon icon-sm"><use href="#icon-arrow-up-right"></use></svg>
-              </div>
-            </a>
+              </a>
 
-            <!-- 02 Real Estate -->
-            <a href="products.html#real-estate" class="field-card-item reveal reveal-delay-1" role="listitem" aria-label="Real Estate: Tools to manage properties, leads and bookings. Coming soon">
-              <div class="field-card-icon-wrap" aria-hidden="true">
-                <img src="/real_estate.png" alt="Real Estate" class="field-card-img" width="48" height="48" loading="lazy">
-              </div>
-              <div class="field-card-body">
-                <div class="field-card-top">
-                  <span class="field-card-name">Real Estate</span>
-                  <span class="fields-strip-status status-soon">Soon</span>
+              <!-- Real Estate -->
+              <a href="products.html#real-estate" class="field-showcase-card reveal reveal-delay-1" role="listitem" aria-label="Real Estate software. Coming soon">
+                <div class="field-showcase-media">
+                  <img src="/real_estate.png" alt="Real Estate software" class="field-showcase-img" width="320" height="320" decoding="async">
                 </div>
-                <p class="field-card-sub">Lead pipelines, booking milestones, inventory and RERA compliance</p>
-              </div>
-              <div class="field-card-action" aria-hidden="true">
-                <svg class="icon icon-sm"><use href="#icon-arrow-up-right"></use></svg>
-              </div>
-            </a>
+                <div class="field-showcase-meta">
+                  <span class="field-showcase-title">Real Estate</span>
+                  <span class="field-showcase-badge badge-soon">Soon</span>
+                </div>
+              </a>
 
-            <!-- 03 Manufacturing -->
-            <a href="products.html#manufacturing" class="field-card-item reveal reveal-delay-2" role="listitem" aria-label="Manufacturing: Systems to manage production, inventory and orders. Coming soon">
-              <div class="field-card-icon-wrap" aria-hidden="true">
-                <img src="/manufacturing.jpg" alt="Manufacturing" class="field-card-img" width="48" height="48" loading="lazy">
-              </div>
-              <div class="field-card-body">
-                <div class="field-card-top">
-                  <span class="field-card-name">Manufacturing</span>
-                  <span class="fields-strip-status status-soon">Soon</span>
+              <!-- Manufacturing -->
+              <a href="products.html#manufacturing" class="field-showcase-card reveal reveal-delay-2" role="listitem" aria-label="Manufacturing software. Coming soon">
+                <div class="field-showcase-media">
+                  <img src="/manufacturing.jpg" alt="Manufacturing software" class="field-showcase-img" width="320" height="320" decoding="async">
                 </div>
-                <p class="field-card-sub">Production scheduling, BOM inventory, orders and quality control</p>
-              </div>
-              <div class="field-card-action" aria-hidden="true">
-                <svg class="icon icon-sm"><use href="#icon-arrow-up-right"></use></svg>
-              </div>
-            </a>
+                <div class="field-showcase-meta">
+                  <span class="field-showcase-title">Manufacturing</span>
+                  <span class="field-showcase-badge badge-soon">Soon</span>
+                </div>
+              </a>
+
+            </div>
+
+            <!-- Below: Note -->
+            <p class="fields-showcase-note reveal reveal-delay-3">
+              <span class="note-bullet" aria-hidden="true"></span>
+              Real estate and manufacturing softwares coming soon
+            </p>
 
           </div>
         </div>
@@ -2002,7 +2002,7 @@
   </div>
 
   <!-- Scripts -->
-  <script src="/js/main.js?v=3.2" defer></script>
-  <script src="/js/home.js?v=3.6" defer></script>
+  <script src="/js/main.js?v=3.7" defer></script>
+  <script src="/js/home.js?v=3.7" defer></script>
 </body>
 </html>
