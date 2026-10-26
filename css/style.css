@@ -461,9 +461,9 @@ em.serif {
   display: inline-flex;
   align-items: baseline;
   font-family: var(--font-sans);
-  font-weight: 500;
-  font-size: 1.15rem;
-  letter-spacing: -0.02em;
+  font-weight: 600;
+  font-size: 1.25rem;
+  letter-spacing: -0.025em;
   color: var(--ink);
   user-select: none;
   text-decoration: none;
@@ -471,7 +471,7 @@ em.serif {
 
 .brand-cap {
   font-size: inherit;
-  font-weight: inherit;
+  font-weight: 700;
   color: inherit;
   display: inline;
   line-height: inherit;
@@ -479,7 +479,7 @@ em.serif {
 }
 
 .brand-legal {
-  font-size: 0.82em;
+  font-size: 0.85em;
   font-weight: 600;
   color: var(--midnight);
   margin-left: 5px;
@@ -495,7 +495,7 @@ em.serif {
   border-radius: 50%;
   margin-left: 2px;
   align-self: baseline;
-  margin-bottom: 3px;
+  margin-bottom: 2px;
 }
 
 .brand-link-light .brand-wordmark {
@@ -516,25 +516,25 @@ em.serif {
 
 @media (max-width: 600px) {
   .brand-wordmark {
-    font-size: 1.05rem;
+    font-size: 1.15rem;
   }
   .brand-cap {
     font-size: inherit;
-    font-weight: inherit;
+    font-weight: 700;
   }
   .brand-legal {
-    font-size: 0.78em;
-    margin-left: 3px;
+    font-size: 0.82em;
+    margin-left: 4px;
   }
 }
 
 @media (max-width: 380px) {
   .brand-wordmark {
-    font-size: 0.95rem;
+    font-size: 1.05rem;
   }
   .brand-cap {
     font-size: inherit;
-    font-weight: inherit;
+    font-weight: 700;
   }
 }
 
