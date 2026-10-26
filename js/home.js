@@ -106,7 +106,7 @@
       });
       if (lapCursor) {
         const yPos = 142 + currentLapIndex * 32;
-        lapCursor.style.transform = `translate(380px, ${yPos}px)`;
+        lapCursor.style.transform = `translate(115px, ${yPos}px)`;
       }
     }
 

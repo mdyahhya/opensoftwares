@@ -69,7 +69,7 @@
 
   <!-- CSS (Cache-busted) -->
   <link rel="stylesheet" href="/css/style.css?v=3.2">
-  <link rel="stylesheet" href="/css/home.css?v=3.4">
+  <link rel="stylesheet" href="/css/home.css?v=3.5">
 
   <!-- Structured Data JSON-LD -->
   <script type="application/ld+json">
@@ -386,20 +386,15 @@
         <!-- Right Column: Phone and Laptop Illustration -->
         <div class="hero-anim-col">
           <div class="hero-devices-wrap" id="heroDevicesWrap" aria-label="OpenSoftwares software preview on laptop and phone">
-          <svg class="hero-devices-svg" id="heroDevicesSvg" viewBox="0 0 1020 580" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+            <svg class="hero-devices-svg" id="heroDevicesSvg" viewBox="0 0 1060 540" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
             <defs>
               <radialGradient id="hGroundGrad" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stop-color="#0E0E10" stop-opacity="0.12"/>
-                <stop offset="100%" stop-color="#0E0E10" stop-opacity="0"/>
-              </radialGradient>
-              <radialGradient id="hLapGroundGrad" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stop-color="#0E0E10" stop-opacity="0.14"/>
-                <stop offset="70%" stop-color="#0E0E10" stop-opacity="0.04"/>
+                <stop offset="0%" stop-color="#0E0E10" stop-opacity="0.10"/>
                 <stop offset="100%" stop-color="#0E0E10" stop-opacity="0"/>
               </radialGradient>
               <radialGradient id="hPhoneGroundGrad" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stop-color="#0E0E10" stop-opacity="0.22"/>
-                <stop offset="70%" stop-color="#0E0E10" stop-opacity="0.06"/>
+                <stop offset="0%" stop-color="#0E0E10" stop-opacity="0.18"/>
+                <stop offset="70%" stop-color="#0E0E10" stop-opacity="0.05"/>
                 <stop offset="100%" stop-color="#0E0E10" stop-opacity="0"/>
               </radialGradient>
               <!-- Light Silver Laptop Lid Body -->
@@ -407,12 +402,9 @@
                 <stop offset="0%" stop-color="#F1F3F7"/>
                 <stop offset="100%" stop-color="#E2E5EB"/>
               </linearGradient>
-              <!-- Laptop Keyboard Deck (Realistic aluminum extrusion with depth) -->
-              <linearGradient id="hLapDeckGrad" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#E5E8EE"/>
-                <stop offset="35%" stop-color="#DFE2E8"/>
-                <stop offset="85%" stop-color="#CFD3DC"/>
-                <stop offset="100%" stop-color="#B8BDC8"/>
+              <linearGradient id="hLapBaseGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#E5E7EB"/>
+                <stop offset="100%" stop-color="#D1D5DB"/>
               </linearGradient>
               <!-- Light Aerospace Titanium Phone Frame -->
               <linearGradient id="hPhoneTitanium" x1="0" y1="0" x2="1" y2="1">
@@ -422,7 +414,7 @@
                 <stop offset="100%" stop-color="#94A3B8"/>
               </linearGradient>
               <linearGradient id="hPhoneGlassSheen" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.7"/>
+                <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.6"/>
                 <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
               </linearGradient>
               <linearGradient id="hChartAreaGradLight" x1="0" y1="0" x2="0" y2="1">
@@ -430,349 +422,295 @@
                 <stop offset="100%" stop-color="#E8A317" stop-opacity="0.02"/>
               </linearGradient>
               <clipPath id="hLapClip">
-                <rect x="302" y="66" width="676" height="402" rx="8"/>
+                <rect x="42" y="66" width="626" height="392" rx="8"/>
               </clipPath>
               <clipPath id="hPhoneClip">
-                <rect x="69" y="69" width="202" height="456" rx="31"/>
+                <rect x="779" y="54" width="202" height="442" rx="28"/>
               </clipPath>
             </defs>
 
             <!-- Baseline Ground Shadows -->
-            <ellipse cx="640" cy="535" rx="360" ry="16" fill="url(#hLapGroundGrad)"/>
-            <ellipse cx="170" cy="542" rx="95" ry="12" fill="url(#hPhoneGroundGrad)"/>
+            <ellipse cx="355" cy="486" rx="335" ry="12" fill="url(#hGroundGrad)"/>
+            <ellipse cx="880" cy="505" rx="90" ry="10" fill="url(#hPhoneGroundGrad)"/>
 
             <!-- =============================================================
-                 1. LAPTOP (Center-Right: Display + Keyboard Deck Base)
+                 1. LAPTOP (Left Side: Clean Flat Lid + Sleek Base Hinge)
                  ============================================================= -->
             <g id="heroLaptop">
               <!-- Display Lid -->
-              <rect x="290" y="50" width="700" height="430" rx="16" fill="url(#hLapBodyLight)" stroke="#C6C9D2" stroke-width="2"/>
+              <rect x="30" y="50" width="650" height="420" rx="16" fill="url(#hLapBodyLight)" stroke="#C6C9D2" stroke-width="2"/>
               
               <!-- Top Camera & Sensor -->
-              <circle cx="640" cy="58" r="2.5" fill="#1E293B"/>
-              <circle cx="648" cy="58" r="1.2" fill="#10B981" opacity="0.85"/>
+              <circle cx="355" cy="58" r="2.5" fill="#1E293B"/>
+              <circle cx="363" cy="58" r="1.2" fill="#10B981" opacity="0.85"/>
 
               <!-- Laptop Screen Inside (White & Light Dashboard) -->
               <g clip-path="url(#hLapClip)">
-                <rect x="302" y="66" width="676" height="402" fill="#FFFFFF"/>
+                <rect x="42" y="66" width="626" height="392" fill="#FFFFFF"/>
 
                 <!-- Browser Chrome Bar -->
-                <rect x="302" y="66" width="676" height="28" fill="#F1F3F6"/>
-                <circle cx="318" cy="80" r="3.5" fill="#EF4444"/>
-                <circle cx="330" cy="80" r="3.5" fill="#F59E0B"/>
-                <circle cx="342" cy="80" r="3.5" fill="#10B981"/>
+                <rect x="42" y="66" width="626" height="28" fill="#F1F3F6"/>
+                <circle cx="56" cy="80" r="3.5" fill="#EF4444"/>
+                <circle cx="68" cy="80" r="3.5" fill="#F59E0B"/>
+                <circle cx="80" cy="80" r="3.5" fill="#10B981"/>
                 
                 <!-- Browser URL pill -->
-                <rect x="440" y="71" width="310" height="18" rx="9" fill="#FFFFFF" stroke="#E2E4E9"/>
-                <path d="M496 80 h10 M500 80 v-2 a1.5 1.5 0 0 1 3 0 v2" stroke="#64748B" stroke-width="1.2" fill="none"/>
-                <text x="600" y="83" font-family="'Geist Mono', monospace" font-size="8.5" fill="#334155" text-anchor="middle">schoolmate.opensoftwares.in</text>
+                <rect x="175" y="71" width="300" height="18" rx="9" fill="#FFFFFF" stroke="#E2E4E9"/>
+                <path d="M231 80 h10 M235 80 v-2 a1.5 1.5 0 0 1 3 0 v2" stroke="#64748B" stroke-width="1.2" fill="none"/>
+                <text x="325" y="83" font-family="'Geist Mono', monospace" font-size="8.5" fill="#334155" text-anchor="middle">schoolmate.opensoftwares.in</text>
 
                 <!-- Sidebar of Modules -->
-                <rect x="302" y="94" width="124" height="374" fill="#F8F9FA"/>
-                <line x1="426" y1="94" x2="426" y2="468" stroke="#E5E7EB" stroke-width="1"/>
+                <rect x="42" y="94" width="116" height="364" fill="#F8F9FA"/>
+                <line x1="158" y1="94" x2="158" y2="458" stroke="#E5E7EB" stroke-width="1"/>
                 
                 <!-- Schoolmate Brand in Sidebar -->
-                <circle cx="322" cy="114" r="5" fill="#E8A317"/>
-                <text x="332" y="118" font-family="'General Sans', sans-serif" font-size="9.5" font-weight="700" fill="#0E0E10">Schoolmate</text>
+                <circle cx="60" cy="114" r="5" fill="#E8A317"/>
+                <text x="70" y="118" font-family="'General Sans', sans-serif" font-size="9.5" font-weight="700" fill="#0E0E10">Schoolmate</text>
 
-                <!-- Module Items (Identical IDs for JS switcher) -->
+                <!-- Module Items -->
                 <g class="hero-lap-mod-item" id="modAnalytics">
-                  <rect x="310" y="130" width="108" height="26" rx="6" fill="#FFF8EC" stroke="rgba(232,163,23,0.3)"/>
-                  <text x="320" y="147" font-family="'General Sans', sans-serif" font-size="8.5" font-weight="600" fill="#0E0E10">Analytics</text>
+                  <rect x="48" y="130" width="102" height="26" rx="6" fill="#FFF8EC" stroke="rgba(232,163,23,0.3)"/>
+                  <text x="58" y="147" font-family="'General Sans', sans-serif" font-size="8.5" font-weight="600" fill="#0E0E10">Analytics</text>
                 </g>
                 <g class="hero-lap-mod-item" id="modFees">
-                  <rect x="310" y="162" width="108" height="26" rx="6" fill="transparent"/>
-                  <text x="320" y="179" font-family="'General Sans', sans-serif" font-size="8.5" font-weight="500" fill="#64748B">Fees &amp; Accounts</text>
+                  <rect x="48" y="162" width="102" height="26" rx="6" fill="transparent"/>
+                  <text x="58" y="179" font-family="'General Sans', sans-serif" font-size="8.5" font-weight="500" fill="#64748B">Fees &amp; Accounts</text>
                 </g>
                 <g class="hero-lap-mod-item" id="modAttendance">
-                  <rect x="310" y="194" width="108" height="26" rx="6" fill="transparent"/>
-                  <text x="320" y="211" font-family="'General Sans', sans-serif" font-size="8.5" font-weight="500" fill="#64748B">Attendance</text>
+                  <rect x="48" y="194" width="102" height="26" rx="6" fill="transparent"/>
+                  <text x="58" y="211" font-family="'General Sans', sans-serif" font-size="8.5" font-weight="500" fill="#64748B">Attendance</text>
                 </g>
                 <g class="hero-lap-mod-item" id="modPayroll">
-                  <rect x="310" y="226" width="108" height="26" rx="6" fill="transparent"/>
-                  <text x="320" y="243" font-family="'General Sans', sans-serif" font-size="8.5" font-weight="500" fill="#64748B">Staff Payroll</text>
+                  <rect x="48" y="226" width="102" height="26" rx="6" fill="transparent"/>
+                  <text x="58" y="243" font-family="'General Sans', sans-serif" font-size="8.5" font-weight="500" fill="#64748B">Staff Payroll</text>
                 </g>
 
                 <!-- 1. Panel: Analytics (active) -->
                 <g class="hero-lap-panel active" id="lapPanelAnalytics">
                   <!-- KPI Cards on Light Surface -->
-                  <rect x="438" y="106" width="168" height="52" rx="8" fill="#F8F9FA" stroke="#E5E7EB"/>
-                  <text x="448" y="121" font-family="'Geist Mono', monospace" font-size="8" fill="#64748B">TOTAL STUDENTS</text>
-                  <text x="448" y="141" font-family="'General Sans', sans-serif" font-size="15" font-weight="700" fill="#0E0E10">1,248</text>
-                  <text x="518" y="141" font-family="'General Sans', sans-serif" font-size="8" fill="#16A34A">+48 new</text>
+                  <rect x="170" y="106" width="154" height="50" rx="8" fill="#F8F9FA" stroke="#E5E7EB"/>
+                  <text x="180" y="121" font-family="'Geist Mono', monospace" font-size="8" fill="#64748B">TOTAL STUDENTS</text>
+                  <text x="180" y="141" font-family="'General Sans', sans-serif" font-size="14.5" font-weight="700" fill="#0E0E10">1,248</text>
+                  <text x="246" y="141" font-family="'General Sans', sans-serif" font-size="8" fill="#16A34A">+48 new</text>
 
-                  <rect x="618" y="106" width="168" height="52" rx="8" fill="#F8F9FA" stroke="#E5E7EB"/>
-                  <text x="628" y="121" font-family="'Geist Mono', monospace" font-size="8" fill="#64748B">FEES COLLECTED</text>
-                  <text x="628" y="141" font-family="'General Sans', sans-serif" font-size="15" font-weight="700" fill="#0E0E10">&#8377;12.4L</text>
-                  <text x="698" y="141" font-family="'General Sans', sans-serif" font-size="8" fill="#B07800">82% goal</text>
+                  <rect x="334" y="106" width="154" height="50" rx="8" fill="#F8F9FA" stroke="#E5E7EB"/>
+                  <text x="344" y="121" font-family="'Geist Mono', monospace" font-size="8" fill="#64748B">FEES COLLECTED</text>
+                  <text x="344" y="141" font-family="'General Sans', sans-serif" font-size="14.5" font-weight="700" fill="#0E0E10">&#8377;12.4L</text>
+                  <text x="408" y="141" font-family="'General Sans', sans-serif" font-size="8" fill="#B07800">82% goal</text>
 
-                  <rect x="798" y="106" width="168" height="52" rx="8" fill="#F8F9FA" stroke="#E5E7EB"/>
-                  <text x="808" y="121" font-family="'Geist Mono', monospace" font-size="8" fill="#64748B">TODAY'S ATTENDANCE</text>
-                  <text x="808" y="141" font-family="'General Sans', sans-serif" font-size="15" font-weight="700" fill="#0E0E10">94.2%</text>
-                  <text x="878" y="141" font-family="'General Sans', sans-serif" font-size="8" fill="#16A34A">+1.3% yday</text>
+                  <rect x="498" y="106" width="158" height="50" rx="8" fill="#F8F9FA" stroke="#E5E7EB"/>
+                  <text x="508" y="121" font-family="'Geist Mono', monospace" font-size="8" fill="#64748B">TODAY'S ATTENDANCE</text>
+                  <text x="508" y="141" font-family="'General Sans', sans-serif" font-size="14.5" font-weight="700" fill="#0E0E10">94.2%</text>
+                  <text x="572" y="141" font-family="'General Sans', sans-serif" font-size="8" fill="#16A34A">+1.3%</text>
 
                   <!-- Line Chart Container -->
-                  <rect x="438" y="168" width="528" height="136" rx="8" fill="#F8F9FA" stroke="#E5E7EB"/>
-                  <text x="450" y="184" font-family="'General Sans', sans-serif" font-size="9" font-weight="600" fill="#0E0E10">Monthly Revenue &amp; Collection Trend</text>
-                  <path d="M 450 264 Q 520 224 580 239 T 710 204 T 820 214 T 946 189 L 946 289 L 450 289 Z" fill="url(#hChartAreaGradLight)"/>
-                  <path class="hero-chart-line-loop" d="M 450 264 Q 520 224 580 239 T 710 204 T 820 214 T 946 189" fill="none" stroke="#E8A317" stroke-width="2.5" stroke-linecap="round"/>
-                  <circle cx="946" cy="189" r="4" fill="#E8A317"/>
+                  <rect x="170" y="166" width="486" height="128" rx="8" fill="#F8F9FA" stroke="#E5E7EB"/>
+                  <text x="182" y="182" font-family="'General Sans', sans-serif" font-size="9" font-weight="600" fill="#0E0E10">Monthly Revenue &amp; Collection Trend</text>
+                  <path d="M 182 254 Q 248 214 304 229 T 426 196 T 526 206 T 644 182 L 644 278 L 182 278 Z" fill="url(#hChartAreaGradLight)"/>
+                  <path class="hero-chart-line-loop" d="M 182 254 Q 248 214 304 229 T 426 196 T 526 206 T 644 182" fill="none" stroke="#E8A317" stroke-width="2.5" stroke-linecap="round"/>
+                  <circle cx="644" cy="182" r="4" fill="#E8A317"/>
 
                   <!-- Mini Charts Row -->
-                  <rect x="438" y="314" width="310" height="142" rx="8" fill="#F8F9FA" stroke="#E5E7EB"/>
-                  <text x="450" y="330" font-family="'General Sans', sans-serif" font-size="8.5" font-weight="600" fill="#0E0E10">Admissions by Division</text>
-                  <g transform="translate(450, 424)">
-                    <rect class="hero-bar-anim b1" x="14" y="-60" width="26" height="60" rx="3" fill="#0B1630"/>
-                    <rect class="hero-bar-anim b2" x="58" y="-85" width="26" height="85" rx="3" fill="#E8A317"/>
-                    <rect class="hero-bar-anim b3" x="102" y="-70" width="26" height="70" rx="3" fill="#0B1630"/>
-                    <rect class="hero-bar-anim b4" x="146" y="-95" width="26" height="95" rx="3" fill="#0B1630"/>
-                    <rect class="hero-bar-anim b5" x="190" y="-75" width="26" height="75" rx="3" fill="#E8A317"/>
-                    <rect class="hero-bar-anim b2" x="234" y="-88" width="26" height="88" rx="3" fill="#0B1630"/>
+                  <rect x="170" y="304" width="280" height="138" rx="8" fill="#F8F9FA" stroke="#E5E7EB"/>
+                  <text x="182" y="320" font-family="'General Sans', sans-serif" font-size="8.5" font-weight="600" fill="#0E0E10">Admissions by Division</text>
+                  <g transform="translate(182, 412)">
+                    <rect class="hero-bar-anim b1" x="12" y="-60" width="24" height="60" rx="3" fill="#0B1630"/>
+                    <rect class="hero-bar-anim b2" x="52" y="-85" width="24" height="85" rx="3" fill="#E8A317"/>
+                    <rect class="hero-bar-anim b3" x="92" y="-70" width="24" height="70" rx="3" fill="#0B1630"/>
+                    <rect class="hero-bar-anim b4" x="132" y="-95" width="24" height="95" rx="3" fill="#0B1630"/>
+                    <rect class="hero-bar-anim b5" x="172" y="-75" width="24" height="75" rx="3" fill="#E8A317"/>
+                    <rect class="hero-bar-anim b2" x="212" y="-88" width="24" height="88" rx="3" fill="#0B1630"/>
                   </g>
 
-                  <rect x="760" y="314" width="206" height="142" rx="8" fill="#F8F9FA" stroke="#E5E7EB"/>
-                  <text x="772" y="330" font-family="'General Sans', sans-serif" font-size="8.5" font-weight="600" fill="#0E0E10">Fee Target Progress</text>
-                  <circle cx="863" cy="388" r="34" stroke="#E5E7EB" stroke-width="8" fill="none"/>
-                  <circle class="hero-donut-anim" cx="863" cy="388" r="34" stroke="#E8A317" stroke-width="8" stroke-dasharray="213" stroke-dashoffset="40" fill="none" transform="rotate(-90 863 388)"/>
-                  <text x="863" y="392" text-anchor="middle" font-family="'General Sans', sans-serif" font-size="13" font-weight="700" fill="#0E0E10">82%</text>
+                  <rect x="460" y="304" width="196" height="138" rx="8" fill="#F8F9FA" stroke="#E5E7EB"/>
+                  <text x="472" y="320" font-family="'General Sans', sans-serif" font-size="8.5" font-weight="600" fill="#0E0E10">Fee Target Progress</text>
+                  <circle cx="558" cy="378" r="32" stroke="#E5E7EB" stroke-width="7" fill="none"/>
+                  <circle class="hero-donut-anim" cx="558" cy="378" r="32" stroke="#E8A317" stroke-width="7" stroke-dasharray="201" stroke-dashoffset="38" fill="none" transform="rotate(-90 558 378)"/>
+                  <text x="558" y="382" text-anchor="middle" font-family="'General Sans', sans-serif" font-size="12" font-weight="700" fill="#0E0E10">82%</text>
                 </g>
 
                 <!-- 2. Panel: Fees & Accounts -->
                 <g class="hero-lap-panel" id="lapPanelFees">
-                  <rect x="438" y="106" width="258" height="56" rx="8" fill="#F8F9FA" stroke="#E5E7EB"/>
-                  <text x="450" y="123" font-family="'Geist Mono', monospace" font-size="8" fill="#64748B">FEES RECEIVED (OCTOBER)</text>
-                  <text x="450" y="146" font-family="'General Sans', sans-serif" font-size="17" font-weight="700" fill="#0E0E10">&#8377;12,40,500</text>
+                  <rect x="170" y="106" width="238" height="54" rx="8" fill="#F8F9FA" stroke="#E5E7EB"/>
+                  <text x="182" y="122" font-family="'Geist Mono', monospace" font-size="8" fill="#64748B">FEES RECEIVED (OCTOBER)</text>
+                  <text x="182" y="144" font-family="'General Sans', sans-serif" font-size="16" font-weight="700" fill="#0E0E10">&#8377;12,40,500</text>
                   
-                  <rect x="708" y="106" width="258" height="56" rx="8" fill="#F8F9FA" stroke="#E5E7EB"/>
-                  <text x="720" y="123" font-family="'Geist Mono', monospace" font-size="8" fill="#64748B">PENDING DUES</text>
-                  <text x="720" y="146" font-family="'General Sans', sans-serif" font-size="17" font-weight="700" fill="#B07800">&#8377;2,71,200</text>
+                  <rect x="418" y="106" width="238" height="54" rx="8" fill="#F8F9FA" stroke="#E5E7EB"/>
+                  <text x="430" y="122" font-family="'Geist Mono', monospace" font-size="8" fill="#64748B">PENDING DUES</text>
+                  <text x="430" y="144" font-family="'General Sans', sans-serif" font-size="16" font-weight="700" fill="#B07800">&#8377;2,71,200</text>
 
-                  <rect x="438" y="172" width="528" height="284" rx="8" fill="#F8F9FA" stroke="#E5E7EB"/>
-                  <text x="452" y="192" font-family="'General Sans', sans-serif" font-size="10" font-weight="600" fill="#0E0E10">Division Fee Collection Status</text>
-                  <g transform="translate(452, 204)">
-                    <rect x="0" y="0" width="500" height="32" rx="4" fill="#FFFFFF" stroke="#E5E7EB"/>
-                    <text x="14" y="20" font-family="'General Sans', sans-serif" font-size="9" fill="#0E0E10">Class X-B (42 Students)</text>
-                    <text x="280" y="20" font-family="'Geist Mono', monospace" font-size="9" fill="#16A34A">&#8377;3,40,000 Paid</text>
-                    <rect x="410" y="6" width="76" height="18" rx="9" fill="rgba(22,163,74,0.12)"/>
-                    <text x="448" y="18" font-family="'General Sans', sans-serif" font-size="7.5" font-weight="600" fill="#16A34A" text-anchor="middle">100% CLEAR</text>
+                  <rect x="170" y="170" width="486" height="272" rx="8" fill="#F8F9FA" stroke="#E5E7EB"/>
+                  <text x="184" y="188" font-family="'General Sans', sans-serif" font-size="9.5" font-weight="600" fill="#0E0E10">Division Fee Collection Status</text>
+                  <g transform="translate(184, 198)">
+                    <rect x="0" y="0" width="458" height="30" rx="4" fill="#FFFFFF" stroke="#E5E7EB"/>
+                    <text x="12" y="19" font-family="'General Sans', sans-serif" font-size="8.5" fill="#0E0E10">Class X-B (42 Students)</text>
+                    <text x="250" y="19" font-family="'Geist Mono', monospace" font-size="8.5" fill="#16A34A">&#8377;3,40,000 Paid</text>
+                    <rect x="372" y="5" width="74" height="18" rx="9" fill="rgba(22,163,74,0.12)"/>
+                    <text x="409" y="17" font-family="'General Sans', sans-serif" font-size="7" font-weight="600" fill="#16A34A" text-anchor="middle">100% CLEAR</text>
 
-                    <rect x="0" y="38" width="500" height="32" rx="4" fill="#FFFFFF" stroke="#E5E7EB"/>
-                    <text x="14" y="58" font-family="'General Sans', sans-serif" font-size="9" fill="#0E0E10">Class IX-A (38 Students)</text>
-                    <text x="280" y="58" font-family="'Geist Mono', monospace" font-size="9" fill="#B07800">&#8377;2,90,000 Paid</text>
-                    <rect x="410" y="44" width="76" height="18" rx="9" fill="rgba(232,163,23,0.15)"/>
-                    <text x="448" y="56" font-family="'General Sans', sans-serif" font-size="7.5" font-weight="600" fill="#B07800" text-anchor="middle">88% CLEAR</text>
+                    <rect x="0" y="36" width="458" height="30" rx="4" fill="#FFFFFF" stroke="#E5E7EB"/>
+                    <text x="12" y="55" font-family="'General Sans', sans-serif" font-size="8.5" fill="#0E0E10">Class IX-A (38 Students)</text>
+                    <text x="250" y="55" font-family="'Geist Mono', monospace" font-size="8.5" fill="#B07800">&#8377;2,90,000 Paid</text>
+                    <rect x="372" y="41" width="74" height="18" rx="9" fill="rgba(232,163,23,0.15)"/>
+                    <text x="409" y="53" font-family="'General Sans', sans-serif" font-size="7" font-weight="600" fill="#B07800" text-anchor="middle">88% CLEAR</text>
 
-                    <rect x="0" y="76" width="500" height="32" rx="4" fill="#FFFFFF" stroke="#E5E7EB"/>
-                    <text x="14" y="96" font-family="'General Sans', sans-serif" font-size="9" fill="#0E0E10">Class VIII-C (35 Students)</text>
-                    <text x="280" y="96" font-family="'Geist Mono', monospace" font-size="9" fill="#16A34A">&#8377;2,45,000 Paid</text>
-                    <rect x="410" y="82" width="76" height="18" rx="9" fill="rgba(22,163,74,0.12)"/>
-                    <text x="448" y="94" font-family="'General Sans', sans-serif" font-size="7.5" font-weight="600" fill="#16A34A" text-anchor="middle">94% CLEAR</text>
+                    <rect x="0" y="72" width="458" height="30" rx="4" fill="#FFFFFF" stroke="#E5E7EB"/>
+                    <text x="12" y="91" font-family="'General Sans', sans-serif" font-size="8.5" fill="#0E0E10">Class VIII-C (35 Students)</text>
+                    <text x="250" y="91" font-family="'Geist Mono', monospace" font-size="8.5" fill="#16A34A">&#8377;2,45,000 Paid</text>
+                    <rect x="372" y="77" width="74" height="18" rx="9" fill="rgba(22,163,74,0.12)"/>
+                    <text x="409" y="89" font-family="'General Sans', sans-serif" font-size="7" font-weight="600" fill="#16A34A" text-anchor="middle">94% CLEAR</text>
 
-                    <rect x="0" y="114" width="500" height="32" rx="4" fill="#FFFFFF" stroke="#E5E7EB"/>
-                    <text x="14" y="134" font-family="'General Sans', sans-serif" font-size="9" fill="#0E0E10">Class VII-A (40 Students)</text>
-                    <text x="280" y="134" font-family="'Geist Mono', monospace" font-size="9" fill="#DC2626">&#8377;1,80,000 Paid</text>
-                    <rect x="410" y="120" width="76" height="18" rx="9" fill="rgba(220,38,38,0.12)"/>
-                    <text x="448" y="132" font-family="'General Sans', sans-serif" font-size="7.5" font-weight="600" fill="#DC2626" text-anchor="middle">62% PENDING</text>
+                    <rect x="0" y="108" width="458" height="30" rx="4" fill="#FFFFFF" stroke="#E5E7EB"/>
+                    <text x="12" y="127" font-family="'General Sans', sans-serif" font-size="8.5" fill="#0E0E10">Class VII-A (40 Students)</text>
+                    <text x="250" y="127" font-family="'Geist Mono', monospace" font-size="8.5" fill="#DC2626">&#8377;1,80,000 Paid</text>
+                    <rect x="372" y="113" width="74" height="18" rx="9" fill="rgba(220,38,38,0.12)"/>
+                    <text x="409" y="125" font-family="'General Sans', sans-serif" font-size="7" font-weight="600" fill="#DC2626" text-anchor="middle">62% PENDING</text>
                   </g>
                 </g>
 
                 <!-- 3. Panel: Attendance & Biometrics -->
                 <g class="hero-lap-panel" id="lapPanelAttendance">
-                  <rect x="438" y="106" width="250" height="146" rx="8" fill="#F8F9FA" stroke="#E5E7EB"/>
-                  <text x="452" y="126" font-family="'General Sans', sans-serif" font-size="9" font-weight="600" fill="#0E0E10">Daily Biometric Gauge</text>
-                  <circle cx="563" cy="186" r="38" stroke="#E5E7EB" stroke-width="8" fill="none"/>
-                  <circle cx="563" cy="186" r="38" stroke="#16A34A" stroke-width="8" stroke-dasharray="238" stroke-dashoffset="24" fill="none" transform="rotate(-90 563 186)"/>
-                  <text x="563" y="190" text-anchor="middle" font-family="'General Sans', sans-serif" font-size="15" font-weight="700" fill="#0E0E10">94.2%</text>
+                  <rect x="170" y="106" width="225" height="140" rx="8" fill="#F8F9FA" stroke="#E5E7EB"/>
+                  <text x="184" y="124" font-family="'General Sans', sans-serif" font-size="9" font-weight="600" fill="#0E0E10">Daily Biometric Gauge</text>
+                  <circle cx="282" cy="184" r="36" stroke="#E5E7EB" stroke-width="7" fill="none"/>
+                  <circle cx="282" cy="184" r="36" stroke="#16A34A" stroke-width="7" stroke-dasharray="226" stroke-dashoffset="23" fill="none" transform="rotate(-90 282 184)"/>
+                  <text x="282" y="188" text-anchor="middle" font-family="'General Sans', sans-serif" font-size="14" font-weight="700" fill="#0E0E10">94.2%</text>
 
-                  <rect x="700" y="106" width="266" height="146" rx="8" fill="#F8F9FA" stroke="#E5E7EB"/>
-                  <text x="714" y="126" font-family="'General Sans', sans-serif" font-size="9" font-weight="600" fill="#0E0E10">Attendance Heatmap (October)</text>
-                  <g transform="translate(714, 138)">
-                    <rect x="0" y="0" width="18" height="18" rx="3" fill="#16A34A"/>
-                    <rect x="25" y="0" width="18" height="18" rx="3" fill="#16A34A"/>
-                    <rect x="50" y="0" width="18" height="18" rx="3" fill="#16A34A"/>
-                    <rect x="75" y="0" width="18" height="18" rx="3" fill="#E8A317"/>
-                    <rect x="100" y="0" width="18" height="18" rx="3" fill="#16A34A"/>
+                  <rect x="405" y="106" width="251" height="140" rx="8" fill="#F8F9FA" stroke="#E5E7EB"/>
+                  <text x="417" y="124" font-family="'General Sans', sans-serif" font-size="9" font-weight="600" fill="#0E0E10">Attendance Heatmap (October)</text>
+                  <g transform="translate(417, 136)">
+                    <rect x="0" y="0" width="16" height="16" rx="3" fill="#16A34A"/>
+                    <rect x="22" y="0" width="16" height="16" rx="3" fill="#16A34A"/>
+                    <rect x="44" y="0" width="16" height="16" rx="3" fill="#16A34A"/>
+                    <rect x="66" y="0" width="16" height="16" rx="3" fill="#E8A317"/>
+                    <rect x="88" y="0" width="16" height="16" rx="3" fill="#16A34A"/>
 
-                    <rect x="0" y="24" width="18" height="18" rx="3" fill="#16A34A"/>
-                    <rect x="25" y="24" width="18" height="18" rx="3" fill="#16A34A"/>
-                    <rect x="50" y="24" width="18" height="18" rx="3" fill="#DC2626"/>
-                    <rect x="75" y="24" width="18" height="18" rx="3" fill="#16A34A"/>
-                    <rect x="100" y="24" width="18" height="18" rx="3" fill="#16A34A"/>
+                    <rect x="0" y="22" width="16" height="16" rx="3" fill="#16A34A"/>
+                    <rect x="22" y="22" width="16" height="16" rx="3" fill="#16A34A"/>
+                    <rect x="44" y="22" width="16" height="16" rx="3" fill="#DC2626"/>
+                    <rect x="66" y="22" width="16" height="16" rx="3" fill="#16A34A"/>
+                    <rect x="88" y="22" width="16" height="16" rx="3" fill="#16A34A"/>
 
-                    <rect x="0" y="48" width="18" height="18" rx="3" fill="#16A34A"/>
-                    <rect x="25" y="48" width="18" height="18" rx="3" fill="#16A34A"/>
-                    <rect x="50" y="48" width="18" height="18" rx="3" fill="#16A34A"/>
-                    <rect x="75" y="48" width="18" height="18" rx="3" fill="#16A34A"/>
-                    <rect x="100" y="48" width="18" height="18" rx="3" fill="#E8A317"/>
+                    <rect x="0" y="44" width="16" height="16" rx="3" fill="#16A34A"/>
+                    <rect x="22" y="44" width="16" height="16" rx="3" fill="#16A34A"/>
+                    <rect x="44" y="44" width="16" height="16" rx="3" fill="#16A34A"/>
+                    <rect x="66" y="44" width="16" height="16" rx="3" fill="#16A34A"/>
+                    <rect x="88" y="44" width="16" height="16" rx="3" fill="#E8A317"/>
 
-                    <rect x="0" y="72" width="18" height="18" rx="3" fill="#16A34A"/>
-                    <rect x="25" y="72" width="18" height="18" rx="3" fill="#16A34A"/>
-                    <rect x="50" y="72" width="18" height="18" rx="3" fill="#16A34A"/>
-                    <rect x="75" y="72" width="18" height="18" rx="3" fill="#16A34A"/>
-                    <rect x="100" y="72" width="18" height="18" rx="3" fill="#16A34A"/>
+                    <rect x="0" y="66" width="16" height="16" rx="3" fill="#16A34A"/>
+                    <rect x="22" y="66" width="16" height="16" rx="3" fill="#16A34A"/>
+                    <rect x="44" y="66" width="16" height="16" rx="3" fill="#16A34A"/>
+                    <rect x="66" y="66" width="16" height="16" rx="3" fill="#16A34A"/>
+                    <rect x="88" y="66" width="16" height="16" rx="3" fill="#16A34A"/>
                   </g>
 
-                  <rect x="438" y="262" width="528" height="194" rx="8" fill="#F8F9FA" stroke="#E5E7EB"/>
-                  <text x="452" y="282" font-family="'General Sans', sans-serif" font-size="9.5" font-weight="600" fill="#0E0E10">Live Activity Feed (Biometric &amp; RFID)</text>
-                  <g transform="translate(452, 296)">
+                  <rect x="170" y="254" width="486" height="188" rx="8" fill="#F8F9FA" stroke="#E5E7EB"/>
+                  <text x="184" y="272" font-family="'General Sans', sans-serif" font-size="9" font-weight="600" fill="#0E0E10">Live Activity Feed (Biometric &amp; RFID)</text>
+                  <g transform="translate(184, 284)">
                     <g class="hero-activity-row r1">
-                      <rect x="0" y="0" width="500" height="28" rx="4" fill="#FFFFFF" stroke="#E5E7EB"/>
-                      <circle cx="16" cy="14" r="3.5" fill="#16A34A"/>
-                      <text x="32" y="18" font-family="'General Sans', sans-serif" font-size="8.5" fill="#0E0E10">07:42 AM &bull; Aanya Agarwal (X-B) &bull; Main Gate Biometric</text>
+                      <rect x="0" y="0" width="458" height="26" rx="4" fill="#FFFFFF" stroke="#E5E7EB"/>
+                      <circle cx="14" cy="13" r="3" fill="#16A34A"/>
+                      <text x="28" y="17" font-family="'General Sans', sans-serif" font-size="8" fill="#0E0E10">07:42 AM &bull; Aanya Agarwal (X-B) &bull; Main Gate Biometric</text>
                     </g>
                     <g class="hero-activity-row r2">
-                      <rect x="0" y="34" width="500" height="28" rx="4" fill="#FFFFFF" stroke="#E5E7EB"/>
-                      <circle cx="16" cy="48" r="3.5" fill="#16A34A"/>
-                      <text x="32" y="52" font-family="'General Sans', sans-serif" font-size="8.5" fill="#0E0E10">07:45 AM &bull; Rohan Mehta (X-B) &bull; Bus 03 RFID Scan</text>
+                      <rect x="0" y="32" width="458" height="26" rx="4" fill="#FFFFFF" stroke="#E5E7EB"/>
+                      <circle cx="14" cy="45" r="3" fill="#16A34A"/>
+                      <text x="28" y="49" font-family="'General Sans', sans-serif" font-size="8" fill="#0E0E10">07:45 AM &bull; Rohan Mehta (X-B) &bull; Bus 03 RFID Scan</text>
                     </g>
                     <g class="hero-activity-row r3">
-                      <rect x="0" y="68" width="500" height="28" rx="4" fill="#FFFFFF" stroke="#E5E7EB"/>
-                      <circle cx="16" cy="82" r="3.5" fill="#16A34A"/>
-                      <text x="32" y="86" font-family="'General Sans', sans-serif" font-size="8.5" fill="#0E0E10">07:49 AM &bull; Priya Desai (X-A) &bull; Academic Wing Gate</text>
+                      <rect x="0" y="64" width="458" height="26" rx="4" fill="#FFFFFF" stroke="#E5E7EB"/>
+                      <circle cx="14" cy="77" r="3" fill="#16A34A"/>
+                      <text x="28" y="81" font-family="'General Sans', sans-serif" font-size="8" fill="#0E0E10">07:49 AM &bull; Priya Desai (X-A) &bull; Academic Wing Gate</text>
                     </g>
                     <g class="hero-activity-row r4">
-                      <rect x="0" y="102" width="500" height="28" rx="4" fill="#FFFFFF" stroke="#E5E7EB"/>
-                      <circle cx="16" cy="116" r="3.5" fill="#E8A317"/>
-                      <text x="32" y="120" font-family="'General Sans', sans-serif" font-size="8.5" fill="#0E0E10">07:53 AM &bull; Karan Joshi (IX-C) &bull; Late Slip RFID</text>
+                      <rect x="0" y="96" width="458" height="26" rx="4" fill="#FFFFFF" stroke="#E5E7EB"/>
+                      <circle cx="14" cy="109" r="3" fill="#E8A317"/>
+                      <text x="28" y="113" font-family="'General Sans', sans-serif" font-size="8" fill="#0E0E10">07:53 AM &bull; Karan Joshi (IX-C) &bull; Late Slip RFID</text>
                     </g>
                   </g>
                 </g>
 
                 <!-- 4. Panel: Payroll & Staff -->
                 <g class="hero-lap-panel" id="lapPanelPayroll">
-                  <rect x="438" y="106" width="258" height="56" rx="8" fill="#F8F9FA" stroke="#E5E7EB"/>
-                  <text x="450" y="123" font-family="'Geist Mono', monospace" font-size="8" fill="#64748B">MONTHLY PAYROLL</text>
-                  <text x="450" y="146" font-family="'General Sans', sans-serif" font-size="17" font-weight="700" fill="#0E0E10">&#8377;8,42,000</text>
+                  <rect x="170" y="106" width="238" height="54" rx="8" fill="#F8F9FA" stroke="#E5E7EB"/>
+                  <text x="182" y="122" font-family="'Geist Mono', monospace" font-size="8" fill="#64748B">MONTHLY PAYROLL</text>
+                  <text x="182" y="144" font-family="'General Sans', sans-serif" font-size="16" font-weight="700" fill="#0E0E10">&#8377;8,42,000</text>
                   
-                  <rect x="708" y="106" width="258" height="56" rx="8" fill="#F8F9FA" stroke="#E5E7EB"/>
-                  <text x="720" y="123" font-family="'Geist Mono', monospace" font-size="8" fill="#64748B">COMPLIANCE &amp; PT</text>
-                  <text x="720" y="146" font-family="'General Sans', sans-serif" font-size="16" font-weight="700" fill="#16A34A">Maharashtra PT Active</text>
+                  <rect x="418" y="106" width="238" height="54" rx="8" fill="#F8F9FA" stroke="#E5E7EB"/>
+                  <text x="430" y="122" font-family="'Geist Mono', monospace" font-size="8" fill="#64748B">COMPLIANCE &amp; PT</text>
+                  <text x="430" y="144" font-family="'General Sans', sans-serif" font-size="15" font-weight="700" fill="#16A34A">Maharashtra PT Active</text>
 
-                  <rect x="438" y="172" width="528" height="284" rx="8" fill="#F8F9FA" stroke="#E5E7EB"/>
-                  <text x="452" y="192" font-family="'General Sans', sans-serif" font-size="10" font-weight="600" fill="#0E0E10">Faculty &amp; Staff Disbursement (72 Staff Members)</text>
-                  <g transform="translate(452, 204)">
-                    <rect x="0" y="0" width="500" height="42" rx="4" fill="#FFFFFF" stroke="#E5E7EB"/>
-                    <text x="14" y="18" font-family="'General Sans', sans-serif" font-size="9" font-weight="600" fill="#0E0E10">Teaching Faculty (44 Members)</text>
-                    <text x="14" y="32" font-family="'Geist Mono', monospace" font-size="8" fill="#64748B">&#8377;5,20,000 Total &bull; Direct Bank Transfer</text>
-                    <rect x="410" y="12" width="76" height="18" rx="9" fill="rgba(22,163,74,0.12)"/>
-                    <text x="448" y="24" font-family="'General Sans', sans-serif" font-size="7.5" font-weight="600" fill="#16A34A" text-anchor="middle">DISBURSED</text>
+                  <rect x="170" y="170" width="486" height="272" rx="8" fill="#F8F9FA" stroke="#E5E7EB"/>
+                  <text x="184" y="188" font-family="'General Sans', sans-serif" font-size="9.5" font-weight="600" fill="#0E0E10">Faculty &amp; Staff Disbursement (72 Staff Members)</text>
+                  <g transform="translate(184, 198)">
+                    <rect x="0" y="0" width="458" height="38" rx="4" fill="#FFFFFF" stroke="#E5E7EB"/>
+                    <text x="12" y="16" font-family="'General Sans', sans-serif" font-size="8.5" font-weight="600" fill="#0E0E10">Teaching Faculty (44 Members)</text>
+                    <text x="12" y="29" font-family="'Geist Mono', monospace" font-size="7.5" fill="#64748B">&#8377;5,20,000 Total &bull; Direct Bank Transfer</text>
+                    <rect x="372" y="10" width="74" height="18" rx="9" fill="rgba(22,163,74,0.12)"/>
+                    <text x="409" y="22" font-family="'General Sans', sans-serif" font-size="7" font-weight="600" fill="#16A34A" text-anchor="middle">DISBURSED</text>
 
-                    <rect x="0" y="52" width="500" height="42" rx="4" fill="#FFFFFF" stroke="#E5E7EB"/>
-                    <text x="14" y="70" font-family="'General Sans', sans-serif" font-size="9" font-weight="600" fill="#0E0E10">Administration &amp; Accounts (12 Members)</text>
-                    <text x="14" y="84" font-family="'Geist Mono', monospace" font-size="8" fill="#64748B">&#8377;1,82,000 Total &bull; EPF/PT Deducted</text>
-                    <rect x="410" y="64" width="76" height="18" rx="9" fill="rgba(22,163,74,0.12)"/>
-                    <text x="448" y="76" font-family="'General Sans', sans-serif" font-size="7.5" font-weight="600" fill="#16A34A" text-anchor="middle">DISBURSED</text>
+                    <rect x="0" y="46" width="458" height="38" rx="4" fill="#FFFFFF" stroke="#E5E7EB"/>
+                    <text x="12" y="62" font-family="'General Sans', sans-serif" font-size="8.5" font-weight="600" fill="#0E0E10">Administration &amp; Accounts (12 Members)</text>
+                    <text x="12" y="75" font-family="'Geist Mono', monospace" font-size="7.5" fill="#64748B">&#8377;1,82,000 Total &bull; EPF/PT Deducted</text>
+                    <rect x="372" y="56" width="74" height="18" rx="9" fill="rgba(22,163,74,0.12)"/>
+                    <text x="409" y="68" font-family="'General Sans', sans-serif" font-size="7" font-weight="600" fill="#16A34A" text-anchor="middle">DISBURSED</text>
 
-                    <rect x="0" y="104" width="500" height="42" rx="4" fill="#FFFFFF" stroke="#E5E7EB"/>
-                    <text x="14" y="122" font-family="'General Sans', sans-serif" font-size="9" font-weight="600" fill="#0E0E10">Transport Drivers &amp; Support (16 Members)</text>
-                    <text x="14" y="136" font-family="'Geist Mono', monospace" font-size="8" fill="#64748B">&#8377;1,40,000 Total &bull; Direct Bank Transfer</text>
-                    <rect x="410" y="116" width="76" height="18" rx="9" fill="rgba(22,163,74,0.12)"/>
-                    <text x="448" y="128" font-family="'General Sans', sans-serif" font-size="7.5" font-weight="600" fill="#16A34A" text-anchor="middle">DISBURSED</text>
+                    <rect x="0" y="92" width="458" height="38" rx="4" fill="#FFFFFF" stroke="#E5E7EB"/>
+                    <text x="12" y="108" font-family="'General Sans', sans-serif" font-size="8.5" font-weight="600" fill="#0E0E10">Transport Drivers &amp; Support (16 Members)</text>
+                    <text x="12" y="121" font-family="'Geist Mono', monospace" font-size="7.5" fill="#64748B">&#8377;1,40,000 Total &bull; Direct Bank Transfer</text>
+                    <rect x="372" y="102" width="74" height="18" rx="9" fill="rgba(22,163,74,0.12)"/>
+                    <text x="409" y="114" font-family="'General Sans', sans-serif" font-size="7" font-weight="600" fill="#16A34A" text-anchor="middle">DISBURSED</text>
                   </g>
                 </g>
 
                 <!-- Animated Cursor that glides between modules -->
-                <g id="heroLapCursor" class="hero-lap-cursor" style="transform: translate(390px, 142px); transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);">
+                <g id="heroLapCursor" class="hero-lap-cursor" style="transform: translate(115px, 142px); transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);">
                   <path d="M0 0 L6 18 L9 12 L16 9 Z" fill="#0E0E10" stroke="#FFFFFF" stroke-width="1.4"/>
                 </g>
 
               </g><!-- /clip -->
 
-              <!-- Laptop Base Keyboard Deck (Extended forward in perspective) -->
-              <path d="M 270 480 L 246 524 Q 242 532 254 532 L 1006 532 Q 1018 532 1014 524 L 990 480 Z" fill="url(#hLapDeckGrad)" stroke="#BFC3CC" stroke-width="1.5"/>
-              <line x1="270" y1="480" x2="990" y2="480" stroke="#FFFFFF" stroke-width="1.2" opacity="0.8"/>
-              
-              <!-- Hinge recess -->
-              <rect x="540" y="480" width="180" height="6" rx="2" fill="#9CA3AF"/>
-              
-              <!-- Keyboard Well with Keys Representation -->
-              <rect x="340" y="486" width="580" height="26" rx="4" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="1"/>
-              <!-- Key rows -->
-              <g fill="#1E293B" opacity="0.8">
-                <!-- Row 1 -->
-                <rect x="346" y="489" width="38" height="5" rx="1"/>
-                <rect x="388" y="489" width="38" height="5" rx="1"/>
-                <rect x="430" y="489" width="38" height="5" rx="1"/>
-                <rect x="472" y="489" width="38" height="5" rx="1"/>
-                <rect x="514" y="489" width="38" height="5" rx="1"/>
-                <rect x="556" y="489" width="38" height="5" rx="1"/>
-                <rect x="598" y="489" width="38" height="5" rx="1"/>
-                <rect x="640" y="489" width="38" height="5" rx="1"/>
-                <rect x="682" y="489" width="38" height="5" rx="1"/>
-                <rect x="724" y="489" width="38" height="5" rx="1"/>
-                <rect x="766" y="489" width="38" height="5" rx="1"/>
-                <rect x="808" y="489" width="38" height="5" rx="1"/>
-                <rect x="850" y="489" width="64" height="5" rx="1"/>
-                <!-- Row 2 -->
-                <rect x="346" y="496" width="48" height="5" rx="1"/>
-                <rect x="398" y="496" width="36" height="5" rx="1"/>
-                <rect x="438" y="496" width="36" height="5" rx="1"/>
-                <rect x="478" y="496" width="36" height="5" rx="1"/>
-                <rect x="518" y="496" width="36" height="5" rx="1"/>
-                <rect x="558" y="496" width="36" height="5" rx="1"/>
-                <rect x="598" y="496" width="36" height="5" rx="1"/>
-                <rect x="638" y="496" width="36" height="5" rx="1"/>
-                <rect x="678" y="496" width="36" height="5" rx="1"/>
-                <rect x="718" y="496" width="36" height="5" rx="1"/>
-                <rect x="758" y="496" width="36" height="5" rx="1"/>
-                <rect x="798" y="496" width="36" height="5" rx="1"/>
-                <rect x="838" y="496" width="76" height="5" rx="1"/>
-                <!-- Row 3: Spacebar & Modifiers -->
-                <rect x="346" y="503" width="60" height="6" rx="1"/>
-                <rect x="410" y="503" width="46" height="6" rx="1"/>
-                <rect x="460" y="503" width="46" height="6" rx="1"/>
-                <rect x="510" y="503" width="220" height="6" rx="1.5"/>
-                <rect x="734" y="503" width="46" height="6" rx="1"/>
-                <rect x="784" y="503" width="46" height="6" rx="1"/>
-                <rect x="834" y="503" width="80" height="6" rx="1"/>
-              </g>
-
-              <!-- Centered Trackpad -->
-              <rect x="570" y="516" width="120" height="13" rx="3" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
-              
-              <!-- Front Opening Lip Notch -->
-              <rect x="605" y="529" width="50" height="3" rx="1.5" fill="#9CA3AF"/>
+              <!-- Sleek Clean Laptop Base Hinge (As before! No keyboard buttons!) -->
+              <rect x="15" y="470" width="680" height="12" rx="6" fill="url(#hLapBaseGrad)" stroke="#BFC3CC" stroke-width="1.2"/>
+              <rect x="315" y="470" width="80" height="3" rx="1.5" fill="#9CA3AF"/>
             </g><!-- /heroLaptop -->
 
-            <!-- Shadow cast by phone onto laptop corner -->
-            <path d="M 280 480 L 305 532 L 270 532 Z" fill="#0E0E10" opacity="0.14"/>
-
             <!-- =============================================================
-                 2. REALISTIC SLIM MOBILE (Placed on LEFT like reference image)
+                 2. REALISTIC SLIM MOBILE (Right Side with Subtle Perspective Curve & Floating Shadow, 90px+ Distance)
                  ============================================================= -->
-            <g id="heroPhone">
+            <g id="heroPhone" transform="rotate(-2 880 275) translate(0, -4)">
               <!-- Side Hardware Buttons -->
               <!-- Left: Action button, Volume Up, Volume Down -->
-              <rect x="56" y="145" width="4" height="20" rx="2" fill="#94A3B8"/>
-              <rect x="56" y="178" width="4" height="34" rx="2" fill="#94A3B8"/>
-              <rect x="56" y="222" width="4" height="34" rx="2" fill="#94A3B8"/>
+              <rect x="766" y="130" width="4" height="18" rx="2" fill="#94A3B8"/>
+              <rect x="766" y="160" width="4" height="32" rx="2" fill="#94A3B8"/>
+              <rect x="766" y="202" width="4" height="32" rx="2" fill="#94A3B8"/>
               <!-- Right: Power/Side button -->
-              <rect x="280" y="180" width="4" height="48" rx="2" fill="#94A3B8"/>
+              <rect x="990" y="165" width="4" height="44" rx="2" fill="#94A3B8"/>
 
-              <!-- Outer Frame: Titanium with 38px corner radius -->
-              <rect x="60" y="60" width="220" height="474" rx="38" fill="url(#hPhoneTitanium)" stroke="#94A3B8" stroke-width="2.5"/>
+              <!-- Outer Frame: Titanium with 36px corner radius -->
+              <rect x="770" y="45" width="220" height="460" rx="36" fill="url(#hPhoneTitanium)" stroke="#94A3B8" stroke-width="2.5"/>
 
               <!-- Chamfer Edge Highlight -->
-              <rect x="62" y="62" width="216" height="470" rx="36" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.65"/>
+              <rect x="772" y="47" width="216" height="456" rx="34" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.65"/>
 
               <!-- Antenna Bands -->
-              <line x1="58" y1="110" x2="62" y2="110" stroke="#64748B" stroke-width="1.5"/>
-              <line x1="58" y1="480" x2="62" y2="480" stroke="#64748B" stroke-width="1.5"/>
-              <line x1="278" y1="110" x2="282" y2="110" stroke="#64748B" stroke-width="1.5"/>
-              <line x1="278" y1="480" x2="282" y2="480" stroke="#64748B" stroke-width="1.5"/>
+              <line x1="768" y1="95" x2="772" y2="95" stroke="#64748B" stroke-width="1.5"/>
+              <line x1="768" y1="465" x2="772" y2="465" stroke="#64748B" stroke-width="1.5"/>
+              <line x1="988" y1="95" x2="992" y2="95" stroke="#64748B" stroke-width="1.5"/>
+              <line x1="988" y1="465" x2="992" y2="465" stroke="#64748B" stroke-width="1.5"/>
 
               <!-- Dark OLED Inner Bezel (Uniform 3.5px border) -->
-              <rect x="65" y="65" width="210" height="464" rx="35" fill="#0A0B0E"/>
+              <rect x="775" y="50" width="210" height="450" rx="33" fill="#0A0B0E"/>
 
               <!-- Active Screen Surface (Paper Background) -->
               <g clip-path="url(#hPhoneClip)">
-                <rect x="69" y="69" width="202" height="456" fill="#F6F4EF"/>
+                <rect x="779" y="54" width="202" height="442" fill="#F6F4EF"/>
 
                 <!-- Top Status Bar -->
-                <text x="92" y="90" font-family="'General Sans', sans-serif" font-size="8.5" font-weight="600" fill="#0E0E10">9:41</text>
+                <text x="802" y="74" font-family="'General Sans', sans-serif" font-size="8.5" font-weight="600" fill="#0E0E10">9:41</text>
                 
                 <!-- Status Icons (5G Signal + Battery) -->
-                <g transform="translate(216, 82)">
+                <g transform="translate(926, 67)">
                   <!-- 4 Signal bars -->
                   <rect x="0" y="5" width="2" height="4" rx="0.5" fill="#0E0E10"/>
                   <rect x="3.5" y="3" width="2" height="6" rx="0.5" fill="#0E0E10"/>
@@ -785,110 +723,110 @@
                 </g>
 
                 <!-- Dynamic Island (Pill Camera + Sensors) -->
-                <rect x="137" y="78" width="66" height="16" rx="8" fill="#000000"/>
-                <circle cx="152" cy="86" r="3.2" fill="#111827"/>
-                <circle cx="151.2" cy="85.2" r="1" fill="#38BDF8" opacity="0.85"/>
-                <circle cx="186" cy="86" r="2.2" fill="#1E293B"/>
+                <rect x="847" y="63" width="66" height="15" rx="7.5" fill="#000000"/>
+                <circle cx="862" cy="70.5" r="3" fill="#111827"/>
+                <circle cx="861.2" cy="69.7" r="1" fill="#38BDF8" opacity="0.85"/>
+                <circle cx="896" cy="70.5" r="2" fill="#1E293B"/>
 
                 <!-- ================= SCENE 1: Login Screen (Active) ================= -->
                 <g class="hero-ph-scene active" id="phSceneLogin">
-                  <circle cx="170" cy="142" r="16" fill="#0B1630"/>
-                  <circle cx="170" cy="142" r="5.5" fill="#E8A317"/>
-                  <text x="170" y="174" font-family="'General Sans', sans-serif" font-size="13" font-weight="700" fill="#0B1630" text-anchor="middle">Schoolmate</text>
-                  <text x="170" y="188" font-family="'General Sans', sans-serif" font-size="8" fill="#64748B" text-anchor="middle">Campus Parent Portal</text>
+                  <circle cx="880" cy="126" r="15" fill="#0B1630"/>
+                  <circle cx="880" cy="126" r="5" fill="#E8A317"/>
+                  <text x="880" y="156" font-family="'General Sans', sans-serif" font-size="12.5" font-weight="700" fill="#0B1630" text-anchor="middle">Schoolmate</text>
+                  <text x="880" y="170" font-family="'General Sans', sans-serif" font-size="8" fill="#64748B" text-anchor="middle">Campus Parent Portal</text>
 
                   <!-- Inputs -->
-                  <rect x="83" y="206" width="174" height="34" rx="8" fill="#FFFFFF" stroke="#DCD7CD"/>
-                  <text x="94" y="227" font-family="'Geist Mono', monospace" font-size="8.5" fill="#0E0E10">parent@school.in</text>
+                  <rect x="793" y="188" width="174" height="32" rx="8" fill="#FFFFFF" stroke="#DCD7CD"/>
+                  <text x="804" y="208" font-family="'Geist Mono', monospace" font-size="8.5" fill="#0E0E10">parent@school.in</text>
 
-                  <rect x="83" y="248" width="174" height="34" rx="8" fill="#FFFFFF" stroke="#DCD7CD"/>
-                  <text x="94" y="270" font-family="'Geist Mono', monospace" font-size="11" fill="#0E0E10">&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;</text>
+                  <rect x="793" y="228" width="174" height="32" rx="8" fill="#FFFFFF" stroke="#DCD7CD"/>
+                  <text x="804" y="249" font-family="'Geist Mono', monospace" font-size="11" fill="#0E0E10">&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;</text>
 
                   <!-- Sign In Button -->
-                  <rect x="83" y="296" width="174" height="34" rx="17" fill="#0E0E10"/>
-                  <text x="170" y="318" font-family="'General Sans', sans-serif" font-size="10" font-weight="600" fill="#FFFFFF" text-anchor="middle">Sign In</text>
+                  <rect x="793" y="274" width="174" height="32" rx="16" fill="#0E0E10"/>
+                  <text x="880" y="295" font-family="'General Sans', sans-serif" font-size="10" font-weight="600" fill="#FFFFFF" text-anchor="middle">Sign In</text>
                   
                   <!-- Subtle Loading indicator -->
-                  <circle cx="230" cy="313" r="4" fill="none" stroke="#E8A317" stroke-width="1.6" stroke-dasharray="6 5"/>
+                  <circle cx="940" cy="290" r="4" fill="none" stroke="#E8A317" stroke-width="1.6" stroke-dasharray="6 5"/>
                 </g>
 
                 <!-- ================= SCENE 2: Success / Dashboard ================= -->
                 <g class="hero-ph-scene" id="phSceneSuccess">
                   <!-- Top greeting -->
-                  <text x="83" y="118" font-family="'General Sans', sans-serif" font-size="11.5" font-weight="700" fill="#0E0E10">Good morning</text>
-                  <text x="83" y="132" font-family="'General Sans', sans-serif" font-size="8" fill="#55555C">Aanya Agarwal &bull; Class X-B</text>
+                  <text x="793" y="104" font-family="'General Sans', sans-serif" font-size="11" font-weight="700" fill="#0E0E10">Good morning</text>
+                  <text x="793" y="118" font-family="'General Sans', sans-serif" font-size="8" fill="#55555C">Aanya Agarwal &bull; Class X-B</text>
 
                   <!-- Attendance ring card -->
-                  <rect x="83" y="146" width="174" height="74" rx="10" fill="#FFFFFF" stroke="#E5E0D6"/>
-                  <circle cx="116" cy="183" r="21" stroke="#E5E7EB" stroke-width="5.5" fill="none"/>
-                  <circle cx="116" cy="183" r="21" stroke="#16A34A" stroke-width="5.5" stroke-dasharray="132" stroke-dashoffset="13" fill="none" transform="rotate(-90 116 183)"/>
-                  <text x="116" y="187" text-anchor="middle" font-family="'General Sans', sans-serif" font-size="9.5" font-weight="700" fill="#0E0E10">94%</text>
-                  <text x="148" y="177" font-family="'General Sans', sans-serif" font-size="9" font-weight="600" fill="#0E0E10">Attendance</text>
-                  <text x="148" y="191" font-family="'General Sans', sans-serif" font-size="7.5" fill="#16A34A">On track &bull; 21/22</text>
+                  <rect x="793" y="132" width="174" height="72" rx="10" fill="#FFFFFF" stroke="#E5E0D6"/>
+                  <circle cx="826" cy="168" r="20" stroke="#E5E7EB" stroke-width="5" fill="none"/>
+                  <circle cx="826" cy="168" r="20" stroke="#16A34A" stroke-width="5" stroke-dasharray="126" stroke-dashoffset="12" fill="none" transform="rotate(-90 826 168)"/>
+                  <text x="826" y="172" text-anchor="middle" font-family="'General Sans', sans-serif" font-size="9" font-weight="700" fill="#0E0E10">94%</text>
+                  <text x="858" y="162" font-family="'General Sans', sans-serif" font-size="9" font-weight="600" fill="#0E0E10">Attendance</text>
+                  <text x="858" y="176" font-family="'General Sans', sans-serif" font-size="7.5" fill="#16A34A">On track &bull; 21/22</text>
 
                   <!-- Homework Due Card -->
-                  <rect x="83" y="230" width="174" height="106" rx="10" fill="#FFFFFF" stroke="#E5E0D6"/>
-                  <text x="94" y="248" font-family="'General Sans', sans-serif" font-size="9" font-weight="700" fill="#0E0E10">Homework Due Today</text>
+                  <rect x="793" y="214" width="174" height="104" rx="10" fill="#FFFFFF" stroke="#E5E0D6"/>
+                  <text x="804" y="232" font-family="'General Sans', sans-serif" font-size="9" font-weight="700" fill="#0E0E10">Homework Due Today</text>
                   
-                  <circle cx="100" cy="268" r="3.5" fill="#E8A317"/>
-                  <text x="110" y="271" font-family="'General Sans', sans-serif" font-size="8.5" font-weight="600" fill="#0E0E10">Maths &bull; Ex 7.2</text>
-                  <text x="110" y="283" font-family="'Geist Mono', monospace" font-size="7.5" fill="#64748B">Due by 4:00 PM</text>
+                  <circle cx="810" cy="252" r="3.5" fill="#E8A317"/>
+                  <text x="820" y="255" font-family="'General Sans', sans-serif" font-size="8.5" font-weight="600" fill="#0E0E10">Maths &bull; Ex 7.2</text>
+                  <text x="820" y="267" font-family="'Geist Mono', monospace" font-size="7.5" fill="#64748B">Due by 4:00 PM</text>
 
-                  <circle cx="100" cy="304" r="3.5" fill="#16A34A"/>
-                  <text x="110" y="307" font-family="'General Sans', sans-serif" font-size="8.5" font-weight="600" fill="#0E0E10">Science Lab Book</text>
-                  <text x="110" y="319" font-family="'Geist Mono', monospace" font-size="7.5" fill="#64748B">Due tomorrow</text>
+                  <circle cx="810" cy="288" r="3.5" fill="#16A34A"/>
+                  <text x="820" y="291" font-family="'General Sans', sans-serif" font-size="8.5" font-weight="600" fill="#0E0E10">Science Lab Book</text>
+                  <text x="820" y="303" font-family="'Geist Mono', monospace" font-size="7.5" fill="#64748B">Due tomorrow</text>
                 </g>
 
                 <!-- ================= SCENE 3: Video Lessons Feed ================= -->
                 <g class="hero-ph-scene" id="phSceneFeed">
-                  <text x="83" y="118" font-family="'General Sans', sans-serif" font-size="11" font-weight="700" fill="#0E0E10">Video Lessons</text>
-                  <rect x="83" y="125" width="76" height="16" rx="8" fill="#0B1630"/>
-                  <text x="121" y="136" font-family="'Geist Mono', monospace" font-size="7" font-weight="600" fill="#E8A317" text-anchor="middle">CBSE CLASS X</text>
+                  <text x="793" y="104" font-family="'General Sans', sans-serif" font-size="11" font-weight="700" fill="#0E0E10">Video Lessons</text>
+                  <rect x="793" y="111" width="76" height="16" rx="8" fill="#0B1630"/>
+                  <text x="831" y="122" font-family="'Geist Mono', monospace" font-size="7" font-weight="600" fill="#E8A317" text-anchor="middle">CBSE CLASS X</text>
 
                   <!-- Video Card 1 -->
-                  <rect x="83" y="148" width="174" height="118" rx="10" fill="#FFFFFF" stroke="#E5E0D6"/>
-                  <rect x="89" y="154" width="162" height="60" rx="6" fill="#0B1630"/>
-                  <path d="M 95 194 Q 135 170 170 196 T 245 174" stroke="#E8A317" stroke-width="1.8" fill="none"/>
-                  <circle cx="170" cy="184" r="10" fill="rgba(255,255,255,0.92)"/>
-                  <polygon points="167,179 175,184 167,189" fill="#0B1630"/>
-                  <text x="93" y="228" font-family="'General Sans', sans-serif" font-size="8.5" font-weight="600" fill="#0E0E10">Quadratic Equations</text>
-                  <text x="93" y="240" font-family="'Geist Mono', monospace" font-size="7.5" fill="#64748B">Maths &bull; 18:40</text>
-                  <rect x="93" y="249" width="154" height="3.5" rx="1.7" fill="rgba(14,14,16,0.08)"/>
-                  <rect x="93" y="249" width="95" height="3.5" rx="1.7" fill="#E8A317"/>
+                  <rect x="793" y="134" width="174" height="114" rx="10" fill="#FFFFFF" stroke="#E5E0D6"/>
+                  <rect x="799" y="140" width="162" height="58" rx="6" fill="#0B1630"/>
+                  <path d="M 805 180 Q 845 156 880 182 T 955 160" stroke="#E8A317" stroke-width="1.8" fill="none"/>
+                  <circle cx="880" cy="169" r="10" fill="rgba(255,255,255,0.92)"/>
+                  <polygon points="877,164 885,169 877,174" fill="#0B1630"/>
+                  <text x="803" y="212" font-family="'General Sans', sans-serif" font-size="8.5" font-weight="600" fill="#0E0E10">Quadratic Equations</text>
+                  <text x="803" y="224" font-family="'Geist Mono', monospace" font-size="7.5" fill="#64748B">Maths &bull; 18:40</text>
+                  <rect x="803" y="233" width="154" height="3.5" rx="1.7" fill="rgba(14,14,16,0.08)"/>
+                  <rect x="803" y="233" width="95" height="3.5" rx="1.7" fill="#E8A317"/>
 
                   <!-- Video Card 2 -->
-                  <rect x="83" y="274" width="174" height="118" rx="10" fill="#FFFFFF" stroke="#E5E0D6"/>
-                  <rect x="89" y="280" width="162" height="60" rx="6" fill="#0F2A1A"/>
-                  <circle cx="170" cy="310" r="10" fill="rgba(255,255,255,0.92)"/>
-                  <polygon points="167,305 175,310 167,315" fill="#0F2A1A"/>
-                  <text x="93" y="354" font-family="'General Sans', sans-serif" font-size="8.5" font-weight="600" fill="#0E0E10">Chemical Reactions</text>
-                  <text x="93" y="366" font-family="'Geist Mono', monospace" font-size="7.5" fill="#64748B">Science &bull; 24:10</text>
+                  <rect x="793" y="258" width="174" height="114" rx="10" fill="#FFFFFF" stroke="#E5E0D6"/>
+                  <rect x="799" y="264" width="162" height="58" rx="6" fill="#0F2A1A"/>
+                  <circle cx="880" cy="293" r="10" fill="rgba(255,255,255,0.92)"/>
+                  <polygon points="877,288 885,293 877,298" fill="#0F2A1A"/>
+                  <text x="803" y="336" font-family="'General Sans', sans-serif" font-size="8.5" font-weight="600" fill="#0E0E10">Chemical Reactions</text>
+                  <text x="803" y="348" font-family="'Geist Mono', monospace" font-size="7.5" fill="#64748B">Science &bull; 24:10</text>
                 </g>
 
                 <!-- ================= SCENE 4: Video Player ================= -->
                 <g class="hero-ph-scene" id="phScenePlayer">
-                  <path d="M88 114 L84 118 L88 122" stroke="#0E0E10" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                  <text x="96" y="120" font-family="'General Sans', sans-serif" font-size="9" font-weight="600" fill="#0E0E10">Maths &bull; Lesson 7</text>
+                  <path d="M798 100 L794 104 L798 108" stroke="#0E0E10" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                  <text x="806" y="106" font-family="'General Sans', sans-serif" font-size="9" font-weight="600" fill="#0E0E10">Maths &bull; Lesson 7</text>
 
                   <!-- Video Player Box -->
-                  <rect x="83" y="130" width="174" height="145" rx="10" fill="#081023"/>
-                  <path d="M 91 226 Q 170 146 249 226" stroke="#E8A317" stroke-width="2" fill="none"/>
-                  <circle cx="170" cy="195" r="15" fill="rgba(255,255,255,0.92)"/>
-                  <polygon points="166,187 177,195 166,203" fill="#081023"/>
+                  <rect x="793" y="116" width="174" height="142" rx="10" fill="#081023"/>
+                  <path d="M 801 210 Q 880 132 959 210" stroke="#E8A317" stroke-width="2" fill="none"/>
+                  <circle cx="880" cy="180" r="15" fill="rgba(255,255,255,0.92)"/>
+                  <polygon points="876,172 887,180 876,188" fill="#081023"/>
 
                   <!-- Moving Progress Bar Scrubber -->
-                  <rect x="89" y="290" width="162" height="4" rx="2" fill="rgba(14,14,16,0.15)"/>
-                  <rect class="hero-ph-progress-fill" x="89" y="290" width="75" height="4" rx="2" fill="#E8A317"/>
+                  <rect x="799" y="274" width="162" height="4" rx="2" fill="rgba(14,14,16,0.15)"/>
+                  <rect class="hero-ph-progress-fill" x="799" y="274" width="75" height="4" rx="2" fill="#E8A317"/>
 
-                  <text x="89" y="312" font-family="'Geist Mono', monospace" font-size="8" fill="#55555C">08:14 / 18:40</text>
-                  <text x="251" y="312" font-family="'Geist Mono', monospace" font-size="8" fill="#16A34A" text-anchor="end">1080p</text>
+                  <text x="799" y="296" font-family="'Geist Mono', monospace" font-size="8" fill="#55555C">08:14 / 18:40</text>
+                  <text x="961" y="296" font-family="'Geist Mono', monospace" font-size="8" fill="#16A34A" text-anchor="end">1080p</text>
                 </g>
 
                 <!-- Screen Glass Diagonal Sheen -->
-                <path d="M 69 69 L 190 69 L 69 240 Z" fill="url(#hPhoneGlassSheen)" opacity="0.08"/>
+                <path d="M 779 54 L 900 54 L 779 220 Z" fill="url(#hPhoneGlassSheen)" opacity="0.08"/>
 
                 <!-- Home Indicator Bar -->
-                <rect x="135" y="514" width="70" height="4" rx="2" fill="#0E0E10"/>
+                <rect x="845" y="486" width="70" height="4" rx="2" fill="#0E0E10"/>
               </g><!-- /clip -->
 
             </g><!-- /heroPhone -->
@@ -1055,7 +993,20 @@
       <div class="container">
         <span class="section-label">03 / Schoolmate</span>
 
-        <!-- a) ONE slim single-line product strip -->
+        <!-- 1. Eyebrow -> Schoolmate by OpenSoftwares -> Making schools ready for the future of learning -->
+        <div class="sm-intro-block">
+          <div class="sm-eyebrow">Introducing</div>
+          <h2 class="sm-brand-title">Schoolmate <span class="sm-brand-by">by OpenSoftwares</span></h2>
+          <p class="sm-section-headline" id="schoolmateHeading">
+            Making schools ready for the <em class="serif sm-serif-accent">future of learning
+              <svg class="sm-underline-svg" viewBox="0 0 320 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path class="sm-underline-path" d="M4 12 C80 4 200 2 316 10" stroke="#E8A317" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+            </em>
+          </p>
+        </div>
+
+        <!-- 2. The Schoolmate product box -->
         <div class="sm-product-strip" role="region" aria-label="Schoolmate product overview and website offer">
           <div class="sm-strip-brand">
             <span class="sm-strip-logo-mark" aria-hidden="true"></span>
@@ -1088,19 +1039,9 @@
           </a>
         </div>
 
-        <!-- b) DIRECTLY below it, the tagline & trust line -->
-        <div class="sm-tagline-wrap">
-          <h2 class="sm-section-headline" id="schoolmateHeading">
-            Making schools ready for the <em class="serif sm-serif-accent">future of learning
-              <svg class="sm-underline-svg" viewBox="0 0 320 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path class="sm-underline-path" d="M4 12 C80 4 200 2 316 10" stroke="#E8A317" stroke-width="3" stroke-linecap="round"/>
-              </svg>
-            </em>
-          </h2>
-          <p class="sm-trust-line">Trusted by thousands of schools and institutions across Maharashtra</p>
-        </div>
+        <!-- 3. Directly below the box: Trust line -->
+        <p class="sm-trust-line">Trusted by 1000+ schools and institutions across India</p>
 
-        <!-- c) Mobile App Heading & Interactive Phone Mockup -->
         <h3 class="sm-phone-heading">Parents, teachers and students mobile app</h3>
         <div class="sm-phone-stage" style="display:flex;justify-content:center;margin:0 auto;">
           <div class="phone-device" aria-label="Schoolmate Mobile App interactive demo" role="region">
@@ -2126,6 +2067,6 @@
 
   <!-- Scripts -->
   <script src="/js/main.js?v=3.2" defer></script>
-  <script src="/js/home.js?v=3.3" defer></script>
+  <script src="/js/home.js?v=3.5" defer></script>
 </body>
 </html>

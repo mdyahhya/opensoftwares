@@ -257,15 +257,15 @@ body.home-page { padding-top: 0; }
 }
 
 @keyframes heroCursorMove {
-  0%, 20% { transform: translate(380px, 142px); }
-  22% { transform: translate(380px, 142px) scale(0.9); }
-  25%, 45% { transform: translate(380px, 174px); }
-  47% { transform: translate(380px, 174px) scale(0.9); }
-  50%, 70% { transform: translate(380px, 206px); }
-  72% { transform: translate(380px, 206px) scale(0.9); }
-  75%, 95% { transform: translate(380px, 238px); }
-  97% { transform: translate(380px, 238px) scale(0.9); }
-  100% { transform: translate(380px, 142px); }
+  0%, 20% { transform: translate(115px, 142px); }
+  22% { transform: translate(115px, 142px) scale(0.9); }
+  25%, 45% { transform: translate(115px, 174px); }
+  47% { transform: translate(115px, 174px) scale(0.9); }
+  50%, 70% { transform: translate(115px, 206px); }
+  72% { transform: translate(115px, 206px) scale(0.9); }
+  75%, 95% { transform: translate(115px, 238px); }
+  97% { transform: translate(115px, 238px) scale(0.9); }
+  100% { transform: translate(115px, 142px); }
 }
 
 /* Laptop panel switching (4 panels, each 4s, total 16s) */
@@ -458,9 +458,67 @@ body.home-page { padding-top: 0; }
   color: var(--saffron);
   transform: translate(2px, -2px);
 }
-  padding-bottom: clamp(28px, 4vw, 44px);
-  border-top: 1px solid var(--line);
-  background: var(--paper);
+
+/* Mobile: Three Industries side-by-side single line row */
+@media (max-width: 768px) {
+  .intro-fields-split {
+    gap: var(--s3);
+    margin-top: var(--s2);
+  }
+
+  .intro-fields-col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-top: var(--s3);
+  }
+
+  .field-card-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 12px 4px 14px;
+    gap: 8px;
+    border-radius: 12px;
+  }
+
+  .field-card-icon-wrap {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    padding: 2px;
+  }
+
+  .field-detailed-svg {
+    width: 36px;
+    height: 36px;
+  }
+
+  .field-card-body {
+    width: 100%;
+    text-align: center;
+  }
+
+  .field-card-top {
+    justify-content: center;
+    margin-bottom: 0;
+  }
+
+  .field-card-name {
+    font-size: clamp(0.72rem, 2.6vw, 0.85rem);
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+
+  /* Hide sublines, status pills, and arrows on mobile to save vertical space */
+  .field-card-sub,
+  .fields-strip-status,
+  .field-card-action {
+    display: none !important;
+  }
 }
 
 .fields-strip-row {
@@ -716,11 +774,54 @@ body.home-page { padding-top: 0; }
   }
 }
 
+/* Intro Header Block above Schoolmate product strip */
+.sm-intro-block {
+  text-align: center;
+  max-width: 860px;
+  margin: var(--s3) auto clamp(20px, 3.5vw, 32px);
+}
+
+.sm-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--saffron);
+  margin-bottom: 6px;
+}
+
+.sm-brand-title {
+  font-family: var(--font-sans);
+  font-size: clamp(2rem, 4.4vw, 3.4rem);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  color: var(--ink);
+  line-height: 1.15;
+  margin: 0 0 clamp(8px, 1.5vw, 14px) 0;
+}
+
+.sm-brand-by {
+  font-weight: 400;
+  font-size: 0.65em;
+  color: var(--ink-soft);
+  letter-spacing: -0.01em;
+}
+
 /* Tagline & Trust line directly below strip */
 .sm-tagline-wrap {
   text-align: center;
   max-width: 840px;
   margin: 0 auto clamp(28px, 4.5vw, 48px);
+}
+
+.sm-trust-line {
+  font-family: var(--font-sans);
+  font-size: clamp(0.92rem, 1.6vw, 1.05rem);
+  font-weight: 500;
+  color: var(--ink-soft);
+  text-align: center;
+  margin: -14px auto clamp(28px, 4.5vw, 44px);
 }
 
 /* Mobile App heading above phone */
