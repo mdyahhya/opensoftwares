@@ -92,20 +92,68 @@
   <!-- SVG Sprite -->
   <svg xmlns="http://www.w3.org/2000/svg" style="display:none;" aria-hidden="true">
     <defs>
+      <symbol id="icon-bus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8 6v6M15 6v6M2 12h20M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"/><circle cx="7" cy="18" r="1"/><circle cx="17" cy="18" r="1"/>
+      </symbol>
+      <symbol id="icon-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+      </symbol>
+      <symbol id="icon-bell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+      </symbol>
+      <symbol id="icon-trophy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.45 1-1 1H8c-.55 0-1 .45-1 1v1h10v-1c0-.55-.45-1-1-1h-1c-.55 0-1-.45-1-1v-2.34"/><path d="M18 4H6v7a6 6 0 0 0 12 0V4z"/>
+      </symbol>
+      <symbol id="icon-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+      </symbol>
+      <symbol id="icon-wallet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/><path d="M18 12a2 2 0 0 0 0 4h4v-4z"/>
+      </symbol>
+      <symbol id="icon-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+      </symbol>
+      <symbol id="icon-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      </symbol>
+      <symbol id="icon-video" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+      </symbol>
+      <symbol id="icon-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+      </symbol>
+      <symbol id="icon-map-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+      </symbol>
+      <symbol id="icon-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/>
+      </symbol>
+      <symbol id="icon-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+      </symbol>
       <symbol id="icon-graduation-cap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
         <path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 2.5 3.5 6 3.5s6-1.5 6-3.5v-5"/>
       </symbol>
-      <symbol id="icon-building" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-        <rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><path d="M9 22v-4h6v4M8 6h.01M16 6h.01M12 6h.01M12 10h.01M12 14h.01M16 10h.01M16 14h.01M8 10h.01M8 14h.01"/>
-      </symbol>
-      <symbol id="icon-gear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
-      </symbol>
-      <symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-        <polyline points="20 6 9 17 4 12"/>
+      <symbol id="icon-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
       </symbol>
       <symbol id="icon-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
         <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
+      </symbol>
+      <symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="20 6 9 17 4 12"/>
+      </symbol>
+      <symbol id="icon-play" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+        <polygon points="5 3 19 12 5 21 5 3"/>
+      </symbol>
+      <symbol id="icon-chevron-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6"/>
+      </symbol>
+      <symbol id="icon-chevron-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="9 18 15 12 9 6"/>
+      </symbol>
+      <symbol id="icon-chevron-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"/>
       </symbol>
       <symbol id="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
@@ -116,8 +164,28 @@
       <symbol id="icon-whatsapp" viewBox="0 0 24 24" fill="currentColor">
         <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.15 8.15 0 01-1.25-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 012.41 5.82c0 4.54-3.7 8.24-8.23 8.24zm4.51-6.17c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.89.87-.89 2.12s.91 2.46 1.04 2.63c.12.17 1.79 2.73 4.33 3.83.61.26 1.08.42 1.45.54.61.19 1.16.17 1.6.1.49-.08 1.47-.6 1.68-1.18.21-.59.21-1.09.15-1.19-.06-.11-.22-.17-.47-.3z"/>
       </symbol>
-      <symbol id="icon-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+      <symbol id="icon-mobile" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="5" y="2" width="14" height="20" rx="3"/><path d="M12 18h.01"/>
+      </symbol>
+      <symbol id="icon-desktop" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+      </symbol>
+      <symbol id="icon-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/>
+      </symbol>
+      <symbol id="icon-building" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><path d="M9 22v-4h6v4M8 6h.01M16 6h.01M12 6h.01M12 10h.01M12 14h.01M16 10h.01M16 14h.01M8 10h.01M8 14h.01"/>
+      </symbol>
+      <symbol id="icon-signal" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+        <rect x="2" y="16" width="3" height="6" rx="1"/><rect x="7.5" y="12" width="3" height="10" rx="1"/><rect x="13" y="8" width="3" height="14" rx="1"/><rect x="18.5" y="4" width="3" height="18" rx="1"/>
+      </symbol>
+      <symbol id="icon-battery" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+        <rect x="2" y="7" width="17" height="10" rx="2"/><rect x="4" y="9" width="11" height="6" rx="1" opacity="0.4"/><rect x="4" y="9" width="8" height="6" rx="1"/><path d="M20 11h2v2h-2z"/>
+      </symbol>
+          <symbol id="icon-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+        <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/>
       </symbol>
     </defs>
   </svg>
@@ -263,127 +331,831 @@
            ================================================================ -->
       <section class="industry-panel active" id="panel-education" role="tabpanel" aria-labelledby="tab-education">
 
-        <!-- Free Website Offer Band at Top -->
-        <div class="free-website-offer-band" style="margin-bottom: var(--s6);">
-          <div class="offer-band-header">
-            <span class="offer-band-label">
-              <svg class="offer-band-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-              </svg>
-              Free with every Schoolmate plan
-            </span>
-            <span class="offer-val-chip">&#8377;15,000 VALUE</span>
-          </div>
-
-          <h3 class="offer-band-title">Get a free school website, worth Rs. 15,000.</h3>
-          <p class="offer-band-desc">Every school that takes a Schoolmate plan gets a professionally designed school website at no extra cost.</p>
-
-          <div class="offer-band-actions">
-            <a href="https://wa.me/917204726501?text=Hi%2C%20I%20want%20to%20know%20about%20the%20free%20school%20website%20with%20the%20Schoolmate%20plan." class="btn-offer-claim" target="_blank" rel="noopener noreferrer">
-              Claim your free website
-              <svg class="icon icon-sm"><use href="#icon-arrow-up-right"></use></svg>
-            </a>
-            <span class="offer-footnote" id="offerFootnoteText">Terms and conditions apply.</span>
-          </div>
-        </div>
-
-        <!-- Schoolmate Product Feature Row -->
-        <div class="schoolmate-feature-row">
-          <span class="sm-feature-badge">FLAGSHIP PRODUCT &bull; LIVE</span>
-          <h2 class="sm-feature-title">Schoolmate, School Management App and ERP by OpenSoftwares</h2>
-          <p style="color:var(--ink-soft);max-width:70ch;font-size:1.05rem;line-height:1.6;margin-bottom:var(--s3);">
-            Built specifically for schools and colleges across India. Connect administration, teaching staff, parents, and students into one synchronized ecosystem with real-time biometric attendance, automated fee processing, and instant notification alerts.
-          </p>
-
-          <!-- 3 Short Points -->
-          <ul class="sm-feature-points">
-            <li class="sm-point-item">
-              <span class="sm-point-check"><svg><use href="#icon-check"></use></svg></span>
-              <span>Android app for parents, teachers and students</span>
-            </li>
-            <li class="sm-point-item">
-              <span class="sm-point-check"><svg><use href="#icon-check"></use></svg></span>
-              <span>Web ERP for administration, finance, staff and payroll</span>
-            </li>
-            <li class="sm-point-item">
-              <span class="sm-point-check"><svg><use href="#icon-check"></use></svg></span>
-              <span>Live bus tracking, attendance, homework and videos</span>
-            </li>
-          </ul>
-
-          <div class="sm-feature-actions">
-            <a href="schoolmate.html" class="btn btn-primary">
-              Learn more
-              <svg class="icon icon-sm"><use href="#icon-arrow-up-right"></use></svg>
-            </a>
-            <a href="contact.html" class="btn btn-secondary">
-              Book a free demo
-            </a>
-            <span style="font-family:var(--font-mono);font-size:11.5px;color:var(--ink-mute);margin-left:auto;display:inline-flex;align-items:center;gap:6px;">
-              <span style="width:6px;height:6px;border-radius:50%;background:var(--saffron);"></span>
-              Schoolmate app &mdash; coming soon on Google Play
-            </span>
-          </div>
-        </div>
-
-        <!-- Compact Interactive Previews -->
-        <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));gap:var(--s4);margin-top:var(--s6);margin-bottom:var(--s7);">
-          
-          <!-- Android App Preview Card -->
-          <div style="background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r-card);padding:var(--s4);display:flex;flex-direction:column;justify-content:space-between;">
-            <div>
-              <span class="section-label" style="margin-bottom:var(--s2);">Mobile Application</span>
-              <h3 style="font-size:1.3rem;font-weight:600;margin-bottom:var(--s2);color:var(--ink);">Android Parent &amp; Student App</h3>
-              <p style="font-size:0.92rem;color:var(--ink-soft);line-height:1.5;margin-bottom:var(--s3);">
-                Instant fee payments, live GPS bus tracking, biometric attendance notifications, syllabus video lessons, and digital circulars directly on smartphones.
-              </p>
-            </div>
-            <div style="background:var(--paper);border:1px solid var(--line);border-radius:var(--r-inner);padding:14px 18px;display:flex;align-items:center;justify-content:space-between;">
-              <span style="font-family:var(--font-mono);font-size:11px;color:var(--ink-soft);">5 Core Modules</span>
-              <a href="schoolmate.html#appShowcase" class="btn-text-link" style="font-size:0.88rem;color:var(--ink);font-weight:600;">Explore App Mockup &rarr;</a>
-            </div>
-          </div>
-
-          <!-- Web ERP Preview Card -->
-          <div style="background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r-card);padding:var(--s4);display:flex;flex-direction:column;justify-content:space-between;">
-            <div>
-              <span class="section-label" style="margin-bottom:var(--s2);">Administrative Suite</span>
-              <h3 style="font-size:1.3rem;font-weight:600;margin-bottom:var(--s2);color:var(--ink);">Schoolmate Web ERP</h3>
-              <p style="font-size:0.92rem;color:var(--ink-soft);line-height:1.5;margin-bottom:var(--s3);">
-                Automated Maharashtra PT/PF-compliant payroll, conflict-free timetable engine, CBSE report cards, UPI fee reconciliation, and multi-campus oversight.
-              </p>
-            </div>
-            <div style="background:var(--paper);border:1px solid var(--line);border-radius:var(--r-inner);padding:14px 18px;display:flex;align-items:center;justify-content:space-between;">
-              <span style="font-family:var(--font-mono);font-size:11px;color:var(--ink-soft);">Desktop ERP</span>
-              <a href="schoolmate.html#erpShowcase" class="btn-text-link" style="font-size:0.88rem;color:var(--ink);font-weight:600;">Explore ERP Mockup &rarr;</a>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Hairline Divider and More Products Rows -->
-        <div class="more-products-preview" style="border-top:1px solid var(--line);padding-top:var(--s5);">
-          <div class="more-products-quiet-line">More products</div>
-          <div class="more-products-slots">
-            
-            <a href="#real-estate" class="product-slot-outlined" data-tab-switch="real-estate" role="button" aria-label="Switch to Real Estate platform preview">
-              <div>
-                <div class="slot-name">Real Estate</div>
-                <div style="font-size:0.82rem;color:var(--ink-soft);margin-top:2px;">Lead pipelines, booking milestones and RERA compliance</div>
-              </div>
-              <span class="slot-tag">Coming soon &rarr;</span>
-            </a>
-
-            <a href="#manufacturing" class="product-slot-outlined" data-tab-switch="manufacturing" role="button" aria-label="Switch to Manufacturing ERP preview">
-              <div>
-                <div class="slot-name">Manufacturing</div>
-                <div style="font-size:0.82rem;color:var(--ink-soft);margin-top:2px;">Production scheduling, BOM inventory and quality control</div>
-              </div>
-              <span class="slot-tag">Coming soon &rarr;</span>
-            </a>
-
-          </div>
-        </div>
+        <!-- a) ONE slim single-line product strip -->
+                <div class="sm-product-strip" role="region" aria-label="Schoolmate product overview and website offer">
+                  <div class="sm-strip-brand">
+                    <span class="sm-strip-logo-mark" aria-hidden="true"></span>
+                    <span>Schoolmate</span>
+                  </div>
+                  <div class="sm-strip-items">
+                    <div class="sm-strip-item">
+                      <svg class="sm-strip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M2 7h20M7 5h.01M10 5h.01M13 5h.01"/>
+                      </svg>
+                      <span>Free school website (worth &#8377;15,000)<span class="sm-strip-free-tag">FREE</span></span>
+                    </div>
+                    <span class="sm-strip-sep" aria-hidden="true">&bull;</span>
+                    <div class="sm-strip-item">
+                      <svg class="sm-strip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="5" y="2" width="14" height="20" rx="3"/><line x1="12" y1="18" x2="12.01" y2="18"/>
+                      </svg>
+                      <span>Parents and teachers app</span>
+                    </div>
+                    <span class="sm-strip-sep" aria-hidden="true">&bull;</span>
+                    <div class="sm-strip-item">
+                      <svg class="sm-strip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+                      </svg>
+                      <span>School management software</span>
+                    </div>
+                  </div>
+                  <a href="https://wa.me/917204726501?text=Hi%2C%20I%20want%20to%20know%20about%20the%20free%20school%20website%20with%20the%20Schoolmate%20plan." target="_blank" rel="noopener noreferrer" class="sm-strip-claim-link">
+                    Claim free website &rarr;
+                  </a>
+                </div>
+        
+                <!-- b) DIRECTLY below it, the tagline & trust line -->
+                <div class="sm-tagline-wrap">
+                  <h2 class="sm-section-headline" id="schoolmateHeading">
+                    Making schools ready for the <em class="serif sm-serif-accent">future of learning
+                      <svg class="sm-underline-svg" viewBox="0 0 320 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path class="sm-underline-path" d="M4 12 C80 4 200 2 316 10" stroke="#E8A317" stroke-width="3" stroke-linecap="round"/>
+                      </svg>
+                    </em>
+                  </h2>
+                  <p class="sm-trust-line">Trusted by thousands of schools and institutions across Maharashtra</p>
+                </div>
+        
+                <!-- c) Interactive Android Phone Mockup -->
+                <div class="sm-phone-stage" style="display:flex;justify-content:center;margin:0 auto;">
+                  <div class="phone-device" aria-label="Schoolmate Android App interactive demo" role="region">
+                    <div class="phone-frame">
+        
+                      <!-- Notch / punch-hole camera -->
+                      <div class="phone-notch-bar">
+                        <div class="phone-camera" aria-hidden="true"></div>
+                      </div>
+                      <div class="phone-screen-inner">
+        
+                        <!-- Status Bar -->
+                        <div class="phone-status-bar" aria-hidden="true">
+                          <span class="phone-status-time">9:41 AM</span>
+                          <div class="phone-status-icons">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><use href="#icon-signal"></use></svg>
+                            <svg width="14" height="12" viewBox="0 0 24 24" fill="currentColor"><use href="#icon-battery"></use></svg>
+                          </div>
+                        </div>
+        
+                        <!-- Phone Screen -->
+                        <div class="phone-screen-wrap" id="phoneScreenWrap">
+        
+                          <!-- Screen 0: Dashboard -->
+                          <div class="phone-screen screen-dashboard" id="screen-0" role="tabpanel" aria-labelledby="tab-0">
+                            <div class="screen-dashboard" style="height:100%;overflow-y:auto;padding:12px 10px 8px;">
+                              <div class="dash-profile-row">
+                                <div class="dash-avatar">AA</div>
+                                <div>
+                                  <div class="dash-name">Aanya Agarwal</div>
+                                  <div class="dash-class">Class X-B &nbsp;&bull;&nbsp; Roll No. 14</div>
+                                </div>
+                                <div class="dash-greeting">Good morning</div>
+                              </div>
+        
+                              <!-- Attendance ring mini -->
+                              <div class="dash-attend-row">
+                                <div class="attend-ring-mini">
+                                  <svg class="attend-ring-mini-svg" viewBox="0 0 44 44">
+                                    <circle class="attend-track" cx="22" cy="22" r="18"/>
+                                    <circle class="attend-fill" cx="22" cy="22" r="18"/>
+                                  </svg>
+                                </div>
+                                <div>
+                                  <div class="attend-pct">94.2%</div>
+                                  <div class="attend-label">Attendance this month</div>
+                                </div>
+                              </div>
+        
+                              <!-- Homework -->
+                              <div class="dash-hw-section">
+                                <div class="dash-hw-title">Due Today</div>
+                                <div class="hw-item">
+                                  <div class="hw-dot"></div>
+                                  <span class="hw-subject">Mathematics</span>
+                                  <span style="font-size:9px;color:var(--ink-soft);">Chapter 7 &mdash; Ex 7.2</span>
+                                  <span class="hw-due">Today</span>
+                                </div>
+                                <div class="hw-item">
+                                  <div class="hw-dot" style="background:var(--success);"></div>
+                                  <span class="hw-subject">Science</span>
+                                  <span style="font-size:9px;color:var(--ink-soft);">Lab Report</span>
+                                  <span class="hw-due">Tomorrow</span>
+                                </div>
+                              </div>
+        
+                              <!-- Quick Actions -->
+                              <div class="dash-quick-actions">
+                                <div class="qa-btn">
+                                  <div class="qa-btn-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><use href="#icon-wallet"></use></svg></div>
+                                  <div class="qa-btn-label">Pay Fees</div>
+                                </div>
+                                <div class="qa-btn">
+                                  <div class="qa-btn-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><use href="#icon-chat"></use></svg></div>
+                                  <div class="qa-btn-label">Message Teacher</div>
+                                </div>
+                                <div class="qa-btn">
+                                  <div class="qa-btn-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><use href="#icon-clock"></use></svg></div>
+                                  <div class="qa-btn-label">Timetable</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+        
+                          <!-- Screen 1: Attendance (Default Active) -->
+                          <div class="phone-screen screen-attendance active" id="screen-1" role="tabpanel" aria-labelledby="tab-1">
+                            <div style="height:100%;padding:10px;background:#f6f4ef;overflow-y:auto;">
+                              <div class="attend-header">
+                                <span class="attend-month-name">October 2026</span>
+                              </div>
+                              <div class="attend-big-ring">
+                                <svg class="attend-big-ring-svg" viewBox="0 0 70 70">
+                                  <circle class="attend-big-track" cx="35" cy="35" r="28"/>
+                                  <circle class="attend-big-fill" cx="35" cy="35" r="28"/>
+                                  <text class="attend-big-text" x="35" y="35">94%</text>
+                                </svg>
+                              </div>
+                              <div class="cal-grid" aria-label="Attendance calendar">
+                                <div class="cal-dow">S</div><div class="cal-dow">M</div><div class="cal-dow">T</div><div class="cal-dow">W</div><div class="cal-dow">T</div><div class="cal-dow">F</div><div class="cal-dow">S</div>
+                                <!-- Week 1 -->
+                                <div class="cal-day future">29</div><div class="cal-day future">30</div><div class="cal-day present">1</div><div class="cal-day present">2</div><div class="cal-day present">3</div><div class="cal-day present">4</div><div class="cal-day future">5</div>
+                                <!-- Week 2 -->
+                                <div class="cal-day future">6</div><div class="cal-day present">7</div><div class="cal-day absent">8</div><div class="cal-day present">9</div><div class="cal-day present">10</div><div class="cal-day present">11</div><div class="cal-day future">12</div>
+                                <!-- Week 3 -->
+                                <div class="cal-day future">13</div><div class="cal-day present">14</div><div class="cal-day present">15</div><div class="cal-day leave">16</div><div class="cal-day present">17</div><div class="cal-day present">18</div><div class="cal-day future">19</div>
+                                <!-- Week 4 -->
+                                <div class="cal-day future">20</div><div class="cal-day present">21</div><div class="cal-day today">22</div><div class="cal-day future">23</div><div class="cal-day future">24</div><div class="cal-day future">25</div><div class="cal-day future">26</div>
+                              </div>
+                              <div style="display:flex;gap:10px;margin-top:10px;font-family:var(--font-mono);font-size:8px;">
+                                <span style="color:var(--success)">&#9632; Present</span>
+                                <span style="color:var(--danger)">&#9632; Absent</span>
+                                <span style="color:#b07800">&#9632; Leave</span>
+                              </div>
+                            </div>
+                          </div>
+        
+                          <!-- Screen 2: Videos -->
+                          <div class="phone-screen screen-videos" id="screen-2" role="tabpanel" aria-labelledby="tab-2">
+                            <div style="height:100%;background:#f6f4ef;padding:10px;overflow-y:auto;">
+                              <div class="videos-title">Learning Videos</div>
+        
+                              <div class="video-card">
+                                <div class="video-thumb">
+                                  <div class="video-thumb-pattern"></div>
+                                  <div class="video-play-btn"><svg viewBox="0 0 24 24"><use href="#icon-play"></use></svg></div>
+                                </div>
+                                <div class="video-info">
+                                  <div class="video-subject">CBSE &bull; Mathematics</div>
+                                  <div class="video-name">Quadratic Equations &mdash; Finding Roots &amp; Discriminant</div>
+                                  <div class="video-meta">
+                                    <span class="video-duration">18:42</span>
+                                  </div>
+                                  <div class="video-progress-bar" style="margin-top:4px;"><div class="video-progress-fill" style="width:65%;"></div></div>
+                                </div>
+                              </div>
+        
+                              <div class="video-card">
+                                <div class="video-thumb" style="background:#0f2a1a;">
+                                  <div class="video-thumb-pattern"></div>
+                                  <div class="video-play-btn"><svg viewBox="0 0 24 24"><use href="#icon-play"></use></svg></div>
+                                </div>
+                                <div class="video-info">
+                                  <div class="video-subject">CBSE &bull; Science</div>
+                                  <div class="video-name">Chemical Reactions and Equations &mdash; Balancing</div>
+                                  <div class="video-meta">
+                                    <span class="video-duration">24:10</span>
+                                  </div>
+                                  <div class="video-progress-bar" style="margin-top:4px;"><div class="video-progress-fill" style="width:10%;"></div></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+        
+                          <!-- Screen 3: Bus Tracking (Vibrant High-Contrast GPS) -->
+                          <div class="phone-screen screen-bus" id="screen-3" role="tabpanel" aria-labelledby="tab-3">
+                            <!-- Top Status Chip -->
+                            <div class="bus-top-bar">
+                              <div class="bus-live-chip">
+                                <span class="bus-live-pulse-dot"></span>
+                                <span>LIVE GPS TELEMETRY</span>
+                              </div>
+                              <div class="bus-top-speed">38 km/h</div>
+                            </div>
+        
+                            <!-- Map background SVG -->
+                            <div class="bus-map-bg" aria-hidden="true">
+                              <svg width="100%" height="100%" viewBox="0 0 280 390" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <!-- High Contrast Map Base -->
+                                <rect width="280" height="390" fill="#DCE5ED"/>
+                                
+                                <!-- City Blocks with Distinct Borders -->
+                                <rect x="12" y="12" width="64" height="70" rx="6" fill="#E2E8F0" stroke="#CBD5E1"/>
+                                <rect x="92" y="12" width="86" height="70" rx="6" fill="#E2E8F0" stroke="#CBD5E1"/>
+                                <rect x="194" y="12" width="74" height="70" rx="6" fill="#E2E8F0" stroke="#CBD5E1"/>
+                                
+                                <rect x="12" y="98" width="64" height="80" rx="6" fill="#E2E8F0" stroke="#CBD5E1"/>
+                                <!-- Vibrant Green City Park -->
+                                <rect x="92" y="98" width="86" height="80" rx="8" fill="#DCFCE7" stroke="#86EFAC"/>
+                                <circle cx="125" cy="130" r="14" fill="#22C55E" opacity="0.35"/>
+                                <circle cx="150" cy="145" r="12" fill="#22C55E" opacity="0.35"/>
+                                <text x="135" y="160" font-family="'Inter', sans-serif" font-size="8" font-weight="700" fill="#15803D" text-anchor="middle">City Park</text>
+        
+                                <!-- Vibrant Blue Water Canal -->
+                                <path d="M 0 220 Q 140 235 280 220" stroke="#7DD3FC" stroke-width="16" fill="none"/>
+                                <text x="65" y="223" font-family="'Inter', sans-serif" font-size="7.5" font-weight="700" fill="#0284C7">Canal Road</text>
+        
+                                <rect x="12" y="195" width="64" height="80" rx="6" fill="#E2E8F0" stroke="#CBD5E1"/>
+                                <rect x="194" y="195" width="74" height="80" rx="6" fill="#E2E8F0" stroke="#CBD5E1"/>
+        
+                                <!-- Major Road Grid (Crisp White with Slate Outlines) -->
+                                <rect x="0" y="82" width="280" height="20" fill="#FFFFFF"/>
+                                <line x1="0" y1="82" x2="280" y2="82" stroke="#CBD5E1" stroke-width="1.5"/>
+                                <line x1="0" y1="102" x2="280" y2="102" stroke="#CBD5E1" stroke-width="1.5"/>
+                                <line x1="0" y1="92" x2="280" y2="92" stroke="#E2E8F0" stroke-width="1.5" stroke-dasharray="8 6"/>
+        
+                                <rect x="76" y="0" width="22" height="390" fill="#FFFFFF"/>
+                                <line x1="76" y1="0" x2="76" y2="390" stroke="#CBD5E1" stroke-width="1.5"/>
+                                <line x1="98" y1="0" x2="98" y2="390" stroke="#CBD5E1" stroke-width="1.5"/>
+                                <line x1="87" y1="0" x2="87" y2="390" stroke="#E2E8F0" stroke-width="1.5" stroke-dasharray="8 6"/>
+        
+                                <rect x="172" y="0" width="22" height="390" fill="#FFFFFF"/>
+                                <line x1="172" y1="0" x2="172" y2="390" stroke="#CBD5E1" stroke-width="1.5"/>
+                                <line x1="194" y1="0" x2="194" y2="390" stroke="#CBD5E1" stroke-width="1.5"/>
+        
+                                <!-- Bus Route Path (Bold Navy) -->
+                                <path d="M 45 265 L 45 178 L 87 178 L 87 92 L 183 92 L 183 45" stroke="#0A2A5E" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                                <!-- Saffron Trajectory Progress -->
+                                <path d="M 45 265 L 45 178 L 87 178 L 87 125" stroke="#E8A317" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+        
+                                <!-- School Campus Destination Pin -->
+                                <circle cx="183" cy="45" r="14" fill="#0A2A5E"/>
+                                <g transform="translate(176, 38)" fill="#FFFFFF">
+                                  <path d="M7 1 L1 5 v7 h12 v-7 z M4 12 v-4 h6 v4 z M6 3 h2 v2 h-2 z" />
+                                </g>
+                                <!-- School Label -->
+                                <g transform="translate(126, 14)">
+                                  <rect width="114" height="18" rx="4" fill="#0A2A5E" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.2))"/>
+                                  <text x="57" y="12" font-family="'Inter', sans-serif" font-size="7.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">School Campus (End)</text>
+                                </g>
+        
+                                <!-- Pickup Stop Passed with Vector Checkmark -->
+                                <circle cx="45" cy="265" r="8" fill="#10B981" stroke="#FFFFFF" stroke-width="2"/>
+                                <path d="M42 265 l2.5 2.5 l4.5 -4.5" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                <text x="58" y="268" font-family="'Inter', sans-serif" font-size="8" font-weight="600" fill="#059669">Home Pickup (7:42 AM)</text>
+        
+                                <!-- Current Bus Marker at (87, 125) with radar pulse -->
+                                <circle cx="87" cy="125" r="26" fill="#E8A317" opacity="0.2"/>
+                                <circle cx="87" cy="125" r="16" fill="#E8A317" opacity="0.35"/>
+                                <rect x="73" y="112" width="28" height="26" rx="6" fill="#E8A317" stroke="#FFFFFF" stroke-width="2" filter="drop-shadow(0 4px 6px rgba(0,0,0,0.25))"/>
+                                <rect x="77" y="115" width="20" height="9" rx="2" fill="#0A2A5E"/>
+                                <circle cx="78" cy="132" r="2.5" fill="#1F2937"/>
+                                <circle cx="96" cy="132" r="2.5" fill="#1F2937"/>
+                                <circle cx="77" cy="128" r="1.5" fill="#FEF08A"/>
+                                <circle cx="97" cy="128" r="1.5" fill="#FEF08A"/>
+        
+                                <!-- Bus Live Speed Tag -->
+                                <g transform="translate(50, 92)">
+                                  <rect width="74" height="16" rx="8" fill="#0B1630"/>
+                                  <circle cx="58" cy="100" r="3" fill="#10B981"/>
+                                  <text x="44" y="11" font-family="'Inter', sans-serif" font-size="8" font-weight="700" fill="#FFFFFF" text-anchor="middle">BUS 03 &#8226; 38 km/h</text>
+                                </g>
+                              </svg>
+                            </div>
+        
+                            <!-- Overlay ETA card -->
+                            <div class="bus-overlay">
+                              <div class="bus-eta-card">
+                                <div class="bus-eta-avatar">
+                                  <!-- Vector School Bus Icon -->
+                                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="3" y="3" width="18" height="15" rx="3" fill="#FEF3C7"/>
+                                    <path d="M3 9h18"/>
+                                    <circle cx="7" cy="18" r="2"/>
+                                    <circle cx="17" cy="18" r="2"/>
+                                  </svg>
+                                </div>
+                                <div class="bus-eta-details">
+                                  <div class="bus-eta-header">
+                                    <span class="bus-eta-pill">On Schedule</span>
+                                    <span class="bus-eta-eta">7 min away</span>
+                                  </div>
+                                  <div class="bus-eta-title">Next: Viman Nagar Stop (1.4 km)</div>
+                                  <div class="bus-driver">Driver: Rajesh Shinde &#8226; MH-12-Q-4521</div>
+                                </div>
+                                <a href="tel:+917204726501" class="bus-call-btn" aria-label="Call Driver">
+                                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                  </svg>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+        
+                          <!-- Screen 4: Notices -->
+                          <div class="phone-screen screen-notices" id="screen-4" role="tabpanel" aria-labelledby="tab-4">
+                            <div style="height:100%;background:#f6f4ef;padding:10px;overflow-y:auto;">
+                              <div class="notices-title">School Notices</div>
+        
+                              <div class="notice-card">
+                                <div class="notice-tag">Academic</div>
+                                <div class="notice-text">Annual Day rehearsals begin from Monday. All students of Class IX and X are required to report to the assembly hall at 7:30 AM.</div>
+                                <div class="notice-date">21 Oct 2026</div>
+                              </div>
+                              <div class="notice-card">
+                                <div class="notice-tag">Examination</div>
+                                <div class="notice-text">Unit Test 2 for Mathematics and Science will be held on 28th October 2026. Syllabus: Ch. 5&ndash;8.</div>
+                                <div class="notice-date">19 Oct 2026</div>
+                              </div>
+                              <div class="notice-card">
+                                <div class="notice-tag">Holiday</div>
+                                <div class="notice-text">School will remain closed on 24th October on account of Diwali. Classes resume on 27th October.</div>
+                                <div class="notice-date">18 Oct 2026</div>
+                              </div>
+                            </div>
+                          </div>
+        
+                        </div><!-- /phone-screen-wrap -->
+        
+                        <!-- Bottom Tab Bar -->
+                        <div class="phone-tab-bar" role="tablist" aria-label="App navigation">
+                          <!-- Sliding saffron indicator -->
+                          <div class="tab-indicator" id="tabIndicator" style="transform: translateX(100%);" aria-hidden="true"></div>
+        
+                          <button class="phone-tab-btn" id="tab-0" role="tab" aria-selected="false" aria-controls="screen-0" type="button">
+                            <svg class="icon icon-sm"><use href="#icon-book"></use></svg>
+                            Home
+                          </button>
+                          <button class="phone-tab-btn active" id="tab-1" role="tab" aria-selected="true" aria-controls="screen-1" type="button">
+                            <svg class="icon icon-sm"><use href="#icon-calendar"></use></svg>
+                            Attend.
+                          </button>
+                          <button class="phone-tab-btn" id="tab-2" role="tab" aria-selected="false" aria-controls="screen-2" type="button">
+                            <svg class="icon icon-sm"><use href="#icon-video"></use></svg>
+                            Videos
+                          </button>
+                          <button class="phone-tab-btn" id="tab-3" role="tab" aria-selected="false" aria-controls="screen-3" type="button">
+                            <svg class="icon icon-sm"><use href="#icon-bus"></use></svg>
+                            Bus
+                          </button>
+                          <button class="phone-tab-btn" id="tab-4" role="tab" aria-selected="false" aria-controls="screen-4" type="button">
+                            <svg class="icon icon-sm"><use href="#icon-bell"></use></svg>
+                            Notices
+                          </button>
+                        </div>
+        
+                        <!-- Gesture bar -->
+                        <div class="phone-gesture-bar" aria-hidden="true">
+                          <div class="gesture-pill"></div>
+                        </div>
+        
+                      </div><!-- /phone-screen-inner -->
+                    </div><!-- /phone-frame -->
+                  </div><!-- /phone-device -->
+                </div><!-- /sm-phone-stage -->
+        
+                <!-- d) DIRECTLY below the phone: Google Play notice & Notify me button -->
+                <div class="app-play-notice" style="max-width: 520px; margin: clamp(24px, 4vw, 36px) auto clamp(48px, 6vw, 72px);" aria-label="Schoolmate app availability">
+                  <div class="app-play-badge">
+                    <svg class="gp-logo" viewBox="0 0 512 512" width="24" height="24" aria-hidden="true">
+                      <path fill="#00D6FF" d="M38.8 14.2c-5.8 6.1-9.3 15.6-9.3 27.6v428.4c0 12 3.5 21.5 9.3 27.6l1.4 1.4L264.4 275v-3.7L40.2 12.8l-1.4 1.4z"/>
+                      <path fill="#FFC900" d="M340.5 351.1l-76.1-76.1V271.3l76.1-76.1 1.7 1 89.9 51.1c25.7 14.6 25.7 38.5 0 53.1l-89.9 51.1-1.7-.4z"/>
+                      <path fill="#FF3A44" d="M342.2 350.7L264.4 273 40.2 497.2c8.5 9 22.4 10.1 38 1.3l264-147.8z"/>
+                      <path fill="#00F076" d="M342.2 161.3L78.2 13.5C62.6 4.7 48.7 5.8 40.2 14.8L264.4 239l77.8-77.7z"/>
+                    </svg>
+                    <div>
+                      <div class="app-play-name">Schoolmate</div>
+                      <div class="app-play-sub">Coming soon on Google Play</div>
+                    </div>
+                  </div>
+                  <div class="app-play-divider" aria-hidden="true"></div>
+                  <a href="https://wa.me/917204726501?text=Hi%2C%20please%20notify%20me%20when%20the%20Schoolmate%20app%20launches%20on%20Google%20Play" class="app-notify-btn" aria-label="Get notified about Schoolmate app launch">
+                    <svg class="notify-bell-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                      <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                    </svg>
+                    <span>Notify me</span>
+                  </a>
+                </div>
+        
+                <!-- e) Schoolmate ERP Mockup -->
+                <div class="sm-erp-wrap" id="erpShowcase">
+                  <h3 class="sm-erp-heading">ERP for school management, finance, staff, payroll and more</h3>
+        
+                  <!-- Scaled Laptop/Monitor Mockup -->
+                  <div class="erp-mockup-host reveal" aria-label="Schoolmate ERP interface demo">
+                    <div class="erp-mockup-scaler">
+                      <div class="erp-mockup-canvas" id="erpCanvas">
+                        <!-- PC Desktop Cursor -->
+                        <div class="erp-pc-cursor" id="erpPcCursor" aria-hidden="true">
+                          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                            <path d="M4 3L11 20L13.8 13.5L20.5 11L4 3Z" fill="#0A2A5E" stroke="#FFFFFF" stroke-width="1.8" stroke-linejoin="round"/>
+                          </svg>
+                          <div class="erp-cursor-ripple"></div>
+                        </div>
+        
+                        <!-- Browser bar -->
+                        <div class="erp-browser-bar">
+                          <div class="erp-traffic-dots" aria-hidden="true">
+                            <div class="erp-dot erp-dot-red"></div>
+                            <div class="erp-dot erp-dot-amber"></div>
+                            <div class="erp-dot erp-dot-green"></div>
+                          </div>
+                          <div class="erp-url-field" aria-label="Browser address bar">
+                            <svg class="erp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                            <span class="erp-url-text">schoolmate.opensoftwares.in/erp-admin</span>
+                          </div>
+                        </div>
+        
+                        <!-- ERP body -->
+                        <div class="erp-body">
+        
+                          <!-- Sidebar -->
+                          <nav class="erp-sidebar" aria-label="ERP Modules">
+                            <div class="erp-sidebar-logo">
+                              <img src="/assets/brand/logo-transparent.png" 
+                                   srcset="/assets/brand/logo-transparent-32.png 1x, /assets/brand/logo-transparent-72.png 2x" 
+                                   width="26" height="26" 
+                                   alt="OpenSoftwares Pvt. Ltd. logo" 
+                                   class="brand-logo-img brand-logo-darkmode">
+                              <div class="erp-sidebar-logo-text">Schoolmate ERP</div>
+                            </div>
+                            <button class="erp-module-btn active" data-erp-panel="erpDashboard" aria-selected="true" type="button">
+                              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+                              Dashboard
+                            </button>
+                            <button class="erp-module-btn" data-erp-panel="erpStudents" aria-selected="false" type="button">
+                              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                              Students
+                            </button>
+                            <button class="erp-module-btn" data-erp-panel="erpStaff" aria-selected="false" type="button">
+                              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                              Staff
+                            </button>
+                            <button class="erp-module-btn" data-erp-panel="erpPayroll" aria-selected="false" type="button">
+                              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/></svg>
+                              Payroll
+                            </button>
+                            <button class="erp-module-btn" data-erp-panel="erpTimetable" aria-selected="false" type="button">
+                              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                              Timetable
+                            </button>
+                            <button class="erp-module-btn" data-erp-panel="erpExams" aria-selected="false" type="button">
+                              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                              Exams
+                            </button>
+                            <button class="erp-module-btn" data-erp-panel="erpFees" aria-selected="false" type="button">
+                              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                              Fees &amp; Accounts
+                            </button>
+                            <button class="erp-module-btn" data-erp-panel="erpTransport" aria-selected="false" type="button">
+                              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 6v6M15 6v6M2 12h20M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"/><circle cx="7" cy="18" r="1"/><circle cx="17" cy="18" r="1"/></svg>
+                              Transport
+                            </button>
+                            <button class="erp-module-btn" data-erp-panel="erpReports" aria-selected="false" type="button">
+                              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg>
+                              Reports
+                            </button>
+                          </nav>
+        
+                          <!-- ERP Panel -->
+                          <div class="erp-panel" role="main">
+        
+                            <!-- Dashboard Panel -->
+                            <div class="erp-panel-view active" id="erpDashboard" role="tabpanel">
+                              <div class="erp-panel-header">
+                                <div class="erp-panel-title">Dashboard</div>
+                                <div class="erp-panel-date">Oct 22, 2026</div>
+                              </div>
+                              <div class="erp-kpi-row">
+                                <div class="erp-kpi-card">
+                                  <div class="erp-kpi-label">Total Students</div>
+                                  <div class="erp-kpi-value" data-target="1248" data-suffix="">1,248</div>
+                                  <div class="erp-kpi-trend">+48 this month</div>
+                                </div>
+                                <div class="erp-kpi-card">
+                                  <div class="erp-kpi-label">Attendance Today</div>
+                                  <div class="erp-kpi-value">94.2%</div>
+                                  <div class="erp-kpi-trend">+1.3% vs yesterday</div>
+                                </div>
+                                <div class="erp-kpi-card">
+                                  <div class="erp-kpi-label">Fees Collected</div>
+                                  <div class="erp-kpi-value">&#8377;12.4L</div>
+                                  <div class="erp-kpi-trend">82% of October target</div>
+                                </div>
+                                <div class="erp-kpi-card">
+                                  <div class="erp-kpi-label">Staff Present</div>
+                                  <div class="erp-kpi-value">68/72</div>
+                                  <div class="erp-kpi-trend">4 on leave</div>
+                                </div>
+                              </div>
+                              <div class="erp-chart-area">
+                                <div class="erp-chart-title">Monthly Fee Collection &mdash; Oct 2026</div>
+                                <svg class="erp-chart-svg" viewBox="0 0 780 120" preserveAspectRatio="none">
+                                  <path class="erp-chart-area-fill" d="M0,110 L65,80 L130,90 L195,55 L260,70 L325,40 L390,55 L455,30 L520,45 L585,20 L650,35 L715,15 L780,25 L780,120 L0,120 Z"/>
+                                  <path class="erp-chart-line" d="M0,110 L65,80 L130,90 L195,55 L260,70 L325,40 L390,55 L455,30 L520,45 L585,20 L650,35 L715,15 L780,25"/>
+                                  <circle cx="780" cy="25" r="3" fill="#E8A317"/>
+                                </svg>
+                              </div>
+                            </div>
+        
+                            <!-- Students Panel -->
+                            <div class="erp-panel-view" id="erpStudents" role="tabpanel">
+                              <div class="erp-panel-header">
+                                <div class="erp-panel-title">Students</div>
+                                <div class="erp-panel-date">1,248 enrolled</div>
+                              </div>
+                              <table class="erp-table">
+                                <thead>
+                                  <tr>
+                                    <th>Name</th><th>Class</th><th>Roll</th><th>Attendance</th><th>Status</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr><td>Aanya Agarwal</td><td>X-B</td><td>14</td><td>94.2%</td><td><span class="erp-badge erp-badge-present">Present</span></td></tr>
+                                  <tr><td>Rohan Mehta</td><td>X-B</td><td>22</td><td>88.1%</td><td><span class="erp-badge erp-badge-present">Present</span></td></tr>
+                                  <tr><td>Priya Desai</td><td>X-A</td><td>7</td><td>91.5%</td><td><span class="erp-badge erp-badge-absent">Absent</span></td></tr>
+                                  <tr><td>Karan Joshi</td><td>IX-C</td><td>31</td><td>97.0%</td><td><span class="erp-badge erp-badge-present">Present</span></td></tr>
+                                  <tr><td>Sneha Patil</td><td>IX-A</td><td>11</td><td>82.4%</td><td><span class="erp-badge erp-badge-present">Present</span></td></tr>
+                                  <tr><td>Amit Kulkarni</td><td>VIII-B</td><td>5</td><td>95.8%</td><td><span class="erp-badge erp-badge-absent">Absent</span></td></tr>
+                                </tbody>
+                              </table>
+                            </div>
+        
+                            <!-- Staff Panel -->
+                            <div class="erp-panel-view" id="erpStaff" role="tabpanel">
+                              <div class="erp-panel-header">
+                                <div class="erp-panel-title">Staff &amp; HR</div>
+                                <div class="erp-panel-date">72 staff members</div>
+                              </div>
+                              <table class="erp-table">
+                                <thead>
+                                  <tr><th>Name</th><th>Designation</th><th>Dept.</th><th>Biometric</th><th>Status</th></tr>
+                                </thead>
+                                <tbody>
+                                  <tr><td>Mrs. Sharma</td><td>Principal</td><td>Admin</td><td>08:12 AM</td><td><span class="erp-badge erp-badge-present">Present</span></td></tr>
+                                  <tr><td>Mr. Patil</td><td>Mathematics</td><td>Academics</td><td>08:24 AM</td><td><span class="erp-badge erp-badge-present">Present</span></td></tr>
+                                  <tr><td>Ms. Kulkarni</td><td>Science</td><td>Academics</td><td>&mdash;</td><td><span class="erp-badge erp-badge-absent">Leave</span></td></tr>
+                                  <tr><td>Mr. Khan</td><td>Driver &mdash; Bus 03</td><td>Transport</td><td>07:45 AM</td><td><span class="erp-badge erp-badge-present">Present</span></td></tr>
+                                  <tr><td>Mrs. Joshi</td><td>Accountant</td><td>Finance</td><td>08:35 AM</td><td><span class="erp-badge erp-badge-present">Present</span></td></tr>
+                                </tbody>
+                              </table>
+                            </div>
+        
+                            <!-- Payroll Panel -->
+                            <div class="erp-panel-view" id="erpPayroll" role="tabpanel">
+                              <div class="erp-panel-header">
+                                <div class="erp-panel-title">Payroll &amp; Salaries</div>
+                                <div class="erp-panel-date">October 2026</div>
+                              </div>
+                              <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+                                <div class="erp-kpi-card"><div class="erp-kpi-label">Gross Payroll</div><div class="erp-kpi-value">&#8377;8.4L</div><div class="erp-kpi-trend">72 employees</div></div>
+                                <div class="erp-kpi-card"><div class="erp-kpi-label">PT Deductions</div><div class="erp-kpi-value">&#8377;21,600</div><div class="erp-kpi-trend">Maharashtra PT compliant</div></div>
+                              </div>
+                              <table class="erp-table">
+                                <thead><tr><th>Employee</th><th>Basic</th><th>HRA</th><th>PT</th><th>Net Pay</th></tr></thead>
+                                <tbody>
+                                  <tr><td>Mrs. Sharma</td><td>&#8377;55,000</td><td>&#8377;22,000</td><td>&#8377;200</td><td>&#8377;76,800</td></tr>
+                                  <tr><td>Mr. Patil</td><td>&#8377;38,000</td><td>&#8377;15,200</td><td>&#8377;200</td><td>&#8377;53,000</td></tr>
+                                  <tr><td>Ms. Kulkarni</td><td>&#8377;36,000</td><td>&#8377;14,400</td><td>&#8377;200</td><td>&#8377;50,200</td></tr>
+                                  <tr><td>Mr. Khan</td><td>&#8377;22,000</td><td>&#8377;8,800</td><td>&#8377;175</td><td>&#8377;30,625</td></tr>
+                                </tbody>
+                              </table>
+                            </div>
+        
+                            <!-- Timetable Panel -->
+                            <div class="erp-panel-view" id="erpTimetable" role="tabpanel">
+                              <div class="erp-panel-header">
+                                <div class="erp-panel-title">Timetable &mdash; Class X-B</div>
+                              </div>
+                              <div class="erp-timetable">
+                                <div class="erp-tt-header">
+                                  <div></div>
+                                  <div class="erp-tt-daylabel">Mon</div>
+                                  <div class="erp-tt-daylabel">Tue</div>
+                                  <div class="erp-tt-daylabel">Wed</div>
+                                  <div class="erp-tt-daylabel">Thu</div>
+                                  <div class="erp-tt-daylabel">Fri</div>
+                                </div>
+                                <div class="erp-tt-row">
+                                  <div class="erp-tt-time">07:30</div>
+                                  <div class="erp-tt-cell math">Maths</div>
+                                  <div class="erp-tt-cell sci">Science</div>
+                                  <div class="erp-tt-cell eng">English</div>
+                                  <div class="erp-tt-cell math">Maths</div>
+                                  <div class="erp-tt-cell sci">Science</div>
+                                </div>
+                                <div class="erp-tt-row">
+                                  <div class="erp-tt-time">08:30</div>
+                                  <div class="erp-tt-cell eng">English</div>
+                                  <div class="erp-tt-cell math">Maths</div>
+                                  <div class="erp-tt-cell sci">Science</div>
+                                  <div class="erp-tt-cell eng">English</div>
+                                  <div class="erp-tt-cell math">Maths</div>
+                                </div>
+                                <div class="erp-tt-row">
+                                  <div class="erp-tt-time">09:30</div>
+                                  <div class="erp-tt-cell sci">Science</div>
+                                  <div class="erp-tt-cell eng">English</div>
+                                  <div class="erp-tt-cell math">Maths</div>
+                                  <div class="erp-tt-cell sci">Science</div>
+                                  <div class="erp-tt-cell eng">English</div>
+                                </div>
+                                <div class="erp-tt-row">
+                                  <div class="erp-tt-time">10:30</div>
+                                  <div class="erp-tt-cell" style="background:rgba(255,255,255,0.03);color:rgba(255,255,255,0.3);font-style:italic;">Break</div>
+                                  <div class="erp-tt-cell" style="background:rgba(255,255,255,0.03);color:rgba(255,255,255,0.3);font-style:italic;">Break</div>
+                                  <div class="erp-tt-cell" style="background:rgba(255,255,255,0.03);color:rgba(255,255,255,0.3);font-style:italic;">Break</div>
+                                  <div class="erp-tt-cell" style="background:rgba(255,255,255,0.03);color:rgba(255,255,255,0.3);font-style:italic;">Break</div>
+                                  <div class="erp-tt-cell" style="background:rgba(255,255,255,0.03);color:rgba(255,255,255,0.3);font-style:italic;">Break</div>
+                                </div>
+                                <div class="erp-tt-row">
+                                  <div class="erp-tt-time">11:00</div>
+                                  <div class="erp-tt-cell math">Maths</div>
+                                  <div class="erp-tt-cell sci">Science</div>
+                                  <div class="erp-tt-cell eng">English</div>
+                                  <div class="erp-tt-cell math">Maths</div>
+                                  <div class="erp-tt-cell">Social Sc.</div>
+                                </div>
+                              </div>
+                            </div>
+        
+                            <!-- Exams Panel -->
+                            <div class="erp-panel-view" id="erpExams" role="tabpanel">
+                              <div class="erp-panel-header">
+                                <div class="erp-panel-title">Exams &amp; Results</div>
+                              </div>
+                              <table class="erp-table">
+                                <thead><tr><th>Subject</th><th>Max</th><th>Class Avg</th><th>Pass%</th></tr></thead>
+                                <tbody>
+                                  <tr><td>Mathematics</td><td>100</td><td>72.4</td><td>94.2%</td></tr>
+                                  <tr><td>Science</td><td>100</td><td>68.8</td><td>91.7%</td></tr>
+                                  <tr><td>English</td><td>100</td><td>76.1</td><td>97.3%</td></tr>
+                                  <tr><td>Social Science</td><td>100</td><td>80.2</td><td>98.9%</td></tr>
+                                  <tr><td>Hindi</td><td>100</td><td>74.5</td><td>96.1%</td></tr>
+                                </tbody>
+                              </table>
+                            </div>
+        
+                            <!-- Fees Panel -->
+                            <div class="erp-panel-view" id="erpFees" role="tabpanel">
+                              <div class="erp-panel-header">
+                                <div class="erp-panel-title">Fees &amp; Accounts</div>
+                                <div class="erp-panel-date">Oct 2026</div>
+                              </div>
+                              <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
+                                <div class="erp-kpi-card"><div class="erp-kpi-label">Collected</div><div class="erp-kpi-value">&#8377;12.4L</div><div class="erp-kpi-trend">82% of target</div></div>
+                                <div class="erp-kpi-card"><div class="erp-kpi-label">Pending</div><div class="erp-kpi-value">&#8377;2.7L</div><div class="erp-kpi-trend">Reminders sent</div></div>
+                                <div class="erp-kpi-card"><div class="erp-kpi-label">Defaulters</div><div class="erp-kpi-value">47</div><div class="erp-kpi-trend">Students</div></div>
+                              </div>
+                              <div class="erp-chart-area" style="flex:1;">
+                                <div class="erp-chart-title">Daily Collection &mdash; Oct 2026</div>
+                                <svg class="erp-chart-svg" viewBox="0 0 780 100" preserveAspectRatio="none">
+                                  <path class="erp-chart-area-fill" d="M0,90 L45,60 L90,75 L135,40 L180,55 L225,25 L270,45 L315,20 L360,35 L405,15 L450,30 L495,10 L540,25 L585,8 L630,20 L675,12 L720,18 L780,15 L780,100 L0,100 Z"/>
+                                  <path class="erp-chart-line" d="M0,90 L45,60 L90,75 L135,40 L180,55 L225,25 L270,45 L315,20 L360,35 L405,15 L450,30 L495,10 L540,25 L585,8 L630,20 L675,12 L720,18 L780,15"/>
+                                </svg>
+                              </div>
+                            </div>
+        
+                            <!-- Transport Panel -->
+                            <div class="erp-panel-view" id="erpTransport" role="tabpanel">
+                              <div class="erp-panel-header">
+                                <div class="erp-panel-title">Transport Management</div>
+                              </div>
+                              <table class="erp-table">
+                                <thead><tr><th>Bus No.</th><th>Driver</th><th>Route</th><th>Students</th><th>Status</th></tr></thead>
+                                <tbody>
+                                  <tr><td>Bus 01</td><td>Mahesh P.</td><td>Wakad &mdash; School</td><td>42</td><td><span class="erp-badge erp-badge-present">Active</span></td></tr>
+                                  <tr><td>Bus 02</td><td>Sanjay K.</td><td>Baner &mdash; School</td><td>38</td><td><span class="erp-badge erp-badge-present">Active</span></td></tr>
+                                  <tr><td>Bus 03</td><td>Rajesh S.</td><td>Kharadi &mdash; School</td><td>45</td><td><span class="erp-badge erp-badge-present">Active</span></td></tr>
+                                  <tr><td>Bus 04</td><td>Vinod M.</td><td>Hadapsar &mdash; School</td><td>29</td><td><span class="erp-badge erp-badge-absent">Maintenance</span></td></tr>
+                                </tbody>
+                              </table>
+                            </div>
+        
+                            <!-- Reports Panel -->
+                            <div class="erp-panel-view" id="erpReports" role="tabpanel">
+                              <div class="erp-panel-header">
+                                <div class="erp-panel-title">Reports</div>
+                              </div>
+                              <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+                                <div class="erp-kpi-card" style="cursor:pointer;"><div class="erp-kpi-label">Report Type</div><div style="color:#fff;font-size:13px;font-weight:600;margin-top:6px;">Attendance Summary</div></div>
+                                <div class="erp-kpi-card" style="cursor:pointer;"><div class="erp-kpi-label">Report Type</div><div style="color:#fff;font-size:13px;font-weight:600;margin-top:6px;">Fee Collection Report</div></div>
+                                <div class="erp-kpi-card" style="cursor:pointer;"><div class="erp-kpi-label">Report Type</div><div style="color:#fff;font-size:13px;font-weight:600;margin-top:6px;">Payroll Statement</div></div>
+                                <div class="erp-kpi-card" style="cursor:pointer;"><div class="erp-kpi-label">Report Type</div><div style="color:#fff;font-size:13px;font-weight:600;margin-top:6px;">CBSE Report Cards</div></div>
+                                <div class="erp-kpi-card" style="cursor:pointer;"><div class="erp-kpi-label">Report Type</div><div style="color:#fff;font-size:13px;font-weight:600;margin-top:6px;">Bus Route Report</div></div>
+                                <div class="erp-kpi-card" style="cursor:pointer;"><div class="erp-kpi-label">Report Type</div><div style="color:#fff;font-size:13px;font-weight:600;margin-top:6px;">Exam Results Export</div></div>
+                              </div>
+                            </div>
+        
+                          </div><!-- /erp-panel -->
+        
+                        </div><!-- /erp-body -->
+                      </div><!-- /erp-mockup-canvas -->
+                    </div><!-- /erp-mockup-scaler -->
+                  </div><!-- /erp-mockup-host -->
+        
+                  <!-- ERP Capabilities list below mockup -->
+                  <div class="erp-capabilities reveal">
+                    <div class="erp-cap-item">
+                      <span class="erp-cap-num">01</span>
+                      <div class="erp-cap-text">
+                        <h4>Biometric Attendance &amp; RFID</h4>
+                        <p>Automated student and staff punch-in with real-time alerts to parents and admin.</p>
+                      </div>
+                    </div>
+                    <div class="erp-cap-item">
+                      <span class="erp-cap-num">02</span>
+                      <div class="erp-cap-text">
+                        <h4>Maharashtra PT/PF Compliant Payroll</h4>
+                        <p>Fully automated salary slips, PT deductions and compliance with state labour norms.</p>
+                      </div>
+                    </div>
+                    <div class="erp-cap-item">
+                      <span class="erp-cap-num">03</span>
+                      <div class="erp-cap-text">
+                        <h4>Conflict-Free Timetable Generation</h4>
+                        <p>AI-assisted scheduling that avoids teacher clashes and room conflicts across branches.</p>
+                      </div>
+                    </div>
+                    <div class="erp-cap-item">
+                      <span class="erp-cap-num">04</span>
+                      <div class="erp-cap-text">
+                        <h4>CBSE &amp; State Board Report Cards</h4>
+                        <p>Automated report card generation, co-scholastic grading and digital marksheets.</p>
+                      </div>
+                    </div>
+                    <div class="erp-cap-item">
+                      <span class="erp-cap-num">05</span>
+                      <div class="erp-cap-text">
+                        <h4>Automated Fee Collection &amp; Ledger</h4>
+                        <p>UPI-linked instant receipts, defaulter reminders and a complete accounts ledger.</p>
+                      </div>
+                    </div>
+                    <div class="erp-cap-item">
+                      <span class="erp-cap-num">06</span>
+                      <div class="erp-cap-text">
+                        <h4>Multi-Branch &amp; Cloud Reports</h4>
+                        <p>Centralised visibility across all branches, campuses and divisions in a single login.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- /sm-erp-wrap -->
+        
+                <!-- f) AFTER the ERP: 3-Slide Image Slider -->
+                <div class="sm-slider-container" style="margin-top: clamp(48px, 7vw, 80px);">
+                  <div class="hero-slider-card" aria-label="Schoolmate product showcase slides">
+                    <div class="slider-inner" id="heroSlider">
+                      <!-- Slide 1: Parents -->
+                      <div class="slide-item active">
+                        <img src="assets/slider-parents.svg" alt="Empowering parents, every day" width="600" height="600" loading="eager">
+                        <div class="slide-caption">
+                          <div class="slide-title-text">Empowering parents, every day</div>
+                        </div>
+                      </div>
+                      <!-- Slide 2: Bus -->
+                      <div class="slide-item">
+                        <img src="assets/slider-bus.svg" alt="Real-time school bus tracking" width="600" height="600" loading="lazy">
+                        <div class="slide-caption">
+                          <div class="slide-title-text">Real-time school bus tracking</div>
+                        </div>
+                      </div>
+                      <!-- Slide 3: Classroom / Video -->
+                      <div class="slide-item">
+                        <img src="assets/slider-classroom.svg" alt="Future-ready video learning" width="600" height="600" loading="lazy">
+                        <div class="slide-caption">
+                          <div class="slide-title-text">Future-ready video learning</div>
+                        </div>
+                      </div>
+                      <!-- Progress bar -->
+                      <div class="slider-progress-bar" aria-hidden="true"></div>
+                    </div>
+                    <button class="slider-arrow slider-arrow-prev" type="button" aria-label="Previous slide">
+                      <svg class="icon"><use href="#icon-chevron-left"></use></svg>
+                    </button>
+                    <button class="slider-arrow slider-arrow-next" type="button" aria-label="Next slide">
+                      <svg class="icon"><use href="#icon-chevron-right"></use></svg>
+                    </button>
+                  </div>
+                </div>
+        
+                <!-- g) AT THE VERY END: Slim "More products coming soon" row -->
+                <div class="sm-more-products-row">
+                  <div class="sm-more-products-label">More products coming soon</div>
+                  <div class="sm-more-products-grid">
+                    <a href="#real-estate" class="product-slot-outlined" data-tab-switch="real-estate" role="button" aria-label="Switch to Real Estate platform preview">
+                      <div>
+                        <div class="slot-name">Real Estate Platform</div>
+                        <div class="slot-tag">Properties, leads &amp; bookings</div>
+                      </div>
+                      <span class="slot-tag">Coming soon &rarr;</span>
+                    </a>
+                    <a href="#manufacturing" class="product-slot-outlined" data-tab-switch="manufacturing" role="button" aria-label="Switch to Manufacturing ERP preview">
+                      <div>
+                        <div class="slot-name">Manufacturing ERP</div>
+                        <div class="slot-tag">Production, inventory &amp; orders</div>
+                      </div>
+                      <span class="slot-tag">Coming soon &rarr;</span>
+                    </a>
+                  </div>
+                </div>
 
       </section>
 
@@ -395,8 +1167,44 @@
           
           <!-- Line-art Building Illustration that draws itself -->
           <div class="coming-soon-art-wrap" aria-hidden="true">
-            <svg class="coming-soon-svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path class="art-self-draw" d="M15 90 L85 90 M25 90 L25 25 L65 25 L65 90 M65 45 L85 45 L85 90 M35 38 H45 M53 38 H57 M35 52 H45 M53 52 H57 M35 66 H45 M53 66 H57 M72 58 H78 M72 72 H78 M42 90 V78 H48 V90"/>
+            <svg class="coming-soon-svg" viewBox="0 0 240 200" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <!-- Ground line -->
+              <line x1="10" y1="175" x2="230" y2="175"/>
+              <!-- Tower 1 (tallest, centre) -->
+              <rect class="art-self-draw" x="90" y="45" width="40" height="130"/>
+              <line x1="90" y1="45" x2="110" y2="30"/><line x1="130" y1="45" x2="110" y2="30"/>
+              <rect x="97" y="60" width="10" height="12" rx="1"/><rect x="113" y="60" width="10" height="12" rx="1"/>
+              <rect x="97" y="82" width="10" height="12" rx="1"/><rect x="113" y="82" width="10" height="12" rx="1"/>
+              <rect x="97" y="104" width="10" height="12" rx="1"/><rect x="113" y="104" width="10" height="12" rx="1"/>
+              <rect x="97" y="126" width="10" height="12" rx="1"/><rect x="113" y="126" width="10" height="12" rx="1"/>
+              <rect x="104" y="155" width="12" height="20" rx="1"/>
+              <!-- Tower 2 (left, medium) -->
+              <rect class="art-self-draw" x="42" y="70" width="34" height="105"/>
+              <line x1="42" y1="70" x2="59" y2="56"/><line x1="76" y1="70" x2="59" y2="56"/>
+              <rect x="49" y="84" width="8" height="10" rx="1"/><rect x="61" y="84" width="8" height="10" rx="1"/>
+              <rect x="49" y="104" width="8" height="10" rx="1"/><rect x="61" y="104" width="8" height="10" rx="1"/>
+              <rect x="49" y="124" width="8" height="10" rx="1"/><rect x="61" y="124" width="8" height="10" rx="1"/>
+              <rect x="53" y="155" width="12" height="20" rx="1"/>
+              <!-- Tower 3 (right, short) -->
+              <rect class="art-self-draw" x="148" y="90" width="28" height="85"/>
+              <line x1="148" y1="90" x2="162" y2="78"/><line x1="176" y1="90" x2="162" y2="78"/>
+              <rect x="154" y="100" width="7" height="9" rx="1"/><rect x="164" y="100" width="7" height="9" rx="1"/>
+              <rect x="154" y="118" width="7" height="9" rx="1"/><rect x="164" y="118" width="7" height="9" rx="1"/>
+              <rect x="154" y="136" width="7" height="9" rx="1"/><rect x="164" y="136" width="7" height="9" rx="1"/>
+              <rect x="156" y="155" width="12" height="20" rx="1"/>
+              <!-- House (right side) -->
+              <polyline class="art-self-draw" points="190,175 190,140 210,125 230,140 230,175"/>
+              <rect x="198" y="150" width="10" height="16" rx="1"/>
+              <rect x="204" y="128" width="4" height="4" rx="1"/>
+              <!-- Crane (far left) -->
+              <line x1="20" y1="175" x2="20" y2="50"/>
+              <line x1="20" y1="55" x2="60" y2="55"/>
+              <line x1="20" y1="55" x2="14" y2="70"/>
+              <line x1="60" y1="55" x2="60" y2="65"/>
+              <!-- Map pin -->
+              <circle cx="205" cy="42" r="8"/>
+              <circle cx="205" cy="42" r="3"/>
+              <line x1="205" y1="50" x2="205" y2="58"/>
             </svg>
           </div>
 
@@ -435,8 +1243,56 @@
           
           <!-- Line-art Factory/Gear Illustration that draws itself -->
           <div class="coming-soon-art-wrap" aria-hidden="true">
-            <svg class="coming-soon-svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path class="art-self-draw" d="M15 90 L85 90 M20 90 L20 50 L40 65 L40 50 L60 65 L60 30 L80 30 L80 90 M67 30 L67 18 L73 18 L73 30 M30 72 H34 M50 72 H54 M70 45 H74 M70 58 H74 M70 72 H74"/>
+            <svg class="coming-soon-svg" viewBox="0 0 240 200" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <!-- Ground line -->
+              <line x1="10" y1="175" x2="230" y2="175"/>
+              <!-- Factory main building -->
+              <rect class="art-self-draw" x="60" y="95" width="110" height="80"/>
+              <!-- Factory roof with stepped silhouette -->
+              <polyline class="art-self-draw" points="60,95 60,75 90,75 90,60 120,60 120,75 170,75 170,95"/>
+              <!-- Chimney 1 -->
+              <rect class="art-self-draw" x="72" y="38" width="14" height="38"/>
+              <polyline points="68,38 86,38"/>
+              <!-- Chimney 2 -->
+              <rect class="art-self-draw" x="100" y="25" width="12" height="35"/>
+              <polyline points="96,25 116,25"/>
+              <!-- Factory windows -->
+              <rect x="70" y="108" width="14" height="14" rx="1"/>
+              <rect x="92" y="108" width="14" height="14" rx="1"/>
+              <rect x="114" y="108" width="14" height="14" rx="1"/>
+              <rect x="136" y="108" width="14" height="14" rx="1"/>
+              <!-- Door -->
+              <rect x="102" y="143" width="18" height="32" rx="2"/>
+              <!-- Main Gear (large) -->
+              <circle cx="200" cy="130" r="22"/>
+              <circle cx="200" cy="130" r="14"/>
+              <!-- Gear teeth (8-tooth) -->
+              <rect x="197" y="105" width="6" height="7" rx="1"/>
+              <rect x="197" y="148" width="6" height="7" rx="1"/>
+              <rect x="175" y="127" width="7" height="6" rx="1"/>
+              <rect x="218" y="127" width="7" height="6" rx="1"/>
+              <rect x="181" y="111" width="6" height="7" rx="1" transform="rotate(-45 184 114)"/>
+              <rect x="213" y="111" width="6" height="7" rx="1" transform="rotate(45 216 114)"/>
+              <rect x="181" y="143" width="6" height="7" rx="1" transform="rotate(45 184 146)"/>
+              <rect x="213" y="143" width="6" height="7" rx="1" transform="rotate(-45 216 146)"/>
+              <!-- Small meshing gear -->
+              <circle cx="182" cy="97" r="12"/>
+              <circle cx="182" cy="97" r="7"/>
+              <!-- Conveyor belt -->
+              <rect class="art-self-draw" x="18" y="150" width="50" height="10" rx="5"/>
+              <ellipse cx="18" cy="155" rx="5" ry="5"/>
+              <ellipse cx="68" cy="155" rx="5" ry="5"/>
+              <!-- Boxes on conveyor -->
+              <rect x="22" y="141" width="9" height="9" rx="1"/>
+              <rect x="35" y="141" width="9" height="9" rx="1"/>
+              <rect x="48" y="141" width="9" height="9" rx="1"/>
+              <!-- Robotic arm -->
+              <line x1="30" y1="175" x2="30" y2="155"/>
+              <line x1="30" y1="155" x2="50" y2="140"/>
+              <line x1="50" y1="140" x2="55" y2="130"/>
+              <circle cx="30" cy="175" r="3"/>
+              <circle cx="30" cy="155" r="2"/>
+              <circle cx="50" cy="140" r="2"/>
             </svg>
           </div>
 
@@ -559,6 +1415,7 @@
 
   <!-- Scripts -->
   <script src="/js/main.js?v=3.0" defer></script>
+  <script src="/js/home.js?v=2.6" defer></script>
   
   <!-- Products Page Segmented Control & Tab Switcher Script -->
   <script>
@@ -614,6 +1471,11 @@
             window.location.hash = tabKey;
           }
         }
+
+        // Notify other components (like home.js) of active panel
+        try {
+          window.dispatchEvent(new CustomEvent('industryTabChange', { detail: { tab: tabKey } }));
+        } catch (e) {}
       }
 
       tabs.forEach((btn, idx) => {

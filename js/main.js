@@ -192,7 +192,7 @@
         }
       });
 
-      const minAnimationTime = isReducedMotion ? 400 : 2300;
+      const minAnimationTime = isReducedMotion ? 400 : 1700;
       const startTime = Date.now();
 
       function scheduleDismiss() {
@@ -205,25 +205,47 @@
         scheduleDismiss();
       } else {
         window.addEventListener('load', scheduleDismiss);
-        setTimeout(dismissSplash, 2800);
+        setTimeout(dismissSplash, 2000);
       }
     }
   }
 
   // =========================================================================
-  // 7. Instant Live Auto-Update (Purge stale cache so changes are immediately live)
+  // 7. Prefetch internal pages on hover / touchstart
   // =========================================================================
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.getRegistrations().then((registrations) => {
-      for (const registration of registrations) {
-        registration.unregister().catch(() => {});
-      }
-    }).catch(() => {});
+  if ('IntersectionObserver' in window) {
+    const prefetched = new Set();
+    function prefetchHref(href) {
+      if (!href || prefetched.has(href)) return;
+      try {
+        const url = new URL(href, location.href);
+        if (url.origin !== location.origin) return;
+        prefetched.add(href);
+        const link = document.createElement('link');
+        link.rel = 'prefetch';
+        link.href = href;
+        link.as = 'document';
+        document.head.appendChild(link);
+      } catch (e) {}
+    }
+
+    document.querySelectorAll('a[href]').forEach(a => {
+      const onPrefetch = () => prefetchHref(a.getAttribute('href'));
+      a.addEventListener('mouseenter', onPrefetch, { once: true, passive: true });
+      a.addEventListener('touchstart', onPrefetch, { once: true, passive: true });
+    });
   }
-  if ('caches' in window) {
-    caches.keys().then((keys) => {
-      keys.forEach((key) => caches.delete(key));
-    }).catch(() => {});
+
+  // Speculation Rules for instant navigation
+  if (!document.querySelector('script[type="speculationrules"]')) {
+    try {
+      const sr = document.createElement('script');
+      sr.type = 'speculationrules';
+      sr.textContent = JSON.stringify({
+        prefetch: [{ source: 'list', urls: ['index.html', 'products.html', 'about.html', 'contact.html', 'schoolmate.html'] }]
+      });
+      document.head.appendChild(sr);
+    } catch (e) {}
   }
 
 })();

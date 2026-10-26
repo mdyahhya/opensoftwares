@@ -81,33 +81,8 @@
     }
   }
   </script>
-  <script>
-    if (sessionStorage.getItem('opensoftwares_splash_shown')) {
-      document.documentElement.classList.add('splash-skip');
-    }
-  </script>
 </head>
 <body class="inner-page">
-
-  <!-- Loading Splash Screen (First visit per session) -->
-  <div class="site-splash" id="siteSplash" role="dialog" aria-modal="true" aria-label="Loading OpenSoftwares">
-    <div class="splash-inner">
-      <div class="splash-brand">
-        <div class="splash-text" aria-label="OpenSoftwares">
-          <span class="splash-letter splash-cap" style="--i:0">O</span><span class="splash-letter" style="--i:1">p</span><span class="splash-letter" style="--i:2">e</span><span class="splash-letter" style="--i:3">n</span><span class="splash-letter splash-cap" style="--i:4">S</span><span class="splash-letter" style="--i:5">o</span><span class="splash-letter" style="--i:6">f</span><span class="splash-letter" style="--i:7">t</span><span class="splash-letter" style="--i:8">w</span><span class="splash-letter" style="--i:9">a</span><span class="splash-letter" style="--i:10">r</span><span class="splash-letter" style="--i:11">e</span><span class="splash-letter" style="--i:12">s</span><span class="splash-dot" style="--i:13"></span>
-        </div>
-        <div class="splash-logo-wrap">
-          <img src="/assets/brand/logo-transparent.png" srcset="/assets/brand/logo-transparent-76.png 1x, /assets/brand/logo-transparent-192.png 2x" 
-               width="76" height="76" 
-               alt="OpenSoftwares Pvt. Ltd. logo" 
-               class="splash-logo-img">
-        </div>
-      </div>
-      <div class="splash-progress-track" aria-hidden="true">
-        <div class="splash-progress-bar"></div>
-      </div>
-    </div>
-  </div>
 
   <!-- SVG Sprite -->
   <svg xmlns="http://www.w3.org/2000/svg" style="display:none;" aria-hidden="true">

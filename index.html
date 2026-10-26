@@ -139,28 +139,8 @@
         </div>
         <!-- 2. Name Below Icon -->
         <div class="splash-text" aria-label="OpenSoftwares">
-          <span class="splash-letter splash-cap" style="--i:0">O</span><span class="splash-letter" style="--i:1">p</span><span class="splash-letter" style="--i:2">e</span><span class="splash-letter" style="--i:3">n</span><span class="splash-letter splash-cap" style="--i:4">S</span><span class="splash-letter" style="--i:5">o</span><span class="splash-letter" style="--i:6">f</span><span class="splash-letter" style="--i:7">t</span><span class="splash-letter" style="--i:8">w</span><span class="splash-letter" style="--i:9">a</span><span class="splash-letter" style="--i:10">r</span><span class="splash-letter" style="--i:11">e</span><span class="splash-letter" style="--i:12">s</span><span class="splash-dot" style="--i:13"></span>
+          <span class="splash-letter" style="--i:0">O</span><span class="splash-letter" style="--i:1">p</span><span class="splash-letter" style="--i:2">e</span><span class="splash-letter" style="--i:3">n</span><span class="splash-letter" style="--i:4">S</span><span class="splash-letter" style="--i:5">o</span><span class="splash-letter" style="--i:6">f</span><span class="splash-letter" style="--i:7">t</span><span class="splash-letter" style="--i:8">w</span><span class="splash-letter" style="--i:9">a</span><span class="splash-letter" style="--i:10">r</span><span class="splash-letter" style="--i:11">e</span><span class="splash-letter" style="--i:12">s</span><span class="splash-dot" style="--i:13"></span>
         </div>
-      </div>
-
-      <!-- Phone and Laptop DRAWN as thin ink line art (SVG stroke-dashoffset) -->
-      <div class="splash-devices-wrap" aria-hidden="true">
-        <svg class="splash-devices-svg" viewBox="0 0 1000 560" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <ellipse cx="500" cy="510" rx="460" ry="14" fill="rgba(14,14,16,0.06)"/>
-          <!-- Laptop lines (drawn) -->
-          <rect class="splash-draw-line" x="316" y="76" width="644" height="422" rx="16"/>
-          <rect class="splash-draw-line" x="330" y="92" width="616" height="394" rx="8"/>
-          <rect class="splash-draw-line" x="276" y="496" width="724" height="14" rx="7"/>
-          <line class="splash-draw-line" x1="330" y1="120" x2="946" y2="120"/>
-          <line class="splash-draw-line" x1="435" y1="120" x2="435" y2="486"/>
-          <!-- Phone lines (drawn) -->
-          <rect class="splash-draw-line" x="42" y="120" width="240" height="384" rx="34"/>
-          <rect class="splash-draw-line" x="54" y="132" width="216" height="360" rx="24"/>
-          <circle class="splash-draw-line" cx="162" cy="146" r="4.5"/>
-          <!-- Screens soft fade fill -->
-          <rect class="splash-screen-fill" x="330" y="92" width="616" height="394" rx="8" fill="#0B1630"/>
-          <rect class="splash-screen-fill" x="54" y="132" width="216" height="360" rx="24" fill="#F6F4EF"/>
-        </svg>
       </div>
 
       <!-- Saffron progress line -->
@@ -378,396 +358,443 @@
     <section class="company-hero" id="hero" aria-labelledby="companyHeroHeading">
       <div class="container company-hero-container">
 
-        <!-- 1. OpenSoftwares Wordmark -->
-        <div class="hero-brand-wordmark" aria-label="OpenSoftwares">
-          <span class="hero-brand-cap">O</span>pen<span class="hero-brand-cap">S</span>oftwares<span class="hero-brand-dot" aria-hidden="true"></span>
+        <!-- Left Column: Heading, Supporting Line, Buttons -->
+        <div class="hero-text-col">
+          <h1 class="company-hero-title" id="companyHeroHeading">
+            We build <em class="serif hero-serif-accent">software products
+              <svg class="hero-underline-svg" viewBox="0 0 320 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path class="hero-underline-path" d="M4 12 C80 4 200 2 316 10" stroke="#E8A317" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+            </em> for multiple industries across India.
+          </h1>
+
+          <p class="company-hero-subline">
+            OpenSoftwares builds software products for education, real estate and manufacturing, and brings them to businesses and institutions across India at prices that make sense.
+          </p>
+
+          <div class="company-hero-actions">
+            <a href="#fields" class="btn btn-primary hero-btn-primary">
+              Explore our products
+              <svg class="icon icon-sm btn-arrow"><use href="#icon-arrow-up-right"></use></svg>
+            </a>
+            <a href="contact.html" class="hero-link-underline">
+              Talk to us
+            </a>
+          </div>
         </div>
 
-        <!-- 2. Phone and Laptop Illustration (Single viewBox: 1000 x 560) -->
-        <div class="hero-devices-wrap" id="heroDevicesWrap" aria-label="OpenSoftwares software preview on laptop and phone">
-          <svg class="hero-devices-svg" viewBox="0 0 1000 560" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+        <!-- Right Column: Phone and Laptop Illustration -->
+        <div class="hero-anim-col">
+          <div class="hero-devices-wrap" id="heroDevicesWrap" aria-label="OpenSoftwares software preview on laptop and phone">
+          <svg class="hero-devices-svg" id="heroDevicesSvg" viewBox="0 0 1000 560" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
             <defs>
               <radialGradient id="hGroundGrad" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stop-color="#0E0E10" stop-opacity="0.12"/>
+                <stop offset="0%" stop-color="#0E0E10" stop-opacity="0.10"/>
                 <stop offset="100%" stop-color="#0E0E10" stop-opacity="0"/>
               </radialGradient>
-              <linearGradient id="hLapBody" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#1E1E24"/>
-                <stop offset="100%" stop-color="#0E0E10"/>
+              <!-- Light Silver Laptop Body -->
+              <linearGradient id="hLapBodyLight" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#EFF1F5"/>
+                <stop offset="100%" stop-color="#E2E4E9"/>
               </linearGradient>
-              <linearGradient id="hPhoneBody" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#24242C"/>
-                <stop offset="100%" stop-color="#0E0E10"/>
+              <linearGradient id="hLapBaseGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#E5E7EB"/>
+                <stop offset="100%" stop-color="#D1D5DB"/>
               </linearGradient>
-              <linearGradient id="hChartAreaGrad" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#E8A317" stop-opacity="0.28"/>
-                <stop offset="100%" stop-color="#E8A317" stop-opacity="0"/>
+              <!-- Light Titanium Phone Frame -->
+              <linearGradient id="hPhoneTitanium" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#ECEFF4"/>
+                <stop offset="100%" stop-color="#D8DBE2"/>
               </linearGradient>
-              <clipPath id="hPhoneClip">
-                <rect x="54" y="132" width="216" height="360" rx="24"/>
-              </clipPath>
+              <linearGradient id="hChartAreaGradLight" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#E8A317" stop-opacity="0.22"/>
+                <stop offset="100%" stop-color="#E8A317" stop-opacity="0.02"/>
+              </linearGradient>
               <clipPath id="hLapClip">
-                <rect x="330" y="92" width="616" height="394" rx="8"/>
+                <rect x="54" y="84" width="642" height="404" rx="8"/>
+              </clipPath>
+              <clipPath id="hPhoneClip">
+                <rect x="664" y="54" width="282" height="452" rx="24"/>
               </clipPath>
             </defs>
 
             <!-- Baseline ground shadow -->
-            <ellipse cx="500" cy="510" rx="460" ry="14" fill="url(#hGroundGrad)"/>
+            <ellipse cx="500" cy="522" rx="460" ry="14" fill="url(#hGroundGrad)"/>
 
-            <!-- ================= LAPTOP (Right ~62%) ================= -->
+            <!-- ================= LIGHT LAPTOP (Left/Center-Left ~70%) ================= -->
             <g id="heroLaptop">
               <!-- Display Lid -->
-              <rect x="316" y="76" width="644" height="422" rx="16" fill="url(#hLapBody)" stroke="#2C2C36" stroke-width="2"/>
-              <circle cx="638" cy="84" r="2.5" fill="#4B4B55"/>
+              <rect x="40" y="70" width="670" height="434" rx="16" fill="url(#hLapBodyLight)" stroke="#C6C9D2" stroke-width="2"/>
+              <!-- Camera -->
+              <circle cx="375" cy="77" r="2.5" fill="#9CA3AF"/>
 
-              <!-- Laptop Screen Inside -->
+              <!-- Laptop Screen Inside (White & Light Dashboard) -->
               <g clip-path="url(#hLapClip)">
-                <rect x="330" y="92" width="616" height="394" fill="#0B1630"/>
+                <rect x="54" y="84" width="642" height="404" fill="#FFFFFF"/>
 
-                <!-- Browser Bar -->
-                <rect x="330" y="92" width="616" height="28" fill="#070E20"/>
-                <circle cx="346" cy="106" r="3.5" fill="#EF4444"/>
-                <circle cx="358" cy="106" r="3.5" fill="#F59E0B"/>
-                <circle cx="370" cy="106" r="3.5" fill="#10B981"/>
-                <rect x="440" y="98" width="280" height="16" rx="8" fill="rgba(255,255,255,0.08)"/>
-                <path d="M495 106 h14 M500 106 v-2 a2 2 0 0 1 4 0 v2" stroke="#CBD5E1" stroke-width="1.2" fill="none"/>
-                <text x="580" y="110" font-family="'Geist Mono', 'DM Mono', monospace" font-size="8" fill="#E2E8F0" text-anchor="middle">schoolmate.opensoftwares.in</text>
+                <!-- Browser Chrome Bar -->
+                <rect x="54" y="84" width="642" height="28" fill="#F1F3F6"/>
+                <circle cx="70" cy="98" r="3.5" fill="#EF4444"/>
+                <circle cx="82" cy="98" r="3.5" fill="#F59E0B"/>
+                <circle cx="94" cy="98" r="3.5" fill="#10B981"/>
+                <!-- Browser URL pill -->
+                <rect x="180" y="89" width="300" height="18" rx="9" fill="#FFFFFF" stroke="#E2E4E9"/>
+                <path d="M236 98 h10 M240 98 v-2 a1.5 1.5 0 0 1 3 0 v2" stroke="#64748B" stroke-width="1.2" fill="none"/>
+                <text x="335" y="101" font-family="'Geist Mono', monospace" font-size="8.5" fill="#334155" text-anchor="middle">schoolmate.opensoftwares.in</text>
 
-                <!-- Sidebar -->
-                <rect x="330" y="120" width="105" height="366" fill="#091328"/>
-                <circle cx="346" cy="136" r="6" fill="#E8A317"/>
-                <text x="358" y="140" font-family="'General Sans', sans-serif" font-size="9" font-weight="700" fill="#FFFFFF">Schoolmate</text>
+                <!-- Sidebar of Modules -->
+                <rect x="54" y="112" width="116" height="376" fill="#F8F9FA"/>
+                <line x1="170" y1="112" x2="170" y2="488" stroke="#E5E7EB" stroke-width="1"/>
+                
+                <!-- Schoolmate Brand in Sidebar -->
+                <circle cx="72" cy="132" r="5" fill="#E8A317"/>
+                <text x="82" y="136" font-family="'General Sans', sans-serif" font-size="9.5" font-weight="700" fill="#0E0E10">Schoolmate</text>
 
-                <!-- Module items in sidebar -->
+                <!-- Module Items -->
                 <g class="hero-lap-mod-item" id="modAnalytics">
-                  <rect x="338" y="156" width="89" height="26" rx="6" fill="rgba(255,255,255,0.06)"/>
-                  <text x="348" y="173" font-family="'General Sans', sans-serif" font-size="8" font-weight="600" fill="#FFFFFF">Analytics</text>
+                  <rect x="62" y="148" width="100" height="26" rx="6" fill="#FFF8EC" stroke="rgba(232,163,23,0.3)"/>
+                  <text x="72" y="165" font-family="'General Sans', sans-serif" font-size="8.5" font-weight="600" fill="#0E0E10">Analytics</text>
                 </g>
                 <g class="hero-lap-mod-item" id="modFees">
-                  <rect x="338" y="190" width="89" height="26" rx="6" fill="transparent"/>
-                  <text x="348" y="207" font-family="'General Sans', sans-serif" font-size="8" font-weight="500" fill="#94A3B8">Fees &amp; Accounts</text>
+                  <rect x="62" y="180" width="100" height="26" rx="6" fill="transparent"/>
+                  <text x="72" y="197" font-family="'General Sans', sans-serif" font-size="8.5" font-weight="500" fill="#64748B">Fees &amp; Accounts</text>
                 </g>
                 <g class="hero-lap-mod-item" id="modAttendance">
-                  <rect x="338" y="224" width="89" height="26" rx="6" fill="transparent"/>
-                  <text x="348" y="241" font-family="'General Sans', sans-serif" font-size="8" font-weight="500" fill="#94A3B8">Attendance</text>
+                  <rect x="62" y="212" width="100" height="26" rx="6" fill="transparent"/>
+                  <text x="72" y="229" font-family="'General Sans', sans-serif" font-size="8.5" font-weight="500" fill="#64748B">Attendance</text>
                 </g>
                 <g class="hero-lap-mod-item" id="modPayroll">
-                  <rect x="338" y="258" width="89" height="26" rx="6" fill="transparent"/>
-                  <text x="348" y="275" font-family="'General Sans', sans-serif" font-size="8" font-weight="500" fill="#94A3B8">Staff Payroll</text>
+                  <rect x="62" y="244" width="100" height="26" rx="6" fill="transparent"/>
+                  <text x="72" y="261" font-family="'General Sans', sans-serif" font-size="8.5" font-weight="500" fill="#64748B">Staff Payroll</text>
                 </g>
 
                 <!-- 1. Panel: Analytics (active) -->
                 <g class="hero-lap-panel active" id="lapPanelAnalytics">
-                  <!-- KPI Cards -->
-                  <rect x="448" y="132" width="150" height="52" rx="8" fill="#111F40" stroke="rgba(255,255,255,0.08)"/>
-                  <text x="458" y="147" font-family="'Geist Mono', monospace" font-size="8" fill="#94A3B8">TOTAL STUDENTS</text>
-                  <text x="458" y="166" font-family="'General Sans', sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">1,248</text>
-                  <text x="518" y="166" font-family="'General Sans', sans-serif" font-size="8" fill="#22C55E">+48 new</text>
+                  <!-- KPI Cards on Light Surface -->
+                  <rect x="180" y="124" width="144" height="52" rx="8" fill="#F8F9FA" stroke="#E5E7EB"/>
+                  <text x="190" y="139" font-family="'Geist Mono', monospace" font-size="8" fill="#64748B">TOTAL STUDENTS</text>
+                  <text x="190" y="159" font-family="'General Sans', sans-serif" font-size="15" font-weight="700" fill="#0E0E10">1,248</text>
+                  <text x="250" y="159" font-family="'General Sans', sans-serif" font-size="8" fill="#16A34A">+48 new</text>
 
-                  <rect x="608" y="132" width="150" height="52" rx="8" fill="#111F40" stroke="rgba(255,255,255,0.08)"/>
-                  <text x="618" y="147" font-family="'Geist Mono', monospace" font-size="8" fill="#94A3B8">FEES COLLECTED</text>
-                  <text x="618" y="166" font-family="'General Sans', sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">&#8377;12.4L</text>
-                  <text x="678" y="166" font-family="'General Sans', sans-serif" font-size="8" fill="#E8A317">82% goal</text>
+                  <rect x="334" y="124" width="144" height="52" rx="8" fill="#F8F9FA" stroke="#E5E7EB"/>
+                  <text x="344" y="139" font-family="'Geist Mono', monospace" font-size="8" fill="#64748B">FEES COLLECTED</text>
+                  <text x="344" y="159" font-family="'General Sans', sans-serif" font-size="15" font-weight="700" fill="#0E0E10">&#8377;12.4L</text>
+                  <text x="404" y="159" font-family="'General Sans', sans-serif" font-size="8" fill="#B07800">82% goal</text>
 
-                  <rect x="768" y="132" width="166" height="52" rx="8" fill="#111F40" stroke="rgba(255,255,255,0.08)"/>
-                  <text x="778" y="147" font-family="'Geist Mono', monospace" font-size="8" fill="#94A3B8">TODAY'S ATTENDANCE</text>
-                  <text x="778" y="166" font-family="'General Sans', sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">94.2%</text>
-                  <text x="838" y="166" font-family="'General Sans', sans-serif" font-size="8" fill="#22C55E">+1.3% yday</text>
+                  <rect x="488" y="124" width="154" height="52" rx="8" fill="#F8F9FA" stroke="#E5E7EB"/>
+                  <text x="498" y="139" font-family="'Geist Mono', monospace" font-size="8" fill="#64748B">TODAY'S ATTENDANCE</text>
+                  <text x="498" y="159" font-family="'General Sans', sans-serif" font-size="15" font-weight="700" fill="#0E0E10">94.2%</text>
+                  <text x="558" y="159" font-family="'General Sans', sans-serif" font-size="8" fill="#16A34A">+1.3% yday</text>
 
                   <!-- Line Chart Container -->
-                  <rect x="448" y="194" width="486" height="136" rx="8" fill="#0F1B38"/>
-                  <text x="460" y="210" font-family="'General Sans', sans-serif" font-size="9" font-weight="600" fill="#E2E8F0">Monthly Revenue &amp; Collection Trend</text>
-                  <path d="M 460 290 Q 520 250 570 265 T 680 230 T 780 240 T 890 215 L 890 315 L 460 315 Z" fill="url(#hChartAreaGrad)"/>
-                  <path class="hero-chart-line-loop" d="M 460 290 Q 520 250 570 265 T 680 230 T 780 240 T 890 215" fill="none" stroke="#E8A317" stroke-width="2.5" stroke-linecap="round"/>
-                  <circle cx="890" cy="215" r="4" fill="#E8A317"/>
+                  <rect x="180" y="186" width="462" height="136" rx="8" fill="#F8F9FA" stroke="#E5E7EB"/>
+                  <text x="192" y="202" font-family="'General Sans', sans-serif" font-size="9" font-weight="600" fill="#0E0E10">Monthly Revenue &amp; Collection Trend</text>
+                  <path d="M 192 282 Q 252 242 302 257 T 412 222 T 512 232 T 622 207 L 622 307 L 192 307 Z" fill="url(#hChartAreaGradLight)"/>
+                  <path class="hero-chart-line-loop" d="M 192 282 Q 252 242 302 257 T 412 222 T 512 232 T 622 207" fill="none" stroke="#E8A317" stroke-width="2.5" stroke-linecap="round"/>
+                  <circle cx="622" cy="207" r="4" fill="#E8A317"/>
 
                   <!-- Mini Charts Row -->
-                  <rect x="448" y="340" width="280" height="132" rx="8" fill="#111F40"/>
-                  <text x="460" y="356" font-family="'General Sans', sans-serif" font-size="8.5" font-weight="600" fill="#E2E8F0">Admissions by Division</text>
-                  <g transform="translate(460, 450)">
-                    <rect class="hero-bar-anim b1" x="10" y="-60" width="24" height="60" rx="3" fill="#1E3A72"/>
-                    <rect class="hero-bar-anim b2" x="50" y="-85" width="24" height="85" rx="3" fill="#E8A317"/>
-                    <rect class="hero-bar-anim b3" x="90" y="-70" width="24" height="70" rx="3" fill="#1E3A72"/>
-                    <rect class="hero-bar-anim b4" x="130" y="-95" width="24" height="95" rx="3" fill="#1E3A72"/>
-                    <rect class="hero-bar-anim b5" x="170" y="-75" width="24" height="75" rx="3" fill="#E8A317"/>
-                    <rect class="hero-bar-anim b2" x="210" y="-88" width="24" height="88" rx="3" fill="#1E3A72"/>
+                  <rect x="180" y="332" width="260" height="142" rx="8" fill="#F8F9FA" stroke="#E5E7EB"/>
+                  <text x="192" y="348" font-family="'General Sans', sans-serif" font-size="8.5" font-weight="600" fill="#0E0E10">Admissions by Division</text>
+                  <g transform="translate(192, 442)">
+                    <rect class="hero-bar-anim b1" x="10" y="-60" width="22" height="60" rx="3" fill="#0B1630"/>
+                    <rect class="hero-bar-anim b2" x="48" y="-85" width="22" height="85" rx="3" fill="#E8A317"/>
+                    <rect class="hero-bar-anim b3" x="86" y="-70" width="22" height="70" rx="3" fill="#0B1630"/>
+                    <rect class="hero-bar-anim b4" x="124" y="-95" width="22" height="95" rx="3" fill="#0B1630"/>
+                    <rect class="hero-bar-anim b5" x="162" y="-75" width="22" height="75" rx="3" fill="#E8A317"/>
+                    <rect class="hero-bar-anim b2" x="200" y="-88" width="22" height="88" rx="3" fill="#0B1630"/>
                   </g>
 
-                  <rect x="738" y="340" width="196" height="132" rx="8" fill="#111F40"/>
-                  <text x="750" y="356" font-family="'General Sans', sans-serif" font-size="8.5" font-weight="600" fill="#E2E8F0">Fee Target Progress</text>
-                  <circle cx="836" cy="414" r="34" stroke="rgba(255,255,255,0.08)" stroke-width="8" fill="none"/>
-                  <circle class="hero-donut-anim" cx="836" cy="414" r="34" stroke="#E8A317" stroke-width="8" stroke-dasharray="213" stroke-dashoffset="40" fill="none" transform="rotate(-90 836 414)"/>
-                  <text x="836" y="418" text-anchor="middle" font-family="'General Sans', sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">82%</text>
+                  <rect x="450" y="332" width="192" height="142" rx="8" fill="#F8F9FA" stroke="#E5E7EB"/>
+                  <text x="462" y="348" font-family="'General Sans', sans-serif" font-size="8.5" font-weight="600" fill="#0E0E10">Fee Target Progress</text>
+                  <circle cx="546" cy="406" r="34" stroke="#E5E7EB" stroke-width="8" fill="none"/>
+                  <circle class="hero-donut-anim" cx="546" cy="406" r="34" stroke="#E8A317" stroke-width="8" stroke-dasharray="213" stroke-dashoffset="40" fill="none" transform="rotate(-90 546 406)"/>
+                  <text x="546" y="410" text-anchor="middle" font-family="'General Sans', sans-serif" font-size="13" font-weight="700" fill="#0E0E10">82%</text>
                 </g>
 
                 <!-- 2. Panel: Fees & Accounts -->
                 <g class="hero-lap-panel" id="lapPanelFees">
-                  <rect x="448" y="132" width="235" height="60" rx="8" fill="#111F40"/>
-                  <text x="460" y="150" font-family="'Geist Mono', monospace" font-size="8" fill="#94A3B8">FEES RECEIVED (OCTOBER)</text>
-                  <text x="460" y="174" font-family="'General Sans', sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">&#8377;12,40,500</text>
+                  <rect x="180" y="124" width="226" height="56" rx="8" fill="#F8F9FA" stroke="#E5E7EB"/>
+                  <text x="192" y="141" font-family="'Geist Mono', monospace" font-size="8" fill="#64748B">FEES RECEIVED (OCTOBER)</text>
+                  <text x="192" y="164" font-family="'General Sans', sans-serif" font-size="17" font-weight="700" fill="#0E0E10">&#8377;12,40,500</text>
                   
-                  <rect x="698" y="132" width="236" height="60" rx="8" fill="#111F40"/>
-                  <text x="710" y="150" font-family="'Geist Mono', monospace" font-size="8" fill="#94A3B8">PENDING DUES</text>
-                  <text x="710" y="174" font-family="'General Sans', sans-serif" font-size="18" font-weight="700" fill="#E8A317">&#8377;2,71,200</text>
+                  <rect x="416" y="124" width="226" height="56" rx="8" fill="#F8F9FA" stroke="#E5E7EB"/>
+                  <text x="428" y="141" font-family="'Geist Mono', monospace" font-size="8" fill="#64748B">PENDING DUES</text>
+                  <text x="428" y="164" font-family="'General Sans', sans-serif" font-size="17" font-weight="700" fill="#B07800">&#8377;2,71,200</text>
 
-                  <rect x="448" y="204" width="486" height="268" rx="8" fill="#111F40"/>
-                  <text x="462" y="224" font-family="'General Sans', sans-serif" font-size="10" font-weight="600" fill="#E2E8F0">Division Fee Collection Status</text>
-                  <g transform="translate(462, 240)">
-                    <rect x="0" y="0" width="458" height="32" rx="4" fill="rgba(255,255,255,0.04)"/>
-                    <text x="12" y="20" font-family="'General Sans', sans-serif" font-size="9" fill="#FFF">Class X-B (42 Students)</text>
-                    <text x="260" y="20" font-family="'Geist Mono', monospace" font-size="9" fill="#22C55E">&#8377;3,40,000 Paid</text>
-                    <rect x="380" y="6" width="66" height="18" rx="9" fill="rgba(34,197,94,0.15)"/>
-                    <text x="413" y="18" font-family="'General Sans', sans-serif" font-size="7.5" font-weight="600" fill="#22C55E" text-anchor="middle">100% CLEAR</text>
+                  <rect x="180" y="190" width="462" height="284" rx="8" fill="#F8F9FA" stroke="#E5E7EB"/>
+                  <text x="194" y="210" font-family="'General Sans', sans-serif" font-size="10" font-weight="600" fill="#0E0E10">Division Fee Collection Status</text>
+                  <g transform="translate(194, 222)">
+                    <rect x="0" y="0" width="434" height="32" rx="4" fill="#FFFFFF" stroke="#E5E7EB"/>
+                    <text x="12" y="20" font-family="'General Sans', sans-serif" font-size="9" fill="#0E0E10">Class X-B (42 Students)</text>
+                    <text x="240" y="20" font-family="'Geist Mono', monospace" font-size="9" fill="#16A34A">&#8377;3,40,000 Paid</text>
+                    <rect x="350" y="6" width="76" height="18" rx="9" fill="rgba(22,163,74,0.12)"/>
+                    <text x="388" y="18" font-family="'General Sans', sans-serif" font-size="7.5" font-weight="600" fill="#16A34A" text-anchor="middle">100% CLEAR</text>
 
-                    <rect x="0" y="40" width="458" height="32" rx="4" fill="rgba(255,255,255,0.04)"/>
-                    <text x="12" y="60" font-family="'General Sans', sans-serif" font-size="9" fill="#FFF">Class IX-A (38 Students)</text>
-                    <text x="260" y="60" font-family="'Geist Mono', monospace" font-size="9" fill="#E8A317">&#8377;2,90,000 Paid</text>
-                    <rect x="380" y="46" width="66" height="18" rx="9" fill="rgba(232,163,23,0.15)"/>
-                    <text x="413" y="58" font-family="'General Sans', sans-serif" font-size="7.5" font-weight="600" fill="#E8A317" text-anchor="middle">88% CLEAR</text>
+                    <rect x="0" y="38" width="434" height="32" rx="4" fill="#FFFFFF" stroke="#E5E7EB"/>
+                    <text x="12" y="58" font-family="'General Sans', sans-serif" font-size="9" fill="#0E0E10">Class IX-A (38 Students)</text>
+                    <text x="240" y="58" font-family="'Geist Mono', monospace" font-size="9" fill="#B07800">&#8377;2,90,000 Paid</text>
+                    <rect x="350" y="44" width="76" height="18" rx="9" fill="rgba(232,163,23,0.15)"/>
+                    <text x="388" y="56" font-family="'General Sans', sans-serif" font-size="7.5" font-weight="600" fill="#B07800" text-anchor="middle">88% CLEAR</text>
 
-                    <rect x="0" y="80" width="458" height="32" rx="4" fill="rgba(255,255,255,0.04)"/>
-                    <text x="12" y="100" font-family="'General Sans', sans-serif" font-size="9" fill="#FFF">Class VIII-C (35 Students)</text>
-                    <text x="260" y="100" font-family="'Geist Mono', monospace" font-size="9" fill="#22C55E">&#8377;2,45,000 Paid</text>
-                    <rect x="380" y="86" width="66" height="18" rx="9" fill="rgba(34,197,94,0.15)"/>
-                    <text x="413" y="98" font-family="'General Sans', sans-serif" font-size="7.5" font-weight="600" fill="#22C55E" text-anchor="middle">94% CLEAR</text>
+                    <rect x="0" y="76" width="434" height="32" rx="4" fill="#FFFFFF" stroke="#E5E7EB"/>
+                    <text x="12" y="96" font-family="'General Sans', sans-serif" font-size="9" fill="#0E0E10">Class VIII-C (35 Students)</text>
+                    <text x="240" y="96" font-family="'Geist Mono', monospace" font-size="9" fill="#16A34A">&#8377;2,45,000 Paid</text>
+                    <rect x="350" y="82" width="76" height="18" rx="9" fill="rgba(22,163,74,0.12)"/>
+                    <text x="388" y="94" font-family="'General Sans', sans-serif" font-size="7.5" font-weight="600" fill="#16A34A" text-anchor="middle">94% CLEAR</text>
 
-                    <rect x="0" y="120" width="458" height="32" rx="4" fill="rgba(255,255,255,0.04)"/>
-                    <text x="12" y="140" font-family="'General Sans', sans-serif" font-size="9" fill="#FFF">Class VII-A (40 Students)</text>
-                    <text x="260" y="140" font-family="'Geist Mono', monospace" font-size="9" fill="#EF4444">&#8377;1,80,000 Paid</text>
-                    <rect x="380" y="126" width="66" height="18" rx="9" fill="rgba(239,68,68,0.15)"/>
-                    <text x="413" y="138" font-family="'General Sans', sans-serif" font-size="7.5" font-weight="600" fill="#EF4444" text-anchor="middle">62% PENDING</text>
+                    <rect x="0" y="114" width="434" height="32" rx="4" fill="#FFFFFF" stroke="#E5E7EB"/>
+                    <text x="12" y="134" font-family="'General Sans', sans-serif" font-size="9" fill="#0E0E10">Class VII-A (40 Students)</text>
+                    <text x="240" y="134" font-family="'Geist Mono', monospace" font-size="9" fill="#DC2626">&#8377;1,80,000 Paid</text>
+                    <rect x="350" y="120" width="76" height="18" rx="9" fill="rgba(220,38,38,0.12)"/>
+                    <text x="388" y="132" font-family="'General Sans', sans-serif" font-size="7.5" font-weight="600" fill="#DC2626" text-anchor="middle">62% PENDING</text>
                   </g>
                 </g>
 
                 <!-- 3. Panel: Attendance & Biometrics -->
                 <g class="hero-lap-panel" id="lapPanelAttendance">
-                  <rect x="448" y="132" width="220" height="150" rx="8" fill="#111F40"/>
-                  <text x="462" y="152" font-family="'General Sans', sans-serif" font-size="9" font-weight="600" fill="#E2E8F0">Daily Biometric Gauge</text>
-                  <circle cx="558" cy="214" r="38" stroke="rgba(255,255,255,0.08)" stroke-width="8" fill="none"/>
-                  <circle cx="558" cy="214" r="38" stroke="#22C55E" stroke-width="8" stroke-dasharray="238" stroke-dashoffset="24" fill="none" transform="rotate(-90 558 214)"/>
-                  <text x="558" y="218" text-anchor="middle" font-family="'General Sans', sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">94.2%</text>
+                  <rect x="180" y="124" width="210" height="146" rx="8" fill="#F8F9FA" stroke="#E5E7EB"/>
+                  <text x="194" y="144" font-family="'General Sans', sans-serif" font-size="9" font-weight="600" fill="#0E0E10">Daily Biometric Gauge</text>
+                  <circle cx="285" cy="204" r="38" stroke="#E5E7EB" stroke-width="8" fill="none"/>
+                  <circle cx="285" cy="204" r="38" stroke="#16A34A" stroke-width="8" stroke-dasharray="238" stroke-dashoffset="24" fill="none" transform="rotate(-90 285 204)"/>
+                  <text x="285" y="208" text-anchor="middle" font-family="'General Sans', sans-serif" font-size="15" font-weight="700" fill="#0E0E10">94.2%</text>
 
-                  <rect x="680" y="132" width="254" height="150" rx="8" fill="#111F40"/>
-                  <text x="694" y="152" font-family="'General Sans', sans-serif" font-size="9" font-weight="600" fill="#E2E8F0">Attendance Heatmap (October)</text>
-                  <g transform="translate(694, 166)">
-                    <rect x="0" y="0" width="16" height="16" rx="3" fill="#22C55E"/>
-                    <rect x="22" y="0" width="16" height="16" rx="3" fill="#22C55E"/>
-                    <rect x="44" y="0" width="16" height="16" rx="3" fill="#22C55E"/>
+                  <rect x="400" y="124" width="242" height="146" rx="8" fill="#F8F9FA" stroke="#E5E7EB"/>
+                  <text x="414" y="144" font-family="'General Sans', sans-serif" font-size="9" font-weight="600" fill="#0E0E10">Attendance Heatmap (October)</text>
+                  <g transform="translate(414, 156)">
+                    <rect x="0" y="0" width="16" height="16" rx="3" fill="#16A34A"/>
+                    <rect x="22" y="0" width="16" height="16" rx="3" fill="#16A34A"/>
+                    <rect x="44" y="0" width="16" height="16" rx="3" fill="#16A34A"/>
                     <rect x="66" y="0" width="16" height="16" rx="3" fill="#E8A317"/>
-                    <rect x="88" y="0" width="16" height="16" rx="3" fill="#22C55E"/>
+                    <rect x="88" y="0" width="16" height="16" rx="3" fill="#16A34A"/>
 
-                    <rect x="0" y="22" width="16" height="16" rx="3" fill="#22C55E"/>
-                    <rect x="22" y="22" width="16" height="16" rx="3" fill="#22C55E"/>
-                    <rect x="44" y="22" width="16" height="16" rx="3" fill="#EF4444"/>
-                    <rect x="66" y="22" width="16" height="16" rx="3" fill="#22C55E"/>
-                    <rect x="88" y="22" width="16" height="16" rx="3" fill="#22C55E"/>
+                    <rect x="0" y="22" width="16" height="16" rx="3" fill="#16A34A"/>
+                    <rect x="22" y="22" width="16" height="16" rx="3" fill="#16A34A"/>
+                    <rect x="44" y="22" width="16" height="16" rx="3" fill="#DC2626"/>
+                    <rect x="66" y="22" width="16" height="16" rx="3" fill="#16A34A"/>
+                    <rect x="88" y="22" width="16" height="16" rx="3" fill="#16A34A"/>
 
-                    <rect x="0" y="44" width="16" height="16" rx="3" fill="#22C55E"/>
-                    <rect x="22" y="44" width="16" height="16" rx="3" fill="#22C55E"/>
-                    <rect x="44" y="44" width="16" height="16" rx="3" fill="#22C55E"/>
-                    <rect x="66" y="44" width="16" height="16" rx="3" fill="#22C55E"/>
+                    <rect x="0" y="44" width="16" height="16" rx="3" fill="#16A34A"/>
+                    <rect x="22" y="44" width="16" height="16" rx="3" fill="#16A34A"/>
+                    <rect x="44" y="44" width="16" height="16" rx="3" fill="#16A34A"/>
+                    <rect x="66" y="44" width="16" height="16" rx="3" fill="#16A34A"/>
                     <rect x="88" y="44" width="16" height="16" rx="3" fill="#E8A317"/>
 
-                    <rect x="0" y="66" width="16" height="16" rx="3" fill="#22C55E"/>
-                    <rect x="22" y="66" width="16" height="16" rx="3" fill="#22C55E"/>
-                    <rect x="44" y="66" width="16" height="16" rx="3" fill="#22C55E"/>
-                    <rect x="66" y="66" width="16" height="16" rx="3" fill="#22C55E"/>
-                    <rect x="88" y="66" width="16" height="16" rx="3" fill="#22C55E"/>
+                    <rect x="0" y="66" width="16" height="16" rx="3" fill="#16A34A"/>
+                    <rect x="22" y="66" width="16" height="16" rx="3" fill="#16A34A"/>
+                    <rect x="44" y="66" width="16" height="16" rx="3" fill="#16A34A"/>
+                    <rect x="66" y="66" width="16" height="16" rx="3" fill="#16A34A"/>
+                    <rect x="88" y="66" width="16" height="16" rx="3" fill="#16A34A"/>
                   </g>
 
-                  <rect x="448" y="294" width="486" height="178" rx="8" fill="#111F40"/>
-                  <text x="462" y="314" font-family="'General Sans', sans-serif" font-size="9.5" font-weight="600" fill="#E2E8F0">Live Activity Feed (Biometric &amp; RFID)</text>
-                  <g transform="translate(462, 328)">
+                  <rect x="180" y="280" width="462" height="194" rx="8" fill="#F8F9FA" stroke="#E5E7EB"/>
+                  <text x="194" y="300" font-family="'General Sans', sans-serif" font-size="9.5" font-weight="600" fill="#0E0E10">Live Activity Feed (Biometric &amp; RFID)</text>
+                  <g transform="translate(194, 314)">
                     <g class="hero-activity-row r1">
-                      <rect x="0" y="0" width="458" height="28" rx="4" fill="rgba(255,255,255,0.04)"/>
-                      <circle cx="16" cy="14" r="3.5" fill="#22C55E"/>
-                      <text x="30" y="18" font-family="'General Sans', sans-serif" font-size="8.5" fill="#FFF">07:42 AM • Aanya Agarwal (X-B) • Main Gate Biometric</text>
+                      <rect x="0" y="0" width="434" height="28" rx="4" fill="#FFFFFF" stroke="#E5E7EB"/>
+                      <circle cx="16" cy="14" r="3.5" fill="#16A34A"/>
+                      <text x="30" y="18" font-family="'General Sans', sans-serif" font-size="8.5" fill="#0E0E10">07:42 AM &bull; Aanya Agarwal (X-B) &bull; Main Gate Biometric</text>
                     </g>
                     <g class="hero-activity-row r2">
-                      <rect x="0" y="34" width="458" height="28" rx="4" fill="rgba(255,255,255,0.04)"/>
-                      <circle cx="16" cy="48" r="3.5" fill="#22C55E"/>
-                      <text x="30" y="52" font-family="'General Sans', sans-serif" font-size="8.5" fill="#FFF">07:45 AM • Rohan Mehta (X-B) • Bus 03 RFID Scan</text>
+                      <rect x="0" y="34" width="434" height="28" rx="4" fill="#FFFFFF" stroke="#E5E7EB"/>
+                      <circle cx="16" cy="48" r="3.5" fill="#16A34A"/>
+                      <text x="30" y="52" font-family="'General Sans', sans-serif" font-size="8.5" fill="#0E0E10">07:45 AM &bull; Rohan Mehta (X-B) &bull; Bus 03 RFID Scan</text>
                     </g>
                     <g class="hero-activity-row r3">
-                      <rect x="0" y="68" width="458" height="28" rx="4" fill="rgba(255,255,255,0.04)"/>
-                      <circle cx="16" cy="82" r="3.5" fill="#22C55E"/>
-                      <text x="30" y="86" font-family="'General Sans', sans-serif" font-size="8.5" fill="#FFF">07:49 AM • Priya Desai (X-A) • Academic Wing Gate</text>
+                      <rect x="0" y="68" width="434" height="28" rx="4" fill="#FFFFFF" stroke="#E5E7EB"/>
+                      <circle cx="16" cy="82" r="3.5" fill="#16A34A"/>
+                      <text x="30" y="86" font-family="'General Sans', sans-serif" font-size="8.5" fill="#0E0E10">07:49 AM &bull; Priya Desai (X-A) &bull; Academic Wing Gate</text>
                     </g>
                     <g class="hero-activity-row r4">
-                      <rect x="0" y="102" width="458" height="28" rx="4" fill="rgba(255,255,255,0.04)"/>
+                      <rect x="0" y="102" width="434" height="28" rx="4" fill="#FFFFFF" stroke="#E5E7EB"/>
                       <circle cx="16" cy="116" r="3.5" fill="#E8A317"/>
-                      <text x="30" y="120" font-family="'General Sans', sans-serif" font-size="8.5" fill="#FFF">07:53 AM • Karan Joshi (IX-C) • Late Slip RFID</text>
+                      <text x="30" y="120" font-family="'General Sans', sans-serif" font-size="8.5" fill="#0E0E10">07:53 AM &bull; Karan Joshi (IX-C) &bull; Late Slip RFID</text>
                     </g>
                   </g>
                 </g>
 
                 <!-- 4. Panel: Payroll & Staff -->
                 <g class="hero-lap-panel" id="lapPanelPayroll">
-                  <rect x="448" y="132" width="235" height="60" rx="8" fill="#111F40"/>
-                  <text x="460" y="150" font-family="'Geist Mono', monospace" font-size="8" fill="#94A3B8">MONTHLY PAYROLL</text>
-                  <text x="460" y="174" font-family="'General Sans', sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">&#8377;8,42,000</text>
+                  <rect x="180" y="124" width="226" height="56" rx="8" fill="#F8F9FA" stroke="#E5E7EB"/>
+                  <text x="192" y="141" font-family="'Geist Mono', monospace" font-size="8" fill="#64748B">MONTHLY PAYROLL</text>
+                  <text x="192" y="164" font-family="'General Sans', sans-serif" font-size="17" font-weight="700" fill="#0E0E10">&#8377;8,42,000</text>
                   
-                  <rect x="698" y="132" width="236" height="60" rx="8" fill="#111F40"/>
-                  <text x="710" y="150" font-family="'Geist Mono', monospace" font-size="8" fill="#94A3B8">COMPLIANCE &amp; PT</text>
-                  <text x="710" y="174" font-family="'General Sans', sans-serif" font-size="18" font-weight="700" fill="#22C55E">Maharashtra PT Active</text>
+                  <rect x="416" y="124" width="226" height="56" rx="8" fill="#F8F9FA" stroke="#E5E7EB"/>
+                  <text x="428" y="141" font-family="'Geist Mono', monospace" font-size="8" fill="#64748B">COMPLIANCE &amp; PT</text>
+                  <text x="428" y="164" font-family="'General Sans', sans-serif" font-size="16" font-weight="700" fill="#16A34A">Maharashtra PT Active</text>
 
-                  <rect x="448" y="204" width="486" height="268" rx="8" fill="#111F40"/>
-                  <text x="462" y="224" font-family="'General Sans', sans-serif" font-size="10" font-weight="600" fill="#E2E8F0">Faculty &amp; Staff Disbursement (72 Staff Members)</text>
-                  <g transform="translate(462, 240)">
-                    <rect x="0" y="0" width="458" height="42" rx="4" fill="rgba(255,255,255,0.04)"/>
-                    <text x="12" y="18" font-family="'General Sans', sans-serif" font-size="9" font-weight="600" fill="#FFF">Teaching Faculty (44 Members)</text>
-                    <text x="12" y="32" font-family="'Geist Mono', monospace" font-size="8" fill="#94A3B8">&#8377;5,20,000 Total &bull; Direct Bank Transfer</text>
-                    <rect x="380" y="12" width="66" height="18" rx="9" fill="rgba(34,197,94,0.15)"/>
-                    <text x="413" y="24" font-family="'General Sans', sans-serif" font-size="7.5" font-weight="600" fill="#22C55E" text-anchor="middle">DISBURSED</text>
+                  <rect x="180" y="190" width="462" height="284" rx="8" fill="#F8F9FA" stroke="#E5E7EB"/>
+                  <text x="194" y="210" font-family="'General Sans', sans-serif" font-size="10" font-weight="600" fill="#0E0E10">Faculty &amp; Staff Disbursement (72 Staff Members)</text>
+                  <g transform="translate(194, 222)">
+                    <rect x="0" y="0" width="434" height="42" rx="4" fill="#FFFFFF" stroke="#E5E7EB"/>
+                    <text x="12" y="18" font-family="'General Sans', sans-serif" font-size="9" font-weight="600" fill="#0E0E10">Teaching Faculty (44 Members)</text>
+                    <text x="12" y="32" font-family="'Geist Mono', monospace" font-size="8" fill="#64748B">&#8377;5,20,000 Total &bull; Direct Bank Transfer</text>
+                    <rect x="350" y="12" width="76" height="18" rx="9" fill="rgba(22,163,74,0.12)"/>
+                    <text x="388" y="24" font-family="'General Sans', sans-serif" font-size="7.5" font-weight="600" fill="#16A34A" text-anchor="middle">DISBURSED</text>
 
-                    <rect x="0" y="52" width="458" height="42" rx="4" fill="rgba(255,255,255,0.04)"/>
-                    <text x="12" y="70" font-family="'General Sans', sans-serif" font-size="9" font-weight="600" fill="#FFF">Administration &amp; Accounts (12 Members)</text>
-                    <text x="12" y="84" font-family="'Geist Mono', monospace" font-size="8" fill="#94A3B8">&#8377;1,82,000 Total &bull; EPF/PT Deducted</text>
-                    <rect x="380" y="64" width="66" height="18" rx="9" fill="rgba(34,197,94,0.15)"/>
-                    <text x="413" y="76" font-family="'General Sans', sans-serif" font-size="7.5" font-weight="600" fill="#22C55E" text-anchor="middle">DISBURSED</text>
+                    <rect x="0" y="52" width="434" height="42" rx="4" fill="#FFFFFF" stroke="#E5E7EB"/>
+                    <text x="12" y="70" font-family="'General Sans', sans-serif" font-size="9" font-weight="600" fill="#0E0E10">Administration &amp; Accounts (12 Members)</text>
+                    <text x="12" y="84" font-family="'Geist Mono', monospace" font-size="8" fill="#64748B">&#8377;1,82,000 Total &bull; EPF/PT Deducted</text>
+                    <rect x="350" y="64" width="76" height="18" rx="9" fill="rgba(22,163,74,0.12)"/>
+                    <text x="388" y="76" font-family="'General Sans', sans-serif" font-size="7.5" font-weight="600" fill="#16A34A" text-anchor="middle">DISBURSED</text>
 
-                    <rect x="0" y="104" width="458" height="42" rx="4" fill="rgba(255,255,255,0.04)"/>
-                    <text x="12" y="122" font-family="'General Sans', sans-serif" font-size="9" font-weight="600" fill="#FFF">Transport Drivers &amp; Support (16 Members)</text>
-                    <text x="12" y="136" font-family="'Geist Mono', monospace" font-size="8" fill="#94A3B8">&#8377;1,40,000 Total &bull; Direct Bank Transfer</text>
-                    <rect x="380" y="116" width="66" height="18" rx="9" fill="rgba(34,197,94,0.15)"/>
-                    <text x="413" y="128" font-family="'General Sans', sans-serif" font-size="7.5" font-weight="600" fill="#22C55E" text-anchor="middle">DISBURSED</text>
+                    <rect x="0" y="104" width="434" height="42" rx="4" fill="#FFFFFF" stroke="#E5E7EB"/>
+                    <text x="12" y="122" font-family="'General Sans', sans-serif" font-size="9" font-weight="600" fill="#0E0E10">Transport Drivers &amp; Support (16 Members)</text>
+                    <text x="12" y="136" font-family="'Geist Mono', monospace" font-size="8" fill="#64748B">&#8377;1,40,000 Total &bull; Direct Bank Transfer</text>
+                    <rect x="350" y="116" width="76" height="18" rx="9" fill="rgba(22,163,74,0.12)"/>
+                    <text x="388" y="128" font-family="'General Sans', sans-serif" font-size="7.5" font-weight="600" fill="#16A34A" text-anchor="middle">DISBURSED</text>
                   </g>
                 </g>
 
                 <!-- Animated Cursor that glides between modules -->
-                <g id="heroLapCursor" class="hero-lap-cursor" style="transform: translate(380px, 160px); transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);">
+                <g id="heroLapCursor" class="hero-lap-cursor" style="transform: translate(110px, 160px); transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);">
                   <path d="M0 0 L6 18 L9 12 L16 9 Z" fill="#0E0E10" stroke="#FFFFFF" stroke-width="1.4"/>
                 </g>
 
               </g><!-- /clip -->
 
-              <!-- Laptop Base Hinge -->
-              <rect x="276" y="496" width="724" height="14" rx="7" fill="#1C1C22" stroke="#0E0E10" stroke-width="1.5"/>
-              <rect x="600" y="496" width="76" height="4" rx="2" fill="#383842"/>
+              <!-- Laptop Base Hinge (Light silver) -->
+              <rect x="20" y="504" width="710" height="16" rx="8" fill="url(#hLapBaseGrad)" stroke="#BFC3CC" stroke-width="1.5"/>
+              <rect x="335" y="504" width="80" height="4" rx="2" fill="#9CA3AF"/>
             </g><!-- /heroLaptop -->
 
 
-            <!-- ================= PHONE (Left ~28%) ================= -->
+            <!-- ================= REALISTIC PHONE (Right side, overlapping laptop) ================= -->
             <g id="heroPhone">
-              <!-- Frame -->
-              <rect x="42" y="120" width="240" height="384" rx="34" fill="url(#hPhoneBody)" stroke="#2B2B34" stroke-width="2"/>
+              <!-- Side Buttons -->
+              <rect x="646" y="120" width="4" height="30" rx="2" fill="#B4B9C4"/>
+              <rect x="646" y="160" width="4" height="30" rx="2" fill="#B4B9C4"/>
+              <rect x="960" y="136" width="4" height="42" rx="2" fill="#B4B9C4"/>
 
-              <!-- Screen Inside -->
+              <!-- Outer Frame: Light Titanium Frame with 36px-style rounded corners -->
+              <rect x="650" y="40" width="310" height="480" rx="36" fill="url(#hPhoneTitanium)" stroke="#B4B9C4" stroke-width="2.5"/>
+
+              <!-- Thin Dark Inner Bezel -->
+              <rect x="656" y="46" width="298" height="468" rx="30" fill="#18181B"/>
+
+              <!-- Screen Inside (Paper Background) -->
               <g clip-path="url(#hPhoneClip)">
-                <rect x="54" y="132" width="216" height="360" fill="#F6F4EF"/>
+                <rect x="664" y="54" width="282" height="452" fill="#F6F4EF"/>
 
-                <!-- Status bar -->
-                <text x="72" y="149" font-family="'General Sans', sans-serif" font-size="9" font-weight="600" fill="#0E0E10">9:41</text>
-                <rect x="232" y="142" width="14" height="7" rx="2" fill="none" stroke="#0E0E10" stroke-width="1"/>
-                <rect x="234" y="144" width="8" height="3" rx="1" fill="#0E0E10"/>
+                <!-- Status Bar (Time, Signal, Battery) -->
+                <text x="688" y="76" font-family="'General Sans', sans-serif" font-size="10" font-weight="600" fill="#0E0E10">9:41</text>
+                <g transform="translate(896, 68)">
+                  <!-- Signal bars -->
+                  <rect x="0" y="5" width="2.5" height="4" rx="0.5" fill="#0E0E10"/>
+                  <rect x="4" y="3" width="2.5" height="6" rx="0.5" fill="#0E0E10"/>
+                  <rect x="8" y="1" width="2.5" height="8" rx="0.5" fill="#0E0E10"/>
+                  <rect x="12" y="0" width="2.5" height="9" rx="0.5" fill="#0E0E10"/>
+                  <!-- Battery -->
+                  <rect x="20" y="1" width="16" height="8" rx="2" fill="none" stroke="#0E0E10" stroke-width="1.2"/>
+                  <rect x="22" y="3" width="10" height="4" rx="1" fill="#0E0E10"/>
+                  <rect x="36.5" y="3.5" width="1.5" height="3" rx="0.5" fill="#0E0E10"/>
+                </g>
 
                 <!-- Scene 1: Login Screen (active) -->
                 <g class="hero-ph-scene active" id="phSceneLogin">
-                  <circle cx="162" cy="190" r="14" fill="#0B1630"/>
-                  <text x="162" y="194" font-family="'General Sans', sans-serif" font-size="10" font-weight="700" fill="#E8A317" text-anchor="middle">S</text>
-                  <text x="162" y="218" font-family="'General Sans', sans-serif" font-size="12" font-weight="700" fill="#0B1630" text-anchor="middle">Schoolmate</text>
-                  <text x="162" y="232" font-family="'General Sans', sans-serif" font-size="8.5" fill="#55555C" text-anchor="middle">Campus Parent Portal</text>
+                  <circle cx="805" cy="130" r="15" fill="#0B1630"/>
+                  <circle cx="805" cy="130" r="5" fill="#E8A317"/>
+                  <text x="805" y="162" font-family="'General Sans', sans-serif" font-size="14" font-weight="700" fill="#0B1630" text-anchor="middle">Schoolmate</text>
+                  <text x="805" y="178" font-family="'General Sans', sans-serif" font-size="9" fill="#55555C" text-anchor="middle">Campus Parent Portal</text>
 
                   <!-- Inputs -->
-                  <rect x="68" y="250" width="188" height="34" rx="6" fill="#FFFFFF" stroke="#DCD7CD"/>
-                  <text x="78" y="271" font-family="'Geist Mono', monospace" font-size="8.5" fill="#0E0E10">parent@school.in</text>
+                  <rect x="684" y="200" width="242" height="38" rx="8" fill="#FFFFFF" stroke="#DCD7CD"/>
+                  <text x="696" y="224" font-family="'Geist Mono', monospace" font-size="9.5" fill="#0E0E10">parent@school.in</text>
 
-                  <rect x="68" y="294" width="188" height="34" rx="6" fill="#FFFFFF" stroke="#DCD7CD"/>
-                  <text x="78" y="315" font-family="'Geist Mono', monospace" font-size="11" fill="#0E0E10">&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;</text>
+                  <rect x="684" y="250" width="242" height="38" rx="8" fill="#FFFFFF" stroke="#DCD7CD"/>
+                  <text x="696" y="274" font-family="'Geist Mono', monospace" font-size="12" fill="#0E0E10">&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;</text>
 
-                  <!-- Button -->
-                  <rect x="68" y="342" width="188" height="34" rx="17" fill="#0E0E10"/>
-                  <text x="162" y="363" font-family="'General Sans', sans-serif" font-size="10" font-weight="600" fill="#FFFFFF" text-anchor="middle">Sign In</text>
+                  <!-- Sign In Button -->
+                  <rect x="684" y="306" width="242" height="38" rx="19" fill="#0E0E10"/>
+                  <text x="805" y="330" font-family="'General Sans', sans-serif" font-size="11" font-weight="600" fill="#FFFFFF" text-anchor="middle">Sign In</text>
+                  
+                  <!-- Subtle Loading indicator -->
+                  <circle cx="875" cy="325" r="5" fill="none" stroke="#E8A317" stroke-width="1.8" stroke-dasharray="8 6"/>
                 </g>
 
-                <!-- Scene 2: Success Tick -->
+                <!-- Scene 2: App Opens (Greeting, Attendance Ring, Homework) -->
                 <g class="hero-ph-scene" id="phSceneSuccess">
-                  <circle cx="162" cy="240" r="28" fill="#22C55E"/>
-                  <path d="M150 240 L158 248 L174 232" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                  <text x="162" y="288" font-family="'General Sans', sans-serif" font-size="13" font-weight="700" fill="#0E0E10" text-anchor="middle">Signed in successfully</text>
-                  <text x="162" y="304" font-family="'General Sans', sans-serif" font-size="9" fill="#55555C" text-anchor="middle">Welcome back, Mrs. Deshpande</text>
+                  <!-- Top greeting -->
+                  <text x="684" y="106" font-family="'General Sans', sans-serif" font-size="13" font-weight="700" fill="#0E0E10">Good morning</text>
+                  <text x="684" y="122" font-family="'General Sans', sans-serif" font-size="9" fill="#55555C">Aanya Agarwal &bull; Class X-B</text>
+
+                  <!-- Attendance ring card -->
+                  <rect x="684" y="136" width="242" height="80" rx="10" fill="#FFFFFF" stroke="#E5E0D6"/>
+                  <circle cx="728" cy="176" r="24" stroke="#E5E7EB" stroke-width="6" fill="none"/>
+                  <circle cx="728" cy="176" r="24" stroke="#16A34A" stroke-width="6" stroke-dasharray="150" stroke-dashoffset="15" fill="none" transform="rotate(-90 728 176)"/>
+                  <text x="728" y="180" text-anchor="middle" font-family="'General Sans', sans-serif" font-size="11" font-weight="700" fill="#0E0E10">94%</text>
+                  <text x="766" y="170" font-family="'General Sans', sans-serif" font-size="10" font-weight="600" fill="#0E0E10">Attendance</text>
+                  <text x="766" y="184" font-family="'General Sans', sans-serif" font-size="8.5" fill="#16A34A">On track &bull; 21/22 days</text>
+
+                  <!-- Homework Due Card -->
+                  <rect x="684" y="226" width="242" height="110" rx="10" fill="#FFFFFF" stroke="#E5E0D6"/>
+                  <text x="696" y="246" font-family="'General Sans', sans-serif" font-size="10" font-weight="700" fill="#0E0E10">Homework Due Today</text>
+                  <circle cx="704" cy="268" r="4" fill="#E8A317"/>
+                  <text x="716" y="271" font-family="'General Sans', sans-serif" font-size="9" font-weight="600" fill="#0E0E10">Mathematics &bull; Ex 7.2</text>
+                  <text x="716" y="284" font-family="'Geist Mono', monospace" font-size="8" fill="#64748B">Due by 4:00 PM today</text>
+
+                  <circle cx="704" cy="306" r="4" fill="#16A34A"/>
+                  <text x="716" y="309" font-family="'General Sans', sans-serif" font-size="9" font-weight="600" fill="#0E0E10">Science &bull; Lab Observation</text>
+                  <text x="716" y="322" font-family="'Geist Mono', monospace" font-size="8" fill="#64748B">Due tomorrow morning</text>
                 </g>
 
                 <!-- Scene 3: Video Lessons Feed -->
                 <g class="hero-ph-scene" id="phSceneFeed">
-                  <text x="68" y="172" font-family="'General Sans', sans-serif" font-size="11" font-weight="700" fill="#0E0E10">Learning Videos</text>
-                  <rect x="68" y="180" width="76" height="16" rx="8" fill="#0B1630"/>
-                  <text x="106" y="191" font-family="'Geist Mono', monospace" font-size="7.5" font-weight="600" fill="#E8A317" text-anchor="middle">CBSE CLASS X</text>
+                  <text x="684" y="104" font-family="'General Sans', sans-serif" font-size="12" font-weight="700" fill="#0E0E10">Video Lessons</text>
+                  <rect x="684" y="112" width="84" height="18" rx="9" fill="#0B1630"/>
+                  <text x="726" y="124" font-family="'Geist Mono', monospace" font-size="8" font-weight="600" fill="#E8A317" text-anchor="middle">CBSE CLASS X</text>
 
                   <!-- Video Card 1 -->
-                  <rect x="68" y="204" width="188" height="116" rx="8" fill="#FFFFFF" stroke="#E5E0D6"/>
-                  <rect x="74" y="210" width="176" height="60" rx="6" fill="#0B1630"/>
-                  <path d="M 80 250 Q 120 220 160 255 T 240 225" stroke="#E8A317" stroke-width="2" fill="none"/>
-                  <circle cx="162" cy="240" r="10" fill="rgba(255,255,255,0.9)"/>
-                  <polygon points="159,235 167,240 159,245" fill="#0B1630"/>
-                  <text x="76" y="284" font-family="'General Sans', sans-serif" font-size="8.5" font-weight="600" fill="#0E0E10">Quadratic Equations</text>
-                  <text x="76" y="296" font-family="'Geist Mono', monospace" font-size="7.5" fill="#55555C">Mathematics &bull; 18:40</text>
-                  <rect x="76" y="304" width="172" height="4" rx="2" fill="rgba(14,14,16,0.1)"/>
-                  <rect x="76" y="304" width="112" height="4" rx="2" fill="#E8A317"/>
+                  <rect x="684" y="138" width="242" height="130" rx="10" fill="#FFFFFF" stroke="#E5E0D6"/>
+                  <rect x="690" y="144" width="230" height="70" rx="6" fill="#0B1630"/>
+                  <path d="M 698 190 Q 750 160 800 195 T 910 165" stroke="#E8A317" stroke-width="2" fill="none"/>
+                  <circle cx="805" cy="179" r="12" fill="rgba(255,255,255,0.92)"/>
+                  <polygon points="801,173 811,179 801,185" fill="#0B1630"/>
+                  <text x="694" y="230" font-family="'General Sans', sans-serif" font-size="9.5" font-weight="600" fill="#0E0E10">Quadratic Equations</text>
+                  <text x="694" y="244" font-family="'Geist Mono', monospace" font-size="8" fill="#64748B">Mathematics &bull; 18:40</text>
+                  <rect x="694" y="254" width="222" height="4" rx="2" fill="rgba(14,14,16,0.08)"/>
+                  <rect x="694" y="254" width="140" height="4" rx="2" fill="#E8A317"/>
 
                   <!-- Video Card 2 -->
-                  <rect x="68" y="328" width="188" height="116" rx="8" fill="#FFFFFF" stroke="#E5E0D6"/>
-                  <rect x="74" y="334" width="176" height="60" rx="6" fill="#0F2A1A"/>
-                  <circle cx="162" cy="364" r="10" fill="rgba(255,255,255,0.9)"/>
-                  <polygon points="159,359 167,364 159,369" fill="#0F2A1A"/>
-                  <text x="76" y="408" font-family="'General Sans', sans-serif" font-size="8.5" font-weight="600" fill="#0E0E10">Chemical Reactions</text>
-                  <text x="76" y="420" font-family="'Geist Mono', monospace" font-size="7.5" fill="#55555C">Science &bull; 24:10</text>
+                  <rect x="684" y="278" width="242" height="130" rx="10" fill="#FFFFFF" stroke="#E5E0D6"/>
+                  <rect x="690" y="284" width="230" height="70" rx="6" fill="#0F2A1A"/>
+                  <circle cx="805" cy="319" r="12" fill="rgba(255,255,255,0.92)"/>
+                  <polygon points="801,313 811,319 801,325" fill="#0F2A1A"/>
+                  <text x="694" y="370" font-family="'General Sans', sans-serif" font-size="9.5" font-weight="600" fill="#0E0E10">Chemical Reactions</text>
+                  <text x="694" y="384" font-family="'Geist Mono', monospace" font-size="8" fill="#64748B">Science &bull; 24:10</text>
                 </g>
 
                 <!-- Scene 4: Video Player -->
                 <g class="hero-ph-scene" id="phScenePlayer">
-                  <path d="M72 165 L66 170 L72 175" stroke="#0E0E10" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                  <text x="82" y="173" font-family="'General Sans', sans-serif" font-size="9" font-weight="600" fill="#0E0E10">Mathematics &bull; Lesson 7</text>
+                  <path d="M690 98 L684 103 L690 108" stroke="#0E0E10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                  <text x="702" y="106" font-family="'General Sans', sans-serif" font-size="10" font-weight="600" fill="#0E0E10">Mathematics &bull; Lesson 7</text>
 
-                  <rect x="66" y="184" width="192" height="150" rx="8" fill="#081023"/>
-                  <path d="M 76 300 Q 162 195 248 300" stroke="#E8A317" stroke-width="2.5" fill="none"/>
-                  <circle cx="162" cy="245" r="14" fill="rgba(255,255,255,0.9)"/>
-                  <polygon points="158,238 168,245 158,252" fill="#081023"/>
+                  <!-- Generic Video Player Box -->
+                  <rect x="680" y="118" width="250" height="190" rx="10" fill="#081023"/>
+                  <path d="M 692 250 Q 805 130 918 250" stroke="#E8A317" stroke-width="2.5" fill="none"/>
+                  <circle cx="805" cy="195" r="18" fill="rgba(255,255,255,0.92)"/>
+                  <polygon points="800,186 813,195 800,204" fill="#081023"/>
 
-                  <rect x="72" y="348" width="180" height="4" rx="2" fill="rgba(14,14,16,0.15)"/>
-                  <rect class="hero-ph-progress-fill" x="72" y="348" width="80" height="4" rx="2" fill="#E8A317"/>
+                  <!-- Moving Progress Bar Scrubber -->
+                  <rect x="688" y="324" width="234" height="4" rx="2" fill="rgba(14,14,16,0.15)"/>
+                  <rect class="hero-ph-progress-fill" x="688" y="324" width="110" height="4" rx="2" fill="#E8A317"/>
 
-                  <text x="72" y="368" font-family="'Geist Mono', monospace" font-size="8.5" fill="#55555C">08:14 / 18:40</text>
-                  <text x="252" y="368" font-family="'Geist Mono', monospace" font-size="8" fill="#22C55E" text-anchor="end">1080p</text>
+                  <text x="688" y="348" font-family="'Geist Mono', monospace" font-size="9" fill="#55555C">08:14 / 18:40</text>
+                  <text x="922" y="348" font-family="'Geist Mono', monospace" font-size="9" fill="#16A34A" text-anchor="end">1080p</text>
                 </g>
 
+                <!-- Home Indicator Bar -->
+                <rect x="765" y="494" width="80" height="4" rx="2" fill="#0E0E10"/>
               </g><!-- /clip -->
 
-              <!-- Punch Hole Camera (on top of screen) -->
-              <circle cx="162" cy="146" r="4.5" fill="#0E0E10"/>
+              <!-- Punch Hole Camera (on top of bezel) -->
+              <circle cx="805" cy="68" r="4.5" fill="#0E0E10"/>
             </g><!-- /heroPhone -->
           </svg>
-        </div>
+          </div><!-- /hero-devices-wrap -->
+        </div><!-- /hero-anim-col -->
 
-        <!-- 3. Heading (Instrument Serif italic + saffron underline) -->
-        <h1 class="company-hero-title" id="companyHeroHeading">
-          <span class="title-line">We build </span>
-          <span class="title-line"><em class="serif hero-serif-accent">software products
-            <svg class="hero-underline-svg" viewBox="0 0 320 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path class="hero-underline-path" d="M4 12 C80 4 200 2 316 10" stroke="#E8A317" stroke-width="3" stroke-linecap="round"/>
-            </svg>
-          </em> </span>
-          <span class="title-line">for multiple industries </span>
-          <span class="title-line">across India.</span>
-        </h1>
-
-        <!-- 4. Supporting Line -->
-        <p class="company-hero-subline">
-          OpenSoftwares builds software products for education, real estate and manufacturing, and brings them to businesses and institutions across India at prices that make sense.
-        </p>
-
-        <!-- 5. Two Buttons -->
-        <div class="company-hero-actions">
-          <a href="#our-products" class="btn btn-primary hero-btn-primary">
-            Explore our products
-            <svg class="icon icon-sm btn-arrow"><use href="#icon-arrow-up-right"></use></svg>
-          </a>
-          <a href="contact.html" class="hero-link-underline">
-            Talk to us
-          </a>
-        </div>
-
-      </div>
+      </div><!-- /company-hero-container -->
     </section>
 
     <!-- ==================================================================
@@ -786,101 +813,104 @@
         <div class="intro-divider" aria-hidden="true"></div>
 
         <p class="intro-body reveal reveal-delay-3">
-          Good software should not be a luxury. We build each product to be easy to use and easy to afford, so that institutions and businesses of every size across India can run on it.
+          Good software should not be a luxury. We build every product to be easy to use and easy to afford.
         </p>
       </div>
     </section>
 
     <!-- ==================================================================
-         4. THREE FIELDS (Section D)
+         4. THREE FIELDS (Section D - Single Compact Line)
          ================================================================== -->
-    <section class="section fields-section" id="fields" aria-labelledby="fieldsHeading">
+    <section class="fields-strip-section" id="fields" aria-labelledby="fieldsHeading">
       <div class="container">
-        <span class="section-label">02 / Our fields</span>
         <h2 id="fieldsHeading" class="sr-only">Our Fields</h2>
 
-        <div class="fields-grid" role="list">
+        <div class="fields-strip-row" role="list">
           <!-- 01 Education -->
-          <a href="products.html#education" class="field-card reveal" role="listitem" aria-label="Education: Software that runs schools. Live now: Schoolmate">
-            <div class="field-card-top">
-              <span class="field-num">01</span>
-              <div class="field-icon-wrap" aria-hidden="true">
-                <svg class="field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 2.5 3.5 6 3.5s6-1.5 6-3.5v-5"/>
-                </svg>
-              </div>
-            </div>
-            <div class="field-art-wrap" aria-hidden="true">
-              <svg class="field-art-svg" viewBox="0 0 160 80" fill="none">
-                <path class="art-draw-path" d="M20 60 L80 20 L140 60 L80 70 Z M40 50 L40 68 Q80 82 120 68 L120 50 M140 60 L150 72" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <a href="products.html#education" class="fields-strip-item reveal" role="listitem" aria-label="Education: Software that runs schools. Live now: Schoolmate">
+            <div class="fields-strip-icon-wrap" aria-hidden="true">
+              <svg class="fields-strip-svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <!-- Mortarboard Diamond Top -->
+                <polygon class="icon-draw-path" pathLength="1" points="24,6 42,13 24,20 6,13" />
+                <!-- Skull Cap Base beneath -->
+                <path class="icon-draw-path" pathLength="1" d="M14 16.5 V22 C14 26 34 26 34 22 V16.5" />
+                <!-- Saffron Tassel hanging from right corner -->
+                <line x1="42" y1="13" x2="42" y2="23" stroke="#E8A317" stroke-width="1.6"/>
+                <circle cx="42" cy="24" r="1.5" fill="#E8A317" stroke="none"/>
+                <!-- Open Book beneath -->
+                <path class="icon-draw-path" pathLength="1" d="M24 31 v12 M24 31 C17 29 10 31 6 33 v9 C10 40 17 38 24 42 C31 38 38 40 42 42 v-9 C38 31 31 29 24 31 Z" />
               </svg>
             </div>
-            <div class="field-card-content">
-              <h3 class="field-title">Education</h3>
-              <p class="field-desc">Software that runs schools, from admissions to attendance, fees and learning.</p>
-            </div>
-            <div class="field-card-footer">
-              <span class="field-status live">
-                <span class="status-dot saffron" aria-hidden="true"></span>
-                Live now: Schoolmate
-              </span>
-              <span class="field-arrow-icon" aria-hidden="true">
-                <svg class="icon icon-sm"><use href="#icon-arrow-up-right"></use></svg>
+            <div class="fields-strip-meta">
+              <span class="fields-strip-name">Education</span>
+              <span class="fields-strip-status status-live">
+                <span class="strip-status-dot" aria-hidden="true"></span>
+                Live
               </span>
             </div>
           </a>
+
+          <div class="fields-strip-divider" aria-hidden="true"></div>
 
           <!-- 02 Real Estate -->
-          <a href="products.html#real-estate" class="field-card reveal reveal-delay-1" role="listitem" aria-label="Real Estate: Tools to manage properties, leads, bookings and payments. Coming soon">
-            <div class="field-card-top">
-              <span class="field-num">02</span>
-              <div class="field-icon-wrap" aria-hidden="true">
-                <svg class="field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><path d="M9 22v-4h6v4M8 6h.01M16 6h.01M12 6h.01M12 10h.01M12 14h.01M16 10h.01M16 14h.01M8 10h.01M8 14h.01"/>
-                </svg>
-              </div>
-            </div>
-            <div class="field-art-wrap" aria-hidden="true">
-              <svg class="field-art-svg" viewBox="0 0 160 80" fill="none">
-                <path class="art-draw-path" d="M30 75 L30 25 L85 25 L85 75 M85 40 L135 40 L135 75 M46 38 h12 M68 38 h6 M46 52 h12 M68 52 h6 M100 52 h14 M100 64 h14 M52 75 v-12 h12 v12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <a href="products.html#real-estate" class="fields-strip-item reveal reveal-delay-1" role="listitem" aria-label="Real Estate: Tools to manage properties, leads and bookings. Coming soon">
+            <div class="fields-strip-icon-wrap" aria-hidden="true">
+              <svg class="fields-strip-svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <!-- Shared Ground line -->
+                <line class="icon-draw-path" pathLength="1" x1="4" y1="44" x2="44" y2="44"/>
+                <!-- Apartment Tower -->
+                <rect class="icon-draw-path" pathLength="1" x="8" y="10" width="18" height="34"/>
+                <!-- Entrance Door -->
+                <rect x="14" y="37" width="6" height="7"/>
+                <!-- Window Grid -->
+                <line x1="12" y1="16" x2="15" y2="16"/><line x1="19" y1="16" x2="22" y2="16"/>
+                <line x1="12" y1="23" x2="15" y2="23"/><line x1="19" y1="23" x2="22" y2="23"/>
+                <line x1="12" y1="30" x2="15" y2="30"/><line x1="19" y1="30" x2="22" y2="30"/>
+                <!-- Pitched Roof House on Right -->
+                <polyline class="icon-draw-path" pathLength="1" points="26,26 36,17 44,24"/>
+                <path class="icon-draw-path" pathLength="1" d="M28 26 V44 H42 V23"/>
+                <rect x="32" y="35" width="5" height="9"/>
+                <!-- Chimney with tiny saffron puff -->
+                <line x1="40" y1="20" x2="40" y2="14"/>
+                <circle cx="40" cy="11" r="1.5" fill="#E8A317" stroke="none"/>
+                <!-- Window with saffron accent -->
+                <rect x="32" y="28" width="5" height="4" stroke="#E8A317"/>
               </svg>
             </div>
-            <div class="field-card-content">
-              <h3 class="field-title">Real Estate</h3>
-              <p class="field-desc">Tools to manage properties, leads, bookings and payments.</p>
-            </div>
-            <div class="field-card-footer">
-              <span class="field-status coming-soon">Coming soon</span>
-              <span class="field-arrow-icon" aria-hidden="true">
-                <svg class="icon icon-sm"><use href="#icon-arrow-up-right"></use></svg>
-              </span>
+            <div class="fields-strip-meta">
+              <span class="fields-strip-name">Real Estate</span>
+              <span class="fields-strip-status status-soon">Soon</span>
             </div>
           </a>
+
+          <div class="fields-strip-divider" aria-hidden="true"></div>
 
           <!-- 03 Manufacturing -->
-          <a href="products.html#manufacturing" class="field-card reveal reveal-delay-2" role="listitem" aria-label="Manufacturing: Systems to manage production, inventory, staff and orders. Coming soon">
-            <div class="field-card-top">
-              <span class="field-num">03</span>
-              <div class="field-icon-wrap" aria-hidden="true">
-                <svg class="field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 2v3m0 14v3M4.93 4.93l2.12 2.12m9.9 9.9l2.12 2.12M2 12h3m14 0h3M4.93 19.07l2.12-2.12m9.9-9.9l2.12-2.12"/><circle cx="12" cy="12" r="4"/>
-                </svg>
-              </div>
-            </div>
-            <div class="field-art-wrap" aria-hidden="true">
-              <svg class="field-art-svg" viewBox="0 0 160 80" fill="none">
-                <path class="art-draw-path" d="M25 75 L25 45 L50 60 L50 45 L75 60 L75 35 L135 35 L135 75 Z M90 75 V55 H108 V75 M115 48 H125" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <a href="products.html#manufacturing" class="fields-strip-item reveal reveal-delay-2" role="listitem" aria-label="Manufacturing: Systems to manage production, inventory and orders. Coming soon">
+            <div class="fields-strip-icon-wrap" aria-hidden="true">
+              <svg class="fields-strip-svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <!-- Shared Ground line -->
+                <line class="icon-draw-path" pathLength="1" x1="4" y1="44" x2="44" y2="44"/>
+                <!-- Factory with Sawtooth Roof -->
+                <path class="icon-draw-path" pathLength="1" d="M6 44 V24 L14 30 V24 L22 30 V20 H34 V44" />
+                <!-- Two Chimneys -->
+                <line x1="24" y1="20" x2="24" y2="13"/>
+                <line x1="28" y1="20" x2="28" y2="15"/>
+                <!-- Saffron Smoke Puffs -->
+                <circle cx="24" cy="10" r="1.5" fill="#E8A317" stroke="none"/>
+                <circle cx="28" cy="12" r="1.2" fill="#E8A317" stroke="none"/>
+                <!-- Loading Door & Window row -->
+                <rect x="10" y="36" width="8" height="8"/>
+                <line x1="24" y1="26" x2="30" y2="26"/>
+                <line x1="24" y1="31" x2="30" y2="31"/>
+                <!-- 8-Tooth Gear Overlapping Bottom Right -->
+                <circle cx="36" cy="36" r="3" fill="none" stroke="#E8A317" stroke-width="1.5"/>
+                <circle cx="36" cy="36" r="7" stroke="#E8A317" stroke-width="2" stroke-dasharray="2.5 3"/>
               </svg>
             </div>
-            <div class="field-card-content">
-              <h3 class="field-title">Manufacturing</h3>
-              <p class="field-desc">Systems to manage production, inventory, staff and orders.</p>
-            </div>
-            <div class="field-card-footer">
-              <span class="field-status coming-soon">Coming soon</span>
-              <span class="field-arrow-icon" aria-hidden="true">
-                <svg class="icon icon-sm"><use href="#icon-arrow-up-right"></use></svg>
-              </span>
+            <div class="fields-strip-meta">
+              <span class="fields-strip-name">Manufacturing</span>
+              <span class="fields-strip-status status-soon">Soon</span>
             </div>
           </a>
         </div>
@@ -888,211 +918,67 @@
     </section>
 
     <!-- ==================================================================
-         5. OUR PRODUCTS (Section E) & THE FREE WEBSITE OFFER
+         5. SCHOOLMATE SECTION (Section E) & UNIFIED SUITE
          ================================================================== -->
-    <section class="section our-products-section" id="our-products" aria-labelledby="productsSectionHeading">
+    <section class="section schoolmate-section" id="schoolmate" aria-labelledby="schoolmateHeading">
       <div class="container">
-        <span class="section-label">03 / Our products</span>
-        <h2 id="productsSectionHeading" class="products-section-title">
-          Our first product, <em class="serif">Schoolmate</em>.
-        </h2>
+        <span class="section-label">03 / Schoolmate</span>
 
-        <!-- FREE WEBSITE OFFER BAND (Prominent & Elegant) -->
-        <div class="free-website-offer-band" role="region" aria-label="Free school website offer">
-          <div class="offer-band-bg-art" aria-hidden="true">
-            <svg viewBox="0 0 400 200" fill="none">
-              <circle cx="360" cy="100" r="140" stroke="rgba(232, 163, 23, 0.12)" stroke-width="1"/>
-              <circle cx="360" cy="100" r="90" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
-            </svg>
+        <!-- a) ONE slim single-line product strip -->
+        <div class="sm-product-strip" role="region" aria-label="Schoolmate product overview and website offer">
+          <div class="sm-strip-brand">
+            <span class="sm-strip-logo-mark" aria-hidden="true"></span>
+            <span>Schoolmate</span>
           </div>
-          <div class="offer-band-inner">
-            <div class="offer-badge-row">
-              <span class="offer-band-label">
-                <svg class="offer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M2 7h20M7 5h.01M10 5h.01M13 5h.01"/>
-                </svg>
-                Free with every Schoolmate plan
-              </span>
+          <div class="sm-strip-items">
+            <div class="sm-strip-item">
+              <svg class="sm-strip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M2 7h20M7 5h.01M10 5h.01M13 5h.01"/>
+              </svg>
+              <span>Free school website (worth &#8377;15,000)<span class="sm-strip-free-tag">FREE</span></span>
             </div>
-            <h3 class="offer-band-headline">Get a free school website, worth Rs. 15,000.</h3>
-            <p class="offer-band-subline">Every school that takes a Schoolmate plan gets a professionally designed school website at no extra cost.</p>
-            <div class="offer-band-action-row">
-              <a href="https://wa.me/917204726501?text=Hi%2C%20I%20want%20to%20know%20about%20the%20free%20school%20website%20with%20the%20Schoolmate%20plan." target="_blank" rel="noopener noreferrer" class="btn btn-offer-claim">
-                Claim your free website
-                <svg class="icon icon-sm"><use href="#icon-arrow-up-right"></use></svg>
-              </a>
-              <span class="offer-band-footnote" id="offerFootnoteText">Terms and conditions apply.</span>
+            <span class="sm-strip-sep" aria-hidden="true">&bull;</span>
+            <div class="sm-strip-item">
+              <svg class="sm-strip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="5" y="2" width="14" height="20" rx="3"/><line x1="12" y1="18" x2="12.01" y2="18"/>
+              </svg>
+              <span>Parents and teachers app</span>
+            </div>
+            <span class="sm-strip-sep" aria-hidden="true">&bull;</span>
+            <div class="sm-strip-item">
+              <svg class="sm-strip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+              </svg>
+              <span>School management software</span>
             </div>
           </div>
+          <a href="https://wa.me/917204726501?text=Hi%2C%20I%20want%20to%20know%20about%20the%20free%20school%20website%20with%20the%20Schoolmate%20plan." target="_blank" rel="noopener noreferrer" class="sm-strip-claim-link">
+            Claim free website &rarr;
+          </a>
         </div>
 
-        <!-- Schoolmate Large Feature Row -->
-        <div class="schoolmate-feature-row reveal">
-          <div class="sm-feature-badge">Flagship Education Platform</div>
-          <h3 class="sm-feature-title">Schoolmate, School Management App and ERP by OpenSoftwares</h3>
-          <ul class="sm-feature-points" role="list">
-            <li class="sm-point-item">
-              <span class="sm-point-check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
-              <span>Android app for parents, teachers and students</span>
-            </li>
-            <li class="sm-point-item">
-              <span class="sm-point-check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
-              <span>Web ERP for administration, finance, staff and payroll</span>
-            </li>
-            <li class="sm-point-item">
-              <span class="sm-point-check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
-              <span>Live bus tracking, attendance, homework and videos</span>
-            </li>
-          </ul>
-          <div class="sm-feature-actions">
-            <a href="products.html#education" class="btn btn-primary">
-              Learn more
-              <svg class="icon icon-sm"><use href="#icon-arrow-up-right"></use></svg>
-            </a>
-            <a href="contact.html" class="btn btn-secondary">
-              Book a free demo
-            </a>
-          </div>
+        <!-- b) DIRECTLY below it, the tagline & trust line -->
+        <div class="sm-tagline-wrap">
+          <h2 class="sm-section-headline" id="schoolmateHeading">
+            Making schools ready for the <em class="serif sm-serif-accent">future of learning
+              <svg class="sm-underline-svg" viewBox="0 0 320 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path class="sm-underline-path" d="M4 12 C80 4 200 2 316 10" stroke="#E8A317" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+            </em>
+          </h2>
+          <p class="sm-trust-line">Trusted by thousands of schools and institutions across Maharashtra</p>
         </div>
 
-        <!-- Quiet more products line with two outlined placeholder slots -->
-        <div class="more-products-preview">
-          <p class="more-products-quiet-line">More products coming soon</p>
-          <div class="more-products-slots">
-            <a href="products.html#real-estate" class="product-slot-outlined">
-              <div>
-                <div class="slot-name">Real Estate Platform</div>
-                <div class="slot-tag">Properties, leads &amp; bookings</div>
+        <!-- c) Interactive Android Phone Mockup -->
+        <div class="sm-phone-stage" style="display:flex;justify-content:center;margin:0 auto;">
+          <div class="phone-device" aria-label="Schoolmate Android App interactive demo" role="region">
+            <div class="phone-frame">
+
+              <!-- Notch / punch-hole camera -->
+              <div class="phone-notch-bar">
+                <div class="phone-camera" aria-hidden="true"></div>
               </div>
-              <span class="slot-tag">Coming soon</span>
-            </a>
-            <a href="products.html#manufacturing" class="product-slot-outlined">
-              <div>
-                <div class="slot-name">Manufacturing ERP</div>
-                <div class="slot-tag">Production, inventory &amp; orders</div>
-              </div>
-              <span class="slot-tag">Coming soon</span>
-            </a>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==================================================================
-         6. SCHOOLMATE SECTION (Section F)
-         ================================================================== -->
-    <section class="section schoolmate-section" id="schoolmate" aria-labelledby="schoolmateSectionHeading">
-      <div class="container">
-        <span class="section-label">04 / Schoolmate</span>
-        
-        <!-- 1. Trust Line -->
-        <p class="sm-trust-line">Trusted by thousands of schools and institutions across Maharashtra</p>
-        
-        <!-- 2. Tagline as Section Headline -->
-        <h2 class="sm-section-headline" id="schoolmateSectionHeading">
-          Making schools ready<br>
-          for the <em class="serif sm-serif-accent">future of learning
-            <svg class="sm-underline-svg" viewBox="0 0 320 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path class="sm-underline-path" d="M4 12 C80 4 200 2 316 10" stroke="#E8A317" stroke-width="3" stroke-linecap="round"/>
-            </svg>
-          </em>
-        </h2>
-
-        <!-- 3. Image Slider -->
-        <div class="sm-slider-container">
-          <div class="hero-slider-card" aria-label="Schoolmate product showcase slides">
-            <div class="slider-inner" id="heroSlider">
-              <div class="slide-item active">
-                <img src="assets/slider-admin.svg" alt="Schoolmate Administration ERP dashboard" width="600" height="600" loading="eager">
-              </div>
-              <div class="slide-item">
-                <img src="assets/slider-parents.svg" alt="Schoolmate Android parent app" width="600" height="600" loading="lazy">
-              </div>
-              <div class="slide-item">
-                <img src="assets/slider-bus.svg" alt="Live GPS school bus tracking" width="600" height="600" loading="lazy">
-              </div>
-              <div class="slide-item">
-                <img src="assets/slider-classroom.svg" alt="Smart classroom and CBSE gradebook" width="600" height="600" loading="lazy">
-              </div>
-              <div class="slide-item">
-                <img src="assets/slider-fees.svg" alt="Automated fees and accounts" width="600" height="600" loading="lazy">
-              </div>
-              <!-- Progress bar -->
-              <div class="slider-progress-bar" aria-hidden="true"></div>
-            </div>
-            <button class="slider-arrow slider-arrow-prev" type="button" aria-label="Previous slide">
-              <svg class="icon"><use href="#icon-chevron-left"></use></svg>
-            </button>
-            <button class="slider-arrow slider-arrow-next" type="button" aria-label="Next slide">
-              <svg class="icon"><use href="#icon-chevron-right"></use></svg>
-            </button>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==================================================================
-         B. APP SHOWCASE SECTION
-         ================================================================== -->
-    <section class="section app-section" id="appShowcase" aria-labelledby="appHeading">
-      <div class="container">
-
-        <div class="app-layout">
-
-          <!-- Text Column -->
-          <div class="app-text-col reveal">
-            <span class="section-label">01 / Mobile App</span>
-
-            <!-- Google Play Notice (above phone) -->
-            <div class="app-play-notice" aria-label="Schoolmate app availability">
-              <div class="app-play-badge">
-                <!-- Exact Official Google Play Store Vector Icon -->
-                <svg class="gp-logo" viewBox="0 0 512 512" width="24" height="24" aria-hidden="true">
-                  <path fill="#00D6FF" d="M38.8 14.2c-5.8 6.1-9.3 15.6-9.3 27.6v428.4c0 12 3.5 21.5 9.3 27.6l1.4 1.4L264.4 275v-3.7L40.2 12.8l-1.4 1.4z"/>
-                  <path fill="#FFC900" d="M340.5 351.1l-76.1-76.1V271.3l76.1-76.1 1.7 1 89.9 51.1c25.7 14.6 25.7 38.5 0 53.1l-89.9 51.1-1.7-.4z"/>
-                  <path fill="#FF3A44" d="M342.2 350.7L264.4 273 40.2 497.2c8.5 9 22.4 10.1 38 1.3l264-147.8z"/>
-                  <path fill="#00F076" d="M342.2 161.3L78.2 13.5C62.6 4.7 48.7 5.8 40.2 14.8L264.4 239l77.8-77.7z"/>
-                </svg>
-                <div>
-                  <div class="app-play-name">Schoolmate</div>
-                  <div class="app-play-sub">Coming soon on Google Play</div>
-                </div>
-              </div>
-              <div class="app-play-divider" aria-hidden="true"></div>
-              <!-- Proper Notify Button with Ringing Bell SVG Icon -->
-              <a href="https://wa.me/917204726501?text=Hi%2C%20please%20notify%20me%20when%20the%20Schoolmate%20app%20launches%20on%20Google%20Play" class="app-notify-btn" aria-label="Get notified about Schoolmate app launch">
-                <svg class="notify-bell-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
-                  <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
-                </svg>
-                <span>Notify me</span>
-              </a>
-            </div>
-
-            <h2 class="app-section-title" id="appHeading">
-              Schoolmate Mobile App
-            </h2>
-            <p class="app-section-subline" style="font-size:1.15rem;font-weight:600;color:var(--ink);margin-bottom:var(--s2);">
-              Everything a parent needs, in one <em class="serif">app.</em>
-            </p>
-            <p class="app-section-body">
-              Homework alerts, attendance records, live bus location, educational videos, fee receipts and school notices &mdash; all in a single, beautifully designed Android app.
-            </p>
-          </div>
-
-          <!-- Phone Device Column -->
-          <div class="app-phone-col reveal reveal-delay-2">
-            <div class="phone-device" aria-label="Schoolmate Android App interactive demo" role="region">
-              <div class="phone-frame">
-
-                <!-- Notch / punch-hole camera -->
-                <div class="phone-notch-bar">
-                  <div class="phone-camera" aria-hidden="true"></div>
-                </div>
-                <div class="phone-screen-inner">
-
+              <div class="phone-screen-inner">
 
                 <!-- Status Bar -->
                 <div class="phone-status-bar" aria-hidden="true">
@@ -1413,391 +1299,458 @@
                   <div class="gesture-pill"></div>
                 </div>
 
-                </div><!-- /phone-screen-inner -->
-              </div><!-- /phone-frame -->
-            </div><!-- /phone-device -->
-          </div><!-- /app-phone-col -->
+              </div><!-- /phone-screen-inner -->
+            </div><!-- /phone-frame -->
+          </div><!-- /phone-device -->
+        </div><!-- /sm-phone-stage -->
 
-        </div><!-- /app-layout -->
+        <!-- d) DIRECTLY below the phone: Google Play notice & Notify me button -->
+        <div class="app-play-notice" style="max-width: 520px; margin: clamp(24px, 4vw, 36px) auto clamp(48px, 6vw, 72px);" aria-label="Schoolmate app availability">
+          <div class="app-play-badge">
+            <svg class="gp-logo" viewBox="0 0 512 512" width="24" height="24" aria-hidden="true">
+              <path fill="#00D6FF" d="M38.8 14.2c-5.8 6.1-9.3 15.6-9.3 27.6v428.4c0 12 3.5 21.5 9.3 27.6l1.4 1.4L264.4 275v-3.7L40.2 12.8l-1.4 1.4z"/>
+              <path fill="#FFC900" d="M340.5 351.1l-76.1-76.1V271.3l76.1-76.1 1.7 1 89.9 51.1c25.7 14.6 25.7 38.5 0 53.1l-89.9 51.1-1.7-.4z"/>
+              <path fill="#FF3A44" d="M342.2 350.7L264.4 273 40.2 497.2c8.5 9 22.4 10.1 38 1.3l264-147.8z"/>
+              <path fill="#00F076" d="M342.2 161.3L78.2 13.5C62.6 4.7 48.7 5.8 40.2 14.8L264.4 239l77.8-77.7z"/>
+            </svg>
+            <div>
+              <div class="app-play-name">Schoolmate</div>
+              <div class="app-play-sub">Coming soon on Google Play</div>
+            </div>
+          </div>
+          <div class="app-play-divider" aria-hidden="true"></div>
+          <a href="https://wa.me/917204726501?text=Hi%2C%20please%20notify%20me%20when%20the%20Schoolmate%20app%20launches%20on%20Google%20Play" class="app-notify-btn" aria-label="Get notified about Schoolmate app launch">
+            <svg class="notify-bell-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+            </svg>
+            <span>Notify me</span>
+          </a>
+        </div>
 
-      </div>
-    </section>
+        <!-- e) Schoolmate ERP Mockup -->
+        <div class="sm-erp-wrap" id="erpShowcase">
+          <h3 class="sm-erp-heading">ERP for school management, finance, staff, payroll and more</h3>
 
-    <!-- ==================================================================
-         C. ERP SECTION (dark band)
-         ================================================================== -->
-    <section class="section erp-section" id="erpShowcase" aria-labelledby="erpHeading">
-      <div class="container">
-
-        <span class="section-label">02 / Web ERP</span>
-        <h2 class="erp-heading reveal" id="erpHeading">Schoolmate ERP</h2>
-        <p class="erp-subline reveal reveal-delay-1">
-          One system for school management, finance, staff, payroll and everything in between.
-        </p>
-
-        <!-- Scaled Laptop/Monitor Mockup -->
-        <div class="erp-mockup-host reveal reveal-delay-2" aria-label="Schoolmate ERP interface demo">
-          <div class="erp-mockup-scaler">
-            <div class="erp-mockup-canvas" id="erpCanvas">
-              <!-- PC Desktop Cursor -->
-              <div class="erp-pc-cursor" id="erpPcCursor" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                  <path d="M4 3L11 20L13.8 13.5L20.5 11L4 3Z" fill="#0A2A5E" stroke="#FFFFFF" stroke-width="1.8" stroke-linejoin="round"/>
-                </svg>
-                <div class="erp-cursor-ripple"></div>
-              </div>
-
-              <!-- Browser bar -->
-              <div class="erp-browser-bar">
-                <div class="erp-traffic-dots" aria-hidden="true">
-                  <div class="erp-dot erp-dot-red"></div>
-                  <div class="erp-dot erp-dot-amber"></div>
-                  <div class="erp-dot erp-dot-green"></div>
+          <!-- Scaled Laptop/Monitor Mockup -->
+          <div class="erp-mockup-host reveal" aria-label="Schoolmate ERP interface demo">
+            <div class="erp-mockup-scaler">
+              <div class="erp-mockup-canvas" id="erpCanvas">
+                <!-- PC Desktop Cursor -->
+                <div class="erp-pc-cursor" id="erpPcCursor" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                    <path d="M4 3L11 20L13.8 13.5L20.5 11L4 3Z" fill="#0A2A5E" stroke="#FFFFFF" stroke-width="1.8" stroke-linejoin="round"/>
+                  </svg>
+                  <div class="erp-cursor-ripple"></div>
                 </div>
-                <div class="erp-url-field" aria-label="Browser address bar">
-                  <svg class="erp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                  <span class="erp-url-text">schoolmate.opensoftwares.in/erp-admin</span>
+
+                <!-- Browser bar -->
+                <div class="erp-browser-bar">
+                  <div class="erp-traffic-dots" aria-hidden="true">
+                    <div class="erp-dot erp-dot-red"></div>
+                    <div class="erp-dot erp-dot-amber"></div>
+                    <div class="erp-dot erp-dot-green"></div>
+                  </div>
+                  <div class="erp-url-field" aria-label="Browser address bar">
+                    <svg class="erp-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    <span class="erp-url-text">schoolmate.opensoftwares.in/erp-admin</span>
+                  </div>
+                </div>
+
+                <!-- ERP body -->
+                <div class="erp-body">
+
+                  <!-- Sidebar -->
+                  <nav class="erp-sidebar" aria-label="ERP Modules">
+                    <div class="erp-sidebar-logo">
+                      <img src="/assets/brand/logo-transparent.png" 
+                           srcset="/assets/brand/logo-transparent-32.png 1x, /assets/brand/logo-transparent-72.png 2x" 
+                           width="26" height="26" 
+                           alt="OpenSoftwares Pvt. Ltd. logo" 
+                           class="brand-logo-img brand-logo-darkmode">
+                      <div class="erp-sidebar-logo-text">Schoolmate ERP</div>
+                    </div>
+                    <button class="erp-module-btn active" data-erp-panel="erpDashboard" aria-selected="true" type="button">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+                      Dashboard
+                    </button>
+                    <button class="erp-module-btn" data-erp-panel="erpStudents" aria-selected="false" type="button">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                      Students
+                    </button>
+                    <button class="erp-module-btn" data-erp-panel="erpStaff" aria-selected="false" type="button">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                      Staff
+                    </button>
+                    <button class="erp-module-btn" data-erp-panel="erpPayroll" aria-selected="false" type="button">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/></svg>
+                      Payroll
+                    </button>
+                    <button class="erp-module-btn" data-erp-panel="erpTimetable" aria-selected="false" type="button">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                      Timetable
+                    </button>
+                    <button class="erp-module-btn" data-erp-panel="erpExams" aria-selected="false" type="button">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                      Exams
+                    </button>
+                    <button class="erp-module-btn" data-erp-panel="erpFees" aria-selected="false" type="button">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                      Fees &amp; Accounts
+                    </button>
+                    <button class="erp-module-btn" data-erp-panel="erpTransport" aria-selected="false" type="button">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 6v6M15 6v6M2 12h20M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"/><circle cx="7" cy="18" r="1"/><circle cx="17" cy="18" r="1"/></svg>
+                      Transport
+                    </button>
+                    <button class="erp-module-btn" data-erp-panel="erpReports" aria-selected="false" type="button">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg>
+                      Reports
+                    </button>
+                  </nav>
+
+                  <!-- ERP Panel -->
+                  <div class="erp-panel" role="main">
+
+                    <!-- Dashboard Panel -->
+                    <div class="erp-panel-view active" id="erpDashboard" role="tabpanel">
+                      <div class="erp-panel-header">
+                        <div class="erp-panel-title">Dashboard</div>
+                        <div class="erp-panel-date">Oct 22, 2026</div>
+                      </div>
+                      <div class="erp-kpi-row">
+                        <div class="erp-kpi-card">
+                          <div class="erp-kpi-label">Total Students</div>
+                          <div class="erp-kpi-value" data-target="1248" data-suffix="">1,248</div>
+                          <div class="erp-kpi-trend">+48 this month</div>
+                        </div>
+                        <div class="erp-kpi-card">
+                          <div class="erp-kpi-label">Attendance Today</div>
+                          <div class="erp-kpi-value">94.2%</div>
+                          <div class="erp-kpi-trend">+1.3% vs yesterday</div>
+                        </div>
+                        <div class="erp-kpi-card">
+                          <div class="erp-kpi-label">Fees Collected</div>
+                          <div class="erp-kpi-value">&#8377;12.4L</div>
+                          <div class="erp-kpi-trend">82% of October target</div>
+                        </div>
+                        <div class="erp-kpi-card">
+                          <div class="erp-kpi-label">Staff Present</div>
+                          <div class="erp-kpi-value">68/72</div>
+                          <div class="erp-kpi-trend">4 on leave</div>
+                        </div>
+                      </div>
+                      <div class="erp-chart-area">
+                        <div class="erp-chart-title">Monthly Fee Collection &mdash; Oct 2026</div>
+                        <svg class="erp-chart-svg" viewBox="0 0 780 120" preserveAspectRatio="none">
+                          <path class="erp-chart-area-fill" d="M0,110 L65,80 L130,90 L195,55 L260,70 L325,40 L390,55 L455,30 L520,45 L585,20 L650,35 L715,15 L780,25 L780,120 L0,120 Z"/>
+                          <path class="erp-chart-line" d="M0,110 L65,80 L130,90 L195,55 L260,70 L325,40 L390,55 L455,30 L520,45 L585,20 L650,35 L715,15 L780,25"/>
+                          <circle cx="780" cy="25" r="3" fill="#E8A317"/>
+                        </svg>
+                      </div>
+                    </div>
+
+                    <!-- Students Panel -->
+                    <div class="erp-panel-view" id="erpStudents" role="tabpanel">
+                      <div class="erp-panel-header">
+                        <div class="erp-panel-title">Students</div>
+                        <div class="erp-panel-date">1,248 enrolled</div>
+                      </div>
+                      <table class="erp-table">
+                        <thead>
+                          <tr>
+                            <th>Name</th><th>Class</th><th>Roll</th><th>Attendance</th><th>Status</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr><td>Aanya Agarwal</td><td>X-B</td><td>14</td><td>94.2%</td><td><span class="erp-badge erp-badge-present">Present</span></td></tr>
+                          <tr><td>Rohan Mehta</td><td>X-B</td><td>22</td><td>88.1%</td><td><span class="erp-badge erp-badge-present">Present</span></td></tr>
+                          <tr><td>Priya Desai</td><td>X-A</td><td>7</td><td>91.5%</td><td><span class="erp-badge erp-badge-absent">Absent</span></td></tr>
+                          <tr><td>Karan Joshi</td><td>IX-C</td><td>31</td><td>97.0%</td><td><span class="erp-badge erp-badge-present">Present</span></td></tr>
+                          <tr><td>Sneha Patil</td><td>IX-A</td><td>11</td><td>82.4%</td><td><span class="erp-badge erp-badge-present">Present</span></td></tr>
+                          <tr><td>Amit Kulkarni</td><td>VIII-B</td><td>5</td><td>95.8%</td><td><span class="erp-badge erp-badge-absent">Absent</span></td></tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <!-- Staff Panel -->
+                    <div class="erp-panel-view" id="erpStaff" role="tabpanel">
+                      <div class="erp-panel-header">
+                        <div class="erp-panel-title">Staff &amp; HR</div>
+                        <div class="erp-panel-date">72 staff members</div>
+                      </div>
+                      <table class="erp-table">
+                        <thead>
+                          <tr><th>Name</th><th>Designation</th><th>Dept.</th><th>Biometric</th><th>Status</th></tr>
+                        </thead>
+                        <tbody>
+                          <tr><td>Mrs. Sharma</td><td>Principal</td><td>Admin</td><td>08:12 AM</td><td><span class="erp-badge erp-badge-present">Present</span></td></tr>
+                          <tr><td>Mr. Patil</td><td>Mathematics</td><td>Academics</td><td>08:24 AM</td><td><span class="erp-badge erp-badge-present">Present</span></td></tr>
+                          <tr><td>Ms. Kulkarni</td><td>Science</td><td>Academics</td><td>&mdash;</td><td><span class="erp-badge erp-badge-absent">Leave</span></td></tr>
+                          <tr><td>Mr. Khan</td><td>Driver &mdash; Bus 03</td><td>Transport</td><td>07:45 AM</td><td><span class="erp-badge erp-badge-present">Present</span></td></tr>
+                          <tr><td>Mrs. Joshi</td><td>Accountant</td><td>Finance</td><td>08:35 AM</td><td><span class="erp-badge erp-badge-present">Present</span></td></tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <!-- Payroll Panel -->
+                    <div class="erp-panel-view" id="erpPayroll" role="tabpanel">
+                      <div class="erp-panel-header">
+                        <div class="erp-panel-title">Payroll &amp; Salaries</div>
+                        <div class="erp-panel-date">October 2026</div>
+                      </div>
+                      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+                        <div class="erp-kpi-card"><div class="erp-kpi-label">Gross Payroll</div><div class="erp-kpi-value">&#8377;8.4L</div><div class="erp-kpi-trend">72 employees</div></div>
+                        <div class="erp-kpi-card"><div class="erp-kpi-label">PT Deductions</div><div class="erp-kpi-value">&#8377;21,600</div><div class="erp-kpi-trend">Maharashtra PT compliant</div></div>
+                      </div>
+                      <table class="erp-table">
+                        <thead><tr><th>Employee</th><th>Basic</th><th>HRA</th><th>PT</th><th>Net Pay</th></tr></thead>
+                        <tbody>
+                          <tr><td>Mrs. Sharma</td><td>&#8377;55,000</td><td>&#8377;22,000</td><td>&#8377;200</td><td>&#8377;76,800</td></tr>
+                          <tr><td>Mr. Patil</td><td>&#8377;38,000</td><td>&#8377;15,200</td><td>&#8377;200</td><td>&#8377;53,000</td></tr>
+                          <tr><td>Ms. Kulkarni</td><td>&#8377;36,000</td><td>&#8377;14,400</td><td>&#8377;200</td><td>&#8377;50,200</td></tr>
+                          <tr><td>Mr. Khan</td><td>&#8377;22,000</td><td>&#8377;8,800</td><td>&#8377;175</td><td>&#8377;30,625</td></tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <!-- Timetable Panel -->
+                    <div class="erp-panel-view" id="erpTimetable" role="tabpanel">
+                      <div class="erp-panel-header">
+                        <div class="erp-panel-title">Timetable &mdash; Class X-B</div>
+                      </div>
+                      <div class="erp-timetable">
+                        <div class="erp-tt-header">
+                          <div></div>
+                          <div class="erp-tt-daylabel">Mon</div>
+                          <div class="erp-tt-daylabel">Tue</div>
+                          <div class="erp-tt-daylabel">Wed</div>
+                          <div class="erp-tt-daylabel">Thu</div>
+                          <div class="erp-tt-daylabel">Fri</div>
+                        </div>
+                        <div class="erp-tt-row">
+                          <div class="erp-tt-time">07:30</div>
+                          <div class="erp-tt-cell math">Maths</div>
+                          <div class="erp-tt-cell sci">Science</div>
+                          <div class="erp-tt-cell eng">English</div>
+                          <div class="erp-tt-cell math">Maths</div>
+                          <div class="erp-tt-cell sci">Science</div>
+                        </div>
+                        <div class="erp-tt-row">
+                          <div class="erp-tt-time">08:30</div>
+                          <div class="erp-tt-cell eng">English</div>
+                          <div class="erp-tt-cell math">Maths</div>
+                          <div class="erp-tt-cell sci">Science</div>
+                          <div class="erp-tt-cell eng">English</div>
+                          <div class="erp-tt-cell math">Maths</div>
+                        </div>
+                        <div class="erp-tt-row">
+                          <div class="erp-tt-time">09:30</div>
+                          <div class="erp-tt-cell sci">Science</div>
+                          <div class="erp-tt-cell eng">English</div>
+                          <div class="erp-tt-cell math">Maths</div>
+                          <div class="erp-tt-cell sci">Science</div>
+                          <div class="erp-tt-cell eng">English</div>
+                        </div>
+                        <div class="erp-tt-row">
+                          <div class="erp-tt-time">10:30</div>
+                          <div class="erp-tt-cell" style="background:rgba(255,255,255,0.03);color:rgba(255,255,255,0.3);font-style:italic;">Break</div>
+                          <div class="erp-tt-cell" style="background:rgba(255,255,255,0.03);color:rgba(255,255,255,0.3);font-style:italic;">Break</div>
+                          <div class="erp-tt-cell" style="background:rgba(255,255,255,0.03);color:rgba(255,255,255,0.3);font-style:italic;">Break</div>
+                          <div class="erp-tt-cell" style="background:rgba(255,255,255,0.03);color:rgba(255,255,255,0.3);font-style:italic;">Break</div>
+                          <div class="erp-tt-cell" style="background:rgba(255,255,255,0.03);color:rgba(255,255,255,0.3);font-style:italic;">Break</div>
+                        </div>
+                        <div class="erp-tt-row">
+                          <div class="erp-tt-time">11:00</div>
+                          <div class="erp-tt-cell math">Maths</div>
+                          <div class="erp-tt-cell sci">Science</div>
+                          <div class="erp-tt-cell eng">English</div>
+                          <div class="erp-tt-cell math">Maths</div>
+                          <div class="erp-tt-cell">Social Sc.</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Exams Panel -->
+                    <div class="erp-panel-view" id="erpExams" role="tabpanel">
+                      <div class="erp-panel-header">
+                        <div class="erp-panel-title">Exams &amp; Results</div>
+                      </div>
+                      <table class="erp-table">
+                        <thead><tr><th>Subject</th><th>Max</th><th>Class Avg</th><th>Pass%</th></tr></thead>
+                        <tbody>
+                          <tr><td>Mathematics</td><td>100</td><td>72.4</td><td>94.2%</td></tr>
+                          <tr><td>Science</td><td>100</td><td>68.8</td><td>91.7%</td></tr>
+                          <tr><td>English</td><td>100</td><td>76.1</td><td>97.3%</td></tr>
+                          <tr><td>Social Science</td><td>100</td><td>80.2</td><td>98.9%</td></tr>
+                          <tr><td>Hindi</td><td>100</td><td>74.5</td><td>96.1%</td></tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <!-- Fees Panel -->
+                    <div class="erp-panel-view" id="erpFees" role="tabpanel">
+                      <div class="erp-panel-header">
+                        <div class="erp-panel-title">Fees &amp; Accounts</div>
+                        <div class="erp-panel-date">Oct 2026</div>
+                      </div>
+                      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
+                        <div class="erp-kpi-card"><div class="erp-kpi-label">Collected</div><div class="erp-kpi-value">&#8377;12.4L</div><div class="erp-kpi-trend">82% of target</div></div>
+                        <div class="erp-kpi-card"><div class="erp-kpi-label">Pending</div><div class="erp-kpi-value">&#8377;2.7L</div><div class="erp-kpi-trend">Reminders sent</div></div>
+                        <div class="erp-kpi-card"><div class="erp-kpi-label">Defaulters</div><div class="erp-kpi-value">47</div><div class="erp-kpi-trend">Students</div></div>
+                      </div>
+                      <div class="erp-chart-area" style="flex:1;">
+                        <div class="erp-chart-title">Daily Collection &mdash; Oct 2026</div>
+                        <svg class="erp-chart-svg" viewBox="0 0 780 100" preserveAspectRatio="none">
+                          <path class="erp-chart-area-fill" d="M0,90 L45,60 L90,75 L135,40 L180,55 L225,25 L270,45 L315,20 L360,35 L405,15 L450,30 L495,10 L540,25 L585,8 L630,20 L675,12 L720,18 L780,15 L780,100 L0,100 Z"/>
+                          <path class="erp-chart-line" d="M0,90 L45,60 L90,75 L135,40 L180,55 L225,25 L270,45 L315,20 L360,35 L405,15 L450,30 L495,10 L540,25 L585,8 L630,20 L675,12 L720,18 L780,15"/>
+                        </svg>
+                      </div>
+                    </div>
+
+                    <!-- Transport Panel -->
+                    <div class="erp-panel-view" id="erpTransport" role="tabpanel">
+                      <div class="erp-panel-header">
+                        <div class="erp-panel-title">Transport Management</div>
+                      </div>
+                      <table class="erp-table">
+                        <thead><tr><th>Bus No.</th><th>Driver</th><th>Route</th><th>Students</th><th>Status</th></tr></thead>
+                        <tbody>
+                          <tr><td>Bus 01</td><td>Mahesh P.</td><td>Wakad &mdash; School</td><td>42</td><td><span class="erp-badge erp-badge-present">Active</span></td></tr>
+                          <tr><td>Bus 02</td><td>Sanjay K.</td><td>Baner &mdash; School</td><td>38</td><td><span class="erp-badge erp-badge-present">Active</span></td></tr>
+                          <tr><td>Bus 03</td><td>Rajesh S.</td><td>Kharadi &mdash; School</td><td>45</td><td><span class="erp-badge erp-badge-present">Active</span></td></tr>
+                          <tr><td>Bus 04</td><td>Vinod M.</td><td>Hadapsar &mdash; School</td><td>29</td><td><span class="erp-badge erp-badge-absent">Maintenance</span></td></tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <!-- Reports Panel -->
+                    <div class="erp-panel-view" id="erpReports" role="tabpanel">
+                      <div class="erp-panel-header">
+                        <div class="erp-panel-title">Reports</div>
+                      </div>
+                      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+                        <div class="erp-kpi-card" style="cursor:pointer;"><div class="erp-kpi-label">Report Type</div><div style="color:#fff;font-size:13px;font-weight:600;margin-top:6px;">Attendance Summary</div></div>
+                        <div class="erp-kpi-card" style="cursor:pointer;"><div class="erp-kpi-label">Report Type</div><div style="color:#fff;font-size:13px;font-weight:600;margin-top:6px;">Fee Collection Report</div></div>
+                        <div class="erp-kpi-card" style="cursor:pointer;"><div class="erp-kpi-label">Report Type</div><div style="color:#fff;font-size:13px;font-weight:600;margin-top:6px;">Payroll Statement</div></div>
+                        <div class="erp-kpi-card" style="cursor:pointer;"><div class="erp-kpi-label">Report Type</div><div style="color:#fff;font-size:13px;font-weight:600;margin-top:6px;">CBSE Report Cards</div></div>
+                        <div class="erp-kpi-card" style="cursor:pointer;"><div class="erp-kpi-label">Report Type</div><div style="color:#fff;font-size:13px;font-weight:600;margin-top:6px;">Bus Route Report</div></div>
+                        <div class="erp-kpi-card" style="cursor:pointer;"><div class="erp-kpi-label">Report Type</div><div style="color:#fff;font-size:13px;font-weight:600;margin-top:6px;">Exam Results Export</div></div>
+                      </div>
+                    </div>
+
+                  </div><!-- /erp-panel -->
+
+                </div><!-- /erp-body -->
+              </div><!-- /erp-mockup-canvas -->
+            </div><!-- /erp-mockup-scaler -->
+          </div><!-- /erp-mockup-host -->
+
+          <!-- ERP Capabilities list below mockup -->
+          <div class="erp-capabilities reveal">
+            <div class="erp-cap-item">
+              <span class="erp-cap-num">01</span>
+              <div class="erp-cap-text">
+                <h4>Biometric Attendance &amp; RFID</h4>
+                <p>Automated student and staff punch-in with real-time alerts to parents and admin.</p>
+              </div>
+            </div>
+            <div class="erp-cap-item">
+              <span class="erp-cap-num">02</span>
+              <div class="erp-cap-text">
+                <h4>Maharashtra PT/PF Compliant Payroll</h4>
+                <p>Fully automated salary slips, PT deductions and compliance with state labour norms.</p>
+              </div>
+            </div>
+            <div class="erp-cap-item">
+              <span class="erp-cap-num">03</span>
+              <div class="erp-cap-text">
+                <h4>Conflict-Free Timetable Generation</h4>
+                <p>AI-assisted scheduling that avoids teacher clashes and room conflicts across branches.</p>
+              </div>
+            </div>
+            <div class="erp-cap-item">
+              <span class="erp-cap-num">04</span>
+              <div class="erp-cap-text">
+                <h4>CBSE &amp; State Board Report Cards</h4>
+                <p>Automated report card generation, co-scholastic grading and digital marksheets.</p>
+              </div>
+            </div>
+            <div class="erp-cap-item">
+              <span class="erp-cap-num">05</span>
+              <div class="erp-cap-text">
+                <h4>Automated Fee Collection &amp; Ledger</h4>
+                <p>UPI-linked instant receipts, defaulter reminders and a complete accounts ledger.</p>
+              </div>
+            </div>
+            <div class="erp-cap-item">
+              <span class="erp-cap-num">06</span>
+              <div class="erp-cap-text">
+                <h4>Multi-Branch &amp; Cloud Reports</h4>
+                <p>Centralised visibility across all branches, campuses and divisions in a single login.</p>
+              </div>
+            </div>
+          </div>
+        </div><!-- /sm-erp-wrap -->
+
+        <!-- f) AFTER the ERP: 3-Slide Image Slider -->
+        <div class="sm-slider-container" style="margin-top: clamp(48px, 7vw, 80px);">
+          <div class="hero-slider-card" aria-label="Schoolmate product showcase slides">
+            <div class="slider-inner" id="heroSlider">
+              <!-- Slide 1: Parents -->
+              <div class="slide-item active">
+                <img src="assets/slider-parents.svg" alt="Empowering parents, every day" width="600" height="600" loading="eager">
+                <div class="slide-caption">
+                  <div class="slide-title-text">Empowering parents, every day</div>
                 </div>
               </div>
-
-              <!-- ERP body -->
-              <div class="erp-body">
-
-                <!-- Sidebar -->
-                <nav class="erp-sidebar" aria-label="ERP Modules">
-                  <div class="erp-sidebar-logo">
-                    <img src="/assets/brand/logo-transparent.png" 
-                         srcset="/assets/brand/logo-transparent-32.png 1x, /assets/brand/logo-transparent-72.png 2x" 
-                         width="26" height="26" 
-                         alt="OpenSoftwares Pvt. Ltd. logo" 
-                         class="brand-logo-img brand-logo-darkmode">
-                    <div class="erp-sidebar-logo-text">Schoolmate ERP</div>
-                  </div>
-                  <button class="erp-module-btn active" data-erp-panel="erpDashboard" aria-selected="true" type="button">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
-                    Dashboard
-                  </button>
-                  <button class="erp-module-btn" data-erp-panel="erpStudents" aria-selected="false" type="button">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
-                    Students
-                  </button>
-                  <button class="erp-module-btn" data-erp-panel="erpStaff" aria-selected="false" type="button">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                    Staff
-                  </button>
-                  <button class="erp-module-btn" data-erp-panel="erpPayroll" aria-selected="false" type="button">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/></svg>
-                    Payroll
-                  </button>
-                  <button class="erp-module-btn" data-erp-panel="erpTimetable" aria-selected="false" type="button">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                    Timetable
-                  </button>
-                  <button class="erp-module-btn" data-erp-panel="erpExams" aria-selected="false" type="button">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                    Exams
-                  </button>
-                  <button class="erp-module-btn" data-erp-panel="erpFees" aria-selected="false" type="button">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-                    Fees &amp; Accounts
-                  </button>
-                  <button class="erp-module-btn" data-erp-panel="erpTransport" aria-selected="false" type="button">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 6v6M15 6v6M2 12h20M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"/><circle cx="7" cy="18" r="1"/><circle cx="17" cy="18" r="1"/></svg>
-                    Transport
-                  </button>
-                  <button class="erp-module-btn" data-erp-panel="erpReports" aria-selected="false" type="button">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg>
-                    Reports
-                  </button>
-                </nav>
-
-                <!-- ERP Panel -->
-                <div class="erp-panel" role="main">
-
-                  <!-- Dashboard Panel -->
-                  <div class="erp-panel-view active" id="erpDashboard" role="tabpanel">
-                    <div class="erp-panel-header">
-                      <div class="erp-panel-title">Dashboard</div>
-                      <div class="erp-panel-date">Oct 22, 2026</div>
-                    </div>
-                    <div class="erp-kpi-row">
-                      <div class="erp-kpi-card">
-                        <div class="erp-kpi-label">Total Students</div>
-                        <div class="erp-kpi-value" data-target="1248" data-suffix="">1,248</div>
-                        <div class="erp-kpi-trend">+48 this month</div>
-                      </div>
-                      <div class="erp-kpi-card">
-                        <div class="erp-kpi-label">Attendance Today</div>
-                        <div class="erp-kpi-value">94.2%</div>
-                        <div class="erp-kpi-trend">+1.3% vs yesterday</div>
-                      </div>
-                      <div class="erp-kpi-card">
-                        <div class="erp-kpi-label">Fees Collected</div>
-                        <div class="erp-kpi-value">&#8377;12.4L</div>
-                        <div class="erp-kpi-trend">82% of October target</div>
-                      </div>
-                      <div class="erp-kpi-card">
-                        <div class="erp-kpi-label">Staff Present</div>
-                        <div class="erp-kpi-value">68/72</div>
-                        <div class="erp-kpi-trend">4 on leave</div>
-                      </div>
-                    </div>
-                    <div class="erp-chart-area">
-                      <div class="erp-chart-title">Monthly Fee Collection &mdash; Oct 2026</div>
-                      <svg class="erp-chart-svg" viewBox="0 0 780 120" preserveAspectRatio="none">
-                        <!-- Area fill -->
-                        <path class="erp-chart-area-fill" d="M0,110 L65,80 L130,90 L195,55 L260,70 L325,40 L390,55 L455,30 L520,45 L585,20 L650,35 L715,15 L780,25 L780,120 L0,120 Z"/>
-                        <!-- Line -->
-                        <path class="erp-chart-line" d="M0,110 L65,80 L130,90 L195,55 L260,70 L325,40 L390,55 L455,30 L520,45 L585,20 L650,35 L715,15 L780,25"/>
-                        <!-- Data point dots -->
-                        <circle cx="780" cy="25" r="3" fill="#E8A317"/>
-                      </svg>
-                    </div>
-                  </div>
-
-                  <!-- Students Panel -->
-                  <div class="erp-panel-view" id="erpStudents" role="tabpanel">
-                    <div class="erp-panel-header">
-                      <div class="erp-panel-title">Students</div>
-                      <div class="erp-panel-date">1,248 enrolled</div>
-                    </div>
-                    <table class="erp-table">
-                      <thead>
-                        <tr>
-                          <th>Name</th><th>Class</th><th>Roll</th><th>Attendance</th><th>Status</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr><td>Aanya Agarwal</td><td>X-B</td><td>14</td><td>94.2%</td><td><span class="erp-badge erp-badge-present">Present</span></td></tr>
-                        <tr><td>Rohan Mehta</td><td>X-B</td><td>22</td><td>88.1%</td><td><span class="erp-badge erp-badge-present">Present</span></td></tr>
-                        <tr><td>Priya Desai</td><td>X-A</td><td>7</td><td>91.5%</td><td><span class="erp-badge erp-badge-absent">Absent</span></td></tr>
-                        <tr><td>Karan Joshi</td><td>IX-C</td><td>31</td><td>97.0%</td><td><span class="erp-badge erp-badge-present">Present</span></td></tr>
-                        <tr><td>Sneha Patil</td><td>IX-A</td><td>11</td><td>82.4%</td><td><span class="erp-badge erp-badge-present">Present</span></td></tr>
-                        <tr><td>Amit Kulkarni</td><td>VIII-B</td><td>5</td><td>95.8%</td><td><span class="erp-badge erp-badge-absent">Absent</span></td></tr>
-                      </tbody>
-                    </table>
-                  </div>
-
-                  <!-- Staff Panel -->
-                  <div class="erp-panel-view" id="erpStaff" role="tabpanel">
-                    <div class="erp-panel-header">
-                      <div class="erp-panel-title">Staff &amp; HR</div>
-                      <div class="erp-panel-date">72 staff members</div>
-                    </div>
-                    <table class="erp-table">
-                      <thead>
-                        <tr><th>Name</th><th>Designation</th><th>Dept.</th><th>Biometric</th><th>Status</th></tr>
-                      </thead>
-                      <tbody>
-                        <tr><td>Mrs. Sharma</td><td>Principal</td><td>Admin</td><td>08:12 AM</td><td><span class="erp-badge erp-badge-present">Present</span></td></tr>
-                        <tr><td>Mr. Patil</td><td>Mathematics</td><td>Academics</td><td>08:24 AM</td><td><span class="erp-badge erp-badge-present">Present</span></td></tr>
-                        <tr><td>Ms. Kulkarni</td><td>Science</td><td>Academics</td><td>&mdash;</td><td><span class="erp-badge erp-badge-absent">Leave</span></td></tr>
-                        <tr><td>Mr. Khan</td><td>Driver &mdash; Bus 03</td><td>Transport</td><td>07:45 AM</td><td><span class="erp-badge erp-badge-present">Present</span></td></tr>
-                        <tr><td>Mrs. Joshi</td><td>Accountant</td><td>Finance</td><td>08:35 AM</td><td><span class="erp-badge erp-badge-present">Present</span></td></tr>
-                      </tbody>
-                    </table>
-                  </div>
-
-                  <!-- Payroll Panel -->
-                  <div class="erp-panel-view" id="erpPayroll" role="tabpanel">
-                    <div class="erp-panel-header">
-                      <div class="erp-panel-title">Payroll &amp; Salaries</div>
-                      <div class="erp-panel-date">October 2026</div>
-                    </div>
-                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
-                      <div class="erp-kpi-card"><div class="erp-kpi-label">Gross Payroll</div><div class="erp-kpi-value">&#8377;8.4L</div><div class="erp-kpi-trend">72 employees</div></div>
-                      <div class="erp-kpi-card"><div class="erp-kpi-label">PT Deductions</div><div class="erp-kpi-value">&#8377;21,600</div><div class="erp-kpi-trend">Maharashtra PT compliant</div></div>
-                    </div>
-                    <table class="erp-table">
-                      <thead><tr><th>Employee</th><th>Basic</th><th>HRA</th><th>PT</th><th>Net Pay</th></tr></thead>
-                      <tbody>
-                        <tr><td>Mrs. Sharma</td><td>&#8377;55,000</td><td>&#8377;22,000</td><td>&#8377;200</td><td>&#8377;76,800</td></tr>
-                        <tr><td>Mr. Patil</td><td>&#8377;38,000</td><td>&#8377;15,200</td><td>&#8377;200</td><td>&#8377;53,000</td></tr>
-                        <tr><td>Ms. Kulkarni</td><td>&#8377;36,000</td><td>&#8377;14,400</td><td>&#8377;200</td><td>&#8377;50,200</td></tr>
-                        <tr><td>Mr. Khan</td><td>&#8377;22,000</td><td>&#8377;8,800</td><td>&#8377;175</td><td>&#8377;30,625</td></tr>
-                      </tbody>
-                    </table>
-                  </div>
-
-                  <!-- Timetable Panel -->
-                  <div class="erp-panel-view" id="erpTimetable" role="tabpanel">
-                    <div class="erp-panel-header">
-                      <div class="erp-panel-title">Timetable &mdash; Class X-B</div>
-                    </div>
-                    <div class="erp-timetable">
-                      <div class="erp-tt-header">
-                        <div></div>
-                        <div class="erp-tt-daylabel">Mon</div>
-                        <div class="erp-tt-daylabel">Tue</div>
-                        <div class="erp-tt-daylabel">Wed</div>
-                        <div class="erp-tt-daylabel">Thu</div>
-                        <div class="erp-tt-daylabel">Fri</div>
-                      </div>
-                      <div class="erp-tt-row">
-                        <div class="erp-tt-time">07:30</div>
-                        <div class="erp-tt-cell math">Maths</div>
-                        <div class="erp-tt-cell sci">Science</div>
-                        <div class="erp-tt-cell eng">English</div>
-                        <div class="erp-tt-cell math">Maths</div>
-                        <div class="erp-tt-cell sci">Science</div>
-                      </div>
-                      <div class="erp-tt-row">
-                        <div class="erp-tt-time">08:30</div>
-                        <div class="erp-tt-cell eng">English</div>
-                        <div class="erp-tt-cell math">Maths</div>
-                        <div class="erp-tt-cell sci">Science</div>
-                        <div class="erp-tt-cell eng">English</div>
-                        <div class="erp-tt-cell math">Maths</div>
-                      </div>
-                      <div class="erp-tt-row">
-                        <div class="erp-tt-time">09:30</div>
-                        <div class="erp-tt-cell sci">Science</div>
-                        <div class="erp-tt-cell eng">English</div>
-                        <div class="erp-tt-cell math">Maths</div>
-                        <div class="erp-tt-cell sci">Science</div>
-                        <div class="erp-tt-cell eng">English</div>
-                      </div>
-                      <div class="erp-tt-row">
-                        <div class="erp-tt-time">10:30</div>
-                        <div class="erp-tt-cell" style="background:rgba(255,255,255,0.03);color:rgba(255,255,255,0.3);font-style:italic;">Break</div>
-                        <div class="erp-tt-cell" style="background:rgba(255,255,255,0.03);color:rgba(255,255,255,0.3);font-style:italic;">Break</div>
-                        <div class="erp-tt-cell" style="background:rgba(255,255,255,0.03);color:rgba(255,255,255,0.3);font-style:italic;">Break</div>
-                        <div class="erp-tt-cell" style="background:rgba(255,255,255,0.03);color:rgba(255,255,255,0.3);font-style:italic;">Break</div>
-                        <div class="erp-tt-cell" style="background:rgba(255,255,255,0.03);color:rgba(255,255,255,0.3);font-style:italic;">Break</div>
-                      </div>
-                      <div class="erp-tt-row">
-                        <div class="erp-tt-time">11:00</div>
-                        <div class="erp-tt-cell math">Maths</div>
-                        <div class="erp-tt-cell sci">Science</div>
-                        <div class="erp-tt-cell eng">English</div>
-                        <div class="erp-tt-cell math">Maths</div>
-                        <div class="erp-tt-cell">Social Sc.</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Exams Panel -->
-                  <div class="erp-panel-view" id="erpExams" role="tabpanel">
-                    <div class="erp-panel-header">
-                      <div class="erp-panel-title">Exams &amp; Results</div>
-                    </div>
-                    <table class="erp-table">
-                      <thead><tr><th>Subject</th><th>Max</th><th>Class Avg</th><th>Pass%</th></tr></thead>
-                      <tbody>
-                        <tr><td>Mathematics</td><td>100</td><td>72.4</td><td>94.2%</td></tr>
-                        <tr><td>Science</td><td>100</td><td>68.8</td><td>91.7%</td></tr>
-                        <tr><td>English</td><td>100</td><td>76.1</td><td>97.3%</td></tr>
-                        <tr><td>Social Science</td><td>100</td><td>80.2</td><td>98.9%</td></tr>
-                        <tr><td>Hindi</td><td>100</td><td>74.5</td><td>96.1%</td></tr>
-                      </tbody>
-                    </table>
-                  </div>
-
-                  <!-- Fees Panel -->
-                  <div class="erp-panel-view" id="erpFees" role="tabpanel">
-                    <div class="erp-panel-header">
-                      <div class="erp-panel-title">Fees &amp; Accounts</div>
-                      <div class="erp-panel-date">Oct 2026</div>
-                    </div>
-                    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
-                      <div class="erp-kpi-card"><div class="erp-kpi-label">Collected</div><div class="erp-kpi-value">&#8377;12.4L</div><div class="erp-kpi-trend">82% of target</div></div>
-                      <div class="erp-kpi-card"><div class="erp-kpi-label">Pending</div><div class="erp-kpi-value">&#8377;2.7L</div><div class="erp-kpi-trend">Reminders sent</div></div>
-                      <div class="erp-kpi-card"><div class="erp-kpi-label">Defaulters</div><div class="erp-kpi-value">47</div><div class="erp-kpi-trend">Students</div></div>
-                    </div>
-                    <div class="erp-chart-area" style="flex:1;">
-                      <div class="erp-chart-title">Daily Collection &mdash; Oct 2026</div>
-                      <svg class="erp-chart-svg" viewBox="0 0 780 100" preserveAspectRatio="none">
-                        <path class="erp-chart-area-fill" d="M0,90 L45,60 L90,75 L135,40 L180,55 L225,25 L270,45 L315,20 L360,35 L405,15 L450,30 L495,10 L540,25 L585,8 L630,20 L675,12 L720,18 L780,15 L780,100 L0,100 Z"/>
-                        <path class="erp-chart-line" d="M0,90 L45,60 L90,75 L135,40 L180,55 L225,25 L270,45 L315,20 L360,35 L405,15 L450,30 L495,10 L540,25 L585,8 L630,20 L675,12 L720,18 L780,15"/>
-                      </svg>
-                    </div>
-                  </div>
-
-                  <!-- Transport Panel -->
-                  <div class="erp-panel-view" id="erpTransport" role="tabpanel">
-                    <div class="erp-panel-header">
-                      <div class="erp-panel-title">Transport Management</div>
-                    </div>
-                    <table class="erp-table">
-                      <thead><tr><th>Bus No.</th><th>Driver</th><th>Route</th><th>Students</th><th>Status</th></tr></thead>
-                      <tbody>
-                        <tr><td>Bus 01</td><td>Mahesh P.</td><td>Wakad &mdash; School</td><td>42</td><td><span class="erp-badge erp-badge-present">Active</span></td></tr>
-                        <tr><td>Bus 02</td><td>Sanjay K.</td><td>Baner &mdash; School</td><td>38</td><td><span class="erp-badge erp-badge-present">Active</span></td></tr>
-                        <tr><td>Bus 03</td><td>Rajesh S.</td><td>Kharadi &mdash; School</td><td>45</td><td><span class="erp-badge erp-badge-present">Active</span></td></tr>
-                        <tr><td>Bus 04</td><td>Vinod M.</td><td>Hadapsar &mdash; School</td><td>29</td><td><span class="erp-badge erp-badge-absent">Maintenance</span></td></tr>
-                      </tbody>
-                    </table>
-                  </div>
-
-                  <!-- Reports Panel -->
-                  <div class="erp-panel-view" id="erpReports" role="tabpanel">
-                    <div class="erp-panel-header">
-                      <div class="erp-panel-title">Reports</div>
-                    </div>
-                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
-                      <div class="erp-kpi-card" style="cursor:pointer;"><div class="erp-kpi-label">Report Type</div><div style="color:#fff;font-size:13px;font-weight:600;margin-top:6px;">Attendance Summary</div></div>
-                      <div class="erp-kpi-card" style="cursor:pointer;"><div class="erp-kpi-label">Report Type</div><div style="color:#fff;font-size:13px;font-weight:600;margin-top:6px;">Fee Collection Report</div></div>
-                      <div class="erp-kpi-card" style="cursor:pointer;"><div class="erp-kpi-label">Report Type</div><div style="color:#fff;font-size:13px;font-weight:600;margin-top:6px;">Payroll Statement</div></div>
-                      <div class="erp-kpi-card" style="cursor:pointer;"><div class="erp-kpi-label">Report Type</div><div style="color:#fff;font-size:13px;font-weight:600;margin-top:6px;">CBSE Report Cards</div></div>
-                      <div class="erp-kpi-card" style="cursor:pointer;"><div class="erp-kpi-label">Report Type</div><div style="color:#fff;font-size:13px;font-weight:600;margin-top:6px;">Bus Route Report</div></div>
-                      <div class="erp-kpi-card" style="cursor:pointer;"><div class="erp-kpi-label">Report Type</div><div style="color:#fff;font-size:13px;font-weight:600;margin-top:6px;">Exam Results Export</div></div>
-                    </div>
-                  </div>
-
-                </div><!-- /erp-panel -->
-
-              </div><!-- /erp-body -->
-            </div><!-- /erp-mockup-canvas -->
-          </div><!-- /erp-mockup-scaler -->
-        </div><!-- /erp-mockup-host -->
-
-        <!-- ERP Capabilities list below mockup -->
-        <div class="erp-capabilities reveal">
-          <div class="erp-cap-item">
-            <span class="erp-cap-num">01</span>
-            <div class="erp-cap-text">
-              <h4>Biometric Attendance &amp; RFID</h4>
-              <p>Automated student and staff punch-in with real-time alerts to parents and admin.</p>
+              <!-- Slide 2: Bus -->
+              <div class="slide-item">
+                <img src="assets/slider-bus.svg" alt="Real-time school bus tracking" width="600" height="600" loading="lazy">
+                <div class="slide-caption">
+                  <div class="slide-title-text">Real-time school bus tracking</div>
+                </div>
+              </div>
+              <!-- Slide 3: Classroom / Video -->
+              <div class="slide-item">
+                <img src="assets/slider-classroom.svg" alt="Future-ready video learning" width="600" height="600" loading="lazy">
+                <div class="slide-caption">
+                  <div class="slide-title-text">Future-ready video learning</div>
+                </div>
+              </div>
+              <!-- Progress bar -->
+              <div class="slider-progress-bar" aria-hidden="true"></div>
             </div>
-          </div>
-          <div class="erp-cap-item">
-            <span class="erp-cap-num">02</span>
-            <div class="erp-cap-text">
-              <h4>Maharashtra PT/PF Compliant Payroll</h4>
-              <p>Fully automated salary slips, PT deductions and compliance with state labour norms.</p>
-            </div>
-          </div>
-          <div class="erp-cap-item">
-            <span class="erp-cap-num">03</span>
-            <div class="erp-cap-text">
-              <h4>Conflict-Free Timetable Generation</h4>
-              <p>AI-assisted scheduling that avoids teacher clashes and room conflicts across branches.</p>
-            </div>
-          </div>
-          <div class="erp-cap-item">
-            <span class="erp-cap-num">04</span>
-            <div class="erp-cap-text">
-              <h4>CBSE &amp; State Board Report Cards</h4>
-              <p>Automated report card generation, co-scholastic grading and digital marksheets.</p>
-            </div>
-          </div>
-          <div class="erp-cap-item">
-            <span class="erp-cap-num">05</span>
-            <div class="erp-cap-text">
-              <h4>Automated Fee Collection &amp; Ledger</h4>
-              <p>UPI-linked instant receipts, defaulter reminders and a complete accounts ledger.</p>
-            </div>
-          </div>
-          <div class="erp-cap-item">
-            <span class="erp-cap-num">06</span>
-            <div class="erp-cap-text">
-              <h4>Multi-Branch &amp; Cloud Reports</h4>
-              <p>Centralised visibility across all branches, campuses and divisions in a single login.</p>
-            </div>
+            <button class="slider-arrow slider-arrow-prev" type="button" aria-label="Previous slide">
+              <svg class="icon"><use href="#icon-chevron-left"></use></svg>
+            </button>
+            <button class="slider-arrow slider-arrow-next" type="button" aria-label="Next slide">
+              <svg class="icon"><use href="#icon-chevron-right"></use></svg>
+            </button>
           </div>
         </div>
 
-      </div>
+        <!-- g) AT THE VERY END: Slim "More products coming soon" row -->
+        <div class="sm-more-products-row">
+          <div class="sm-more-products-label">More products coming soon</div>
+          <div class="sm-more-products-grid">
+            <a href="products.html#real-estate" class="product-slot-outlined">
+              <div>
+                <div class="slot-name">Real Estate Platform</div>
+                <div class="slot-tag">Properties, leads &amp; bookings</div>
+              </div>
+              <span class="slot-tag">Coming soon &rarr;</span>
+            </a>
+            <a href="products.html#manufacturing" class="product-slot-outlined">
+              <div>
+                <div class="slot-name">Manufacturing ERP</div>
+                <div class="slot-tag">Production, inventory &amp; orders</div>
+              </div>
+              <span class="slot-tag">Coming soon &rarr;</span>
+            </a>
+          </div>
+        </div>
+
+      </div><!-- /container -->
     </section>
 
     <!-- ==================================================================
