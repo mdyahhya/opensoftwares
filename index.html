@@ -69,7 +69,7 @@
 
   <!-- CSS (Cache-busted) -->
   <link rel="stylesheet" href="/css/style.css?v=3.2">
-  <link rel="stylesheet" href="/css/home.css?v=3.3">
+  <link rel="stylesheet" href="/css/home.css?v=3.4">
 
   <!-- Structured Data JSON-LD -->
   <script type="application/ld+json">
@@ -1861,23 +1861,76 @@
           </div>
         </div>
 
-        <!-- g) AT THE VERY END: Slim "More products coming soon" row -->
+        <!-- g) AT THE VERY END: "More products coming soon" section -->
         <div class="sm-more-products-row">
-          <div class="sm-more-products-label">More products coming soon</div>
+          <div class="sm-more-products-header">
+            <span class="sm-more-products-badge">The Product Pipeline</span>
+            <h3 class="sm-more-products-title">More products coming soon</h3>
+            <p class="sm-more-products-subtitle">Specialised software products in active development for India’s core industries.</p>
+          </div>
           <div class="sm-more-products-grid">
-            <a href="products.html#real-estate" class="product-slot-outlined">
+            <!-- Real Estate Card -->
+            <a href="products.html#real-estate" class="sm-prod-card" aria-label="Explore Real Estate Platform preview">
               <div>
-                <div class="slot-name">Real Estate Platform</div>
-                <div class="slot-tag">Properties, leads &amp; bookings</div>
+                <div class="sm-prod-card-top">
+                  <div class="sm-prod-card-icon-wrap" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M3 21h18"/>
+                      <path d="M5 21V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v16"/>
+                      <path d="M15 9h4a2 2 0 0 1 2 2v10"/>
+                      <line x1="9" y1="8" x2="11" y2="8"/>
+                      <line x1="9" y1="12" x2="11" y2="12"/>
+                      <line x1="9" y1="16" x2="11" y2="16"/>
+                      <line x1="17" y1="13" x2="19" y2="13"/>
+                      <line x1="17" y1="17" x2="19" y2="17"/>
+                    </svg>
+                  </div>
+                  <span class="sm-prod-card-status">
+                    <span class="status-dot"></span>In Development
+                  </span>
+                </div>
+                <h4 class="sm-prod-card-title">Real Estate Platform</h4>
+                <p class="sm-prod-card-desc">Properties, leads, site visits, unit bookings, milestone installment billing, and society maintenance accounting.</p>
+                <div class="sm-prod-card-tags">
+                  <span>Site Visits</span>
+                  <span>Unit Inventory</span>
+                  <span>Installments</span>
+                  <span>Maintenance</span>
+                </div>
               </div>
-              <span class="slot-tag">Coming soon &rarr;</span>
+              <div class="sm-prod-card-action">
+                <span>Explore roadmap preview</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </div>
             </a>
-            <a href="products.html#manufacturing" class="product-slot-outlined">
+
+            <!-- Manufacturing Card -->
+            <a href="products.html#manufacturing" class="sm-prod-card" aria-label="Explore Manufacturing ERP preview">
               <div>
-                <div class="slot-name">Manufacturing ERP</div>
-                <div class="slot-tag">Production, inventory &amp; orders</div>
+                <div class="sm-prod-card-top">
+                  <div class="sm-prod-card-icon-wrap" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="3"/>
+                      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                    </svg>
+                  </div>
+                  <span class="sm-prod-card-status">
+                    <span class="status-dot"></span>In Development
+                  </span>
+                </div>
+                <h4 class="sm-prod-card-title">Manufacturing ERP</h4>
+                <p class="sm-prod-card-desc">Production scheduling, multi-level Bill of Materials (BOM), batch inventory, machine maintenance, and vendor invoicing.</p>
+                <div class="sm-prod-card-tags">
+                  <span>Multi-level BOM</span>
+                  <span>Batch Tracking</span>
+                  <span>Work Orders</span>
+                  <span>Quality Checks</span>
+                </div>
               </div>
-              <span class="slot-tag">Coming soon &rarr;</span>
+              <div class="sm-prod-card-action">
+                <span>Explore roadmap preview</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </div>
             </a>
           </div>
         </div>
