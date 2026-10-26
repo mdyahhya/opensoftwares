@@ -320,10 +320,10 @@ body.home-page { padding-top: 0; }
 
 .intro-statement {
   font-family: var(--font-sans);
-  font-size: clamp(2.2rem, 5.5vw, 4.4rem);
+  font-size: clamp(2.2rem, 5vw, 4rem);
   font-weight: 600;
   letter-spacing: -0.04em;
-  line-height: 1.1;
+  line-height: 1.12;
   color: var(--ink);
   margin-bottom: 0.15em;
 }
@@ -339,45 +339,125 @@ body.home-page { padding-top: 0; }
   width: 100%;
   height: 1px;
   background-color: var(--line);
-  margin-bottom: var(--s5);
+  margin-top: var(--s4);
+  margin-bottom: var(--s4);
 }
 
 .intro-body {
-  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  font-size: clamp(1rem, 1.8vw, 1.25rem);
   color: var(--ink-soft);
-  line-height: 1.65;
+  line-height: 1.6;
   max-width: 48ch;
 }
 
-/* =========================================================================
-   3. THREE FIELDS (Section D)
-   ========================================================================= */
-.fields-section {
-  padding-top: clamp(60px, 8vw, 100px);
-  padding-bottom: clamp(60px, 8vw, 100px);
-  border-top: 1px solid var(--line);
-  background: var(--paper);
-}
-
-.fields-grid {
+/* Split Layout: Who We Are (Left) + Three Fields (Right) */
+.intro-fields-split {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: clamp(16px, 2.5vw, 32px);
-  margin-top: var(--s4);
+  grid-template-columns: 1fr;
+  gap: var(--s5);
+  align-items: center;
+  margin-top: var(--s3);
 }
 
-@media (max-width: 900px) {
-  .fields-grid {
-    grid-template-columns: 1fr;
-    gap: var(--s3);
+@media (min-width: 992px) {
+  .intro-fields-split {
+    grid-template-columns: 1.15fr 1fr;
+    gap: clamp(36px, 5vw, 64px);
+    align-items: center;
   }
 }
 
-/* -------------------------------------------------------------------------
-   B. THREE FIELDS: SINGLE COMPACT LINE (Section 5)
-   ------------------------------------------------------------------------- */
-.fields-strip-section {
-  padding-top: clamp(28px, 4vw, 44px);
+.intro-statements-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.intro-fields-col {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  justify-content: center;
+}
+
+.field-card-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: var(--r-card);
+  padding: 16px 20px;
+  text-decoration: none;
+  color: var(--ink);
+  transition: transform var(--dur-fast), border-color var(--dur-fast), box-shadow var(--dur-fast);
+}
+
+.field-card-item:hover {
+  transform: translateY(-2px);
+  border-color: rgba(232, 163, 23, 0.4);
+  box-shadow: 0 4px 16px rgba(14, 14, 16, 0.06);
+}
+
+.field-card-icon-wrap {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 4px;
+}
+
+.field-detailed-svg {
+  width: 44px;
+  height: 44px;
+  display: block;
+}
+
+.field-card-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.field-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 3px;
+}
+
+.field-card-name {
+  font-family: var(--font-sans);
+  font-size: 1.12rem;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -0.015em;
+}
+
+.field-card-sub {
+  font-size: 0.84rem;
+  color: var(--ink-soft);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.field-card-action {
+  color: var(--ink-mute);
+  transition: transform var(--dur-fast), color var(--dur-fast);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.field-card-item:hover .field-card-action {
+  color: var(--saffron);
+  transform: translate(2px, -2px);
+}
   padding-bottom: clamp(28px, 4vw, 44px);
   border-top: 1px solid var(--line);
   background: var(--paper);
@@ -604,14 +684,35 @@ body.home-page { padding-top: 0; }
 @media (max-width: 900px) {
   .sm-product-strip {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
     gap: 12px;
-    padding: 16px;
-    max-height: 150px;
+    padding: 16px 18px;
+    height: auto;
+    max-height: none;
+    overflow: visible;
   }
   .sm-strip-items {
-    font-size: 0.86rem;
+    font-size: 0.88rem;
     gap: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .sm-strip-sep {
+    display: none;
+  }
+  .sm-strip-item {
+    width: 100%;
+    justify-content: flex-start;
+    line-height: 1.4;
+  }
+  .sm-strip-claim-link {
+    display: inline-block;
+    margin-top: 4px;
+    padding-top: 10px;
+    border-top: 1px solid var(--line);
+    width: 100%;
+    text-align: right;
   }
 }
 
@@ -622,10 +723,23 @@ body.home-page { padding-top: 0; }
   margin: 0 auto clamp(28px, 4.5vw, 48px);
 }
 
-/* ERP section heading */
+/* Mobile App heading above phone */
+.sm-phone-heading {
+  font-family: var(--font-sans);
+  font-size: clamp(1.5rem, 2.8vw, 2.2rem);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  text-align: center;
+  margin: 0 auto var(--s4);
+}
+
+/* ERP section heading & container */
 .sm-erp-wrap {
   margin: clamp(48px, 7vw, 84px) auto;
   text-align: center;
+  max-width: 960px;
+  width: 100%;
 }
 
 .sm-erp-heading {
@@ -633,6 +747,9 @@ body.home-page { padding-top: 0; }
   font-size: clamp(1.6rem, 3.2vw, 2.6rem);
   font-weight: 600;
   letter-spacing: -0.03em;
+  color: var(--ink);
+  margin-bottom: clamp(20px, 3.5vw, 36px);
+}
   color: var(--ink);
   margin-bottom: clamp(20px, 3.5vw, 36px);
 }
@@ -1904,6 +2021,7 @@ body.home-page { padding-top: 0; }
 /* Laptop/monitor mockup — fixed 1200x760 design, scaled via JS/CSS */
 .erp-mockup-host {
   width: 100%;
+  max-width: 960px;
   margin: 0 auto var(--s6);
   position: relative;
 }
@@ -2363,31 +2481,32 @@ body.home-page { padding-top: 0; }
   align-items: flex-start;
   gap: var(--s2);
   padding: var(--s3) 0;
-  border-bottom: 1px solid var(--line-light);
+  border-bottom: 1px solid var(--line);
 }
 
-.erp-cap-item:nth-child(odd)  { padding-right: var(--s4); border-right: 1px solid var(--line-light); }
+.erp-cap-item:nth-child(odd)  { padding-right: var(--s4); border-right: 1px solid var(--line); }
 .erp-cap-item:nth-child(even) { padding-left: var(--s4); }
 
 .erp-cap-num {
   font-family: var(--font-mono);
   font-size: 11px;
-  color: var(--saffron);
+  font-weight: 700;
+  color: #B07800;
   flex-shrink: 0;
   margin-top: 2px;
 }
 
 .erp-cap-text h4 {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 600;
-  color: rgba(255,255,255,0.9);
+  color: var(--ink);
   margin-bottom: 4px;
   letter-spacing: -0.02em;
 }
 
 .erp-cap-text p {
-  font-size: 0.82rem;
-  color: rgba(255,255,255,0.45);
+  font-size: 0.84rem;
+  color: var(--ink-soft);
   line-height: 1.5;
 }
 

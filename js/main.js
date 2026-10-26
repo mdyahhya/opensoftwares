@@ -26,15 +26,12 @@
   // =========================================================================
   // 2. Mobile Full-Screen Overlay Menu
   // =========================================================================
-  const navToggle   = document.getElementById('navToggle');
-  const mobileOverlay = document.getElementById('mobileOverlay');
-  const overlayClose  = document.getElementById('overlayClose');
-  const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-
   let overlayOpen = false;
   let prevFocused = null;
 
   function openOverlay() {
+    const mobileOverlay = document.getElementById('mobileOverlay');
+    const navToggle = document.getElementById('navToggle');
     if (!mobileOverlay || overlayOpen) return;
     overlayOpen = true;
     prevFocused = document.activeElement;
@@ -44,12 +41,14 @@
 
     if (navToggle) navToggle.setAttribute('aria-expanded', 'true');
 
-    // Focus trap — focus first link
+    // Focus first focusable link
     const firstFocusable = mobileOverlay.querySelector('a, button');
-    setTimeout(() => { if (firstFocusable) firstFocusable.focus(); }, 100);
+    setTimeout(() => { if (firstFocusable) firstFocusable.focus(); }, 120);
   }
 
   function closeOverlay() {
+    const mobileOverlay = document.getElementById('mobileOverlay');
+    const navToggle = document.getElementById('navToggle');
     if (!mobileOverlay || !overlayOpen) return;
     overlayOpen = false;
 
@@ -63,19 +62,27 @@
     }
   }
 
-  if (navToggle) {
-    navToggle.addEventListener('click', (e) => {
+  // Delegated click handler: works on any page regardless of load timing
+  document.addEventListener('click', (e) => {
+    const toggleBtn = e.target.closest('#navToggle, .nav-toggle');
+    if (toggleBtn) {
+      e.preventDefault();
       e.stopPropagation();
       if (overlayOpen) closeOverlay(); else openOverlay();
-    });
-  }
+      return;
+    }
 
-  if (overlayClose) {
-    overlayClose.addEventListener('click', closeOverlay);
-  }
+    const closeBtn = e.target.closest('#overlayClose, .overlay-close');
+    if (closeBtn) {
+      e.preventDefault();
+      closeOverlay();
+      return;
+    }
 
-  mobileNavLinks.forEach(link => {
-    link.addEventListener('click', closeOverlay);
+    const navLink = e.target.closest('.mobile-nav-link');
+    if (navLink) {
+      closeOverlay();
+    }
   });
 
   // Close on Esc

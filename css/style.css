@@ -66,6 +66,25 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+*:focus:not(:focus-visible) {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+button, a, input, select, textarea {
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+button:focus, a:focus {
+  outline: none !important;
+}
+
+button:focus-visible, a:focus-visible {
+  outline: 2px solid var(--saffron) !important;
+  outline-offset: 2px;
 }
 
 html {
@@ -634,17 +653,20 @@ em.serif {
   position: fixed;
   inset: 0;
   background-color: var(--midnight);
-  z-index: 1100;
+  z-index: 1200;
   display: flex;
   flex-direction: column;
   padding: var(--s3);
   clip-path: circle(0% at calc(100% - 36px) 38px);
-  transition: clip-path 0.65s var(--ease-in-out);
+  -webkit-clip-path: circle(0% at calc(100% - 36px) 38px);
+  transition: clip-path 0.65s var(--ease-in-out), -webkit-clip-path 0.65s var(--ease-in-out);
+  will-change: clip-path;
   pointer-events: none;
 }
 
 .mobile-overlay.open {
   clip-path: circle(150% at calc(100% - 36px) 38px);
+  -webkit-clip-path: circle(150% at calc(100% - 36px) 38px);
   pointer-events: all;
 }
 
