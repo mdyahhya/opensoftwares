@@ -1805,7 +1805,7 @@ body.home-page { padding-top: 0; }
 
 /* ---- Screen: Dashboard ---- */
 .screen-dashboard {
-  background: #f6f4ef;
+  background: #F8F9FA;
   padding: 12px 10px;
 }
 
@@ -1893,7 +1893,13 @@ body.home-page { padding-top: 0; }
   line-height: 1;
 }
 
-.dash-hw-section { margin-bottom: 10px; }
+.dash-hw-section {
+  margin-bottom: 10px;
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  padding: 8px 10px;
+}
 .dash-hw-title { font-size: 9px; font-weight: 600; color: var(--ink-mute); text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 6px; }
 
 .hw-item {
@@ -1901,7 +1907,7 @@ body.home-page { padding-top: 0; }
   align-items: center;
   gap: 6px;
   padding: 5px 0;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid #F1F3F5;
   font-size: 9px;
   color: var(--ink-soft);
 }
@@ -1918,7 +1924,8 @@ body.home-page { padding-top: 0; }
 }
 
 .qa-btn {
-  background: var(--paper-2);
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -1944,7 +1951,7 @@ body.home-page { padding-top: 0; }
 
 /* ---- Screen: Attendance Calendar ---- */
 .screen-attendance {
-  background: #f6f4ef;
+  background: #F8F9FA;
   padding: 10px;
 }
 
@@ -1965,7 +1972,7 @@ body.home-page { padding-top: 0; }
   margin: 0 auto 10px;
 }
 .attend-big-ring-svg { width: 70px; height: 70px; }
-.attend-big-track { fill: none; stroke: var(--paper-2); stroke-width: 6; }
+.attend-big-track { fill: none; stroke: #E5E7EB; stroke-width: 6; }
 .attend-big-fill {
   fill: none; stroke: var(--saffron); stroke-width: 6;
   stroke-linecap: round; stroke-dasharray: 179; stroke-dashoffset: 20;
@@ -1980,6 +1987,10 @@ body.home-page { padding-top: 0; }
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 3px;
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  padding: 6px;
 }
 .cal-dow {
   font-family: var(--font-mono); font-size: 7px; color: var(--ink-mute);
@@ -1998,16 +2009,16 @@ body.home-page { padding-top: 0; }
 
 /* ---- Screen: Videos ---- */
 .screen-videos {
-  background: #f6f4ef;
+  background: #F8F9FA;
   padding: 10px;
 }
 .videos-title { font-size: 11px; font-weight: 700; color: var(--ink); margin-bottom: 10px; }
 .video-card {
-  background: #fff;
+  background: #FFFFFF;
   border-radius: 8px;
   overflow: hidden;
   margin-bottom: 8px;
-  border: 1px solid var(--line);
+  border: 1px solid #E5E7EB;
 }
 .video-thumb {
   height: 72px;
@@ -2190,14 +2201,14 @@ body.home-page { padding-top: 0; }
 
 /* ---- Screen: Notices ---- */
 .screen-notices {
-  background: #f6f4ef;
+  background: #F8F9FA;
   padding: 10px;
   overflow-y: auto;
 }
 .notices-title { font-size: 11px; font-weight: 700; color: var(--ink); margin-bottom: 8px; }
 .notice-card {
-  background: #fff;
-  border: 1px solid var(--line);
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
   border-radius: 8px;
   padding: 8px 10px;
   margin-bottom: 7px;
@@ -2225,8 +2236,8 @@ body.home-page { padding-top: 0; }
 /* Bottom Tab Bar inside phone (seamlessly contained inside curved screen) */
 .phone-tab-bar {
   display: flex;
-  background: #fff;
-  border-top: 1px solid var(--line);
+  background: #FFFFFF;
+  border-top: 1px solid #E5E7EB;
   padding: 6px 2px 4px;
   position: relative;
   z-index: 10;

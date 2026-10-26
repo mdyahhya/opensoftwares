@@ -40,15 +40,6 @@
 
   <!-- Critical Inline CSS: Guarantees zero FOUC even before external stylesheets arrive -->
   <style>
-    .mobile-overlay {
-      display: none !important;
-      position: fixed; inset: 0; z-index: 10000;
-      opacity: 0; pointer-events: none;
-    }
-    .mobile-overlay.open {
-      display: flex !important;
-      opacity: 1; pointer-events: auto;
-    }
     .nav-link { position: relative; overflow: hidden; display: inline-flex; }
     .nav-link .nav-text-back { position: absolute; top: 100%; left: 50%; transform: translateX(-50%); opacity: 0; }
     .brand-logo-img { width: 36px; height: 36px; max-width: 36px; max-height: 36px; object-fit: contain; }
@@ -62,7 +53,7 @@
   </style>
 
   <!-- CSS (Cache-busted) -->
-  <link rel="stylesheet" href="/css/style.css?v=3.2">
+  <link rel="stylesheet" href="/css/style.css?v=3.4">
   <link rel="stylesheet" href="/css/pages.css?v=3.0">
 
   <!-- Schema.org ContactPage JSON-LD -->
@@ -523,7 +514,7 @@
     </a>
   </div>
 
-  <script src="/js/main.js?v=3.2" defer></script>
+  <script src="/js/main.js?v=3.8" defer></script>
   <script src="/js/contact.js?v=2.5" defer></script>
 </body>
 </html>

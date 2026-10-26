@@ -272,5 +272,54 @@
     } catch (e) {}
   }
 
+  // =========================================================================
+  // 8. Production-Ready Back Navigation & Clean History Stack
+  // Prevents accumulation of subpage-to-subpage history and ensures Back
+  // button always brings the user directly to the Home page at the top.
+  // =========================================================================
+  (function initBackNavigation() {
+    const path = window.location.pathname;
+    const isHome = path === '/' || path === '' || path.endsWith('/index.html') || path.endsWith('\\index.html');
+
+    if (!isHome) {
+      // 1. Trap Back action on subpages so pressing Back directly lands on Home at the top
+      try {
+        window.history.pushState({ opensoftwares_subpage: true }, document.title, window.location.href);
+      } catch (e) {}
+
+      window.addEventListener('popstate', function () {
+        window.location.replace('/index.html');
+      });
+
+      // 2. Intercept internal links from subpages to replace state instead of stacking history
+      document.addEventListener('click', function (e) {
+        const link = e.target.closest('a[href]');
+        if (!link) return;
+        const href = link.getAttribute('href');
+        if (!href) return;
+
+        // Skip anchors on current page, external links, telephone, mailto, whatsapp
+        if (href.startsWith('#') || href.startsWith('tel:') || href.startsWith('mailto:') || href.startsWith('https://wa.me') || link.target === '_blank') {
+          return;
+        }
+
+        // Check if internal relative or absolute URL
+        try {
+          const targetUrl = new URL(link.href, window.location.href);
+          if (targetUrl.origin === window.location.origin) {
+            e.preventDefault();
+            // If target is home
+            if (targetUrl.pathname === '/' || targetUrl.pathname.endsWith('/index.html')) {
+              window.location.replace('/index.html' + targetUrl.hash);
+            } else {
+              // Target is another subpage: replace so history doesn't chain subpages
+              window.location.replace(targetUrl.pathname + targetUrl.search + targetUrl.hash);
+            }
+          }
+        } catch (err) {}
+      });
+    }
+  })();
+
 })();
 

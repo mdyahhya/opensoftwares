@@ -653,7 +653,7 @@ em.serif {
   position: fixed;
   inset: 0;
   background-color: var(--midnight);
-  z-index: 1200;
+  z-index: 10000;
   display: flex;
   flex-direction: column;
   padding: var(--s3);
@@ -1670,12 +1670,26 @@ body.splash-locked {
 }
 
 .coming-soon-art-wrap {
-  width: 240px;
-  height: 200px;
+  width: clamp(160px, 35vw, 220px);
+  height: clamp(160px, 35vw, 220px);
   margin: 0 auto var(--s4);
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.coming-soon-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  border-radius: 20px;
+  filter: drop-shadow(0 10px 28px rgba(11, 22, 48, 0.09));
+  transition: transform var(--dur-med) var(--ease-out);
+}
+
+.coming-soon-img:hover {
+  transform: scale(1.04);
 }
 
 .coming-soon-svg {

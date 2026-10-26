@@ -50,15 +50,6 @@
       display: flex; align-items: center; justify-content: center;
     }
     html.splash-skip .site-splash { display: none !important; }
-    .mobile-overlay {
-      display: none !important;
-      position: fixed; inset: 0; z-index: 10000;
-      opacity: 0; pointer-events: none;
-    }
-    .mobile-overlay.open {
-      display: flex !important;
-      opacity: 1; pointer-events: auto;
-    }
     .nav-link { position: relative; overflow: hidden; display: inline-flex; }
     .nav-link .nav-text-back { position: absolute; top: 100%; left: 50%; transform: translateX(-50%); opacity: 0; }
     .brand-logo-img { width: 36px; height: 36px; max-width: 36px; max-height: 36px; object-fit: contain; }
@@ -70,8 +61,8 @@
   </style>
 
   <!-- CSS (Cache-busted) -->
-  <link rel="stylesheet" href="/css/style.css?v=3.3">
-  <link rel="stylesheet" href="/css/home.css?v=3.7">
+  <link rel="stylesheet" href="/css/style.css?v=3.4">
+  <link rel="stylesheet" href="/css/home.css?v=3.8">
 
   <!-- Structured Data JSON-LD -->
   <script type="application/ld+json">
@@ -704,9 +695,9 @@
               <!-- Dark OLED Inner Bezel (Uniform 3.5px border) -->
               <rect x="775" y="50" width="210" height="450" rx="33" fill="#0A0B0E"/>
 
-              <!-- Active Screen Surface (Paper Background) -->
+              <!-- Active Screen Surface (Light Grey / White Dashboard matching laptop) -->
               <g clip-path="url(#hPhoneClip)">
-                <rect x="779" y="54" width="202" height="442" fill="#F6F4EF"/>
+                <rect x="779" y="54" width="202" height="442" fill="#F8F9FA"/>
 
                 <!-- Top Status Bar -->
                 <text x="802" y="74" font-family="'General Sans', sans-serif" font-size="8.5" font-weight="600" fill="#0E0E10">9:41</text>
@@ -738,10 +729,10 @@
                   <text x="880" y="170" font-family="'General Sans', sans-serif" font-size="8" fill="#64748B" text-anchor="middle">Campus Parent Portal</text>
 
                   <!-- Inputs -->
-                  <rect x="793" y="188" width="174" height="32" rx="8" fill="#FFFFFF" stroke="#DCD7CD"/>
+                  <rect x="793" y="188" width="174" height="32" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
                   <text x="804" y="208" font-family="'Geist Mono', monospace" font-size="8.5" fill="#0E0E10">parent@school.in</text>
 
-                  <rect x="793" y="228" width="174" height="32" rx="8" fill="#FFFFFF" stroke="#DCD7CD"/>
+                  <rect x="793" y="228" width="174" height="32" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
                   <text x="804" y="249" font-family="'Geist Mono', monospace" font-size="11" fill="#0E0E10">&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;</text>
 
                   <!-- Sign In Button -->
@@ -759,7 +750,7 @@
                   <text x="793" y="118" font-family="'General Sans', sans-serif" font-size="8" fill="#55555C">Aanya Agarwal &bull; Class X-B</text>
 
                   <!-- Attendance ring card -->
-                  <rect x="793" y="132" width="174" height="72" rx="10" fill="#FFFFFF" stroke="#E5E0D6"/>
+                  <rect x="793" y="132" width="174" height="72" rx="10" fill="#FFFFFF" stroke="#E2E8F0"/>
                   <circle cx="826" cy="168" r="20" stroke="#E5E7EB" stroke-width="5" fill="none"/>
                   <circle cx="826" cy="168" r="20" stroke="#16A34A" stroke-width="5" stroke-dasharray="126" stroke-dashoffset="12" fill="none" transform="rotate(-90 826 168)"/>
                   <text x="826" y="172" text-anchor="middle" font-family="'General Sans', sans-serif" font-size="9" font-weight="700" fill="#0E0E10">94%</text>
@@ -767,7 +758,7 @@
                   <text x="858" y="176" font-family="'General Sans', sans-serif" font-size="7.5" fill="#16A34A">On track &bull; 21/22</text>
 
                   <!-- Homework Due Card -->
-                  <rect x="793" y="214" width="174" height="104" rx="10" fill="#FFFFFF" stroke="#E5E0D6"/>
+                  <rect x="793" y="214" width="174" height="104" rx="10" fill="#FFFFFF" stroke="#E2E8F0"/>
                   <text x="804" y="232" font-family="'General Sans', sans-serif" font-size="9" font-weight="700" fill="#0E0E10">Homework Due Today</text>
                   
                   <circle cx="810" cy="252" r="3.5" fill="#E8A317"/>
@@ -786,7 +777,7 @@
                   <text x="831" y="122" font-family="'Geist Mono', monospace" font-size="7" font-weight="600" fill="#E8A317" text-anchor="middle">CBSE CLASS X</text>
 
                   <!-- Video Card 1 -->
-                  <rect x="793" y="134" width="174" height="114" rx="10" fill="#FFFFFF" stroke="#E5E0D6"/>
+                  <rect x="793" y="134" width="174" height="114" rx="10" fill="#FFFFFF" stroke="#E2E8F0"/>
                   <rect x="799" y="140" width="162" height="58" rx="6" fill="#0B1630"/>
                   <path d="M 805 180 Q 845 156 880 182 T 955 160" stroke="#E8A317" stroke-width="1.8" fill="none"/>
                   <circle cx="880" cy="169" r="10" fill="rgba(255,255,255,0.92)"/>
@@ -797,7 +788,7 @@
                   <rect x="803" y="233" width="95" height="3.5" rx="1.7" fill="#E8A317"/>
 
                   <!-- Video Card 2 -->
-                  <rect x="793" y="258" width="174" height="114" rx="10" fill="#FFFFFF" stroke="#E5E0D6"/>
+                  <rect x="793" y="258" width="174" height="114" rx="10" fill="#FFFFFF" stroke="#E2E8F0"/>
                   <rect x="799" y="264" width="162" height="58" rx="6" fill="#0F2A1A"/>
                   <circle cx="880" cy="293" r="10" fill="rgba(255,255,255,0.92)"/>
                   <polygon points="877,288 885,293 877,298" fill="#0F2A1A"/>
@@ -2002,7 +1993,7 @@
   </div>
 
   <!-- Scripts -->
-  <script src="/js/main.js?v=3.7" defer></script>
+  <script src="/js/main.js?v=3.8" defer></script>
   <script src="/js/home.js?v=3.7" defer></script>
 </body>
 </html>
