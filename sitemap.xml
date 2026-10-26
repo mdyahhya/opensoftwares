@@ -7,8 +7,14 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://opensoftwares.in/products.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://opensoftwares.in/schoolmate.html</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>

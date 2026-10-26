@@ -16,14 +16,152 @@
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   // =========================================================================
-  // 1. Hero Underline SVG Draw
+  // Configurable Footnote Variable (Section E)
+  // =========================================================================
+  window.OPENSOFTWARES_CONFIG = window.OPENSOFTWARES_CONFIG || {};
+  window.OPENSOFTWARES_CONFIG.freeWebsiteFootnote = "Terms and conditions apply.";
+  const offerFootnoteEl = document.getElementById('offerFootnoteText');
+  if (offerFootnoteEl) {
+    offerFootnoteEl.textContent = window.OPENSOFTWARES_CONFIG.freeWebsiteFootnote;
+  }
+
+  // =========================================================================
+  // 1. Underline SVG Draw Animations (Hero + Schoolmate Section)
   // =========================================================================
   const underlinePath = document.querySelector('.hero-underline-path');
   if (underlinePath) {
-    // Trigger draw after a brief delay
     setTimeout(() => {
       underlinePath.classList.add('draw');
-    }, 600);
+    }, 500);
+  }
+
+  const smUnderlinePath = document.querySelector('.sm-underline-path');
+  if (smUnderlinePath && 'IntersectionObserver' in window) {
+    const smUnderlineObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          smUnderlinePath.classList.add('draw');
+          smUnderlineObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    smUnderlineObs.observe(smUnderlinePath);
+  } else if (smUnderlinePath) {
+    smUnderlinePath.classList.add('draw');
+  }
+
+  // =========================================================================
+  // 1B. Hero Phone & Laptop Continuous Looping Animations
+  // =========================================================================
+  const heroSvg = document.getElementById('heroDevicesSvg');
+  if (heroSvg) {
+    // Laptop screen: cycle between 4 modules every 4s with smooth transition
+    const lapPanels = [
+      document.getElementById('lapPanelAnalytics'),
+      document.getElementById('lapPanelFees'),
+      document.getElementById('lapPanelAttendance'),
+      document.getElementById('lapPanelPayroll')
+    ].filter(Boolean);
+
+    const lapModules = [
+      document.getElementById('modAnalytics'),
+      document.getElementById('modFees'),
+      document.getElementById('modAttendance'),
+      document.getElementById('modPayroll')
+    ].filter(Boolean);
+
+    const lapCursor = document.getElementById('heroLapCursor');
+    let currentLapIndex = 0;
+    let lapTimer = null;
+
+    function setHeroLapPanel(idx) {
+      if (!lapPanels.length) return;
+      currentLapIndex = idx % lapPanels.length;
+      lapPanels.forEach((p, i) => {
+        p.classList.toggle('active', i === currentLapIndex);
+      });
+      lapModules.forEach((m, i) => {
+        const bg = m.querySelector('rect');
+        const txt = m.querySelector('text');
+        if (i === currentLapIndex) {
+          if (bg) bg.setAttribute('fill', 'rgba(255,255,255,0.08)');
+          if (txt) { txt.setAttribute('fill', '#FFFFFF'); txt.setAttribute('font-weight', '600'); }
+        } else {
+          if (bg) bg.setAttribute('fill', 'transparent');
+          if (txt) { txt.setAttribute('fill', '#94A3B8'); txt.setAttribute('font-weight', '500'); }
+        }
+      });
+      if (lapCursor) {
+        const yPos = 160 + currentLapIndex * 34;
+        lapCursor.style.transform = `translate(380px, ${yPos}px)`;
+      }
+    }
+
+    // Phone screen: Login -> Success -> Feed -> Video Player -> Loop
+    const phScenes = [
+      document.getElementById('phSceneLogin'),
+      document.getElementById('phSceneSuccess'),
+      document.getElementById('phSceneFeed'),
+      document.getElementById('phScenePlayer')
+    ].filter(Boolean);
+
+    let currentPhIndex = 0;
+    let phTimer = null;
+    const phDurations = [3500, 2000, 3200, 3600];
+
+    function setHeroPhScene(idx) {
+      if (!phScenes.length) return;
+      currentPhIndex = idx % phScenes.length;
+      phScenes.forEach((s, i) => {
+        s.classList.toggle('active', i === currentPhIndex);
+      });
+    }
+
+    function runHeroPhLoop() {
+      if (prefersReducedMotion) return;
+      clearTimeout(phTimer);
+      const nextIdx = (currentPhIndex + 1) % phScenes.length;
+      phTimer = setTimeout(() => {
+        setHeroPhScene(nextIdx);
+        runHeroPhLoop();
+      }, phDurations[currentPhIndex] || 3000);
+    }
+
+    function startHeroLoops() {
+      if (prefersReducedMotion) return;
+      clearInterval(lapTimer);
+      clearTimeout(phTimer);
+      lapTimer = setInterval(() => {
+        setHeroLapPanel(currentLapIndex + 1);
+      }, 4000);
+      runHeroPhLoop();
+    }
+
+    function stopHeroLoops() {
+      clearInterval(lapTimer);
+      clearTimeout(phTimer);
+      lapTimer = null;
+      phTimer = null;
+    }
+
+    if ('IntersectionObserver' in window) {
+      const heroObs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            startHeroLoops();
+          } else {
+            stopHeroLoops();
+          }
+        });
+      }, { threshold: 0.1 });
+      heroObs.observe(heroSvg);
+    } else {
+      startHeroLoops();
+    }
+
+    // Initial state
+    setHeroLapPanel(0);
+    setHeroPhScene(0);
   }
 
   // =========================================================================
