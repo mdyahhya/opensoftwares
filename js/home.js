@@ -105,7 +105,7 @@
         }
       });
       if (lapCursor) {
-        const yPos = 160 + currentLapIndex * 32;
+        const yPos = 142 + currentLapIndex * 32;
         lapCursor.style.transform = `translate(380px, ${yPos}px)`;
       }
     }

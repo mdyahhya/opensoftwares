@@ -169,7 +169,7 @@ body.home-page { padding-top: 0; }
   }
 
   .hero-devices-wrap {
-    max-width: 560px;
+    max-width: 600px;
     margin: 0 0 0 auto;
   }
 
@@ -257,15 +257,15 @@ body.home-page { padding-top: 0; }
 }
 
 @keyframes heroCursorMove {
-  0%, 20% { transform: translate(380px, 160px); }
-  22% { transform: translate(380px, 160px) scale(0.9); }
-  25%, 45% { transform: translate(380px, 200px); }
-  47% { transform: translate(380px, 200px) scale(0.9); }
-  50%, 70% { transform: translate(380px, 240px); }
-  72% { transform: translate(380px, 240px) scale(0.9); }
-  75%, 95% { transform: translate(380px, 280px); }
-  97% { transform: translate(380px, 280px) scale(0.9); }
-  100% { transform: translate(380px, 160px); }
+  0%, 20% { transform: translate(380px, 142px); }
+  22% { transform: translate(380px, 142px) scale(0.9); }
+  25%, 45% { transform: translate(380px, 174px); }
+  47% { transform: translate(380px, 174px) scale(0.9); }
+  50%, 70% { transform: translate(380px, 206px); }
+  72% { transform: translate(380px, 206px) scale(0.9); }
+  75%, 95% { transform: translate(380px, 238px); }
+  97% { transform: translate(380px, 238px) scale(0.9); }
+  100% { transform: translate(380px, 142px); }
 }
 
 /* Laptop panel switching (4 panels, each 4s, total 16s) */
