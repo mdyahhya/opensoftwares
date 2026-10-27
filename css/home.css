@@ -925,9 +925,6 @@ body.home-page { padding-top: 0; }
   color: var(--ink);
   margin-bottom: clamp(20px, 3.5vw, 36px);
 }
-  color: var(--ink);
-  margin-bottom: clamp(20px, 3.5vw, 36px);
-}
 
 /* More products row at end of Schoolmate section */
 .sm-more-products-row {
