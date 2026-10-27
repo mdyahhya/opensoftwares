@@ -373,6 +373,82 @@ body.home-page { padding-top: 0; }
   justify-content: center;
 }
 
+/* Intro Stats Strip: Animated metrics right after Who We Are statement */
+.intro-stats-strip {
+  margin-top: clamp(20px, 2.4vw, 28px);
+  padding: clamp(12px, 1.6vw, 16px) clamp(14px, 1.8vw, 20px);
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(8px, 1.2vw, 14px);
+  box-shadow: 0 2px 8px rgba(14, 14, 16, 0.02);
+}
+
+.intro-stat-item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-align: left;
+  transition: transform 0.2s var(--ease-out);
+}
+
+.intro-stat-item:hover {
+  transform: translateY(-2px);
+}
+
+.intro-stat-item + .intro-stat-item::before {
+  content: '';
+  position: absolute;
+  left: calc(-1 * clamp(4px, 0.6vw, 7px));
+  top: 15%;
+  bottom: 15%;
+  width: 1px;
+  background: var(--line);
+}
+
+.intro-stat-num {
+  font-family: var(--font-mono);
+  font-size: clamp(1.2rem, 1.65vw, 1.55rem);
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.intro-stat-item:hover .intro-stat-num {
+  color: var(--saffron);
+}
+
+.intro-stat-label {
+  font-family: var(--font-mono);
+  font-size: clamp(9px, 0.75vw, 10.5px);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+@media (max-width: 640px) {
+  .intro-stats-strip {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px 12px;
+    padding: 14px 14px;
+  }
+  .intro-stat-item + .intro-stat-item::before {
+    display: none;
+  }
+  .intro-stat-num {
+    font-size: 1.4rem;
+  }
+}
+
+
 /* Right Column: Products we master in (Three Industries Showcase) */
 .intro-fields-col {
   display: flex;
