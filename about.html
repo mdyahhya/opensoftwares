@@ -51,7 +51,7 @@
   </style>
 
   <!-- CSS (Cache-busted) -->
-  <link rel="stylesheet" href="/css/style.css?v=3.6">
+  <link rel="stylesheet" href="/css/style.css?v=3.7">
   <link rel="stylesheet" href="/css/pages.css?v=3.0">
 
   <!-- Schema.org AboutPage JSON-LD -->
@@ -84,7 +84,35 @@
         ],
         "url": "https://opensoftwares.in",
         "logo": "https://opensoftwares.in/assets/brand/logo-mark-512.png",
-        "description": "Open Softwares is a group of companies managing software in the education, manufacturing and real estate industries.",
+        "description": "OpenSoftwares is an enterprise software group with offices in Solapur (Maharashtra) and Gulbarga (Karnataka), delivering solutions and channel partner support all over India.",
+        "address": [
+          {
+            "@type": "PostalAddress",
+            "addressLocality": "Solapur",
+            "addressRegion": "Maharashtra",
+            "addressCountry": "IN"
+          },
+          {
+            "@type": "PostalAddress",
+            "addressLocality": "Gulbarga (Kalaburagi)",
+            "addressRegion": "Karnataka",
+            "addressCountry": "IN"
+          }
+        ],
+        "areaServed": [
+          {
+            "@type": "Country",
+            "name": "India"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Maharashtra"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Karnataka"
+          }
+        ],
         "sameAs": [
           "https://opensoftwares.in",
           "https://wa.me/917204726501",
@@ -100,6 +128,11 @@
   <!-- SVG Sprite -->
   <svg xmlns="http://www.w3.org/2000/svg" style="display:none;" aria-hidden="true">
     <defs>
+      <symbol id="icon-map-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+        <circle cx="12" cy="10" r="3" />
+      </symbol>
+
       <symbol id="icon-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></symbol>
       <symbol id="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></symbol>
       <symbol id="icon-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
@@ -198,6 +231,124 @@
       </div>
     </section>
 
+    <!-- =========================================================================
+         OFFICES IN 2 STATES & PAN-INDIA REACH (Start of About Section)
+         ========================================================================= -->
+    <section class="section section-presence" id="locations" aria-labelledby="aboutLocationsTitle">
+      <div class="container">
+        <div class="about-presence-header reveal">
+          <span class="section-label">Offices &amp; Nationwide Network</span>
+          <h2 id="aboutLocationsTitle" class="section-title">
+            Operating from 2 States, Delivering <em class="serif">All Over India.</em>
+          </h2>
+          <p class="section-lead">
+            OpenSoftwares operates dedicated regional offices in <strong>Solapur (Maharashtra)</strong> and <strong>Gulbarga (Karnataka)</strong>. Backed by our nationwide network of certified channel partners across India, we bring robust software solutions, on-ground deployment, and responsive local support to institutions across all states.
+          </p>
+        </div>
+
+        <div class="presence-grid">
+          <!-- Solapur Card -->
+          <article class="presence-card reveal" role="region" aria-label="Solapur Office, Maharashtra">
+            <div class="presence-card-top">
+              <span class="presence-badge state-badge-mh">Maharashtra</span>
+              <div class="presence-card-icon" aria-hidden="true">
+                <svg class="icon"><use href="#icon-map-pin"></use></svg>
+              </div>
+            </div>
+            <h3 class="presence-city">Solapur Office</h3>
+            <p class="presence-role">Corporate &amp; Regional Operations</p>
+            <p class="presence-state">Solapur, Maharashtra, India</p>
+            <ul class="presence-highlights" role="list">
+              <li>
+                <svg class="icon icon-sm"><use href="#icon-check"></use></svg>
+                <span>Strategic operations &amp; business partnerships</span>
+              </li>
+              <li>
+                <svg class="icon icon-sm"><use href="#icon-check"></use></svg>
+                <span>Institutional implementations &amp; consultations</span>
+              </li>
+              <li>
+                <svg class="icon icon-sm"><use href="#icon-check"></use></svg>
+                <span>Central engineering &amp; product evolution</span>
+              </li>
+            </ul>
+            <div class="presence-card-action">
+              <a href="tel:+917204726501" class="presence-link">
+                <svg class="icon icon-sm"><use href="#icon-phone"></use></svg>
+                <span>+91 72047 26501</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Gulbarga Card -->
+          <article class="presence-card reveal reveal-delay-1" role="region" aria-label="Gulbarga Office, Karnataka">
+            <div class="presence-card-top">
+              <span class="presence-badge state-badge-ka">Karnataka</span>
+              <div class="presence-card-icon" aria-hidden="true">
+                <svg class="icon"><use href="#icon-map-pin"></use></svg>
+              </div>
+            </div>
+            <h3 class="presence-city">Gulbarga Office</h3>
+            <p class="presence-role">Regional Operations Office</p>
+            <p class="presence-state">Gulbarga (Kalaburagi), Karnataka, India</p>
+            <ul class="presence-highlights" role="list">
+              <li>
+                <svg class="icon icon-sm"><use href="#icon-check"></use></svg>
+                <span>Schoolmate ERP campus rollouts</span>
+              </li>
+              <li>
+                <svg class="icon icon-sm"><use href="#icon-check"></use></svg>
+                <span>Institutional training &amp; staff onboarding</span>
+              </li>
+              <li>
+                <svg class="icon icon-sm"><use href="#icon-check"></use></svg>
+                <span>Regional client success &amp; field support</span>
+              </li>
+            </ul>
+            <div class="presence-card-action">
+              <a href="tel:+917204726501" class="presence-link">
+                <svg class="icon icon-sm"><use href="#icon-phone"></use></svg>
+                <span>+91 72047 26501</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- All India Services & Channel Partners -->
+          <article class="presence-card presence-card-featured reveal reveal-delay-2" role="region" aria-label="Services & Channel Partners All Over India">
+            <div class="presence-card-top">
+              <span class="presence-badge state-badge-india">Pan-India Reach</span>
+              <div class="presence-card-icon presence-icon-accent" aria-hidden="true">
+                <svg class="icon"><use href="#icon-users"></use></svg>
+              </div>
+            </div>
+            <h3 class="presence-city">All Over India</h3>
+            <p class="presence-role">Nationwide Services &amp; Channel Partners</p>
+            <p class="presence-state">Active Channel Partners in Every Region</p>
+            <ul class="presence-highlights" role="list">
+              <li>
+                <svg class="icon icon-sm"><use href="#icon-check"></use></svg>
+                <span>Certified local channel partners stationed across India</span>
+              </li>
+              <li>
+                <svg class="icon icon-sm"><use href="#icon-check"></use></svg>
+                <span>In-person campus walk-throughs &amp; tailored demos</span>
+              </li>
+              <li>
+                <svg class="icon icon-sm"><use href="#icon-check"></use></svg>
+                <span>Immediate response, training &amp; year-round support</span>
+              </li>
+            </ul>
+            <div class="presence-card-action">
+              <a href="contact.html" class="presence-btn-primary">
+                <span>Partner with Us</span>
+                <svg class="icon icon-sm"><use href="#icon-arrow-up-right"></use></svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <!-- About Body -->
     <section class="section" aria-labelledby="aboutStoryTitle">
       <div class="container">
@@ -208,10 +359,10 @@
           </div>
           <div class="reveal reveal-delay-2">
             <p style="margin-bottom:var(--s3);">
-              OpenSoftwares began with a simple observation: school administrators in Maharashtra were overwhelmed by disconnected tools — spreadsheets for attendance, registers for fees, WhatsApp groups for parent communication. We decided to build one system that does it all.
+              OpenSoftwares began with a simple observation: institutions were overwhelmed by disconnected tools — spreadsheets for attendance, registers for fees, WhatsApp groups for parent communication. We decided to build one system that does it all.
             </p>
             <p style="margin-bottom:var(--s3);">
-              Today, Schoolmate by OpenSoftwares serves thousands of schools, making every campus more connected, more efficient and safer for students.
+              Today, operating with physical offices in Solapur (Maharashtra) and Gulbarga (Karnataka), Schoolmate by OpenSoftwares serves institutions across India, backed by an expanding network of certified channel partners.
             </p>
             <p>
               Beyond education, we are building specialised software for manufacturing and real estate — leveraging the same philosophy: deeply understand an industry, then build something that just works.
@@ -399,7 +550,7 @@
                  class="brand-logo-img brand-logo-darkmode">
             <span class="brand-wordmark"><span class="brand-cap">O</span>pen<span class="brand-cap">S</span>oftwares <span class="brand-legal">Pvt. Ltd.</span><span class="brand-dot"></span></span>
           </a>
-          <p>OpenSoftwares is a group of companies managing software in education, manufacturing and real estate. Our flagship product is Schoolmate by OpenSoftwares.</p>
+          <p>OpenSoftwares is a group of companies managing software in education, manufacturing and real estate. Offices in Solapur (Maharashtra) &amp; Gulbarga (Karnataka) with services and channel partners available all over India. Flagship product: Schoolmate by OpenSoftwares.</p>
           <ul class="footer-contact-list">
             <li><a href="tel:+917204726501"><svg class="icon icon-sm"><use href="#icon-phone"></use></svg> +91 72047 26501</a></li>
             <li><a href="mailto:contact@opensoftwares.in"><svg class="icon icon-sm"><use href="#icon-chat"></use></svg> contact@opensoftwares.in</a></li>

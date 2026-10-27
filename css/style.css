@@ -1998,6 +1998,7 @@ body.splash-locked {
 .schoolmate-section,
 .stats-section,
 .testimonials-section,
+.presence-section,
 .cta-band,
 .site-footer {
   content-visibility: auto;
@@ -2009,5 +2010,338 @@ body.splash-locked {
 .hero-devices-wrap {
   contain: layout paint;
 }
+
+/* --------------------------------------------------------------------------
+   Office Locations & Pan-India Channel Partners Network
+   Applied to: index.html (end), about.html (start), contact.html (start)
+   -------------------------------------------------------------------------- */
+.presence-section {
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+  padding: clamp(60px, 8vw, 100px) 0;
+  position: relative;
+}
+
+.presence-header,
+.about-presence-header,
+.contact-presence-header {
+  margin-bottom: clamp(32px, 5vw, 48px);
+  max-width: 760px;
+}
+
+.presence-header .section-lead,
+.about-presence-header .section-lead,
+.contact-presence-header .section-lead {
+  font-size: clamp(1rem, 1.4vw, 1.12rem);
+  color: var(--ink-soft);
+  line-height: 1.65;
+  margin-top: 12px;
+}
+
+.presence-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(20px, 3vw, 32px);
+}
+
+@media (max-width: 991px) {
+  .presence-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.presence-card {
+  background: #FFFFFF;
+  border: 1px solid var(--line);
+  border-radius: var(--r-card, 16px);
+  padding: clamp(24px, 3.5vw, 32px);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out);
+  box-shadow: 0 4px 20px rgba(14, 14, 16, 0.04);
+}
+
+.presence-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(11, 22, 48, 0.08);
+  border-color: rgba(232, 163, 23, 0.5);
+}
+
+.presence-card-featured {
+  background: linear-gradient(180deg, #FFFFFF 0%, #FAF8F5 100%);
+  border-color: rgba(232, 163, 23, 0.35);
+  box-shadow: 0 6px 24px rgba(232, 163, 23, 0.08);
+}
+
+.presence-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.presence-badge {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.state-badge-mh {
+  background: #EEF2FF;
+  color: #1E40AF;
+  border: 1px solid rgba(30, 64, 175, 0.15);
+}
+
+.state-badge-ka {
+  background: #ECFDF5;
+  color: #065F46;
+  border: 1px solid rgba(6, 95, 70, 0.15);
+}
+
+.state-badge-india {
+  background: #FEF3C7;
+  color: #92400E;
+  border: 1px solid rgba(146, 64, 14, 0.2);
+}
+
+.presence-card-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--midnight);
+  flex-shrink: 0;
+}
+
+.presence-card-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.presence-icon-accent {
+  background: rgba(232, 163, 23, 0.14);
+  border-color: rgba(232, 163, 23, 0.3);
+  color: #92400E;
+}
+
+.presence-city {
+  font-size: clamp(1.35rem, 2vw, 1.6rem);
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.025em;
+  margin-bottom: 4px;
+}
+
+.presence-role {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--saffron);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-family: var(--font-mono);
+  margin-bottom: 8px;
+}
+
+.presence-state {
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  margin-bottom: 20px;
+}
+
+.presence-highlights {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.presence-highlights li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  line-height: 1.45;
+}
+
+.presence-highlights li svg {
+  color: var(--saffron);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.presence-card-action {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+.presence-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--midnight);
+  text-decoration: none;
+  transition: color var(--dur-fast);
+}
+
+.presence-link:hover {
+  color: var(--saffron);
+}
+
+.presence-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--midnight);
+  color: #FFFFFF;
+  padding: 10px 18px;
+  border-radius: var(--r-btn);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  width: 100%;
+  transition: background var(--dur-fast), transform var(--dur-fast);
+}
+
+.presence-btn-primary:hover {
+  background: var(--midnight-2);
+  transform: translateY(-1px);
+}
+
+/* Contact Page Strip Grid */
+.contact-presence-banner {
+  background: var(--paper-2);
+  border-bottom: 1px solid var(--line);
+  padding: clamp(36px, 5vw, 48px) 0;
+}
+
+.contact-presence-strip-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 900px) {
+  .contact-presence-strip-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
+
+.contact-presence-tile {
+  background: #FFFFFF;
+  border: 1px solid var(--line);
+  border-radius: var(--r-card, 14px);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 14px;
+  box-shadow: 0 2px 10px rgba(14, 14, 16, 0.03);
+  transition: transform var(--dur-fast) var(--ease-out), border-color var(--dur-fast);
+}
+
+.contact-presence-tile:hover {
+  transform: translateY(-2px);
+  border-color: rgba(232, 163, 23, 0.4);
+}
+
+.contact-presence-tile.presence-tile-accent {
+  background: linear-gradient(180deg, #FFFFFF 0%, #FEFDF9 100%);
+  border-color: rgba(232, 163, 23, 0.35);
+}
+
+.presence-tile-badge {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 999px;
+  align-self: flex-start;
+}
+
+.presence-tile-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.presence-tile-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--midnight);
+}
+
+.presence-tile-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.presence-tile-info h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 2px;
+}
+
+.presence-tile-info p {
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  margin-bottom: 4px;
+}
+
+.presence-tile-meta {
+  font-size: 0.78rem;
+  font-family: var(--font-mono);
+  color: var(--ink-mute);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.presence-tile-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--midnight);
+  text-decoration: none;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+}
+
+.presence-tile-link:hover {
+  color: var(--saffron);
+}
+
 
 

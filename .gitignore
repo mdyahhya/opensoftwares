@@ -13,3 +13,5 @@ Thumbs.db
 # Vercel & build artifacts
 .vercel
 node_modules/
+scratch/
+

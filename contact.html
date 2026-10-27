@@ -55,7 +55,7 @@
   </style>
 
   <!-- CSS (Cache-busted) -->
-  <link rel="stylesheet" href="/css/style.css?v=3.6">
+  <link rel="stylesheet" href="/css/style.css?v=3.7">
   <link rel="stylesheet" href="/css/pages.css?v=3.0">
 
   <!-- Schema.org ContactPage JSON-LD -->
@@ -89,11 +89,34 @@
         "logo": "https://opensoftwares.in/assets/brand/logo-mark-512.png",
         "telephone": "+917204726501",
         "email": "contact@opensoftwares.in",
-        "address": {
-          "@type": "PostalAddress",
-          "addressRegion": "Maharashtra",
-          "addressCountry": "IN"
-        },
+        "address": [
+          {
+            "@type": "PostalAddress",
+            "addressLocality": "Solapur",
+            "addressRegion": "Maharashtra",
+            "addressCountry": "IN"
+          },
+          {
+            "@type": "PostalAddress",
+            "addressLocality": "Gulbarga (Kalaburagi)",
+            "addressRegion": "Karnataka",
+            "addressCountry": "IN"
+          }
+        ],
+        "areaServed": [
+          {
+            "@type": "Country",
+            "name": "India"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Maharashtra"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Karnataka"
+          }
+        ],
         "sameAs": [
           "https://opensoftwares.in",
           "https://wa.me/917204726501",
@@ -125,6 +148,13 @@
   <!-- Reusable SVG Sprite -->
   <svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
     <defs>
+      <symbol id="icon-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+      </symbol>
+      <symbol id="icon-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
+      </symbol>
+
       <symbol id="icon-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
         <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
       </symbol>
@@ -243,6 +273,82 @@
         <p>
           Speak with our education technology consultants or arrange an in-person campus demonstration for your school trustees and management team.
         </p>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         OFFICES IN 2 STATES & PAN-INDIA REACH (Start of Contact Section)
+         ========================================================================= -->
+    <section class="contact-presence-banner" aria-labelledby="contactPresenceHeading">
+      <div class="container">
+        <div class="contact-presence-header reveal">
+          <span class="section-label">Offices &amp; Nationwide Network</span>
+          <h2 id="contactPresenceHeading" class="section-title" style="font-size: clamp(1.8rem, 3.8vw, 2.6rem); margin-bottom: 0.5rem;">
+            Offices in 2 States, Services &amp; Channel Partners <em class="serif">All Over India.</em>
+          </h2>
+          <p class="section-lead" style="max-width: 76ch; margin-bottom: 1.5rem;">
+            Visit our regional offices in <strong>Solapur (Maharashtra)</strong> and <strong>Gulbarga (Karnataka)</strong>, or connect with our authorized channel partners stationed all over India for on-site institutional demonstrations and localized support.
+          </p>
+        </div>
+
+        <div class="contact-presence-strip-grid reveal reveal-delay-1">
+          <!-- Solapur Office Strip -->
+          <div class="contact-presence-tile">
+            <div class="presence-tile-badge state-badge-mh">Maharashtra</div>
+            <div class="presence-tile-body">
+              <div class="presence-tile-icon" aria-hidden="true">
+                <svg class="svg-icon"><use href="#icon-map-pin"></use></svg>
+              </div>
+              <div class="presence-tile-info">
+                <h4>Solapur Office</h4>
+                <p>Solapur, Maharashtra, India</p>
+                <span class="presence-tile-meta">Corporate &amp; Regional Operations</span>
+              </div>
+            </div>
+            <a href="tel:+917204726501" class="presence-tile-link">
+              <svg class="svg-icon" style="width: 14px; height: 14px;"><use href="#icon-phone"></use></svg>
+              +91 72047 26501
+            </a>
+          </div>
+
+          <!-- Gulbarga Office Strip -->
+          <div class="contact-presence-tile">
+            <div class="presence-tile-badge state-badge-ka">Karnataka</div>
+            <div class="presence-tile-body">
+              <div class="presence-tile-icon" aria-hidden="true">
+                <svg class="svg-icon"><use href="#icon-map-pin"></use></svg>
+              </div>
+              <div class="presence-tile-info">
+                <h4>Gulbarga Office</h4>
+                <p>Gulbarga (Kalaburagi), Karnataka, India</p>
+                <span class="presence-tile-meta">Regional Operations Office</span>
+              </div>
+            </div>
+            <a href="tel:+917204726501" class="presence-tile-link">
+              <svg class="svg-icon" style="width: 14px; height: 14px;"><use href="#icon-phone"></use></svg>
+              +91 72047 26501
+            </a>
+          </div>
+
+          <!-- All India Channel Partners Strip -->
+          <div class="contact-presence-tile presence-tile-accent">
+            <div class="presence-tile-badge state-badge-india">Pan-India Reach</div>
+            <div class="presence-tile-body">
+              <div class="presence-tile-icon presence-icon-accent" aria-hidden="true">
+                <svg class="svg-icon"><use href="#icon-shield"></use></svg>
+              </div>
+              <div class="presence-tile-info">
+                <h4>All Over India</h4>
+                <p>Services &amp; Channel Partners Network</p>
+                <span class="presence-tile-meta">Certified Partners in All States</span>
+              </div>
+            </div>
+            <a href="https://wa.me/917204726501?text=Hi%2C%20I%20want%20to%20connect%20with%20an%20OpenSoftwares%20channel%20partner" target="_blank" rel="noopener noreferrer" class="presence-tile-link" style="color: #047857;">
+              <svg class="svg-icon svg-icon-filled" style="width: 14px; height: 14px; fill: #10B981;"><use href="#icon-whatsapp"></use></svg>
+              Chat with Local Partner
+            </a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -398,21 +504,32 @@
                   <svg class="svg-icon" width="20" height="20" viewBox="0 0 24 24"><use href="#icon-map-pin"></use></svg>
                 </div>
                 <div class="contact-method-detail">
-                  <h4>Headquarters</h4>
-                  <p>OpenSoftwares Pvt. Ltd. Corporate Offices</p>
-                  <span style="font-size: 0.85rem; color: #64748B;">Maharashtra, India</span>
+                  <h4>Solapur Office &amp; Operations</h4>
+                  <p>Solapur, Maharashtra, India</p>
+                  <span style="font-size: 0.82rem; color: #1E40AF; font-weight: 600;">State: Maharashtra</span>
+                </div>
+              </div>
+
+              <div class="contact-method" id="officeGulbarga">
+                <div class="contact-icon-wrapper" aria-hidden="true">
+                  <svg class="svg-icon" width="20" height="20" viewBox="0 0 24 24"><use href="#icon-map-pin"></use></svg>
+                </div>
+                <div class="contact-method-detail">
+                  <h4>Gulbarga Office &amp; Operations</h4>
+                  <p>Gulbarga (Kalaburagi), Karnataka, India</p>
+                  <span style="font-size: 0.82rem; color: #065F46; font-weight: 600;">State: Karnataka</span>
                 </div>
               </div>
             </div>
 
             <!-- Map Coverage Card -->
             <div class="contact-map-card">
-              <div style="display: flex; justify-content: space-between; align-items: center;">
-                <h3 style="font-size: 1.15rem; color: #FFFFFF;">Service Coverage: Maharashtra</h3>
-                <span style="font-size: 0.75rem; background: #2563EB; color: #FFFFFF; padding: 2px 8px; border-radius: 12px; font-weight: 700;">Active 36 Districts</span>
+              <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+                <h3 style="font-size: 1.15rem; color: #FFFFFF;">Nationwide Reach: All Over India</h3>
+                <span style="font-size: 0.75rem; background: var(--saffron); color: #0E0E10; padding: 2px 10px; border-radius: 12px; font-weight: 700;">Channel Partners Active</span>
               </div>
-              <p style="font-size: 0.86rem; color: #CBD5E1; margin-top: 0.4rem;">
-                Our field technicians provide in-person onboarding across Pune, Mumbai, Thane, Nashik, Kolhapur, Satara, Aurangabad, and Nagpur.
+              <p style="font-size: 0.86rem; color: #CBD5E1; margin-top: 0.5rem; line-height: 1.5;">
+                With direct offices in <strong>Maharashtra (Solapur)</strong> and <strong>Karnataka (Gulbarga)</strong>, our services and certified channel partners are available <strong>all over India</strong> for on-site presentations, campus onboarding, and continuous institutional support.
               </p>
 
               <!-- Stylized Vector Map Card -->
@@ -503,7 +620,7 @@
           <div class="footer-contact-list">
             <div class="footer-contact-item">
               <svg class="svg-icon"><use href="#icon-map-pin"></use></svg>
-              <span>Maharashtra, India</span>
+              <span>Solapur (MH) &amp; Gulbarga (KA) • All Over India</span>
             </div>
             <div class="footer-contact-item">
               <svg class="svg-icon"><use href="#icon-phone"></use></svg>
@@ -526,7 +643,7 @@
           &copy; OpenSoftwares Pvt. Ltd.
         </div>
         <div>
-          Empowering educational institutions across Maharashtra with high-performance software.
+          Empowering educational institutions and enterprises across India with high-performance software. Offices in 2 states (Solapur, Maharashtra &amp; Gulbarga, Karnataka) with channel partners nationwide.
         </div>
       </div>
     </div>
