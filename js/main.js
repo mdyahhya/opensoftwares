@@ -63,6 +63,13 @@
   }
 
   // Delegated click handler: works on any page regardless of load timing
+  let isMobileNavigating = false;
+
+  window.addEventListener('pageshow', () => {
+    isMobileNavigating = false;
+    closeOverlay();
+  });
+
   document.addEventListener('click', (e) => {
     const toggleBtn = e.target.closest('#navToggle, .nav-toggle');
     if (toggleBtn) {
@@ -79,9 +86,46 @@
       return;
     }
 
-    const navLink = e.target.closest('.mobile-nav-link');
-    if (navLink) {
+    const navLink = e.target.closest('.mobile-nav-link, .mobile-overlay .brand-link');
+    if (navLink && overlayOpen) {
+      const href = navLink.getAttribute('href');
+      // If no href or it's a telephone/email/whatsapp link, close immediately without intercepting
+      if (!href || href.startsWith('tel:') || href.startsWith('mailto:') || href.startsWith('https://wa.me')) {
+        closeOverlay();
+        return;
+      }
+
+      e.preventDefault();
+      e.stopPropagation();
+
+      if (isMobileNavigating) return;
+      isMobileNavigating = true;
+
+      // Start the reverse circular wipe animation immediately (same as close button)
       closeOverlay();
+
+      const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+      const targetPath = href.split('#')[0].split('/').pop() || 'index.html';
+      const hash = href.includes('#') ? href.substring(href.indexOf('#')) : '';
+
+      // If already on the target page, smoothly scroll to anchor or top after wipe
+      if (currentPath === targetPath) {
+        setTimeout(() => {
+          if (hash) {
+            const targetEl = document.querySelector(hash);
+            if (targetEl) targetEl.scrollIntoView({ behavior: 'smooth' });
+          } else {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }
+          isMobileNavigating = false;
+        }, 550);
+        return;
+      }
+
+      // Navigating to a different page: let the reverse circular wipe play out, then navigate
+      setTimeout(() => {
+        window.location.href = href;
+      }, 550);
     }
   });
 
