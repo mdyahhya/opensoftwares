@@ -909,6 +909,177 @@ body.home-page { padding-top: 0; }
   margin: 0 auto var(--s4);
 }
 
+/* -------------------------------------------------------------------------
+   C. SCHOOLMATE SHOWCASE TWO-COLUMN SPLIT
+   Desktop: Left Side All Text & Badges, Right Side Mobile Screen
+   ------------------------------------------------------------------------- */
+.sm-showcase-split {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s3);
+  margin-top: var(--s2);
+}
+
+.sm-strip-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 12px;
+}
+
+.sm-strip-top-row .sm-strip-claim-link {
+  width: auto;
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+@media (max-width: 991px) {
+  .sm-showcase-split {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .sm-showcase-content {
+    display: contents;
+  }
+  .sm-showcase-content .sm-intro-block { order: 1; }
+  .sm-showcase-content .sm-product-strip { order: 2; }
+  .sm-showcase-content .sm-trust-line { order: 3; }
+  .sm-showcase-content .sm-phone-heading { order: 4; }
+  .sm-showcase-phone-col { order: 5; margin: 0 auto; width: 100%; display: flex; justify-content: center; }
+  .sm-showcase-content .app-play-notice { order: 6; }
+}
+
+@media (min-width: 992px) {
+  .sm-showcase-split {
+    display: grid;
+    grid-template-columns: minmax(0, 1.32fr) minmax(300px, 0.88fr);
+    gap: clamp(36px, 5vw, 64px);
+    align-items: center;
+    margin-top: var(--s2);
+    margin-bottom: clamp(32px, 4vw, 56px);
+  }
+
+  .sm-showcase-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+  }
+
+  .sm-showcase-content .sm-intro-block {
+    text-align: left;
+    margin: 0 0 clamp(16px, 2vw, 22px) 0;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .sm-showcase-content .sm-eyebrow {
+    text-align: left;
+    margin-bottom: 6px;
+  }
+
+  .sm-showcase-content .sm-brand-title {
+    font-size: clamp(2rem, 3.4vw, 2.85rem);
+    text-align: left;
+    margin: 0 0 8px 0;
+    line-height: 1.12;
+  }
+
+  .sm-showcase-content .sm-section-headline {
+    font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+    line-height: 1.15;
+    text-align: left;
+    margin: 0 0 clamp(16px, 2.2vw, 22px) 0;
+  }
+
+  .sm-showcase-content .sm-product-strip {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding: 16px 20px;
+    background: #FFFFFF;
+    border: 1px solid var(--line);
+    border-radius: var(--r-card, 16px);
+    box-shadow: 0 4px 18px rgba(11, 22, 48, 0.04);
+    margin: 0 0 16px 0;
+    width: 100%;
+  }
+
+  .sm-showcase-content .sm-strip-top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .sm-showcase-content .sm-strip-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    align-items: center;
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+  }
+
+  .sm-showcase-content .sm-trust-line {
+    text-align: left;
+    margin: 0 0 14px 0;
+    font-size: 0.92rem;
+    font-weight: 500;
+    color: var(--ink-soft);
+    width: 100%;
+  }
+
+  .sm-showcase-content .sm-phone-heading {
+    text-align: left;
+    margin: 0 0 14px 0;
+    font-size: clamp(1.25rem, 1.8vw, 1.55rem);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    width: 100%;
+  }
+
+  .sm-showcase-content .app-play-notice {
+    margin: 0 !important;
+    width: 100%;
+    max-width: 460px;
+    align-self: flex-start;
+  }
+
+  .sm-showcase-phone-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .sm-showcase-phone-col .sm-phone-stage {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sm-showcase-phone-col .phone-device {
+    margin: 0 auto;
+    width: 290px;
+    max-width: 100%;
+  }
+
+  /* Below the split: ensure ERP section has clean top margin */
+  .schoolmate-section .sm-erp-wrap {
+    margin-top: clamp(64px, 8vw, 96px);
+  }
+}
+
 /* ERP section heading & container */
 .sm-erp-wrap {
   margin: clamp(48px, 7vw, 84px) auto;
