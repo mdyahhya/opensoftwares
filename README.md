@@ -13,7 +13,7 @@ OpenSoftwares is a group of companies managing software in the education, manufa
 
 - **Schoolmate by OpenSoftwares**:
   - **Native Android App**: Real-time push alerts, attendance tracking, educational videos, homework, one-tap UPI fee receipts, and direct parent-teacher communication.
-  - **Web ERP for Administration**: Biometric staff attendance, payroll with Maharashtra PT/PF compliance, automated conflict-free timetable scheduling, CBSE/State report card generation, and multi-branch management.
+  - **Web ERP for Administration**: Staff management, daily attendance tracking, automated conflict-free timetable scheduling, CBSE/State report card generation, and multi-branch management.
   - **Live GPS Telemetry**: Real-time school bus tracking with route maps, speed monitoring, and arrival geofence alerts.
 
 ---

@@ -3287,3 +3287,140 @@ body.home-page { padding-top: 0; }
   from { opacity: 0; transform: translateY(-16px); }
   to   { opacity: 1; transform: none; }
 }
+
+
+/* =========================================================
+   SCHOOLMATE MOBILE APP FEATURES & EDUCATIONAL FEED (V5.0)
+   Strict Icon and Layout Guard
+========================================================= */
+.sm-app-features {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 14px !important;
+  width: 100% !important;
+  margin: 18px 0 20px 0 !important;
+  text-align: left !important;
+  box-sizing: border-box !important;
+}
+.sm-feed-highlight-card {
+  background: linear-gradient(135deg, rgba(10, 42, 94, 0.05) 0%, rgba(232, 163, 23, 0.09) 100%) !important;
+  border: 1px solid rgba(10, 42, 94, 0.12) !important;
+  border-left: 4px solid #E8A317 !important;
+  border-radius: 12px !important;
+  padding: 14px 16px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+  box-sizing: border-box !important;
+}
+.sm-feed-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  font-size: 0.78rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  color: #0A2A5E !important;
+}
+.sm-feed-badge svg {
+  width: 14px !important;
+  height: 14px !important;
+  min-width: 14px !important;
+  max-width: 14px !important;
+  color: #E8A317 !important;
+  flex-shrink: 0 !important;
+}
+.sm-feed-quote {
+  font-size: 0.92rem !important;
+  line-height: 1.5 !important;
+  color: #1F2937 !important;
+  font-weight: 500 !important;
+}
+.sm-feed-pills {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+}
+.sm-pill {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  font-size: 0.76rem !important;
+  font-weight: 600 !important;
+  background: #FFFFFF !important;
+  border: 1px solid rgba(10, 42, 94, 0.15) !important;
+  border-radius: 20px !important;
+  padding: 4px 10px !important;
+  color: #0A2A5E !important;
+}
+.sm-pill svg {
+  width: 12px !important;
+  height: 12px !important;
+  min-width: 12px !important;
+  max-width: 12px !important;
+  color: #E8A317 !important;
+  flex-shrink: 0 !important;
+}
+.sm-feature-points {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+}
+.sm-feature-point {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 12px !important;
+  background: #FFFFFF !important;
+  border: 1px solid rgba(10, 42, 94, 0.08) !important;
+  border-radius: 10px !important;
+  padding: 10px 12px !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03) !important;
+  box-sizing: border-box !important;
+}
+.sm-point-icon {
+  width: 34px !important;
+  height: 34px !important;
+  min-width: 34px !important;
+  min-height: 34px !important;
+  max-width: 34px !important;
+  max-height: 34px !important;
+  border-radius: 8px !important;
+  background: #0A2A5E !important;
+  color: #E8A317 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+  overflow: hidden !important;
+}
+.sm-point-icon svg {
+  width: 18px !important;
+  height: 18px !important;
+  min-width: 18px !important;
+  max-width: 18px !important;
+  min-height: 18px !important;
+  max-height: 18px !important;
+  display: block !important;
+  flex-shrink: 0 !important;
+}
+.sm-point-body {
+  flex: 1 !important;
+  min-width: 0 !important;
+}
+.sm-point-body strong {
+  display: block !important;
+  font-size: 0.92rem !important;
+  font-weight: 700 !important;
+  color: #0A2A5E !important;
+  margin-bottom: 2px !important;
+}
+.sm-point-body p {
+  font-size: 0.82rem !important;
+  line-height: 1.45 !important;
+  color: #4B5563 !important;
+  margin: 0 !important;
+}

@@ -2345,3 +2345,235 @@ body.splash-locked {
 
 
 
+
+
+/* =========================================================
+   BULLETPROOF GLOBAL SVG BOUNDING & MOBILE ICON GUARD (V5.0)
+========================================================= */
+.sm-point-icon {
+  width: 34px !important;
+  height: 34px !important;
+  min-width: 34px !important;
+  min-height: 34px !important;
+  max-width: 34px !important;
+  max-height: 34px !important;
+  border-radius: 8px !important;
+  background: #0A2A5E !important;
+  color: #E8A317 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+  overflow: hidden !important;
+}
+.sm-point-icon svg,
+.sm-point-icon .icon,
+.sm-point-icon .icon-sm {
+  width: 18px !important;
+  height: 18px !important;
+  min-width: 18px !important;
+  max-width: 18px !important;
+  min-height: 18px !important;
+  max-height: 18px !important;
+  display: block !important;
+  flex-shrink: 0 !important;
+}
+.sm-pill svg {
+  width: 12px !important;
+  height: 12px !important;
+  min-width: 12px !important;
+  max-width: 12px !important;
+  display: inline-block !important;
+  flex-shrink: 0 !important;
+}
+.sm-feed-badge svg {
+  width: 14px !important;
+  height: 14px !important;
+  min-width: 14px !important;
+  max-width: 14px !important;
+  display: inline-block !important;
+  flex-shrink: 0 !important;
+}
+
+
+/* Video Card & Play Button Styles */
+.video-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  background: #FFFFFF;
+  border: 1px solid rgba(10, 42, 94, 0.08);
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.video-thumb {
+  width: 72px;
+  height: 48px;
+  border-radius: 6px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.video-thumb-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.15;
+  background-image: radial-gradient(#fff 1px, transparent 1px);
+  background-size: 6px 6px;
+}
+.video-play-btn {
+  width: 28px !important;
+  height: 28px !important;
+  min-width: 28px !important;
+  max-width: 28px !important;
+  border-radius: 50% !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+  z-index: 1 !important;
+  overflow: hidden !important;
+  flex-shrink: 0 !important;
+}
+.video-play-btn svg {
+  width: 14px !important;
+  height: 14px !important;
+  min-width: 14px !important;
+  max-width: 14px !important;
+  fill: #0A2A5E !important;
+  color: #0A2A5E !important;
+  display: block !important;
+  flex-shrink: 0 !important;
+}
+.video-info {
+  flex: 1;
+  min-width: 0;
+}
+.video-subject {
+  font-size: 0.72rem;
+}
+.video-name {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #0F172A;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.video-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.72rem;
+  color: #64748B;
+  margin-top: 2px;
+}
+.video-progress-bar {
+  width: 100%;
+  height: 3px;
+  background: #E2E8F0;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.video-progress-fill {
+  height: 100%;
+}
+
+
+/* =========================================================
+   COMPREHENSIVE SVG SAFETY & CONTAINMENT GUARDS (V5.0)
+========================================================= */
+svg.icon,
+svg.svg-icon,
+svg.icon-sm,
+svg.icon-md,
+svg.icon-lg,
+.icon,
+.svg-icon {
+  flex-shrink: 0 !important;
+}
+svg.icon-sm,
+.icon-sm {
+  width: 18px !important;
+  height: 18px !important;
+  min-width: 18px !important;
+  max-width: 18px !important;
+  min-height: 18px !important;
+  max-height: 18px !important;
+}
+svg.icon,
+.icon,
+svg.icon-md,
+.icon-md {
+  width: 24px !important;
+  height: 24px !important;
+  max-width: 24px !important;
+  max-height: 24px !important;
+}
+svg.icon-lg,
+.icon-lg {
+  width: 28px !important;
+  height: 28px !important;
+  max-width: 28px !important;
+  max-height: 28px !important;
+}
+.section-badge svg,
+.section-badge .icon,
+.section-badge .svg-icon {
+  width: 14px !important;
+  height: 14px !important;
+  min-width: 14px !important;
+  max-width: 14px !important;
+  display: inline-block !important;
+  flex-shrink: 0 !important;
+}
+.qa-btn-icon {
+  width: 34px !important;
+  height: 34px !important;
+  min-width: 34px !important;
+  max-width: 34px !important;
+  border-radius: 8px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  flex-shrink: 0 !important;
+}
+.qa-btn-icon svg {
+  width: 16px !important;
+  height: 16px !important;
+  min-width: 16px !important;
+  max-width: 16px !important;
+  max-height: 16px !important;
+  display: block !important;
+  flex-shrink: 0 !important;
+}
+.erp-module-btn svg {
+  width: 15px !important;
+  height: 15px !important;
+  min-width: 15px !important;
+  max-width: 15px !important;
+  display: inline-block !important;
+  flex-shrink: 0 !important;
+}
+.sm-strip-icon {
+  width: 18px !important;
+  height: 18px !important;
+  min-width: 18px !important;
+  max-width: 18px !important;
+  display: inline-block !important;
+  flex-shrink: 0 !important;
+}
+.compact-bar-icon {
+  width: 18px !important;
+  height: 18px !important;
+  min-width: 18px !important;
+  max-width: 18px !important;
+  display: inline-block !important;
+  flex-shrink: 0 !important;
+}
