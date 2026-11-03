@@ -1025,7 +1025,8 @@ body.home-page { padding-top: 0; }
   .sm-showcase-content .sm-trust-line { order: 3; }
   .sm-showcase-content .sm-phone-heading { order: 4; }
   .sm-showcase-phone-col { order: 5; margin: 0 auto; width: 100%; display: flex; justify-content: center; }
-  .sm-showcase-content .app-play-notice { order: 6; }
+  .sm-showcase-content .sm-app-features { order: 6; }
+  .sm-showcase-content .app-play-notice { order: 7; }
 }
 
 @media (min-width: 992px) {
@@ -1120,6 +1121,11 @@ body.home-page { padding-top: 0; }
     letter-spacing: -0.02em;
     color: var(--ink);
     width: 100%;
+  }
+
+  .sm-showcase-content .sm-app-features {
+    width: 100%;
+    margin-bottom: 16px;
   }
 
   .sm-showcase-content .app-play-notice {
